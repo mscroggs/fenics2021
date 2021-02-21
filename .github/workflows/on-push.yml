@@ -8,9 +8,11 @@ jobs:
     name: Run style checks
     runs-on: ubuntu-latest
     steps:
+      - run: sudo apt-get install -y python3-flake8
+        name: Install flake8
       - uses: actions/checkout@v2
       - run: python3 -m flake8 .
-        name: Flake8 checks
+        name: Run flake8
 
   build-website:
     name: Build fenics2021.com
