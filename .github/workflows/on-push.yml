@@ -12,6 +12,7 @@ jobs:
     steps:
       - run: sudo apt-get install -y python3-setuptools python3-pip
         name: Install pip
+      - uses: actions/checkout@v2
       - run: sudo pip3 install -r requirements.txt
         name: Install requirements
       - run: python3 builder/build.py ../_html
