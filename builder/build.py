@@ -84,8 +84,8 @@ def make_talk_page(t_id, day, session_n):
     content += f"<h1>{tinfo['title']}</h1>"
     content += f"<div>{authortxt}.</div>"
     content += (f"<div style='margin-top:5px'>"
-                "<a href='/talks/list-{day}.html'>{day}</a>"
-                " session {session_n} ({times[session_n]})</div>")
+                f"<a href='/talks/list-{day}.html'>{day}</a>"
+                f" session {session_n} ({times[session_n]})</div>")
     content += "<div class='abstract'>"
     if isinstance(tinfo['abstract'], list):
         for parag in tinfo['abstract']:
