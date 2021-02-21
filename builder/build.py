@@ -29,6 +29,18 @@ os.system(f"cp -r {files_path}/* {html_path}")
 with open(os.path.join(html_path, "CNAME"), "w") as f:
     f.write("fenics2021.com")
 
+with open(os.path.join(talks_path, "timetable.yml")) as f:
+    timetable = yaml.load(f, Loader=yaml.FullLoader)
+
+times = {1: "13:00-14:30", 2: "15:00-16:30", 3: "17:00-18:30", "evening": "19:30-21:00"}
+daylist = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+
+evenings = {"Monday": "Drinks reception",
+            "Tuesday": "Discussion tables",
+            "Wednesday": "FEniCS quiz nights",
+            "Thursday": "Conference dinner",
+            "Friday": "Hang out and goodbyes"}
+
 
 def markup_author(authorinfo, bold=False):
     info = ""
@@ -113,12 +125,6 @@ for file in os.listdir(pages_path):
             content = markup(f.read())
         write_page(f"{fname}.html", content)
 
-with open(os.path.join(talks_path, "timetable.yml")) as f:
-    timetable = yaml.load(f, Loader=yaml.FullLoader)
-
-times = {1: "13:00-14:30", 2: "15:00-16:30", 3: "17:00-18:30"}
-daylist = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
-
 content = "<h1>Timetable</h1>"
 content += "<div class='timetablegrid'>\n"
 
@@ -127,23 +133,7 @@ for s in [1, 2, 3]:
     content += f"grid-row: {5 * s - 3} / span 4;'>Session {s} ({times[s]})</div>"
 
 content += f"<div class='gridcell timetableheading rotated' style='grid-column: 1 / span 1; "
-content += f"grid-row: 17 / span 1;'>Evening session (19:30-21:00)</div>"
-
-content += "<div class='gridcell timetabletalk' "
-content += f"style='grid-column: 2 / span 1; grid-row: 17 / span 1;'>"
-content += f"<div class='timetabletalktitle'>Drinks reception</div></div>"
-content += "<div class='gridcell timetabletalk' "
-content += f"style='grid-column: 3 / span 1; grid-row: 17 / span 1;'>"
-content += f"<div class='timetabletalktitle'>Discussion tables</div></div>"
-content += "<div class='gridcell timetabletalk' "
-content += f"style='grid-column: 4 / span 1; grid-row: 17 / span 1;'>"
-content += f"<div class='timetabletalktitle'>FEniCS quiz night</div></div>"
-content += "<div class='gridcell timetabletalk' "
-content += f"style='grid-column: 5 / span 1; grid-row: 17 / span 1;'>"
-content += f"<div class='timetabletalktitle'>Conference dinner</div></div>"
-content += "<div class='gridcell timetabletalk' "
-content += f"style='grid-column: 6 / span 1; grid-row: 17 / span 1;'>"
-content += f"<div class='timetabletalktitle'>Hang out and goodbyes</div></div>"
+content += f"grid-row: 17 / span 1;'>Evening session ({times['evening']})</div>"
 
 for row in [6, 11, 16]:
     content += f"<div class='gridcell timetableheading' style='grid-column: 2 / span 5; "
@@ -159,6 +149,11 @@ content += "Q&A with the FEniCS steering council</div></div>"
 for i, day in enumerate(daylist):
     content += f"<div class='gridcell timetableheading' style='grid-column: {i + 2} / span 1; "
     content += f"grid-row: 1 / span 1;'>{day}</div>"
+
+    content += "<div class='gridcell timetabletalk' "
+    content += f"style='grid-column: {i + 2} / span 1; grid-row: 17 / span 1;'>"
+    content += f"<div class='timetabletalktitle'>{evenings[day]}</div></div>"
+
     for s in [1, 2, 3]:
         if s == 2 and day == "Tuesday":
             continue
@@ -190,6 +185,10 @@ for day in daylist:
                 content += "<div class='timetablelisttalk'>"
                 content += make_talk_page(t, day, s)
                 content += "</div>"
+    content += f"<h3>Evening session ({times['evening']})</h3>"
+    content += "<div class='timetablelisttalk'>"
+    content += f"<div class='talktitle'>{evenings[day]}</div>"
+    content += "</div>"
     daytalks[day] = content
 
 
