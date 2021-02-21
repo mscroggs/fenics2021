@@ -33,7 +33,7 @@ a:hover {color:#FF8800}
 .head, .footer {font-family: Lato, sans-serif;font-weight:bold}
 
 h2 {margin-top:50px}
-h1, h2, h3, h4, h5, h6 {font-family: Lato, sans-serif;font-weight:bold;color:#4A98DD}
+h1, h2, h3, h4, h5, h6 {font-family: Lato, sans-serif;font-weight:bold;color:black}/*#4A98DD}*/
 body, p {font-family:sans}
 p {text-align:justify}
 

@@ -2,7 +2,7 @@ title: This is a talk with a very long title to allow us to test that titles do 
 speaker:
   name: Matthew Scroggs
   affiliation: University of Cambridge
-  website: mscroggs.co.uk
+  website: https://mscroggs.co.uk
   github: mscroggs
   twitter: mscroggs
 abstract:
