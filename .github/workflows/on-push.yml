@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-website:
-    name: Build defelement.com
+    name: Build fenics2021.com
     runs-on: ubuntu-latest
     steps:
       - run: sudo apt-get install -y python3-setuptools python3-pip
