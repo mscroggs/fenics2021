@@ -25,6 +25,6 @@ jobs:
           git checkout -b gh-pages
           git add .
           git commit -m "Build HTML website"
-          git remote add origin https://symfembot:${{ secrets.bot_github_token }}@github.com/mscroggs/fenics2021.com.git
+          git remote add origin https://symfembot:${{ secrets.bot_github_token }}@github.com/mscroggs/fenics2021.git
           git push -u origin gh-pages --force
         name: Push website to gh-pages branch
