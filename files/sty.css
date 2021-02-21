@@ -1,16 +1,9 @@
---/*****************************
+/*****************************
 colour scheme:
   orange:        #FF8800
   pastel orange: #FFBC6F
   blue:          #4A98DD
 *****************************/
-
-@media (min-width:500px){
-  #sideplots {display:block}
-}
-@media (max-width:500px){
-  #sideplots {display:none}  
-}
 
 body {padding:0px;margin:0px; margin-bottom:50px}
 
@@ -25,7 +18,13 @@ a, a:link, a:active, a:visited
 .footer a:hover,
 a:hover {color:#FF8800}
 
-.content {max-width:740px;margin:auto;padding:10px;background-color:rgba(255,255,255,0.9)}
+@media (min-width:900px){
+  .content {width:740px}
+}
+@media (max-width:900px){
+  .content {width:95%}
+}
+.content {background-color:rgba(255,255,255,0.9);margin:auto;padding:10px}
 
 .title {text-align:center;font-size:35px}
 .tagline {text-align:center;font-size:25px;color:#4A98DD}
