@@ -1,5 +1,3 @@
-# Hello there!
-
 [Talk timetable](/talks)
 
 The FEniCS 2021 conference is an opportunity for all those interested in the FEniCS Project and related projects to exchange ideas, communicate their results and network with the automated scientific computing community.
@@ -13,3 +11,13 @@ The FEniCS 2021 conference will emphasise an open and inclusive atmosphere, cont
 The FEniCS 2021 conference is sponsored by:
 
 <center>[<img src='/img/rafinex.png' style='height:100px'>](https://www.rafinex.com/)</center>
+
+## Registration
+{{if before 2021, 3, 21, 0, 0}}
+You can register to attend this conference using [this form on the University of Cambridge online store](https://onlinesales.admin.cam.ac.uk/conferences-and-events/earth-sciences/fenics/fenics-2021).
+There is a registration fee of £10.
+The deadline for registering for the conference is <strong>20 March 2021</strong>.
+{{fi}}
+{{if after 2021, 3, 21, 0, 0}}
+Registration for this conference is now closed.
+{{fi}}

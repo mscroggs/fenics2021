@@ -8,6 +8,21 @@ page_references = []
 
 def markup(content):
     global page_references
+    while "{{if " in content:
+        pre, rest = content.split("{{if ", 1)
+        condition, rest = rest.split("}}", 1)
+        optional, post = rest.split("{{fi}}", 1)
+        condition, options = condition.split(" ", 1)
+        content = pre
+        if condition in ["before", "after"]:
+            options = [int(i) for i in options.split(",")]
+            if condition == "before" and datetime.now() < datetime(*options):
+                content += optional
+            if condition == "after" and datetime.now() > datetime(*options):
+                content += optional
+        else:
+            raise ValueError(f"Unknown condition: {condition}")
+        content += post
     out = ""
     popen = False
     code = False
