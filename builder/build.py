@@ -37,17 +37,15 @@ def markup_author(authorinfo, bold=False):
     info += authorinfo["name"]
     if bold:
         info += "</b>"
-    icons = []
     if "website" in authorinfo:
-        icons.append(f"<a href='{authorinfo['website']}'>"
-                     "<i class='fab fa-internet-explorer'></i></a>")
+        info += (f" <a href='{authorinfo['website']}' class='falink'>"
+                 "<i class='fab fa-internet-explorer'></i></a>")
     if "github" in authorinfo:
-        icons.append(f"<a href='https://github.com/{authorinfo['github']}'>"
-                     "<i class='fab fa-github'></i></a>")
+        info += (f" <a href='https://github.com/{authorinfo['github']}' class='falink'>"
+                 "<i class='fab fa-github'></i></a>")
     if "twitter" in authorinfo:
-        icons.append(f"<a href='https://twitter.com/{authorinfo['twitter']}'>"
-                     "<i class='fab fa-twitter'></i></a>")
-        info += " " + "&nbsp;".join(icons)
+        info += (f" <a href='https://twitter.com/{authorinfo['twitter']}' class='falink'>"
+                 "<i class='fab fa-twitter'></i></a>")
 
     if "affiliation" in authorinfo:
         info += f" ({authorinfo['affiliation']})"

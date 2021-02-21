@@ -18,10 +18,10 @@ a, a:link, a:active, a:visited
 .footer a:hover,
 a:hover {color:#FF8800}
 
-@media (min-width:900px){
+@media (min-width:1000px){
   .content {width:740px}
 }
-@media (max-width:900px){
+@media (max-width:1000px){
   .content {width:95%}
 }
 .content {background-color:rgba(255,255,255,0.9);margin:auto;padding:10px}
@@ -74,3 +74,7 @@ a.gridcell, a.gridcell:link, a.gridcell:active, a.gridcell:visited,
 a.gridcell:hover
   {color:black;text-decoration:none;}
 a.gridcell:hover {background-color:#FFBC6F}
+
+a.falink, a.falink:link, a.falink:active, a.falink:visited,
+a.falink:hover
+  {text-decoration:none;}
