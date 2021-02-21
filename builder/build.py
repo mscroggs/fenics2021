@@ -166,7 +166,7 @@ for i, day in enumerate(daylist):
             if f"session {s}" in timetable[day] and len(timetable[day][f"session {s}"]) > talk_n:
                 talk_id = timetable[day][f"session {s}"][talk_n]
                 content += (f"<a class='gridcell timetabletalk' href='/talks/{talk_id}.html' "
-                            "style='{talkpos}'>")
+                            f"style='{talkpos}'>")
                 title, speaker = get_title_and_speaker(talk_id)
                 content += f"<div class='timetabletalktitle'>{title}</div>"
                 content += f"<div class='timetabletalkspeaker'>{speaker}</div>"
