@@ -48,11 +48,6 @@ td.rotated {vertical-align: middle; text-align: center; width:20px}
 td.rotated span {-ms-writing-mode: tb-rl; -webkit-writing-mode: vertical-rl; writing-mode: vertical-rl; transform: rotate(180deg); white-space: nowrap;}
 td.heading {font-weight:bold;font-size:80%}
 
-table.timetable {border-collapse:collapse}
-table.timetable td {border:1px solid #AAAAAA;padding:8px;text-align:center}
-table.timetable thead {font-weight:bold;font-size:80%}
-table.timetable td.heading {border:none;padding:3px}
-
 .talktitle, .timetabletalktitle {font-family: Lato, sans-serif;font-weight:bold}
 .timetabletalkspeaker {font-size:80%;margin-top:5px}
 
@@ -78,3 +73,4 @@ a.gridcell:hover {background-color:#FFBC6F}
 a.falink, a.falink:link, a.falink:active, a.falink:visited,
 a.falink:hover
   {text-decoration:none;}
+a.timetabletalk:hover {border:1px solid #FF8800}
