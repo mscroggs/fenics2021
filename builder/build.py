@@ -49,8 +49,9 @@ for i in [1, 2, 3]:
     else:
         talk_starts[i] = break_positions[i-1] + 1
     break_positions[i] = talk_starts[i] + ntalks[i]
-
 talk_starts["evening"] = break_positions[3] + 1
+
+empty_talks = {"Tuesday": {2: list(range(5))}, "Friday": {1: [5], 3: [3, 4]}}
 
 
 def markup_author(authorinfo, bold=False):
@@ -158,6 +159,18 @@ content += f"style='grid-column: 3 / span 1; grid-row: {talk_starts[2]} / span {
 content += "<div class='timetabletalktitle'>"
 content += "Q&A with the FEniCS steering council</div></div>"
 
+content += "<div class='gridcell timetabletalk' "
+content += f"style='grid-column: 2 / span 1; grid-row: 2 / span 1;'>"
+content += "<div class='timetabletalktitle'>Welcome & Introduction</div>"
+content += "<div class='timetabletalkspeaker'>Put name here</div>"
+content += "</div>"
+
+content += "<div class='gridcell timetabletalk' "
+content += f"style='grid-column: 6 / span 1; grid-row: 18 / span 2;'>"
+content += "<div class='timetabletalktitle'>Prizes & Conclusion</div>"
+content += "<div class='timetabletalkspeaker'>Put name here</div>"
+content += "</div>"
+
 for i, day in enumerate(daylist):
     content += f"<div class='gridcell timetableheading' style='grid-column: {i + 2} / span 1; "
     content += f"grid-row: 1 / span 1;'>{day}</div>"
@@ -170,10 +183,14 @@ for i, day in enumerate(daylist):
     content += "</div>"
 
     for s in [1, 2, 3]:
-        if s == 2 and day == "Tuesday":
-            continue
-        for talk_n in range(ntalks[s]):
-            talkpos = f"grid-column: {i + 2} / span 1; grid-row: {talk_starts[s] + talk_n} / span 1"
+        add = 0
+        if day == "Monday" and s == 1:
+            add = 1
+        for talk_n in range(ntalks[s] - add):
+            if day in empty_talks and s in empty_talks[day] and talk_n in empty_talks[day][s]:
+                continue
+            talkpos = f"grid-column: {i + 2} / span 1; "
+            talkpos += f"grid-row: {talk_starts[s] + add + talk_n} / span 1"
             if f"session {s}" in timetable[day] and len(timetable[day][f"session {s}"]) > talk_n:
                 talk_id = timetable[day][f"session {s}"][talk_n]
                 content += (f"<a class='gridcell timetabletalk' href='/talks/{talk_id}.html' "
@@ -200,10 +217,8 @@ for day in daylist:
                 content += "<div class='timetablelisttalk'>"
                 content += make_talk_page(t, day, s)
                 content += "</div>"
-    content += f"<h3>Evening session ({times['evening']})</h3>"
-    content += "<div class='timetablelisttalk'>"
-    content += f"<div class='talktitle'>{evenings[day]}</div>"
-    content += "</div>"
+    content += f"<h3>Evening session: {evenings[day][0]} ({times['evening']})</h3>"
+    content += f"<div class='timetablelisttalk'>{evenings[day][1]}</div>"
     daytalks[day] = content
 
 
