@@ -32,14 +32,25 @@ with open(os.path.join(html_path, "CNAME"), "w") as f:
 with open(os.path.join(talks_path, "timetable.yml")) as f:
     timetable = yaml.load(f, Loader=yaml.FullLoader)
 
-times = {1: "13:00-14:30", 2: "15:00-16:30", 3: "17:00-18:30", "evening": "19:30-21:00"}
+times = {1: "13:00-14:40", 2: "15:00-16:30", 3: "17:00-18:30", "evening": "19:30-21:00"}
 daylist = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+evenings = {"Monday": ("Drinks reception", "Lorem ipsum"),
+            "Tuesday": ("Discussion tables", ""),
+            "Wednesday": ("FEniCS quiz night", ""),
+            "Thursday": ("Conference dinner", ""),
+            "Friday": ("Hang out and goodbyes", "")}
 
-evenings = {"Monday": "Drinks reception",
-            "Tuesday": "Discussion tables",
-            "Wednesday": "FEniCS quiz nights",
-            "Thursday": "Conference dinner",
-            "Friday": "Hang out and goodbyes"}
+ntalks = {1: 6, 2: 5, 3: 5}
+talk_starts = {}
+break_positions = {}
+for i in [1, 2, 3]:
+    if i == 1:
+        talk_starts[i] = 2
+    else:
+        talk_starts[i] = break_positions[i-1] + 1
+    break_positions[i] = talk_starts[i] + ntalks[i]
+
+talk_starts["evening"] = break_positions[3] + 1
 
 
 def markup_author(authorinfo, bold=False):
@@ -130,19 +141,20 @@ content += "<div class='timetablegrid'>\n"
 
 for s in [1, 2, 3]:
     content += f"<div class='gridcell timetableheading rotated' style='grid-column: 1 / span 1; "
-    content += f"grid-row: {5 * s - 3} / span 4;'>Session {s} ({times[s]})</div>"
+    content += f"grid-row: {talk_starts[s]} / span {ntalks[s]};'>Session {s} ({times[s]})</div>"
 
-content += f"<div class='gridcell timetableheading rotated' style='grid-column: 1 / span 1; "
-content += f"grid-row: 17 / span 1;'>Evening session ({times['evening']})</div>"
-
-for row in [6, 11, 16]:
     content += f"<div class='gridcell timetableheading' style='grid-column: 2 / span 5; "
-    content += f"grid-row: {row} / span 1;padding:10px'>"
+    content += f"grid-row: {break_positions[s]} / span 1;padding:10px'>"
     content += " &nbsp; &nbsp; &nbsp; ".join([i for i in "BREAK"])
     content += "</div>"
 
+content += f"<div class='gridcell timetableheading rotated' style='grid-column: 1 / span 1; "
+content += f"grid-row: {talk_starts['evening']} / span 1;'>"
+content += f"Evening session ({times['evening']})</div>"
+
+
 content += "<div class='gridcell timetabletalk' "
-content += "style='grid-column: 3 / span 1; grid-row: 7 / span 4;'>"
+content += f"style='grid-column: 3 / span 1; grid-row: {talk_starts[2]} / span {ntalks[2]};'>"
 content += "<div class='timetabletalktitle'>"
 content += "Q&A with the FEniCS steering council</div></div>"
 
@@ -151,14 +163,17 @@ for i, day in enumerate(daylist):
     content += f"grid-row: 1 / span 1;'>{day}</div>"
 
     content += "<div class='gridcell timetabletalk' "
-    content += f"style='grid-column: {i + 2} / span 1; grid-row: 17 / span 1;'>"
-    content += f"<div class='timetabletalktitle'>{evenings[day]}</div></div>"
+    content += f"style='grid-column: {i + 2} / span 1; "
+    content += f"grid-row: {talk_starts['evening']} / span 1;'>"
+    content += f"<div class='timetabletalktitle'>{evenings[day][0]}</div>"
+    content += f"<div class='timetabletalkspeaker'>{evenings[day][1]}</div>"
+    content += "</div>"
 
     for s in [1, 2, 3]:
         if s == 2 and day == "Tuesday":
             continue
-        for talk_n in range(4):
-            talkpos = f"grid-column: {i + 2} / span 1; grid-row: {5 * s - 3 + talk_n} / span 1"
+        for talk_n in range(ntalks[s]):
+            talkpos = f"grid-column: {i + 2} / span 1; grid-row: {talk_starts[s] + talk_n} / span 1"
             if f"session {s}" in timetable[day] and len(timetable[day][f"session {s}"]) > talk_n:
                 talk_id = timetable[day][f"session {s}"][talk_n]
                 content += (f"<a class='gridcell timetabletalk' href='/talks/{talk_id}.html' "

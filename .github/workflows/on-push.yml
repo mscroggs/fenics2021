@@ -14,6 +14,17 @@ jobs:
       - run: python3 -m flake8 .
         name: Run flake8
 
+  run-tests:
+    name: Run tests
+    runs-on: ubuntu-latest
+    steps:
+      - run: sudo apt-get install -y python3-setuptools python3-pip python3-pytest
+        name: Install pip
+      - uses: actions/checkout@v2
+      - run: sudo pip3 install -r requirements.txt
+      - run: python3 -m pytest test/
+        name: Run tests
+
   build-website:
     name: Build fenics2021.com
     runs-on: ubuntu-latest
