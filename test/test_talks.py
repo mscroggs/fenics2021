@@ -21,4 +21,3 @@ def test_all_included():
             ids2.add(file[:-4])
 
     assert ids1 == ids2
-

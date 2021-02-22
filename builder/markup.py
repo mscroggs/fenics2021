@@ -23,6 +23,12 @@ def markup(content):
         else:
             raise ValueError(f"Unknown condition: {condition}")
         content += post
+
+    while "<person>" in content:
+        a, b = content.split("<person>", 1)
+        b, c = b.split("</person>", 1)
+        content = a + markup_person(b) + c
+
     out = ""
     popen = False
     code = False
@@ -125,3 +131,39 @@ def python_highlight(txt):
 
         out.append(line + comment)
     return "<br />".join(out)
+
+
+def markup_person(details):
+    out = "<div class='person'>"
+    info = {}
+    for line in details.strip().split("\n"):
+        if ":" in line:
+            key, value = line.split(":", 1)
+            info[key.strip()] = value.strip()
+
+    if "img" in info:
+        out += f"<div class='imgwrap'><img src='{info['img']}'></div>\n"
+    out += "<div class='innertext'>\n"
+    out += f"<h3>{info['name']}</h3>\n{info['about']}"
+    out += "<ul class='sociallist'>"
+    if "email" in info:
+        out += f"<li><a href='mailto:{info['email']}'><i class='far fa-envelope'></i>&nbsp;"
+        out += info["email"]
+        out += "</a></li>"
+    if "website" in info:
+        out += f"<li><a href='{info['website']}'><i class='fab fa-internet-explorer'></i>&nbsp;"
+        out += info["website"].split("://")[1]
+        out += "</a></li>"
+    if "github" in info:
+        out += f"<li><a href='https://github.com/{info['github']}'>"
+        out += "<i class='fab fa-github'></i>&nbsp;"
+        out += info["github"]
+        out += "</a></li>"
+    if "twitter" in info:
+        out += f"<li><a href='https://twitter.com/{info['twitter']}'>"
+        out += "<i class='fab fa-twitter'></i>&nbsp;"
+        out += "@" + info["twitter"]
+        out += "</a></li>"
+
+    out += "</ul></div></div>"
+    return out
