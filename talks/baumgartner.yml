@@ -1,29 +1,24 @@
-Title:	Total Generalized Variation for Piecewise Constant Functions
-Author keywords:	
-Total Generalized Variation
-Regularization
-Imaging
-non-smooth
-Abstract:	The total generalized variation (TGV) was introduced as a generalization to the total variation regularizer to avoid the staircasing effect. In particular, the kernel of second-order TGV consists of linear polynomials.
-Strictly speaking, the functional measures TV on piecewise constant data, however, the concept has become state of the art for recontruction of pixel images using an appropriate discretization.
-
-A discrete version of second-order TGV for piecewise constant functions on triangulated meshes is presented in the FEniCS framework. The non-smooth regularizer prefers equally distributed jumps over larger constant areas and thus prevents the visible staircasing effect compared to TV.
-This is demonstrated for image denoising problems on structured as well as unstructured planar meshes using an implementation of the split Bregman method in FEniCS.
-
-The functional is suitable for data on surfaces and can be extended to manifold valued data to measure the total generalized variation of the normal vector.
-Submitted:	Feb 20, 15:33 GMT
-Last update:	Feb 20, 15:33 GMT
-Decision:	 
-Bidding and assignment information
-Assigned to:	nobody
-Conflict of interest:	nobody
-Bid:	
-yes:	none
-maybe:	none
-Authors
-first name	last name	email	country	affiliation	Web page	corresponding?
-Lukas	Baumgärnter	Germany	Humboldt-Universität zu Berlin		✔
-Stephan	Schmidt	Germany	Humboldt-Universität zu Berlin		✔
-Roland	Herzog	Germany	Technische Universität Chemnitz		✔
-Ronny	Bergmann	Germany	Technische Universität Chemnitz		✔
-José	Vidal-Núñez	Spain	University of Alcalá		✔
+title: Total generalized variation for piecewise constant functions
+abstract:
+  - The total generalized variation (TGV) was introduced as a generalization to the total variation regularizer to avoid the staircasing effect. In particular, the kernel of second-order TGV consists of linear polynomials.
+  - Strictly speaking, the functional measures TV on piecewise constant data, however, the concept has become state of the art for recontruction of pixel images using an appropriate discretization.
+  - A discrete version of second-order TGV for piecewise constant functions on triangulated meshes is presented in the FEniCS framework. The non-smooth regularizer prefers equally distributed jumps over larger constant areas and thus prevents the visible staircasing effect compared to TV.
+  - This is demonstrated for image denoising problems on structured as well as unstructured planar meshes using an implementation of the split Bregman method in FEniCS.
+  - The functional is suitable for data on surfaces and can be extended to manifold valued data to measure the total generalized variation of the normal vector.
+speaker: 
+  name: Lukas Baumg&auml;rnter
+  country: Germany
+  affiliation: Humboldt-Universit&auml;t zu Berlin
+coauthor:
+  - name: Stephan Schmidt
+    country: Germany
+    affiliation: Humboldt-Universität zu Berlin
+  - name: Roland Herzog
+    country: Germany
+    affiliation: Technische Universität Chemnitz
+  - name: Ronny	Bergmann
+    country: Germany
+    affiliation: Technische Universität Chemnitz
+  - name: Jos&eacute; Vidal-N&uacute;&ntilde;ez
+    country: Spain
+    affiliation: University of Alcal&aacute;

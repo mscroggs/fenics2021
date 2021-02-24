@@ -1,20 +1,7 @@
-Title:	Automating the formulation and resolution of convex variational problems with the fenics_optim package
-Author keywords:	
-variational methods
-convex optimization
-conic programming
-non-smooth mechanics
-image processing
-Abstract:	In this work, we present a Python package called fenics_optim which enables to easily formulate convex variational problems as conic optimization problems within FEniCS. It relies on the conic optimization solver Mosek which uses sate-of-the-art interior-point methods for solving large-scale linear, second-order cone and semi-definite programming problems. These are particularly suited for solving non-smooth optimization problems which arise in contact or elasto-plasticity problems for instance but also in the image processing community. In particular, we will present an application to solving limit analysis problems, i.e. computing directly the limit load of a perfectly plastic structure as a convex optimization problem and without relying on an incremental elasto-plastic procedure until final collapse. I will finish by a recent extension towards limit-analysis based topology optimization.
-Submitted:	Feb 10, 09:48 GMT
-Last update:	Feb 10, 09:48 GMT
-Decision:	 
-Bidding and assignment information
-Assigned to:	nobody
-Conflict of interest:	nobody
-Bid:	
-yes:	none
-maybe:	none
-Authors
-first name	last name	email	country	affiliation	Web page	corresponding?
-Jeremy	Bleyer	France	Laboratoire Navier, Ecole des Ponts ParisTech, Université Gustave Eiffel, CNRS, UMR 8205	https://sites.google.com/site/bleyerjeremy/
+title: Automating the formulation and resolution of convex variational problems with the fenics_optim package
+abstract: In this work, we present a Python package called fenics_optim which enables to easily formulate convex variational problems as conic optimization problems within FEniCS. It relies on the conic optimization solver Mosek which uses sate-of-the-art interior-point methods for solving large-scale linear, second-order cone and semi-definite programming problems. These are particularly suited for solving non-smooth optimization problems which arise in contact or elasto-plasticity problems for instance but also in the image processing community. In particular, we will present an application to solving limit analysis problems, i.e. computing directly the limit load of a perfectly plastic structure as a convex optimization problem and without relying on an incremental elasto-plastic procedure until final collapse. I will finish by a recent extension towards limit-analysis based topology optimization.
+speaker:
+  name: Jeremy Bleyer
+  country: France
+  affiliations: Laboratoire Navier, Ecole des Ponts ParisTech, Université Gustave Eiffel, CNRS, UMR 8205
+  website: https://sites.google.com/site/bleyerjeremy/
