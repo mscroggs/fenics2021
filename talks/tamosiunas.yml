@@ -1,19 +1,6 @@
-Title:	Astrophysical Tests of Gravity using FEniCS
-Author keywords:	
-cosmology
-astrophysics
-physics
-non-linear differential equations
-Abstract:	Various theories of gravity are described by non-linear differential equations, which are difficult to solve analytically in all but a few simple cases. In this talk I will present the work done by myself and my colleagues at the University of Nottingham towards developing a FEniCS code for solving differential equations describing theories of gravity in laboratory and astrophysical environments.
-Submitted:	Feb 19, 15:27 GMT
-Last update:	Feb 19, 15:27 GMT
-Decision:	 
-Bidding and assignment information
-Assigned to:	nobody
-Conflict of interest:	nobody
-Bid:	
-yes:	none
-maybe:	none
-Authors
-first name	last name	email	country	affiliation	Web page	corresponding?
-Andrius	Tamosiunas	United Kingdom	University of Nottingham		✔
+title: Astrophysical Tests of Gravity using FEniCS
+abstract: Various theories of gravity are described by non-linear differential equations, which are difficult to solve analytically in all but a few simple cases. In this talk I will present the work done by myself and my colleagues at the University of Nottingham towards developing a FEniCS code for solving differential equations describing theories of gravity in laboratory and astrophysical environments.
+speaker:
+  name: Andrius	Tamosiunas
+  country: United Kingdom
+  affiliation: University of Nottingham

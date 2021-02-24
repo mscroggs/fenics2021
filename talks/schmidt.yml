@@ -1,27 +1,16 @@
-Title:	A Second Order Scheme to Compute Geometric Interfaces With Applications in Microfluids
-Author keywords:	
-Shape Optimization
-Finite Elements on Surfaces
-Shells
-Level Sets
-Multimesh
-Curvature Free
-Abstract:	Second order shape calculus is used to solve the Young-Laplace problem, which determines the shape of energy minimal interfaces such as droplets and capillary bridges. Knowledge of the shape and resulting capillary force of droplets in micro fluids has multiple application in granulate flows and lubrication.
-
-To this end, 2nd order shape calculus is combined with a variety of contact and subset constraints to make the problem tractable with FEniCS. In particular, a level-set formulation to described the external geometry is coupled with a curvature-free variational formulation of the shape Hessian on shells, combining the multi and inter mesh capabilities of FEniCS with finite elements on shells.
-
-Alternative, non-smooth interface energies and the resulting geometric flows will also be discussed.
-Submitted:	Feb 20, 14:03 GMT
-Last update:	Feb 20, 14:03 GMT
-Decision:	 
-Bidding and assignment information
-Assigned to:	nobody
-Conflict of interest:	nobody
-Bid:	
-yes:	none
-maybe:	none
-Authors
-first name	last name	email	country	affiliation	Web page	corresponding?
-Stephan	Schmidt	Germany	Humboldt University Berlin		✔
-Melanie	Gräßer	Germany	Paderborn University		
-Hans-Joachim	Schmid	Germany	Paderborn University		
+title: A Second Order Scheme to Compute Geometric Interfaces With Applications in Microfluids
+abstract:
+- Second order shape calculus is used to solve the Young-Laplace problem, which determines the shape of energy minimal interfaces such as droplets and capillary bridges. Knowledge of the shape and resulting capillary force of droplets in micro fluids has multiple application in granulate flows and lubrication.
+- To this end, 2nd order shape calculus is combined with a variety of contact and subset constraints to make the problem tractable with FEniCS. In particular, a level-set formulation to described the external geometry is coupled with a curvature-free variational formulation of the shape Hessian on shells, combining the multi and inter mesh capabilities of FEniCS with finite elements on shells.
+- Alternative, non-smooth interface energies and the resulting geometric flows will also be discussed.
+speaker: 
+  name: Stephan Schmidt
+  country: Germany
+  affiliation: Humboldt University Berlin
+coauthor:
+- name: Melanie	Gr&auml;&szlig;er
+  country: Germany
+  affiliation: Paderborn University
+- name: Hans-Joachim Schmid
+  country: Germany
+  affiliation: Paderborn University
