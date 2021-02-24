@@ -1,4 +1,4 @@
-title: Simple and sharp: Error estimates of Bank&ndash;Weiser type in the FEniCS Project
+title: "Simple and sharp: Error estimates of Bank&ndash;Weiser type in the FEniCS Project"
 abstract:
   - We propose a simple, cheap and parallelisable implementation [Bulle et al., submitted] in DOLFIN and DOLFINx of an implicit a posteriori error estimator introduced in [Bank and Weiser, 1985].
   - The computation of the implicit estimator requires the solution of local Neumann problems in non-standard finite element spaces on each cell of the mesh. These special spaces are usually not available in modern automated finite element software, including the FEniCS Project.

@@ -1,17 +1,17 @@
-title:	Generating high-order time stepping methods
-abstract:	
+title: Generating high-order time stepping methods
+abstract:
 - Code generation systems greatly simplify the formulation of physical problems, allowing efficient and accurate discretizations to be rapidly deployed for challenging problems. However, domain-specific languages like UFL currently lack abstractions to describe time-dependence, leaving users to hand-code multistep or Runge-Kutta methods if they wish to obtain high temporal accuracy or utilize special time-stepping strategies.
 - In this talk, we describe IRKsome, a simple package that, given a UFL description of a semidiscrete problem and a Butcher tableau, produces UFL for the associated Runge-Kutta method. In this way, we can obtain high-order time-stepping methods with appropriate stability and/or symplecticity properties. On the down side, implicit Runge-Kutta methods lead to algebraic systems coupling together the several stages, which presents greater challenges to the linear solvers. We also present preliminary results on preconditioners.
 - Although Irksome currently sits on top of Firedrake, the critical aspects of UFL manipulation (the hard part) should work well with FEniCS or other UFL-based codes.
 speaker:
-  name: Robert	Kirby
+  name: Robert Kirby
   country: United States
   affiliation: Baylor University
 coauthor:
-  - name: Jorge	Marchena-Menendez
+  - name: Jorge Marchena-Menendez
     country: United States
-    affiliation: Baylor University		
-  - name: Patrick	Farrell
+    affiliation: Baylor University
+  - name: Patrick Farrell
     country: United States
     affiliation: University of Oxford
 

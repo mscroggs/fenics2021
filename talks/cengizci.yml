@@ -6,11 +6,11 @@ speaker:
   affiliation: Middle East Technical University
   website: https://antalya.edu.tr/en/academic-staff/college-of-business/suleyman-cengizci
 coauthor:
-  - name: &Ouml;m&uuml;r U&gbreve;ur
+  - name: "&Ouml;m&uuml;r U&gbreve;ur"
     country: Turkey
     affiliation: Middle East Technical University
-    website: https://ougur.iam.metu.edu.tr/	
+    website: https://ougur.iam.metu.edu.tr
   - name: Tayfun E. Tezduyar
     country: United States
     affiliation: Rice University
-    website: https://www.tafsm.org/~tezduyar/
+    website: https://www.tafsm.org/~tezduyar

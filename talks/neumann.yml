@@ -1,5 +1,5 @@
 title: Stochastic topology optimisation for robust and manufacturable designs
-Abstract:
+abstract:
   - Modern production methods, such as 3D printing, can manufacture almost constraint free form variations. Topology optimization enables engineers to explore the vastly increased design possibilities. Given the performance requirements, a part is optimized to be as cheap or lightweight as possible. Provided with the greatest allowed extent of the part, the algorithm fully controls the shape and placement of material and the incorporation of holes.
   - Care needs to be taken as there is a high risk of over-optimization towards the provided load cases. As a result the part might perform well in the simulated environment but fail in the actual application as unforeseen load conditions might occur or load cases might deviate due to some margin of error in manufacturing and application.
   - Stochastic topology optimization yields reliable optimal forms by extending physics models with risk assessment approaches from financial mathematics using formal uncertainty quantification methods. Loads are allowed to have an error in direction or magnitude, materials might have production faults. Incorporating these defects in the optimization yields unique designs that are not achievable by conventional topology optimization.

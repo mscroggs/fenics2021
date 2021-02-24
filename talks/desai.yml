@@ -1,4 +1,4 @@
-title: FEniCS-preCICE: Coupling FEniCS to other simulation software
+title: "FEniCS-preCICE: Coupling FEniCS to other simulation software"
 abstract:
   - FEniCS-preCICE facilitates coupling of FEniCS with other software codes using the coupling library preCICE. preCICE enables users to couple different solvers in a partitioned black-box fashion. This talk explains various features of preCICE and its usage. Only a few additional lines of code are necessary to prepare a FEniCS program script for coupling.
   - FEniCS-preCICE acts as a middle software layer which helps to connect a high-level FEniCS program to the low-level API of preCICE. The package converts between FEniCS and preCICE data structures, provides easy-to-use coupling conditions, and manages checkpointing for implicit coupling. FEniCS-preCICE is able to handle distributed memory parallelization of FEniCS internally. This package is a library itself and follows a FEniCS-native style.

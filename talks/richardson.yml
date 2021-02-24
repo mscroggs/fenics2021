@@ -4,6 +4,6 @@ abstract:
 - This can be viewed as "turning FEniCS inside-out" as the previous internal workings have become public interfaces, and FEniCS itself is simplified and reduced.
 - I will show some examples using the Trilinos solvers, custom mesh partitioning and how to access data directly for I/O and visualisation.
 speaker:
-  name: Chris	Richardson
+  name: Chris Richardson
   country: United Kingdom
   affiliation: BP Institute, University of Cambridge

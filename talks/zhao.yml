@@ -1,18 +1,18 @@
 title: Coupling of non-matching isogeometric shells, with applications in aerospace structures
 abstract: This talk presents a framework for penalty coupling of non-matching Kirchhoff--Love shells using a FEniCS-based implementation of isogeometric analysis (IGA) called tIGAr. Topologically-1D, geometrically-3D mortar meshes are generated to integrate penalty terms in the variational problem, which penalize deviations from displacement and rotational continuity at the geometric intersections between separately-parameterized spline surfaces modeling different structural components. The framework allows one to directly perform shell structure analysis on computer-aided design (CAD) models consisting of multiple surface patches with non-matching parameterizations at their intersections. We verify the method and implementation using benchmark examples like the Scordelis--Lo roof problem with multiple NURBS patches and a T-beam subjected to a point load at one corner. Quantities of interest are computed accurately over a wide range of values of a dimensionless, problem-independent penalty coefficient. Coupling of non-matching shell structures with IGA is attractive for the design and analysis of aircraft, which are usually modeled geometrically by many intersecting parametric surfaces. We use the new framework to perform structural analysis of an aircraft model given in STEP format, which includes 42 B-spline surfaces and 84 non-matching intersections.
 speaker: 
-  name: Han	Zhao
+  name: Han Zhao
   country: United States
   affiliation: University of California San Diego
 coauthor: 
 - name: Xiangbei Liu
   country: United States
   affiliation: University of California San Diego
-- name: John T.	Hwang
+- name: John T. Hwang
   country: United States
   affiliaton: University of California San Diego
   website: https://lsdo.eng.ucsd.edu/
-- name: David	Kamensky
+- name: David Kamensky
   country: United States
   affiliation: University of California San Diego
-  website:	https://david-kamensky.eng.ucsd.edu/
+  website: https://david-kamensky.eng.ucsd.edu/

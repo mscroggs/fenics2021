@@ -217,6 +217,7 @@ for day in daylist:
         if f"session {s}" in timetable[day]:
             talks = timetable[day][f"session {s}"]
             for t in talks:
+                print(t)
                 content += "<div class='timetablelisttalk'>"
                 content += make_talk_page(t, day, s)
                 content += "</div>"

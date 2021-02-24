@@ -1,12 +1,12 @@
 title: Computing multiple solutions of topology optimisation problems with FEniCS
 abstract: Topology optimisation finds the optimal material distribution of a fluid or solid in a domain, subject to PDE and volume constraints. The models often result in a PDE, volume and inequality constrained, nonconvex, infinite-dimensional optimisation problem. These problems can exhibit many local minima. In practice, heuristics are used to obtain the global minimum, but these can fail even in the simplest of cases. In this talk, we will introduce the deflated barrier method, an algorithm, implemented in both FEniCS and Firedrake, that solves such problems and can systematically discover many of these local minima. We will present examples which include finding 42 solutions of the topology optimisation of a fluid satisfying the Navier-Stokes equations and more recent work involving the three-dimensional topology optimisation of a fluid in Stokes flow. We also discuss block preconditioners for solving the linear systems arising in three-dimensional problems.
 speaker:
-  name: Ioannis	Papadopoulos
+  name: Ioannis Papadopoulos
   country: United Kingdom
   affiliation: University of Oxford
   website: http://www.maths.ox.ac.uk/people/ioannis.papadopoulos
 coauthor: 
-- name: Patrick	Farrell
+- name: Patrick Farrell
   country: United Kingdom
   affiliation: University of Oxford
 - name: Thomas Surowiec
