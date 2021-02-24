@@ -1,39 +1,14 @@
-Title:	UFL to GPU: Generating Near Roofline Actions Kernels
-Author keywords:	
-GPU
-Roofline performance model
-Auto-tuning
-Program Transformation
-Abstract:	Recent GPUs are capable of providing peak performance up to 6 TFlOps/s (DP),
-making them an attractive computational target for Finite Element Methods.
-However, effectively mapping an FEM solver to a GPU remains challenging due to
-the scattered memory access, large amounts of on-chip state space (e.g.
-registers) required for efficient execution, and the inherently large
-algorithmic variety encountered in local assembly kernels for variational
-forms.
-
-In this talk, we focus on accelerating FEM action kernels for
-matrix-free operators on simplices. We describe a parametrized family of
-transformation strategies targeting these kernels, a heuristic cost model, and
-an auto-tuning strategy that enables us to achieve near-roofline performance
-for a wide variety of variational forms across domains such as fluid dynamics,
-solid mechanics, and wave motion. We propose a new computational offloading
-interface for Firedrake, and we have realized our UFL-to-GPU compilation
-pipeline within this interface. The pipeline can process general UFL with
-very few limitations and reliably produce routines for high-performance
-matrix-free 1-form assembly.
-
-We close with remarks on further potential performance improvement opportunities.
-Submitted:	Feb 20, 20:33 GMT
-Last update:	Feb 20, 20:33 GMT
-Decision:	 
-Bidding and assignment information
-Assigned to:	nobody
-Conflict of interest:	nobody
-Bid:	
-yes:	none
-maybe:	none
-Authors
-first name	last name	email	country	affiliation	Web page	corresponding?
-Kaushik	Kulkarni	United States	University of Illinois at Urbana-Champaign	https://kaushikcfd.github.io	✔
-Andreas	Kloeckner	United States	University of Illinois at Urbana-Champaign	http://www.cs.illinois.edu/~andreask	✔
+title:	"UFL to GPU: Generating Near Roofline Actions Kernels"
+abstract:	
+- Recent GPUs are capable of providing peak performance up to 6 TFlOps/s (DP), making them an attractive computational target for Finite Element Methods. However, effectively mapping an FEM solver to a GPU remains challenging due to the scattered memory access, large amounts of on-chip state space (e.g. registers) required for efficient execution, and the inherently large algorithmic variety encountered in local assembly kernels for variational forms.
+- In this talk, we focus on accelerating FEM action kernels for matrix-free operators on simplices. We describe a parametrized family of transformation strategies targeting these kernels, a heuristic cost model, and an auto-tuning strategy that enables us to achieve near-roofline performance for a wide variety of variational forms across domains such as fluid dynamics, solid mechanics, and wave motion. We propose a new computational offloading interface for Firedrake, and we have realized our UFL-to-GPU compilation pipeline within this interface. The pipeline can process general UFL with very few limitations and reliably produce routines for high-performance matrix-free 1-form assembly.
+- We close with remarks on further potential performance improvement opportunities.
+speaker:
+  name: Kaushik	Kulkarni
+  country: India
+  affiliation: United States
+coauthor:
+  - name: Andreas	Kloeckner
+    country: United States
+    affiliation: University of Illinois at Urbana-Champaign
+    website: 	http://www.cs.illinois.edu/~andreask
