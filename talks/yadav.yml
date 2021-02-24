@@ -1,4 +1,4 @@
-title: Numerical Investigation of the Interaction of Two Electrolytic Drops Under an External Electric Field
+title: Numerical investigation of the interaction of two electrolytic drops under an external electric field
 abstract: In the current work, we study the interaction of two micro droplets containing electrolytes in presence of an external electric field. For this purpose, we use the open source code 'BERNAISE' which is built on top of FEniCS and capable of simulating the electrohydrodynamics of binary electrolytes. We focus on the movement of the electrolytes in and around the thin liquid bridge which forms during the interaction of droplets and investigate their role in causing coalescence or bouncing of droplets at different strengths of externally applied electric field.
 speaker:
   name: Shyam Sunder Yadav

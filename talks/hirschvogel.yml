@@ -1,4 +1,4 @@
-title: Multiscale-in-Time modeling of myocardial growth & disease progression
+title: Multiscale-in-time modeling of myocardial growth & disease progression
 abstract:
   - A multiscale-in-time framework for simulation of maladaptive growth and remodeling (G&R) in the heart is presented. G&R is assumed to be driven by a deviation of mechanical stress or strain with respect to a homeostatic baseline state. Since ventricular loads vary on a much shorter time scale than processes of G&R occur, a staggered solution scheme discriminating between “small scale” heart beat dynamics and “large scale” G&R is chosen.
   - On the small scale, a coupled monolithic problem of 3D finite strain elasticity for the heart and 0D lumped-parameter flow is solved, using a closed-loop systemic and pulmonary circulation model to account for physiologic loading conditions on the myocardium. After computing a homeostatic reference state, the system is perturbed by introducing a cardiovascular disease (i.e. regurgitation of the mitral valve or aortic stenosis), eventually leading to a state of chronic volume or pressure overload for the ventricle.
