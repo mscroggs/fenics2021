@@ -51,7 +51,7 @@ for i in [1, 2, 3]:
     break_positions[i] = talk_starts[i] + ntalks[i]
 talk_starts["evening"] = break_positions[3] + 1
 
-empty_talks = {"Tuesday": {2: list(range(5))}, "Friday": {1: [5], 3: [3, 4]}}
+empty_talks = {"Tuesday": {2: list(range(5))}, "Friday": {3: [3, 4]}}
 
 
 def markup_author(authorinfo, bold=False):

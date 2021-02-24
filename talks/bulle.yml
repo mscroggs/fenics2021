@@ -4,7 +4,7 @@ abstract:
   - In this talk, we will show a novel a posteriori error estimation method for the spectral fractional Laplacian.
   - Our method begins with the work of [Bonito and Pasciak, 2013] where a fractional operator is represented by an integral over non-fractional (i.e. local) parametric operators. The integral and the local operators can then be discretised using a quadrature rule and a standard finite element method, respectively.
   - We show that the integral representation of [Bonito and Pasciak, 2013] can equally be applied to the construction of an error estimator. A key building block of the method is an efficient hierarchical estimator introduced in [Bank and Weiser, 1985].
-  - The estimator has numerous benefits: it is numerically sharp, it allows the measurement of the error in various norms, and it is defined for one, two and three-dimensional problems. It is also fully local and cheap to compute in parallel.
+  - "The estimator has numerous benefits: it is numerically sharp, it allows the measurement of the error in various norms, and it is defined for one, two and three-dimensional problems. It is also fully local and cheap to compute in parallel."
   - The estimator leads to optimal convergence rates when used to steer adaptive refinement algorithms.
   - The implementation is based on FEniCS Error Estimation (FEniCS-EE), a finite element error estimation package for DOLFIN and DOLFINX [Bulle et al., submitted].
   - Bank, R.E. and A. Weiser (1985), "Some a posteriori error estimators for elliptic partial differential equations", https://doi.org/10.2307/2007953.

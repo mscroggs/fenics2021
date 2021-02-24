@@ -58,7 +58,8 @@ td.rotated span {-ms-writing-mode: tb-rl; -webkit-writing-mode: vertical-rl; wri
 td.heading {font-weight:bold;font-size:80%}
 
 .talktitle, .timetabletalktitle {font-family: Lato, sans-serif;font-weight:bold}
-.timetabletalkspeaker {font-size:80%;margin-top:5px}
+.timetabletalktitle {font-size:70%}
+.timetabletalkspeaker {font-size:55%;margin-top:5px}
 
 .timetablegrid {
   display:grid;
