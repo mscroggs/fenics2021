@@ -1,36 +1,29 @@
-Title:	mgis.fenics Part II: Cosserat media in small deformation with mgis.fenics
-Paper:	FEniCS2021_paper_39.pdf(Feb 19, 18:12 GMT)
-Author keywords:	
-Cosserat media
-generalized continua
-mgis.fenics
-elastoplasticity
-small deformation
-performance
-parallel scaling
-Abstract:	When exposed to high strain rates of deformation, metal alloys with low thermal conductivity are typically liable to large quantities of plastic strain. This phenomenon of localization of high temperatures in a narrow band, known as an adiabatic shear band, occurs in many manufacturing processes such as machining or metal forming. We aim to simulate it based on the research of Forest et al. [1] and Russo et al.[2] that propose a thermodynamically consistent framework for both elastoplasticity and elastoviscoplasticity. Their approach builds upon a bulk of work stemming from that of the Cosserat brothers in 1909 [3] on generalized continua by introducing independent translational and rotational degrees of freedom.
-
-
-Our contribution is the implementation of the elastoplasticity framework using FEniCS, the MFront library [4], and the corresponding interface between them, the mgis.fenics module. These tools automate the implementation of material behaviours and allow for complex models. We present the results for the glide and bending/torsion test, and their validation against another finite element solver (Zset) and the analytical solution. Moreover, we run the performance analysis on the Atlas-EDR cluster, at the Donostia International Physics Center (DIPC). We break down the execution time, identify the most computationally intensive components, and analyze the results from the point of view of parallel scaling.
-
-[1] Samuel Forest and Rainer Sievert. Elastoviscoplastic constitutive frameworks for generalized continua. Acta Mechanica, 160(1):71–111, 2003.
-[2] Raffaele Russo, Samuel Forest, and Franck Andrés Girot Mata. Thermomechanics of cosserat medium: modeling adiabatic shear bands in metals. Continuum Mechanics and Thermodynamics, pages 1–20, 2020.
-[3] Eugene Cosserat and François Cosserat. Theorie des corps dédormables. A. Hermann et fils, 1909.
-[4] Thomas Helfer, Bruno Michel, Jean-Michel Proix, Maxime Salvo, Jérôme Sercombe, and Michel Casella. Introducing the open-source mfront code generator: Application to mechanical behaviours and material knowledge management within the pleiades fuel element modelling platform. Computers & Mathematics with Applications, 70(5):994–1023, 2015.
-Submitted:	Feb 19, 18:12 GMT
-Last update:	Feb 19, 18:12 GMT
-Decision:	 
-Bidding and assignment information
-Assigned to:	nobody
-Conflict of interest:	nobody
-Bid:	
-yes:	none
-maybe:	none
-Authors
-first name	last name	email	country	affiliation	Web page	corresponding?
-Tamara	Dancheva	Spain	BCAM - Basque Center for Applied Mathematics	http://www.bcamath.org/en/	✔
-Unai	Alonso	Spain	University of the Basque Country		✔
-Michael	Barton	Spain	BCAM - Basque Center for Applied Mathematics		✔
-Jérémy	Bleyer	France	Ecole des Ponts ParisTech		✔
-Thomas	Hefler	France	CEA (French Alternative Energies and Atomic Energy Commission)		✔
-Raffaele	Russo	Spain	University of the Basque Country		✔
+title: mgis.fenics Part II\: Cosserat media in small deformation with mgis.fenics
+abstract:
+  - When exposed to high strain rates of deformation, metal alloys with low thermal conductivity are typically liable to large quantities of plastic strain. This phenomenon of localization of high temperatures in a narrow band, known as an adiabatic shear band, occurs in many manufacturing processes such as machining or metal forming. We aim to simulate it based on the research of Forest et al. [1] and Russo et al.[2] that propose a thermodynamically consistent framework for both elastoplasticity and elastoviscoplasticity. Their approach builds upon a bulk of work stemming from that of the Cosserat brothers in 1909 [3] on generalized continua by introducing independent translational and rotational degrees of freedom.
+  - Our contribution is the implementation of the elastoplasticity framework using FEniCS, the MFront library [4], and the corresponding interface between them, the mgis.fenics module. These tools automate the implementation of material behaviours and allow for complex models. We present the results for the glide and bending/torsion test, and their validation against another finite element solver (Zset) and the analytical solution. Moreover, we run the performance analysis on the Atlas-EDR cluster, at the Donostia International Physics Center (DIPC). We break down the execution time, identify the most computationally intensive components, and analyze the results from the point of view of parallel scaling.
+  - [1] Samuel Forest and Rainer Sievert. Elastoviscoplastic constitutive frameworks for generalized continua. Acta Mechanica, 160(1):71–111, 2003.
+  - [2] Raffaele Russo, Samuel Forest, and Franck Andrés Girot Mata. Thermomechanics of cosserat medium: modeling adiabatic shear bands in metals. Continuum Mechanics and Thermodynamics, pages 1–20, 2020.
+  - [3] Eugene Cosserat and François Cosserat. Theorie des corps dédormables. A. Hermann et fils, 1909.
+  - [4] Thomas Helfer, Bruno Michel, Jean-Michel Proix, Maxime Salvo, Jérôme Sercombe, and Michel Casella. Introducing the open-source mfront code generator: Application to mechanical behaviours and material knowledge management within the pleiades fuel element modelling platform. Computers & Mathematics with Applications, 70(5):994–1023, 2015.
+speaker:
+  name: Tamara Dancheva
+  country: Spain
+  affiliation: BCAM - Basque Center for Applied Mathematics
+  website: http://www.bcamath.org/en
+coauthors:
+  - name: Unai Alonso
+    country: Spain
+    affiliation: University of the Basque Country
+  - name: Michael Barton
+    country: Spain
+    affiliation: BCAM - Basque Center for Applied Mathematics
+  - name: J&eacute;r&eacute;my Bleyer
+    country: France
+    affiliation: Ecole des Ponts ParisTech
+  - name: Thomas Hefler
+    country: France
+    affiliation: CEA (French Alternative Energies and Atomic Energy Commission)
+  - name: Raffaele Russo
+    country: Spain
+    affiliation: University of the Basque Country

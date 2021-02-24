@@ -1,19 +1,10 @@
-Title:	Efficient Hessian computation in deterministic and Bayesian inverse problems
-Author keywords:	
-inverse problems
-uncertainty quantification
-bayesian
-Abstract:	Inverse problem applications often require finding the minimum and Hessian of an optimization problem with partial differential equation constraints. Computing the Hessian of the cost functional is useful to estimate the uncertainty in the inverse problem solution from both a deterministic and Bayesian point of view. Direct computation of the Hessian, however, is prohibitively expensive for inverse problems with high dimensionality. We present a computational algorithm that computes the Hessian as a by-product of solving the inverse problem at practically no additional cost. It is based on solving using conjugate gradient (CG) inner iterations to solve for Newton updates in outer iterations to find the minimum. As an iterative matrix solver, an advantage of CG is that of short term recurrence preserves global conjugacy of the search directions, and therefore prior searches may be discarded. By saving conjugate directions and the action of the Hessian on those directions, we show that we can recover the full Hessian while computing the minimum. We present the algorithm in weak form in Hilbert space, and implement it in FEniCS. We verify the implementation in simulated inverse problems of modest size, and demonstrate its applicability to real data in an application of ultrasound elastography.
-Submitted:	Feb 20, 22:26 GMT
-Last update:	Feb 20, 22:26 GMT
-Decision:	 
-Bidding and assignment information
-Assigned to:	nobody
-Conflict of interest:	nobody
-Bid:	
-yes:	none
-maybe:	none
-Authors
-first name	last name	email	country	affiliation	Web page	corresponding?
-Daniel I	Gendin	United States	Boston University		✔
-Paul	Barbone	United States	Boston University		✔
+title: Efficient Hessian computation in deterministic and Bayesian inverse problems
+abstract: Inverse problem applications often require finding the minimum and Hessian of an optimization problem with partial differential equation constraints. Computing the Hessian of the cost functional is useful to estimate the uncertainty in the inverse problem solution from both a deterministic and Bayesian point of view. Direct computation of the Hessian, however, is prohibitively expensive for inverse problems with high dimensionality. We present a computational algorithm that computes the Hessian as a by-product of solving the inverse problem at practically no additional cost. It is based on solving using conjugate gradient (CG) inner iterations to solve for Newton updates in outer iterations to find the minimum. As an iterative matrix solver, an advantage of CG is that of short term recurrence preserves global conjugacy of the search directions, and therefore prior searches may be discarded. By saving conjugate directions and the action of the Hessian on those directions, we show that we can recover the full Hessian while computing the minimum. We present the algorithm in weak form in Hilbert space, and implement it in FEniCS. We verify the implementation in simulated inverse problems of modest size, and demonstrate its applicability to real data in an application of ultrasound elastography.
+speaker:
+  name: Daniel I Gendin
+  country: United States
+  affiliation: Boston University
+coauthor:
+  - name: Paul Barbone
+    country: United States
+    affiliation: Boston University

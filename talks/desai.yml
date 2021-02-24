@@ -1,27 +1,26 @@
-Title:	FEniCS-preCICE: Coupling FEniCS to other Simulation Software
-Paper:	FEniCS2021_paper_23.pdf(Feb 18, 09:28 GMT)
-Author keywords:	
-Multiphysics
-Coupled Problems
-preCICE
-Fluid-Structure Interaction
-EasyChair keyphrases:	fenics precice (60), parallel and distributed system (40), simulation software (40)
-Abstract:	FEniCS-preCICE facilitates coupling of FEniCS with other software codes using the coupling library preCICE. preCICE enables users to couple different solvers in a partitioned black-box fashion. This talk explains various features of preCICE and its usage. Only a few additional lines of code are necessary to prepare a FEniCS program script for coupling.
-FEniCS-preCICE acts as a middle software layer which helps to connect a high-level FEniCS program to the low-level API of preCICE. The package converts between FEniCS and preCICE data structures, provides easy-to-use coupling conditions, and manages checkpointing for implicit coupling. FEniCS-preCICE is able to handle distributed memory parallelization of FEniCS internally. This package is a library itself and follows a FEniCS-native style.
-The functionality of FEniCS-preCICE is illustrated by two examples of coupled problems in fluid-structure interaction: a FEniCS heat conduction program coupled to OpenFOAM and a FEniCS elastic solid mechanics program coupled to SU2. In both examples FEniCS is used to solve the solid part of the fluid-solid coupling. The results of both examples are compared with other simulation software showing good agreement. preCICE and FEniCS-preCICE are available under open-source licenses on GitHub.
-Submitted:	Feb 18, 09:28 GMT
-Last update:	Feb 18, 09:33 GMT
-Decision:	 
-Bidding and assignment information
-Assigned to:	nobody
-Conflict of interest:	nobody
-Bid:	
-yes:	none
-maybe:	none
-Authors
-first name	last name	email	country	affiliation	Web page	corresponding?
-Ishaan	Desai	Germany	University of Stuttgart	https://www.ipvs.uni-stuttgart.de/institute/team/Desai/	✔
-Benjamin	Rodenberg	Germany	Technical Universiy of Munich	https://www.in.tum.de/i05/personen/personen/benjamin-rodenberg/	
-Richard	Hertrich	Germany	Technical University of Munich		
-Alexander	Jaust	Germany	University of Stuttgart	https://www.ipvs.uni-stuttgart.de/institute/team/Jaust-00001/	
-Benjamin	Uekermann	Germany	University of Stuttgart	https://www.ipvs.uni-stuttgart.de/institute/team/Uekermann-00001/	
+title: FEniCS-preCICE: Coupling FEniCS to other simulation software
+abstract:
+  - FEniCS-preCICE facilitates coupling of FEniCS with other software codes using the coupling library preCICE. preCICE enables users to couple different solvers in a partitioned black-box fashion. This talk explains various features of preCICE and its usage. Only a few additional lines of code are necessary to prepare a FEniCS program script for coupling.
+  - FEniCS-preCICE acts as a middle software layer which helps to connect a high-level FEniCS program to the low-level API of preCICE. The package converts between FEniCS and preCICE data structures, provides easy-to-use coupling conditions, and manages checkpointing for implicit coupling. FEniCS-preCICE is able to handle distributed memory parallelization of FEniCS internally. This package is a library itself and follows a FEniCS-native style.
+  - The functionality of FEniCS-preCICE is illustrated by two examples of coupled problems in fluid-structure interaction: a FEniCS heat conduction program coupled to OpenFOAM and a FEniCS elastic solid mechanics program coupled to SU2. In both examples FEniCS is used to solve the solid part of the fluid-solid coupling. The results of both examples are compared with other simulation software showing good agreement. preCICE and FEniCS-preCICE are available under open-source licenses on GitHub.
+speaker:
+  name: Ishaan Desai
+  country: Germany
+  affiliation: University of Stuttgart
+  website: https://www.ipvs.uni-stuttgart.de/institute/team/Desai
+coauthor:
+  - name: Benjamin Rodenberg
+    country: Germany
+    affiliation: Technical Universiy of Munich
+    website: https://www.in.tum.de/i05/personen/personen/benjamin-rodenberg
+  - name: Richard Hertrich
+    country: Germany
+    affiliation: Technical University of Munich
+  - name: Alexander Jaust
+    country: Germany
+    affiliation: University of Stuttgart
+    website: https://www.ipvs.uni-stuttgart.de/institute/team/Jaust-00001
+  - name: Benjamin Uekermann
+    country: Germany
+    affiliation: University of Stuttgart
+    website: https://www.ipvs.uni-stuttgart.de/institute/team/Uekermann-00001

@@ -1,33 +1,29 @@
-Title:	FESTIM, a modelling code for hydrogen transport in materials for nuclear fusion applications
-Paper:	FEniCS2021_paper_4.pdf(Jan 20, 10:12 GMT)
-Author keywords:	
-nuclear fusion
-hydrogen transport
-heat transfer
-Abstract:	The principle of nuclear fusion is to fuse two hydrogen nuclei to form a helium nucleus and a neutron, releasing incredible amounts of energy in the process. To achieve these fusion reactions, extremely high temperatures are required: more than 10 times the temperature of the Sun’s core. The very hot fuel in the plasma is magnetically confined within a chamber called a tokamak. Eventually, hydrogen ions will hit the reactor walls and penetrate in the materials.
-In order to simulate hydrogen transport in complex components (multi-material, multidimensional geometries…), a finite element modelling code relying on FEniCS called FESTIM has been developed [1]. FESTIM solves a set of transient Macroscopic Rate Equations (MRE) which accounts for the diffusion (based on Fick’s law) and trapping/detrapping of hydrogen isotopes in materials (based on McNabb and Foster’s equations [3]) coupled to transient heat transfer.
-
-This talk showcases the use of FESTIM and FEniCS to model key tokamak components such as actively cooled plasma facing components and how results crucial for the International Thermonuclear Experimental Reactor (ITER) [4] operations are extracted from it [2]. The code was verified using the method of manufactured solutions and validated against experimental results. FESTIM was also benchmarked with other codes from the fusion community and with the commercial simulation suite Abaqus.
-
-
-[1] Delaporte-Mathurin et al, Nuclear Materials and Energy 21: 100709 (2019)
-[2] Delaporte-Mathurin et al, Scientific Reports 10 (1): 17798. (2020)
-[3] McNabb et Foster McNabb, A., et P. K. Foster. Transactions of the Metallurgical Society of AIME 227 (1963): 618–627.
-[4] ITER website. www.iter.org
-Submitted:	Jan 20, 10:12 GMT
-Last update:	Jan 20, 10:12 GMT
-Decision:	 
-Bidding and assignment information
-Assigned to:	nobody
-Conflict of interest:	nobody
-Bid:	
-yes:	none
-maybe:	none
-Authors
-first name	last name	email	country	affiliation	Web page	corresponding?
-Rémi	Delaporte-Mathurin	France	CEA		✔
-Etienne	Hodille	France	CEA		
-Floriane	Leblond	France	CEA		
-Jonathan	Mougennot	France	LSPM		
-Yann	Charles	France	LSPM		
-Christian	Grisolia	France	CEA	
+Title: FESTIM, a modelling code for hydrogen transport in materials for nuclear fusion applications
+Abstract:
+  - The principle of nuclear fusion is to fuse two hydrogen nuclei to form a helium nucleus and a neutron, releasing incredible amounts of energy in the process. To achieve these fusion reactions, extremely high temperatures are required: more than 10 times the temperature of the Sun’s core. The very hot fuel in the plasma is magnetically confined within a chamber called a tokamak. Eventually, hydrogen ions will hit the reactor walls and penetrate in the materials.
+  - In order to simulate hydrogen transport in complex components (multi-material, multidimensional geometries…), a finite element modelling code relying on FEniCS called FESTIM has been developed [1]. FESTIM solves a set of transient Macroscopic Rate Equations (MRE) which accounts for the diffusion (based on Fick’s law) and trapping/detrapping of hydrogen isotopes in materials (based on McNabb and Foster’s equations [3]) coupled to transient heat transfer.
+  - This talk showcases the use of FESTIM and FEniCS to model key tokamak components such as actively cooled plasma facing components and how results crucial for the International Thermonuclear Experimental Reactor (ITER) [4] operations are extracted from it [2]. The code was verified using the method of manufactured solutions and validated against experimental results. FESTIM was also benchmarked with other codes from the fusion community and with the commercial simulation suite Abaqus.
+  - [1] Delaporte-Mathurin et al, Nuclear Materials and Energy 21: 100709 (2019)
+  - [2] Delaporte-Mathurin et al, Scientific Reports 10 (1): 17798. (2020)
+  - [3] McNabb et Foster McNabb, A., et P. K. Foster. Transactions of the Metallurgical Society of AIME 227 (1963): 618–627.
+  - [4] ITER website. www.iter.org
+speaker:
+  name: R&eacute;mi Delaporte-Mathurin
+  country: France
+  affiliation: CEA
+coauthor:
+  - name: Etienne Hodille
+    country: France
+    affiliation: CEA
+  - name: Floriane Leblond
+    country: France
+    affiliation: CEA
+  - name: Jonathan Mougennot
+    country: France
+    affiliation: LSPM
+  - name: Yann Charles
+    country: France
+    affiliation: LSPM
+  - name: Christian Grisolia
+    country: France
+    affiliation: CEA	
