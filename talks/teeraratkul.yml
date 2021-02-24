@@ -1,19 +1,10 @@
-Title:	Implementation of fluid-structure interactions for rigid body motion in FEniCS using immersed finite element method
-Author keywords:	
-Fluid-structure interaction
-Immersed finite element method
-Particulate flow
-Abstract:	In this work, an implementation of rigid body immersed finite element method in FEniCS is presented. Immersed finite element method was proposed for resolving complex fluid structure interaction problems often encounter in many engineering applications. In immersed finite element method, the structure is represented by a Lagrangian mesh moving on top of a Eulerian fluid mesh. This allow for the fluid mesh to be generated independently from the solid structure and thus greatly simplified the meshing process. The no-slip condition and the FSI force at the fluid-solid interface is enforced using a mesh-to-mesh interpolation of velocity and FSI coupling force. Classically, the interpolation method employed in immersed finite element is to use a discrete delta function; however, in this work a method based on transforming basis function between the two domain is employed. This allow for the support of the FSI force interpolation to be the size elements in the fluid domain touching the structure domain. Support size on which the fluid-structure interaction force is applied is therefore optimal in an element-wise sense. Results from a canonical problem of rigid sphere dropping in a channel is simulated to demonstrate the implementation. Implementation details and performance of the implementation is discussed.
-Submitted:	Feb 20, 18:05 GMT
-Last update:	Feb 20, 18:05 GMT
-Decision:	 
-Bidding and assignment information
-Assigned to:	nobody
-Conflict of interest:	nobody
-Bid:	
-yes:	none
-maybe:	none
-Authors
-first name	last name	email	country	affiliation	Web page	corresponding?
-Chayut	Teeraratkul	United States	University of Colorado Boulder		✔
-Debanjan	Mukherjee	United States	University of Colorado Boulder		✔
+title: Implementation of fluid-structure interactions for rigid body motion in FEniCS using immersed finite element method
+abstract: In this work, an implementation of rigid body immersed finite element method in FEniCS is presented. Immersed finite element method was proposed for resolving complex fluid structure interaction problems often encounter in many engineering applications. In immersed finite element method, the structure is represented by a Lagrangian mesh moving on top of a Eulerian fluid mesh. This allow for the fluid mesh to be generated independently from the solid structure and thus greatly simplified the meshing process. The no-slip condition and the FSI force at the fluid-solid interface is enforced using a mesh-to-mesh interpolation of velocity and FSI coupling force. Classically, the interpolation method employed in immersed finite element is to use a discrete delta function; however, in this work a method based on transforming basis function between the two domain is employed. This allow for the support of the FSI force interpolation to be the size elements in the fluid domain touching the structure domain. Support size on which the fluid-structure interaction force is applied is therefore optimal in an element-wise sense. Results from a canonical problem of rigid sphere dropping in a channel is simulated to demonstrate the implementation. Implementation details and performance of the implementation is discussed.
+speaker: 
+  name: Chayut Teeraratkul
+  country: United States
+  affiliation: University of Colorado Boulder
+coauthor:
+  name: Debanjan Mukherjee
+  country: United States
+  affiliation: University of Colorado Boulder

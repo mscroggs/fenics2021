@@ -1,19 +1,6 @@
-Title:	Interoperability with Automatic Differentiation Libraries through NumPy Interface to FEniCS
-Author keywords:	
-automatic differentiation
-adjoint
-tangent linear
-Abstract:	Partial differential equations (PDEs) are used to describe a variety of physical phenomena. Computing derivative information of the solution to PDE with respect to the input parameters is important in many tasks in scientific computing. A high-level interface for evaluating derivatives of FEniCS models is developed. It is intended to be used as the backend for extending Automatic Differentiation libraries to support FEniCS solvers. High-level symbolic representation of PDEs allows bypassing differentiating through low-level possibly many iterations of the underlying nonlinear solvers. Automatic tangent linear and adjoint solvers for FEniCS problems are derived with dolfin-adjoint/pyadjoint. These solvers make it possible to use forward and reverse modes Automatic Differentiation with FEniCS. This package is used for building bridges between FEniCS and JAX, PyMC3 (Theano), PyTorch, Julia's ChainRule.jl, Zygote.jl. This enables the efficient composition of finite element solvers with arbitrary differentiable programs.
-
-Submitted:	Feb 20, 19:03 GMT
-Last update:	Feb 20, 19:03 GMT
-Decision:	 
-Bidding and assignment information
-Assigned to:	nobody
-Conflict of interest:	nobody
-Bid:	
-yes:	none
-maybe:	none
-Authors
-first name	last name	email	country	affiliation	Web page	corresponding?
-Ivan	Yashchuk	Finland	Aalto University		✔
+title: Interoperability with Automatic Differentiation Libraries through NumPy Interface to FEniCS
+abstract: Partial differential equations (PDEs) are used to describe a variety of physical phenomena. Computing derivative information of the solution to PDE with respect to the input parameters is important in many tasks in scientific computing. A high-level interface for evaluating derivatives of FEniCS models is developed. It is intended to be used as the backend for extending Automatic Differentiation libraries to support FEniCS solvers. High-level symbolic representation of PDEs allows bypassing differentiating through low-level possibly many iterations of the underlying nonlinear solvers. Automatic tangent linear and adjoint solvers for FEniCS problems are derived with dolfin-adjoint/pyadjoint. These solvers make it possible to use forward and reverse modes Automatic Differentiation with FEniCS. This package is used for building bridges between FEniCS and JAX, PyMC3 (Theano), PyTorch, Julia's ChainRule.jl, Zygote.jl. This enables the efficient composition of finite element solvers with arbitrary differentiable programs.
+speaker:
+  name: Ivan Yashchuk
+  country: Finland
+  affiliation: Aalto University

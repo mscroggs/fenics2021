@@ -1,23 +1,9 @@
-Title:	Turning FEniCS inside out
-Author keywords:	
-FEniCS-X
-Trilinos
-mesh
-plotting
-interfacing
-Abstract:	Previous versions of FEniCS have focused on adding more features and functionality by adding interfaces to an increasing list of third party libraries, for linear algebra, plotting, mesh partitioning, etc. In the latest version of FEniCS-X we are moving away from this trend, on the assumption that users can interface third-party libraries themselves, given the right interface to FEniCS.
-This can be viewed as "turning FEniCS inside-out" as the previous internal workings have become public interfaces, and FEniCS itself is simplified and reduced.
-
-I will show some examples using the Trilinos solvers, custom mesh partitioning and how to access data directly for I/O and visualisation.
-Submitted:	Feb 10, 09:41 GMT
-Last update:	Feb 10, 09:41 GMT
-Decision:	 
-Bidding and assignment information
-Assigned to:	nobody
-Conflict of interest:	nobody
-Bid:	
-yes:	none
-maybe:	none
-
-first name	last name	email	country	affiliation	Web page	corresponding?
-Chris	Richardson	United Kingdom	BP Institute, University of Cambridge		✔
+title: Turning FEniCS inside out
+abstract:
+- Previous versions of FEniCS have focused on adding more features and functionality by adding interfaces to an increasing list of third party libraries, for linear algebra, plotting, mesh partitioning, etc. In the latest version of FEniCS-X we are moving away from this trend, on the assumption that users can interface third-party libraries themselves, given the right interface to FEniCS.
+- This can be viewed as "turning FEniCS inside-out" as the previous internal workings have become public interfaces, and FEniCS itself is simplified and reduced.
+- I will show some examples using the Trilinos solvers, custom mesh partitioning and how to access data directly for I/O and visualisation.
+speaker:
+  name: Chris	Richardson
+  country: United Kingdom
+  affiliation: BP Institute, University of Cambridge
