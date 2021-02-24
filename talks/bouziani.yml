@@ -1,0 +1,26 @@
+Title:	External operators in UFL and Firedrake
+Paper:	FEniCS2021_paper_38.pdf(Feb 19, 17:30 GMT)
+Author keywords:	
+UFL
+Firedrake
+Deep learning
+Implicit constitutive laws
+EasyChair keyphrases:	external operator (40)
+Abstract:	High level domain specific languages based on the Unified Form Language (UFL) such as FEniCS or Firedrake enable one to write down PDE-based problems in a very productive way. UFL equips FEniCS and Firedrake with a highly expressive interface to specify the variational forms and discrete function spaces, providing the abstractions needed for code generation. However, one of the limitations of UFL is that it does not take into account operators that are not directly expressible in the vector calculus sense. In a nutshell, the UFL abstraction is not rich enough to encompass these operators. We refer to these operators as external operators.
+
+This limitation is critical in many applications where PDEs are not enough to accurately describe the physical problem of interest. These applications include nonlinear implicit constitutive laws such as the Glen’s flow law for glacier flow, the use of neural networks to include features not represented in the differential equations, or closures for unresolved spatiotemporal scales. Example applications of neural networks include regularization of inverse problems such as in seismic inversion and subgrid parameterization of atmospheric or oceanographic processes like clouds or turbulence.
+
+We present extensions to the Unified Form Language (UFL) and Firedrake that enable the inclusion of arbitrary external operators. This external operator feature composes seamlessly with the automatic differentiation capabilities of Firedrake.
+Submitted:	Feb 19, 17:30 GMT
+Last update:	Feb 19, 17:30 GMT
+Decision:	 
+Bidding and assignment information
+Assigned to:	nobody
+Conflict of interest:	nobody
+Bid:	
+yes:	none
+maybe:	none
+Authors
+first name	last name	email	country	affiliation	Web page	corresponding?
+Nacime	Bouziani	United Kingdom	Imperial College London	https://www.imperial.ac.uk/people/n.bouziani18	✔
+David	Ham	United Kingdom	Imperial College London	http://amcg.ese.ic.ac.uk/index.php?title=David_Ham	✔

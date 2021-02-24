@@ -1,0 +1,39 @@
+Title:	Local a posteriori error estimates for the spectral fractional Laplacian
+Author keywords:	
+fractional partial differential equation
+nonlocal model
+a posteriori error estimation
+adaptive mesh refinement
+Abstract:	The fractional Laplacian has a global character and its solutions have strong boundary layers. Its efficient solution is still an open challenge for the community.
+
+In this talk, we will show a novel a posteriori error estimation method for the spectral fractional Laplacian.
+
+Our method begins with the work of [Bonito and Pasciak, 2013] where a fractional operator is represented by an integral over non-fractional (i.e. local) parametric operators. The integral and the local operators can then be discretised using a quadrature rule and a standard finite element method, respectively.
+
+We show that the integral representation of [Bonito and Pasciak, 2013] can equally be applied to the construction of an error estimator. A key building block of the method is an efficient hierarchical estimator introduced in [Bank and Weiser, 1985].
+
+The estimator has numerous benefits: it is numerically sharp, it allows the measurement of the error in various norms, and it is defined for one, two and three-dimensional problems. It is also fully local and cheap to compute in parallel.
+
+The estimator leads to optimal convergence rates when used to steer adaptive refinement algorithms.
+
+The implementation is based on FEniCS Error Estimation (FEniCS-EE), a finite element error estimation package for DOLFIN and DOLFINX [Bulle et al., submitted].
+
+Bank, R.E. and A. Weiser (1985), "Some a posteriori error estimators for elliptic partial differential equations", https://doi.org/10.2307/2007953.
+Bonito, A. and J.E. Pasciak (2015), "Numerical Approximation of Fractional Powers of Elliptic Operators", https://doi.org/10.1090/S0025-5718-2015-02937-8.
+Bulle, R. et al. (2020), "Hierarchical a posteriori error estimation of Bank-Weiser type in the FEniCS Project", (submitted).
+Submitted:	Feb 22, 08:45 GMT
+Last update:	Feb 22, 08:45 GMT
+Decision:	 
+Bidding and assignment information
+Assigned to:	nobody
+Conflict of interest:	nobody
+Bid:	
+yes:	none
+maybe:	none
+Authors
+first name	last name	email	country	affiliation	Web page	corresponding?
+Raphaël	Bulle	Luxembourg	University of Luxembourg	https://www.researchgate.net/profile/Raphael-Bulle	✔
+Stéphane P. A.	Bordas	Luxembourg	University of Luxembourg		
+Franz	Chouly	France	Université de Bourgogne-Franche-Comté		
+Jack S.	Hale	Luxembourg	University of Luxembourg		
+Alexei	Lozinski	France	Université Bourgogne Franche-Comté	http://lmb.univ-fcomte.fr/Lozinski-Alexei	

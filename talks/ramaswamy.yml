@@ -1,0 +1,20 @@
+Title:	Shape optimization in coupled fluid – structure systems using Multiphenics
+Author keywords:	
+Fluid-Structure Acoustics
+Shape Optimization
+Multiphenics
+Abstract:	We present a gradient-based shape optimization framework for coupled structural acoustic systems using Multiphenics, a FEniCS-based open source software. In our approach, the primary variables are displacement in the solid domain and pressure in the fluid domain; they are obtained by solving the Navier-Cauchy and the Helmholtz equation respectively. Further, these fields are coupled through explicit interface conditions that ensure the continuity of displacements and tractions across fluid-structure boundary. In our method, the adjoint based formulation is employed to derive gradients that drive the movement of the interface boundary at every iteration. The curvature at the interface boundary, which is a crucial ingredient for obtaining the shape sensitivity, is computed by considering a smooth-continuous extension of the normal vector. Finally, the effectiveness of our approach in solving both interior and exterior optimization problems is demonstrated with simple examples.
+Submitted:	Feb 21, 08:00 GMT
+Last update:	Feb 21, 08:00 GMT
+Decision:	 
+Bidding and assignment information
+Assigned to:	nobody
+Conflict of interest:	nobody
+Bid:	
+yes:	none
+maybe:	none
+Authors
+first name	last name	email	country	affiliation	Web page	corresponding?
+Harisankar	Ramaswamy	United States	University of Southern California		✔
+Saikat	Dey	United States	U.S. Naval Research Laboratory		
+Assad	Oberai	United States	University of Southern California		

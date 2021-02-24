@@ -1,0 +1,23 @@
+Title:	Development of an open-source-based framework for multiphysical crystal growth simulations
+Author keywords:	
+multiphysics
+crystal growth
+Elmer
+Gmsh
+mesh update
+Abstract:	The NEMOCRYS project in the group “Model experiments” at the IKZ funded by an ERC Starting Grant aims at profoundly validated numerical models for crystal growth. These processes involve a variety of coupled physical phenomena such as heat transfer including radiation and phase change, electromagnetism, melt- and gas flows and thermal stresses. Numerous simulation studies (using e.g. Comsol, Ansys or OpenFOAM) have been published, however, their applicability remains limited: The validation is mostly insufficient due to missing in-situ measurements, and the models are either implemented in expensive closed-source software or not published at all.
+Therefore, a new open-source-based framework for multiphysics simulation in crystal growth is under development. It currently uses Gmsh for FEM mesh generation and Elmer to solve the heat transfer problem, which are wrapped in a python interface. A major challenge in the current implementation is the coupling between Elmer and Gmsh: The transient simulation involves a moving crystal and phase boundary, and thus the mesh needs to be updated. FEniCS is a promising tool providing additional flexibility to implement new models with more advanced coupling algorithms. For example, a dynamic simulation with varying crystal diameter could include heat transfer with phase change and electromagnetic heat induction in FEniCs. External coupling with finite volume libraries such as OpenFOAM could be applied for melt and gas flow calculations.
+Submitted:	Feb 19, 11:51 GMT
+Last update:	Feb 19, 11:51 GMT
+Decision:	 
+Bidding and assignment information
+Assigned to:	nobody
+Conflict of interest:	nobody
+Bid:	
+yes:	none
+maybe:	none
+Authors
+first name	last name	email	country	affiliation	Web page	corresponding?
+Arved	Enders-Seidlitz	Germany	Leibniz Institute for Crystal Growth		✔
+Josef	Pal	Germany	Leibniz Institute for Crystal Growth		
+Kaspars	Dadzis	Germany	Leibniz Institute for Crystal Growth	

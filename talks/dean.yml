@@ -1,0 +1,24 @@
+Title:	Hybridized discontinuous Galerkin methods for the Stokes and Navier-Stokes equations in FEniCSx: non-simplex cells and curved geometries
+Author keywords:	
+Stokes
+Navier-Stokes
+hybridized discontinuous Galerkin
+non-simplex cells
+curved geometries
+composable kernels
+Abstract:	We investigate hybridized discontinuous Galerkin (HDG) methods for the Stokes and incompressible Navier-Stokes equations which yield approximate velocity fields that are pointwise divergence free in each cell and globally $H(\rm{div})$-conforming. The analysis of a recently developed method is restricted to simplex cells and affine geometries. Here, we explore the extension of the method to non-simplex cells and curved boundaries, both of which are important for engineering applications. Static condensation is used to reduce the size of the global system of equations. For the implementation, we make use of some new features of FEniCSx, which is composed of DOLFINx, FFCx, Basix, and UFL. We use UFL and FFCx to compile kernels for each block of the global matrix, which are then exposed to the Python interface using CFFI. These kernels are called from a custom kernel (compiled by Numba) to carry out the static condensation process. The smaller statically condensed system can then be solved using a block preconditioned iterative solver. We present analysis and numerical results demonstrating that the approximate velocity field is pointwise divergence free in each cell and globally $H(\rm{div})$-conforming on meshes with non-simplex cells and curved boundaries.
+Submitted:	Feb 18, 11:16 GMT
+Last update:	Feb 18, 11:16 GMT
+Decision:	 
+Bidding and assignment information
+Assigned to:	nobody
+Conflict of interest:	nobody
+Bid:	
+yes:	none
+maybe:	none
+Authors
+first name	last name	email	country	affiliation	Web page	corresponding?
+Joseph P.	Dean	United Kingdom	University of Cambridge		✔
+Sander	Rhebergen	Canada	University of Waterloo		
+Chris N.	Richardson	United Kingdom	University of Cambridge		
+Garth N.	Wells	United Kingdom	University of Cambridge		

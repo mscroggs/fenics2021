@@ -1,0 +1,20 @@
+Title:	Linear multipoint constraints in FEniCSx
+Author keywords:	
+Multipoint constraints
+Boundary conditions
+Contact problems
+Abstract:	In the finite element method, it is common to encounter boundary conditions such as the Dirichlet, Neumann and Robin boundary condition. However, the zero-slip condition, $u\cdot n = 0$ does not fall under either of these categories when the domain boundary is not aligned with the coordinate axes. For this problem the boundary condition can be written as a linear combination of the degrees of freedom collocated at a boundary coordinate. In this talk, we present a method for enforcing linear multipoint constraints in the FEniCSx framework using master-minion matrix reduction. The multipoint constraint framework is written as a separate module that can be used alongside FEniCSx, supporting all variational forms written in the unified form language. The main components of the module is the multipoint constraint class, which handles communication of non-local degrees of freedom for parallel execution, and custom assemblers for the element-wise matrix reduction operation. Additionally, the module includes several specialized constructors for boundary conditions such as the periodic and zero-slip boundary condition. We illustrate the applicability of the module to non-trivial constraints by solving a contact problem on a non-conforming mesh.
+Submitted:	Feb 17, 17:27 GMT
+Last update:	Feb 17, 17:27 GMT
+Decision:	 
+Bidding and assignment information
+Assigned to:	nobody
+Conflict of interest:	nobody
+Bid:	
+yes:	none
+maybe:	none
+Authors
+first name	last name	email	country	affiliation	Web page	corresponding?
+Jørgen Schartum	Dokken	United Kingdom	University of Cambridge	https://jsdokken.com	✔
+Garth	Wells	United Kingdom	University of Cambridge		
+Chris	Richardson	United Kingdom	University of Cambridge		

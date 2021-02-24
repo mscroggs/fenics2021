@@ -1,0 +1,36 @@
+Title:	On the reproducibility of numerical experiments with FEniCS
+Author keywords:	
+reproducible science
+software installation
+package management
+GNU Guix
+Abstract:	A key tenet of the scientific method is that an experiment conducted
+in one laboratory may be reproduced in another. For numerical
+experiments the process should be straightforward; simply a case of
+supplying the same inputs to the same software application. However,
+for software applications with complex hierarchies the essential step
+of re-creating the same software environment can represent a
+significant challenge. Difficulties can emerge in installing library
+dependencies on computer systems with different architectures. Even
+on the same system changes to low-level libraries over time can
+prevent compilation or execution of higher-level code. To address
+these issues methods from functional programming have been developed
+to guarantee bit-identical software installations. Package
+definitions have been created for FEniCS and its dependencies within
+the GNU Guix framework. Used as a package manager, GNU Guix provides
+the tools to manage a dedicated file structure that sits alongside the
+host operating system. This presentation shows how the underlying
+mechanism works, how FEniCS fits in and how to create software
+environments that can be reproduced identically in space and time.
+Submitted:	Feb 19, 14:18 GMT
+Last update:	Feb 19, 14:18 GMT
+Decision:	 
+Bidding and assignment information
+Assigned to:	nobody
+Conflict of interest:	nobody
+Bid:	
+yes:	none
+maybe:	none
+Authors
+first name	last name	email	country	affiliation	Web page	corresponding?
+Paul	Garlick	United Kingdom	Tourbillion Technology Ltd	http://www.tourbillion-technology.com	✔

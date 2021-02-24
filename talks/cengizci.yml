@@ -1,0 +1,21 @@
+Title:	Stabilized Numerical Simulations of Hypersonic Flows in Thermochemical Nonequilibrium with FEniCS
+Author keywords:	
+Hypersonic flow
+Chemical nonequilibrium
+Compressible-flow SUPG
+Shock-capturing
+Abstract:	In this talk, we are presenting numerical simulations of inviscid hypersonic flow past a cylinder. It is assumed that the flow environment is in thermochemical nonequilibrium and non-ionized. A 5-species air-mixture and a 17-reaction chemical kinetic model with Park's two-temperature approach are adopted. In performing the relevant simulations, the Galerkin finite element method is stabilized by the compressible-flow Streamline-Upwind/Petrov-Galerkin method. Furthermore, the YZ$\beta$ shock-capturing is employed to achieve better solution profiles at shocks. The flow field is spatially discretized on an unstructured mesh with triangular elements, and the zero-normal-velocity condition is enforced on the cylinder in a weak sense. The system of algebraic equations resulting from the spatial and temporal discretizations of the governing equations is linearized with the Newton-Raphson technique and then solved in each time-step by the GMRES method with the ILU preconditioning. All the numerical computations are carried out in FEniCS 2019.1.0 environment.
+Submitted:	Jan 14, 11:28 GMT
+Last update:	Jan 14, 11:28 GMT
+Decision:	 
+Bidding and assignment information
+Assigned to:	nobody
+Conflict of interest:	nobody
+Bid:	
+yes:	none
+maybe:	none
+Authors
+first name	last name	email	country	affiliation	Web page	corresponding?
+Süleyman	Cengizci	Turkey	Middle East Technical University	https://antalya.edu.tr/en/academic-staff/college-of-business/suleyman-cengizci	✔
+Ömür	Uğur	Turkey	Middle East Technical University	https://ougur.iam.metu.edu.tr/	
+Tayfun E.	Tezduyar	United States	Rice University	https://www.tafsm.org/~tezduyar/

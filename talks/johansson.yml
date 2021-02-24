@@ -1,0 +1,24 @@
+Title:	CutFEM-style methods in FEniCS-X: CAD and level sets
+Author keywords:	
+CutFEM
+Non-matching mesh
+Nitsche
+Abstract:	The interest in finite element methods on non-matching meshes has increased in recent years. Theoretical advances, based on the ideas of Nitsche, have allowed for the construction of methods such as CutFEM for a wide variety of problems.
+
+From the perspective of implementation, one major challenge is to be able to compute integrals over cells that only have a partial intersection with the domain. Often, quadrature rules for both the volume and surface are required by the method.
+
+In this contribution we will present our work on using custom quadrature in the FEniCS-X framework. We focus on domains described by level sets as well as domains from CAD, and restrict ourselves to quadrilateral and hexahedral elements.
+
+Submitted:	Feb 20, 23:13 GMT
+Last update:	Feb 20, 23:13 GMT
+Decision:	 
+Bidding and assignment information
+Assigned to:	nobody
+Conflict of interest:	nobody
+Bid:	
+yes:	none
+maybe:	none
+Authors
+first name	last name	email	country	affiliation	Web page	corresponding?
+August	Johansson	Norway	SINTEF Digital		✔
+Vibeke	Skytt	Norway	SINTEF Digital		

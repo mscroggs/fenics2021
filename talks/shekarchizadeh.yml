@@ -1,0 +1,19 @@
+Title:	Developing an automatized optimization problem in FEniCS for parameter determination of metamaterials
+Author keywords:	
+Inverse analysis
+Metamaterials
+Optimization
+Abstract:	In this work, a novel automatized optimization process is developed for the inverse analysis and parameter determination of metamaterials. Metamaterials are the family of materials designed to have tailored material properties, such as high strength-to-weight ratio or extreme elasticity, by using an optimized topology. Due to metamaterials' inner substructure, it is of interest to simulate their mechanical behaviour using reduced-order modelling utilizing the generalized mechanics. We determine the constitutive parameters of such models by developing an automatized optimization process in FEniCS. This process utilizes the Trust Region Reflective optimization method, from Scipy, for minimizing the deviation of the continuum model from a detailed micro-scale model. The parameter identification procedure proves to be robust and reliable by testing it for the pantographic structures as an example of metamaterials.
+Submitted:	Feb 20, 22:37 GMT
+Last update:	Feb 20, 22:37 GMT
+Decision:	 
+Bidding and assignment information
+Assigned to:	nobody
+Conflict of interest:	nobody
+Bid:	
+yes:	none
+maybe:	none
+Authors
+first name	last name	email	country	affiliation	Web page	corresponding?
+Navid	Shekarchizadeh	Italy	Department of Basic and Applied Sciences for Engineering, Sapienza University of Rome		✔
+Alberto Maria	Bersani	Italy	Department of Mechanical and Aerospace Engineering, Sapienza University of Rome		✔

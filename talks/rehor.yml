@@ -1,0 +1,33 @@
+Title:	Dynamic composition of solvers for coupled problems in DOLFINX
+Paper:	FEniCS2021_paper_45.pdf(Feb 19, 23:08 GMT)
+Author keywords:	
+iterative methods
+preconditioning
+composable solvers
+Abstract:	Recent developments in DOLFINX allow for the block assembly of linear algebraic systems arising from discretisations of coupled partial differential equations. Each algebraic block represents a subproblem associated with a coupling of the unknown fields. Designing and implementing robust and scalable solution and preconditioning strategies for block-structured linear systems is an active area of research.
+
+In this contribution we show how DOLFINX can now exploit one of the most significant features of PETSc; the dynamic composition of the hierarchical solver and preconditioner options at runtime, see Brown et al. [1]. The idea is inspired by the work of Kirby and Mitchell [2] that was originally implemented in the Firedrake Project.
+
+One of the most significant benefits of the approach is the possibility to construct advanced preconditioners that require structure beyond a purely algebraic problem description, e.g. the pressure-convection-diffusion (PCD) approximation of the Schur complement for the Navier-Stokes equations, see Silvester et al. [3].
+
+We illustrate the capabilities of our implementation on examples ranging from incompressible flow of a viscous fluid, through temperature-driven convection, to flows described by rate-type viscoelastic fluid models.
+
+[1] Brown, J., Knepley, M. G., May, D. A., McInnes, L. C., & Smith, B. (2012). Composable Linear Solvers for Multiphysics. In Proceedings of the 2012 11th International Symposium on Parallel and Distributed Computing (ISPDC '12). IEEE Computer Society, USA, 55-62. DOI: 10.1109/ISPDC.2012.16
+
+[2] Kirby, R., & Mitchell, L., (2017). Solver Composition Across the PDE/Linear Algebra Barrier. SIAM Journal on Scientific Computing. 40. DOI: 10.1137/17M1133208
+
+[3] Silvester, D., Elman, H., & Wathen, A. (2014). Finite Elements and Fast Iterative Solvers: with applications in incompressible fluid dynamics. (Second ed.) (Numerical Mathematics and Scientific Computation). Oxford University Press.
+
+Submitted:	Feb 19, 23:08 GMT
+Last update:	Feb 19, 23:08 GMT
+Decision:	 
+Bidding and assignment information
+Assigned to:	nobody
+Conflict of interest:	nobody
+Bid:	
+yes:	none
+maybe:	none
+Authors
+first name	last name	email	country	affiliation	Web page	corresponding?
+Martin	Řehoř	Luxembourg	Rafinex S.à r.l.		✔
+Jack S.	Hale	Luxembourg	University of Luxembourg		

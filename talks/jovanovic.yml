@@ -1,0 +1,22 @@
+Title:	Plasma modelling using FEniCS and FEDM
+Author keywords:	
+multiphysics plasma modelling
+fluid model
+automation of modelling approaches
+Abstract:	Non-thermal low-temperature plasmas produced by electric discharges are widely used for various kinds of applications, such as chemical processing (like ozone generation), surface processing (such as plasma etching and sputtering), plasma actuators, or biomedical applications. In order to determine the governing physical and chemical processes, which is sometimes ambitious by experimental methods, plasma modelling is an additional option to be applied. For the numerical analysis of atmospheric-pressure plasmas, which are considered here, fluid models are mostly used due to their computational efficiency. Common fluid models for non-thermal plasmas consist of a set of balance equations for the particle number densities of the relevant plasma species and the energy density of electrons. Poisson's equation is typically solved to self-consistently calculate the electric potential and field. Depending on the gas under consideration the number of species that needs to be taken into account spans from tens to hundreds, which results in the same number of balance equations that need to be solved. At the same time, the number of collision and radiation processes to be considered can even reach thousands, which can make setting-up of the model difficult. Moreover, the physical time scales in plasmas range from picoseconds (electron kinetics) to tens of seconds (slow plasma-chemical reactions) so that the implementation of adaptive time stepping methods is necessary. The present FEniCS based FEDM (Finite Element Discharge Modelling) code addresses these challenges by automating the model set-up procedure and implementing a backward differentiation formula for time stepping. This contribution represents the main features of the code, shows results of verification studies using benchmarking, and highlights how FEniCS can be used for the numerical analysis of dielectric barrier discharges in argon at atmospheric pressure.
+
+The present work was funded by the Deutsche Forschungsgemeinschaft – project number 407462159.
+Submitted:	Feb 15, 08:34 GMT
+Last update:	Feb 15, 08:34 GMT
+Decision:	 
+Bidding and assignment information
+Assigned to:	nobody
+Conflict of interest:	nobody
+Bid:	
+yes:	none
+maybe:	none
+Authors
+first name	last name	email	country	affiliation	Web page	corresponding?
+Aleksandar P.	Jovanovic	Germany	Leibniz Institute for Plasma Science and Technology (INP), Felix-Hausdorff-Str. 2, 17489 Greifswald, Germany		✔
+Detlef	Loffhagen		Germany	Leibniz Institute for Plasma Science and Technology (INP), Felix-Hausdorff-Str. 2, 17489 Greifswald, Germany		
+Markus M.	Becker		Germany	Leibniz Institute for Plasma Science and Technology (INP), Felix-Hausdorff-Str. 2, 17489 Greifswald, Germany

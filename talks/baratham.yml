@@ -1,0 +1,18 @@
+Title:	A finite element model of electric fields in the brain
+Author keywords:	
+biophysics
+neuroscience
+high performance computing
+Abstract:	In recent years, simulation of neural tissue at subcellular resolution has become an important tool for understanding the electrophysiological signals that neuroscientists and physicians record from the brain. These simulations use precise chemistry and physics to generate true-to-life predictions of neural activity, but employ simplifying assumptions to propagate that activity from neuron to recording electrode, a problem which could be solved exactly using finite element modeling. In this talk, I will summarize the biophysics of neural simulation, present the widely-used simplified model of electric field propagation in the brain, and share my ideas for implementing a more exact model in FEniCS. I welcome any feedback or tips on my proposed approach. I believe that a freely available implementation of this problem in an open source FEM solver is an important next step in the development of neural simulators. We must understand in detail how electric fields propagate through neural tissue before we can develop neural interfaces capable of reading and stimulating the brain at high resolution.
+Submitted:	Feb 21, 00:36 GMT
+Last update:	Feb 21, 00:36 GMT
+Decision:	 
+Bidding and assignment information
+Assigned to:	nobody
+Conflict of interest:	nobody
+Bid:	
+yes:	none
+maybe:	none
+Authors
+first name	last name	email	country	affiliation	Web page	corresponding?
+Vyassa	Baratham	United States	University of California, Berkeley		✔

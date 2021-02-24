@@ -1,0 +1,36 @@
+Title:	Domain Decomposition of Stochastic PDEs using FEniCs
+Author keywords:	
+Stochastic PDE
+Uncertainty Quantification
+Domain Decomposition Method
+Abstract:	Domain Decomposition of Stochastic PDEs using FEniCs
+
+Sudhi Sharma (a) , Ajit Desai (a,1) , Mohammad Khalil (b,2) , Chris Pettit (c) , Dominique Poirel (d) and Abhijit Sarkar (a)
+(a) Carleton University, Ottawa, Ontario, Canada
+(b) Sandia National Laboratories (2) , Livermore, California, USA
+(c) United States Naval Academy, Annapolis, Maryland, USA
+(d) Royal Military College of Canada, Kingston, Ontario, Canada
+
+(1) Currently at Bank of Canada, Ottawa, Ontario, Canada
+(2) Sandia National Laboratories is a multimission laboratory managed and operated by National Technology and Engineering Solutions of Sandia, LLC., a wholly owned subsidiary of Honeywell International, Inc., for the U.S. Department of Energy’s National Nuclear Security Administration under contract DE-NA0003525.
+
+
+The intrusive spectral stochastic finite element method (SSFEM) based domain decomposition (DD) solvers for stochastic PDEs are implemented using FEniCS. For efficient uncertainty quantification (UQ) for large- scale computational models, these algorithms demonstrate scalabilities for high resolution spatial discretiza- tion and high dimensional random parameter space. However the implementation of these algorithms is intrusive to finite element codes demanding additional programming efforts. In the intrusive SSFEM based DD formalism, the stochastic PDE is converted into a very large set (depending on the number of random parameters) of deterministic coupled PDE system. It leads to a large-scale linear system being solved iteratively using two-level domain decomposition preconditioners. The submatrices for each subdomain are constructed using FEniCS. For each scale of random fluctuation, the associated subdomain level deter- ministic submatrices required for DD algorithm are extracted through a modified variational form of the PDE. Both three-dimensional stochastic Poissson and linear elasticity problems are tackled through this generic software leveraging FEniCS.
+Submitted:	Feb 18, 05:01 GMT
+Last update:	Feb 18, 05:01 GMT
+Decision:	 
+Bidding and assignment information
+Assigned to:	nobody
+Conflict of interest:	nobody
+Bid:	
+yes:	none
+maybe:	none
+Authors
+first name	last name	email	country	affiliation	Web page	corresponding?
+Abhijit	Sarkar	Canada	Carleton University	http://abhijitsarkar.net	✔
+Sudhi	Sharma		Canada	Carleton University		
+Ajit	Desai		Canada	Carleton University		
+Mohammad	Khalil		United States	Sandia National Laboratories		
+Chris	Pettit		United States	United States Naval Academy		
+Dominique	Poirel		Canada	Royal Military College of Canada		
+    

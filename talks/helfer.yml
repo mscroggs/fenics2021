@@ -1,0 +1,46 @@
+Title:	mgis.fenics Part I: Coupling MFront and FEniCS for complex solid mechanics simulations
+Author keywords:	
+Non-linear mechanics
+Generalised constitutive equations
+MFront
+Abstract:	Constitutive equations describe how the internal state variables of a material evolve with changing external conditions or due to gradients of thermodynamic variables. Those state variables can describe many microstructural aspects of the material (grain size, dislocation density, hardening state, etc.) or be phenomenological in nature (equivalent plastic strain). The knowledge of those internal state variables allows the computation of local thermodynamic forces which affect the material equilibrium at the structural scale.
+
+MFront is an open-source code generator for complex constitutive laws which aims at ease of use, numerical efficiency and portability (See [5, 3]). MFront has been developed under very stringent quality requirements in the context of nuclear fuel element simulation under the PLEIADES platform (see [7]), which is co-developed by CEA, EDF and Framatome. MFront provides several domain specific languages (DSL) built on top of the C++ language and associated with specific integration schemes that allows to readily implement the constitutive equations in source code close to their mathematical expressions. Numerical details are hidden by default allowing the user to focus on the physics. The underlying mathematical library, called TFEL/Math, provides optimised tensor objects and makes heavily use of template metaprogramming to generate optimised code.
+
+Those DSLs are translated into C++ sources adapted to the targeted solver. Interfaces are provided for Cast3M, Code Aster, Europlexus, Cyrano, Abaqus/Implicit, Abaqus/Explicit, Ansys, CalculiX, AMITEX FFTP, etc. A so-called generic interface has recently been introduced and is meant to be used through the MFrontGenericInterfaceSupport project (MGIS) (See [4, 6]).
+
+The mgis.fenics python module aims at leveraging the power of the FEniCS platform, used for the discretization of the balance equations, the assembly of residuals and stiffness matrices and the parallel distribution of the resolution, combined with MFront, used for the local integration of the constitutive equations, to build complex mechanical simulations. Several examples, illustrating the use of the new module, will be presented (See [1,2]), including:
+
+- Finite strain plasticity in the logarithmic space.
+- Phase-field approach to britlle fracture.
+- Finite strain polycrystal computations based on the Méric-Cailletaud behaviour.
+
+[1] Jérémy Bleyer and Thomas Helfer. Elasto-plastic analysis implemented using the MFront code generator. Numerical tours of continuum mechanics using FEniCS. 2019. url: https://comet- fenics.readthedocs.io/en/latest/demo/plasticity_mfront/plasticity_mfront.py.html.
+
+[2] Jérémy Bleyer and Thomas Helfer. FEniCS and MFront for complex non linear solid mechanics simulation. July 4, 2019. url: https://www.researchgate.net/publication/333089270_FEniCS_and_MFront_for_complex_non_linear_solid_mechanics_simulation (visited on 07/04/2019).
+
+[3] CEA and EDF. MFront Web Site. 2020. url: http://www.tfel.sourceforge.net/.
+
+[4] Thomas Helfer. The MFrontGenericInterfaceSupport project. The MFrontGenericInterfaceSupport project. 2019. url: https://thelfer.github.io/mgis/web/index.html.
+
+[5] Thomas Helfer et al. “Introducing the open-source mfront code generator: Application to mechanical behaviours and material knowledge management within the PLEIADES fuel element modelling platform”. In: Computers & Mathematics with Applications 70.5 (Sept. 2015), pp. 994–1023. issn: 0898-1221. doi: 10 . 1016 / j . camwa.2015.06.027. url: http://www.sciencedirect.com/science/article/pii/S0898122115003132 (visited on 09/22/2016).
+
+[6] Thomas Helfer et al. “The ‘MFrontGenericInterfaceSupport‘ project”. In: Journal of Open Source Software 5.48 (2020). Publisher: The Open Journal, p. 2003. doi: 10.21105/joss.02003. url: https://doi.org/10.21105/joss.02003.
+
+[7] Vincent Marelle et al. “New developments in ALCYONE 2.0 fuel performance code”. In: Top Fuel. Boise, USA, 2016.
+Submitted:	Feb 19, 19:16 GMT
+Last update:	Feb 19, 19:16 GMT
+Decision:	 
+Bidding and assignment information
+Assigned to:	nobody
+Conflict of interest:	nobody
+Bid:	
+yes:	none
+maybe:	none
+Authors
+first name	last name	email	country	affiliation	Web page	corresponding?
+Thomas	Helfer	France	CEA, DEN/DEC/SESC, Département d’Études des Combustibles, 13 108 St Paul lez Durance CEDEX	http://tfel.sourceforge.net	✔
+Jérémy	Bleyer	France	Laboratoire Navier UMR 8205 (École des Ponts ParisTech-IFSTTAR-CNRS)	https://comet-fenics.readthedocs.io/en/latest/index.html	✔
+Raffaele	Russo	France	University of the Basque Country		✔
+Tamara	Dancheva	France	BCAM - Basque Center for Applied Mathematics		✔
+    

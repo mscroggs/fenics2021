@@ -1,0 +1,19 @@
+Title:	Coupling of Thermomechanics with Electromagnetism in FEniCS
+Author keywords:	
+electromagnetism
+thermodynamics
+continuum mechanics
+mixed element spaces
+Abstract:	In thermomechanics, we utilize balance equations and compute temperature as well as deformation of a continuum body. The theory is well established. In electromagnetism, we use Maxwell's equations for calculating electric field and magnetic flux. As we want to combine all of these fields, there are theoretical and numerical challenges. This talk briefly introduces challenges and addresses some possible solutions for computing electro-magneto-thermo-mechanical systems in FEniCS.
+Submitted:	Feb 08, 10:27 GMT
+Last update:	Feb 08, 10:27 GMT
+Decision:	 
+Bidding and assignment information
+Assigned to:	nobody
+Conflict of interest:	nobody
+Bid:	
+yes:	none
+maybe:	none
+Authors
+first name	last name	email	country	affiliation	Web page	corresponding?
+Bilen Emek	Abali	Sweden	Uppsala University	http://bilenemek.abali.org	✔

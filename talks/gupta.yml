@@ -1,0 +1,23 @@
+Title:	Run-time from 300 years to 300 min: Lessons learned in large-scale modeling in FEniCS.
+Author keywords:	
+Parallel computing
+Topology optimization
+Program design
+Abstract:	Topology optimization and phase-field fracture simulations necessitate the use of high mesh density in the model. Thus, practical problems could range from a million to more than a billion degrees of freedom. It is impossible to solve such systems without proper knowledge of good programming practices, efficient memory management, and parallel computation. Fortunately, FEniCS works out of the box for parallel computation. However, a researcher working with FEniCS should also understand the algorithm's computational complexity and optimize it for the best performance.
+
+This talk aims to provide beginners with proper guidelines for handling large-scale systems in FEniCS. We investigate the work cost and the storage cost related to different components of the program. We will also comment on good programming practices that allow for a drastic reduction in program run-time. Furthermore, we present our study on a topology optimization problem and discuss our mistakes while working with small mesh that resulted in an estimated run-time of 300 years for a large-scale system. We finally present the redesigned implementation that brought the run-time close to 300 mins.
+Submitted:	Feb 20, 10:07 GMT
+Last update:	Feb 20, 10:08 GMT
+Decision:	 
+Bidding and assignment information
+Assigned to:	nobody
+Conflict of interest:	nobody
+Bid:	
+yes:	none
+maybe:	none
+Authors
+first name	last name	email	country	affiliation	Web page	corresponding?
+Abhinav	Gupta	India	Indian Institute of Technology Roorkee, India	https://computationalmechanics.in/rajib_teams/abhinav-gupta/	✔
+U Meenu	Krishnan	India	Indian Institiute of Technology Roorkee		
+Rajib	Chowdhury	India	Indian Institiute of Technology Roorkee		
+Anupam	Chakrabarti	India	Indian Institiute of Technology Roorkee		

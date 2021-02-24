@@ -1,0 +1,25 @@
+Title:	Finite elements on accelerators: an experience using FEniCSx and SYCL
+Author keywords:	
+Graphics Processing Units
+Parallel Programming
+Performance Portability
+Finite Element Assembly
+Abstract:	In this presentation, we are going to talk about our experience implementing the finite element method on different architectures and accelerators using the FEniCSx libraries and the SYCL programming model. Our main focus is on performance portability, we would like the FEM program to get consistent performance on a wide variety of platforms, instead of being very efficient on a single one.
+
+SYCL is a modern kernel-based parallel programming model that allows for one code to be written which can run in multiple types of computational devices (e.g.: CPUs and GPUs). A kernel describes a single operation, that can be instantiated many times and applied to different input data (e.g.: cell-wise matrix assembly). This kernel-based model matches nicely with the new FEniCS data-centric design: DOLFINx generates data to operate in parallel (geometry, topology, and dofmaps) and FFCx generates efficient code that can be used as part of the parallel kernels.
+
+We will discuss how different ways of expressing parallelism can affect the performance we ultimately achieve, for instance, we consider different global assembly strategies and data structures. We will also discuss how carefully arranging memory transfer and allocations can reduce latency and increase throughput in different accelerators. Finally, we will show some performance results of simplified finite element simulations on different architectures, ranging from Intel and AMD CPUs to NVIDIA GPUs.
+Submitted:	Feb 20, 12:47 GMT
+Last update:	Feb 20, 12:47 GMT
+Decision:	 
+Bidding and assignment information
+Assigned to:	nobody
+Conflict of interest:	nobody
+Bid:	
+yes:	none
+maybe:	none
+Authors
+first name	last name	email	country	affiliation	Web page	corresponding?
+Igor	Baratta	United Kingdom	University of Cambridge		✔
+Chris	Richardson	United Kingdom	University of Cambridge		
+Garth	Wells	United Kingdom	University of Cambridge	

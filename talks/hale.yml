@@ -1,0 +1,34 @@
+Title:	Simple and sharp: Error estimates of Bank-Weiser type in the FEniCS Project
+Author keywords:	
+A posteriori error estimation
+Adaptive mesh refinement
+Goal-oriented method
+Custom assembler
+Linear elasticity
+Abstract:	We propose a simple, cheap and parallelisable implementation [Bulle et al., submitted] in DOLFIN and DOLFINX of an implicit a posteriori error estimator introduced in [Bank and Weiser, 1985].
+
+The computation of the implicit estimator requires the solution of local Neumann problems in non-standard finite element spaces on each cell of the mesh. These special spaces are usually not available in modern automated finite element software, including the FEniCS Project.
+
+Our method bypasses this issue by constructing a linear system on each cell corresponding to the problem in an available finite element space. We restrict this linear system to a non-standard space. On affine-equivalent finite elements, this restriction is constant and its application involves only small dense matrix-matrix multiplications.
+
+We show several numerical examples of adaptive mesh refinement driven by this estimator applied to Poisson, Stokes and incompressible linear elasticity, as well as for goal-oriented problems [Becker et al., 2011].
+
+Bank, R.E. and A. Weiser (1985), "Some a posteriori error estimators for elliptic partial differential equations", https://doi.org/10.2307/2007953.
+Becker, R. et al. (2011) "Weighted marking for goal-oriented adaptive finite element methods", https://doi.org/10.1137/100794298.
+Bulle, R. et al. (2020), "Hierarchical a posteriori error estimation of Bank-Weiser type in the FEniCS Project", (submitted).
+Submitted:	Feb 22, 08:50 GMT
+Last update:	Feb 22, 08:50 GMT
+Decision:	 
+Bidding and assignment information
+Assigned to:	nobody
+Conflict of interest:	nobody
+Bid:	
+yes:	none
+maybe:	none
+Authors
+first name	last name	email	country	affiliation	Web page	corresponding?
+Jack S.	Hale	Luxembourg	University of Luxembourg		✔
+Raphael	Bulle	France	University of Luxembourg		
+Alexei	Lozinski	France	Université Bourgogne Franche-Comté	http://lmb.univ-fcomte.fr/Lozinski-Alexei	
+Stéphane P. A.	Bordas	Luxembourg	University of Luxembourg		
+Franz	Chouly	France	Université de Bourgogne-Franche-Comté	

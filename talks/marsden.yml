@@ -1,0 +1,22 @@
+Title:	Explicit Dual Space Representation in UFL
+Author keywords:	
+Unified Form Language
+Dual Spaces
+Symbolic Representation
+Abstract:	This talk will discuss proposed changes to the Unified Form Language to include symbolic types representing dual spaces along with associated objects and functions. UFL represents forms over finite element spaces, and operations on these forms naturally results in objects in the dual space, or operators mapping to or from dual spaces. Since UFL currently does not have a representation of these objects, the language is not closed, meaning these operations result in objects outside of the language, which these changes aim to solve.
+
+We will discuss the changes being made and their structure, the mathematical background and the potential benefits, applications and simplifications that this work enables.
+Submitted:	Feb 03, 13:47 GMT
+Last update:	Feb 03, 13:47 GMT
+Decision:	 
+Bidding and assignment information
+Assigned to:	nobody
+Conflict of interest:	nobody
+Bid:	
+yes:	none
+maybe:	none
+Authors
+first name	last name	email	country	affiliation	Web page	corresponding?
+India	Marsden	United Kingdom	Department of Computing, Imperial College London		✔
+David A	Ham	United Kingdom	Department of Mathematics, Imperial College London		
+Reuben	Nixon-Hill	United Kingdom	Department of Mathematics, Imperial College London		

@@ -29,7 +29,7 @@ os.system(f"cp -r {files_path}/* {html_path}")
 with open(os.path.join(html_path, "CNAME"), "w") as f:
     f.write("fenics2021.com")
 
-with open(os.path.join(talks_path, "timetable.yml")) as f:
+with open(os.path.join(talks_path, "_timetable.yml")) as f:
     timetable = yaml.load(f, Loader=yaml.FullLoader)
 
 times = {1: "13:00-14:40", 2: "15:00-16:30", 3: "17:00-18:30", "evening": "19:30-21:00"}
