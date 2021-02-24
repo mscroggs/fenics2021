@@ -72,7 +72,10 @@ def markup_author(authorinfo, bold=False):
                  "<i class='fab fa-twitter'></i></a>")
 
     if "affiliation" in authorinfo:
-        info += f" ({authorinfo['affiliation']})"
+        info += f" ({authorinfo['affiliation']}"
+        if "country" in authorinfo:
+            info += f", {authorinfo['country']}"
+        info += ")"
     return info
 
 

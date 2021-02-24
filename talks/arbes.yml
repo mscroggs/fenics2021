@@ -1,25 +1,15 @@
-Title:	Modelling of solidification problems with FEniCS
-Author keywords:	
-solidification
-phase change
-heat transfer
-transport
-reduced order modelling
-Abstract:	Modelling the solidification of alloys remains challenging, as there is a multi-physics problem to be solved involving fluid flow, heat transfer as well as phase changes. Shape casting processes are constantly sought to be improved, which can potentially be achieved through accurate and fast modelling of the alloy solidification process. We present in a short overview our approach of an application relying on FEniCS that will be used to model such solidification problems. The model, which is currently under development, follows a volume-averaged two-phase approach, as proposed by Beckermann et. al [1].
-Simplified models have been tested and used to generate snapshots for a non-intrusive reduced order model. As this application is being built in Python, we hope its flexible core will open up new opportunities for fast and accurate reduced order models.
-
-[1] J. Ni and C. Beckermann, ‘A volume-averaged two-phase model for transport phenomena during solidification’, Metall. Trans. B, vol. 22, no. 3, p. 349, Jun. 1991, doi: 10.1007/BF02651234.
-Submitted:	Feb 19, 15:29 GMT
-Last update:	Feb 19, 15:29 GMT
-Decision:	 
-Bidding and assignment information
-Assigned to:	nobody
-Conflict of interest:	nobody
-Bid:	
-yes:	none
-maybe:	none
-Authors
-first name	last name	email	country	affiliation	Web page	corresponding?
-Florian	Arbes	Norway	IFE		✔
-Kent-Andre	Mardal	Norway	UiO		✔
-Øyvind	Jensen	Norway	IFE		✔
+title: Modelling of solidification problems with FEniCS
+abstract:
+  - Modelling the solidification of alloys remains challenging, as there is a multi-physics problem to be solved involving fluid flow, heat transfer as well as phase changes. Shape casting processes are constantly sought to be improved, which can potentially be achieved through accurate and fast modelling of the alloy solidification process. We present in a short overview our approach of an application relying on FEniCS that will be used to model such solidification problems. The model, which is currently under development, follows a volume-averaged two-phase approach, as proposed by Beckermann <i>et al</i> <ref name="A volume-averaged two-phase model for transport phenomena during solidification" author="J. Ni and C. Beckermann" journal="Metallurgical Transactions B " volume="22" number="349" doi="10.1007/BF02651234">.
+  - Simplified models have been tested and used to generate snapshots for a non-intrusive reduced order model. As this application is being built in Python, we hope its flexible core will open up new opportunities for fast and accurate reduced order models.
+speaker:
+  name: Florian Arbes
+  country: Norway
+  affiliation: IFE
+coauthor:
+  - name: Kent-Andre Mardal
+    country: Norway
+    affiliation: UiO
+  - name: &Oslash;yvind Jensen
+    country: Norway
+    affiliation: IFE

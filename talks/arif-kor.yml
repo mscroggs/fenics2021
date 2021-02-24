@@ -1,20 +1,18 @@
-Title:	High-intensity focused ultrasound simulation with Gauss-Lobatto-Legendre quadrature in FEniCSx
-Author keywords:	
-high-intensity focused ultrasound
-Gauss-Lobatto-Legendre points
-Gauss-Lobatto-Legendre quadrature
-Abstract:	High-intensity focused ultrasound (HIFU) is a non-invasive medical technique that uses ultrasound for tissue heating and ablation. HIFU generates acoustic waves using transducers to heat unwanted tissue while keeping the surrounding tissue unaffected. The main challenge of HIFU treatment is to obtain a patient-specific treatment planning. Consequently, a patient-specific treatment plan requires an accurate simulation of HIFU operating condition. The finite element simulation of time-domain wave problems such as HIFU simulation requires the solution of a mass matrix at each time step. While this may be acceptable for a 1D simulation, for 2D and 3D simulation this process can be computationally expensive. However, using Gauss-Lobatto-Legendre (GLL) quadrature evaluated at GLL points, the resulting mass matrix is diagonal. Accordingly, a cheaper linear solve cost is incurred. In this talk, we present numerical experiments of HIFU simulation on quadrilateral and hexahedral element using GLL points and GLL quadrature.
-Submitted:	Feb 18, 12:31 GMT
-Last update:	Feb 18, 12:31 GMT
-Decision:	 
-Bidding and assignment information
-Assigned to:	nobody
-Conflict of interest:	nobody
-Bid:	
-yes:	none
-maybe:	none
-Authors
-first name	last name	email	country	affiliation	Web page	corresponding?
-Adeeb	Arif Kor	United Kingdom	University of Cambridge		✔
-Matthew	Scroggs	United Kingdom	University of Cambridge		
-Garth	Wells	United Kingdom	University of Cambridge		
+title:  High-intensity focused ultrasound simulation with Gauss&ndash;Lobatto&ndash;Legendre quadrature in FEniCSx
+abstract: High-intensity focused ultrasound (HIFU) is a non-invasive medical technique that uses ultrasound for tissue heating and ablation. HIFU generates acoustic waves using transducers to heat unwanted tissue while keeping the surrounding tissue unaffected. The main challenge of HIFU treatment is to obtain a patient-specific treatment planning. Consequently, a patient-specific treatment plan requires an accurate simulation of HIFU operating condition. The finite element simulation of time-domain wave problems such as HIFU simulation requires the solution of a mass matrix at each time step. While this may be acceptable for a 1D simulation, for 2D and 3D simulation this process can be computationally expensive. However, using Gauss-Lobatto-Legendre (GLL) quadrature evaluated at GLL points, the resulting mass matrix is diagonal. Accordingly, a cheaper linear solve cost is incurred. In this talk, we present numerical experiments of HIFU simulation on quadrilateral and hexahedral element using GLL points and GLL quadrature.
+speaker: 
+  name: Adeeb Arif Kor
+  country: United Kingdom
+  affiliation: University of Cambridge
+  github: adeebkor
+coauthor:
+  - name: Matthew Scroggs
+    country: United Kingdom
+    affiliation: University of Cambridge
+    website: https://mscroggs.co.uk
+    twitter: mscroggs
+    github: mscroggs
+  - name: Garth Wells
+    country: United Kingdom
+    addiliation: University of Cambridge
+    github: garth-wells
