@@ -1,9 +1,0 @@
-title: This is a talk with a very long title to allow us to test that titles do not overflow anywhere
-speaker:
-  name: Matthew Scroggs
-  affiliation: University of Cambridge
-  website: https://mscroggs.co.uk
-  github: mscroggs
-  twitter: mscroggs
-abstract:
-  - This is an abstract with \(\LaTeX\). $$\int_0^1 e^x\,\mathrm{d}x=e$$
