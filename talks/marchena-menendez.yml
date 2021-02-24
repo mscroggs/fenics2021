@@ -1,20 +1,10 @@
-Title:	Additive Schwarz methods for serendipity elements
-Author keywords:	
-Serendipity elements.
-Additive Schwarz methods.
-Firedrake.
-Multigrid.
-Abstract:	While solving Partial Differential Equations (PDEs) with finite element method (FEM), serendipity elements allow us to obtain the same order of accuracy as rectangular tensor-product elements with many fewer degrees of freedom (DOFs). To realize these savings in practice, we utilize p-version Additive Schwarz methods that solve local patch problems together with a low-order global system. For symmetric coercive problems, we obtain condition numbers independent of the mesh size and degree of serendipity space. Numerical experiments using Firedrake and PETSc confirm this theory and demonstrate efficiency relative to standard elements for model problems.
-Submitted:	Feb 18, 21:57 GMT
-Last update:	Feb 18, 21:57 GMT
-Decision:	 
-Bidding and assignment information
-Assigned to:	nobody
-Conflict of interest:	nobody
-Bid:	
-yes:	none
-maybe:	none
-Authors
-first name	last name	email	country	affiliation	Web page	corresponding?
-Jorge	Marchena Menendez	United States	Baylor University		✔
-Robert	Kirby	United States	Baylor University		✔
+title: Additive Schwarz methods for serendipity elements
+abstract: While solving partial differential equations (PDEs) with finite element method (FEM), serendipity elements allow us to obtain the same order of accuracy as rectangular tensor-product elements with many fewer degrees of freedom (DOFs). To realize these savings in practice, we utilize p-version Additive Schwarz methods that solve local patch problems together with a low-order global system. For symmetric coercive problems, we obtain condition numbers independent of the mesh size and degree of serendipity space. Numerical experiments using Firedrake and PETSc confirm this theory and demonstrate efficiency relative to standard elements for model problems.
+speaker:
+  name: Jorge Marchena Menendez
+  country: United States
+  affiliation: Baylor University
+coauthor:
+  name: Robert Kirby
+  country: United States
+  affiliation: Baylor University

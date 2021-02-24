@@ -1,21 +1,7 @@
-Title:	A two-level nonlinear beam model using adjoints
-Paper:	FEniCS2021_paper_15.pdf(Feb 16, 15:09 GMT)
-Author keywords:	
-two-level
-beam
-Dolfin
-adjoint
-EasyChair keyphrases:	cross section (586), beam model (126), moment resultant (100), cross section model (95), complementary strain energy (95), cross section problem (95), internal force (90), ufc cell (80), test function (80), first derivative (70), second derivative (70), beam cross section (63), elasto plastic (63), normal stress vector (63), finite element (60), actual implementation (60), dual material elasto plastic (60), global model (50), constitutive law (50), equivalent plastic strain (47), kirchhoff stress tensor (47), dolfin python wrapper (47), second order adjoint (47), complex cross section (47), elasto plastic beam (47), beam problem (40), coupling scheme (40), run time (40), composite wire (40), loaded point displacement component (40)
-Abstract:	A two-level nonlinear beam model, with the two levels linked by first- and second-order adjoints, allows to successfully deal with beam problems characterized by complex and multi-material cross-sections. Emphasis is given to the approach used for coupling the two levels within the FEniCS framework, and on how to overcome a few issues encountered during the actual implementation of the coupling procedure.
-Submitted:	Feb 16, 15:09 GMT
-Last update:	Feb 16, 15:09 GMT
-Decision:	 
-Bidding and assignment information
-Assigned to:	nobody
-Conflict of interest:	nobody
-Bid:	
-yes:	none
-maybe:	none
-Authors
-first name	last name	email	country	affiliation	Web page	corresponding?
-Marco	Morandini	Italy	Politecnico di Milano	https://home.aero.polimi.it/morandini/	✔
+title: A two-level nonlinear beam model using adjoints
+abstract: A two-level nonlinear beam model, with the two levels linked by first- and second-order adjoints, allows to successfully deal with beam problems characterized by complex and multi-material cross-sections. Emphasis is given to the approach used for coupling the two levels within the FEniCS framework, and on how to overcome a few issues encountered during the actual implementation of the coupling procedure.
+speaker:
+  name: Marco Morandini
+  country: Italy
+  affiliation: Politecnico di Milano
+  website: https://home.aero.polimi.it/morandini
