@@ -7,7 +7,7 @@ abstract:
 speaker:
   name: Thomas Helfer
   country: France
-  affiliation: CEA, DEN/DEC/SESC, Département d'&Eacute;tudes des Combustibles, 13 108 St Paul lez Durance CEDEX
+  affiliation: CEA, DEN/DEC/SESC, Département d'&Eacute;tudes des Combustibles
   website: http://tfel.sourceforge.net
 coauthor:
   - name: J&eacute;r&eacute;my Bleyer

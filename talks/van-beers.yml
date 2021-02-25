@@ -1,7 +1,7 @@
 title: Direct FEM Simulation for air pollution dispersion in building aerodynamics
 abstract:
 - We discuss the suitability of time-resolved adaptive Direct FEM Simulations (DFS) as an alternative method to RANS and LES in building aerodynamics. This method has significant advantages over other methods in that it relies less on human-defined parameters and meshes, potentially reducing the need for extensive validation for each new case. Next to that, it uses computational resources very efficiently, as the mesh is adapted to local error estimates. Especially for applications such as pollution dispersion, where RANS does not provide sufficiently detailed flow characteristics and LES is often too slow, adaptive DFS may present a solution.
-- However, little research is available on the use of this method in the Atmospheric Boundary Layer (ABL), which is essential for flow features around buildings. We will present preliminary principles and results for applying time-resolved adaptive DFS in building aerodynamics, with the focus on future application to pollution dispersion. Moreover, experiments will be performed using FEniCS in accessible environments with limited computational resources, to enhance reproducibility.
+- However, little research is available on the use of this method in the Atmospheric Boundary Layer, which is essential for flow features around buildings. We will present preliminary principles and results for applying time-resolved adaptive DFS in building aerodynamics, with the focus on future application to pollution dispersion. Moreover, experiments will be performed using FEniCS in accessible environments with limited computational resources, to enhance reproducibility.
 speaker:
   name: Linde van Beers
   country: Sweden
