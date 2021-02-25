@@ -43,7 +43,7 @@ def markup_citation(r):
         out += "</a>"
     if "doi" in r:
         out += f" [DOI:&nbsp;<a href='https://doi.org/{r['doi']}'>{r['doi']}</a>]"
-    else:
+    if "doi" not in f and "arxiv" not in f and "url" not in f:
         warnings.warn(f"Paper without DOI: {out}", Warning)
     return out
 
