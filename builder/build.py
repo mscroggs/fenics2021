@@ -161,7 +161,8 @@ def make_talk_page(t_id, day, session_n, prev, next):
         content += "</a>"
     else:
         content += "<i>this is the final talk</i>"
-    content += "</a>"
+    content += "</div>"
+    content += "</div>"
 
     write_page(f"talks/{t_id}.html", content)
 
