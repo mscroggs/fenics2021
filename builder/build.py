@@ -53,6 +53,29 @@ talk_starts["evening"] = break_positions[3] + 1
 
 empty_talks = {"Tuesday": {2: list(range(5))}, "Friday": {3: [3, 4]}}
 
+country_emoji = {
+    "Norway": "&#127475;&#127476;",
+    "United States": "&#127482;&#127480;",
+    "United Kingdom": "&#127468;&#127463;",
+    "Sweden": "&#127480;&#127466;",
+    "Luxembourg": "&#127473;&#127482;",
+    "Canada": "&#127464;&#127462;",
+    "Germany": "&#127465;&#127466;",
+    "France": "&#127467;&#127479;",
+    "Spain": "&#127466;&#127480;",
+    "Brazil": "&#127463;&#127479;",
+    "Poland": "&#127477;&#127473;",
+    "Italy": "&#127470;&#127481;",
+    "Switzerland": "&#127464;&#127469;",
+    "India": "&#127470;&#127475;",
+    "Ireland": "&#127470;&#127466;",
+    "Colombia": "&#127464;&#127476;",
+    "Morocco": "&#127474;&#127462;",
+    "Qatar": "&#127478;&#127462;",
+    "Turkey": "&#127481;&#127479;",
+    "Finland": "&#127467;&#127470;",
+}
+
 
 def markup_author(authorinfo, bold=False):
     info = ""
@@ -74,7 +97,7 @@ def markup_author(authorinfo, bold=False):
     if "affiliation" in authorinfo:
         info += f" ({authorinfo['affiliation']}"
         if "country" in authorinfo:
-            info += f", {authorinfo['country']}"
+            info += f", {country_emoji[authorinfo['country']]}"
         info += ")"
     return info
 
@@ -101,7 +124,7 @@ def make_talk_page(t_id, day, session_n):
     authors = [markup_author(tinfo["speaker"], True)]
     if "coauthor" in tinfo:
         authors += [markup_author(a) for a in tinfo["coauthor"]]
-    authortxt = "<br />".join(authors)
+    authortxt = "".join([f"<div class='authors'>{i}</div>" for i in authors])
 
     content = ""
     content += f"<h1>{tinfo['title']}</h1>"
