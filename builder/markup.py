@@ -71,7 +71,8 @@ def markup(content):
                 out += " "
     page_references = []
 
-    out = re.sub(r" *<ref ([^>]+)>", add_citation, out)
+    out = re.sub(r"<ref ([^>]+)>", add_citation, out)
+    out = re.sub(r"<ghostref ([^>]+)>", add_ghost_citation, out)
     out = insert_links(out)
 
     out = re.sub(r"`([^`]+)`", r"<span style='font-family:monospace'>\1</span>", out)
@@ -92,6 +93,11 @@ def insert_links(txt):
     return txt
 
 
+def add_ghost_citation(matches):
+    add_citation(matches)
+    return ""
+
+
 def add_citation(matches):
     global page_references
     ref = {}
@@ -99,7 +105,7 @@ def add_citation(matches):
         a, b = i.split("=")
         ref[a] = b
     page_references.append(markup_citation(ref))
-    return f"<sup><a href='#ref{len(page_references)}'>[{len(page_references)}]</a></sup>"
+    return f"<a href='#ref{len(page_references)}'>[{len(page_references)}]</a>"
 
 
 def insert_dates(txt):

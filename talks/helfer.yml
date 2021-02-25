@@ -7,13 +7,13 @@ abstract:
   - Finite strain plasticity in the logarithmic space.
   - Phase-field approach to britlle fracture.
   - Finite strain polycrystal computations based on the Méric-Cailletaud behaviour.
-  - r[1] Jérémy Bleyer and Thomas Helfer. Elasto-plastic analysis implemented using the MFront code generator. Numerical tours of continuum mechanics using FEniCS. 2019. url: https://comet- fenics.readthedocs.io/en/latest/demo/plasticity_mfront/plasticity_mfront.py.html.
-  - r[2] Jérémy Bleyer and Thomas Helfer. FEniCS and MFront for complex non linear solid mechanics simulation. July 4, 2019. url: https://www.researchgate.net/publication/333089270_FEniCS_and_MFront_for_complex_non_linear_solid_mechanics_simulation (visited on 07/04/2019).
-  - r[3] CEA and EDF. MFront Web Site. 2020. url: http://www.tfel.sourceforge.net/.
-  - r[4] Thomas Helfer. The MFrontGenericInterfaceSupport project. The MFrontGenericInterfaceSupport project. 2019. url: https://thelfer.github.io/mgis/web/index.html.
+  - "r[1] Jérémy Bleyer and Thomas Helfer. Elasto-plastic analysis implemented using the MFront code generator. Numerical tours of continuum mechanics using FEniCS. 2019. url: https://comet- fenics.readthedocs.io/en/latest/demo/plasticity_mfront/plasticity_mfront.py.html."
+  - "r[2] Jérémy Bleyer and Thomas Helfer. FEniCS and MFront for complex non linear solid mechanics simulation. July 4, 2019. url: https://www.researchgate.net/publication/333089270_FEniCS_and_MFront_for_complex_non_linear_solid_mechanics_simulation (visited on 07/04/2019)."
+  - "r[3] CEA and EDF. MFront Web Site. 2020. url: http://www.tfel.sourceforge.net/."
+  - "r[4] Thomas Helfer. The MFrontGenericInterfaceSupport project. The MFrontGenericInterfaceSupport project. 2019. url: https://thelfer.github.io/mgis/web/index.html."
   - "r[5] Thomas Helfer et al. “Introducing the open-source mfront code generator: Application to mechanical behaviours and material knowledge management within the PLEIADES fuel element modelling platform”. In: Computers & Mathematics with Applications 70.5 (Sept. 2015), pp. 994–1023. issn: 0898-1221. doi: 10 . 1016 / j . camwa.2015.06.027. url: http://www.sciencedirect.com/science/article/pii/S0898122115003132 (visited on 09/22/2016)."
   - "r[6] Thomas Helfer et al. “The ‘MFrontGenericInterfaceSupport‘ project”. In: Journal of Open Source Software 5.48 (2020). Publisher: The Open Journal, p. 2003. doi: 10.21105/joss.02003. url: https://doi.org/10.21105/joss.02003."
-  - r[7] Vincent Marelle et al. “New developments in ALCYONE 2.0 fuel performance code”. In: Top Fuel. Boise, USA, 2016.
+  - "r[7] Vincent Marelle et al. “New developments in ALCYONE 2.0 fuel performance code”. In: Top Fuel. Boise, USA, 2016."
 speaker:
   name: Thomas Helfer
   country: France

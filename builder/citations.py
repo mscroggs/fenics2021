@@ -1,4 +1,5 @@
 import re
+import warnings
 
 
 def markup_authors(a):
@@ -13,11 +14,13 @@ def markup_authors(a):
 
 def markup_citation(r):
     out = ""
+    if "author" not in r and "url" in r:
+        pass
     if "author" in r:
         out += markup_authors(r["author"])
     else:
         out += "<i>(unknown author)</i>"
-    out += f" {r['title']}"
+    out += f". {r['title']}"
     if "journal" in r:
         out += f", <em>{r['journal']}</em>"
         if "volume" in r:
@@ -37,6 +40,8 @@ def markup_citation(r):
     out += "."
     if "doi" in r:
         out += f" [DOI:&nbsp;<a href='https://doi.org/{r['doi']}'>{r['doi']}</a>]"
+    else:
+        warnings.warn(f"Paper without DOI: {out}", Warning)
     return out
 
 

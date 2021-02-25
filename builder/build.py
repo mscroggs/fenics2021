@@ -101,25 +101,22 @@ def make_talk_page(t_id, day, session_n):
     authors = [markup_author(tinfo["speaker"], True)]
     if "coauthor" in tinfo:
         authors += [markup_author(a) for a in tinfo["coauthor"]]
-    authortxt = ", ".join(authors[:-1])
-    if len(authors) > 1:
-        if len(authors) > 2:
-            authortxt += ","
-        authortxt += " and "
-    authortxt += authors[-1]
+    authortxt = "<br />".join(authors)
 
     content = ""
     content += f"<h1>{tinfo['title']}</h1>"
-    content += f"<div>{authortxt}.</div>"
+    content += f"<div>{authortxt}</div>"
     content += (f"<div style='margin-top:5px'>"
                 f"<a href='/talks/list-{day}.html'>{day}</a>"
                 f" session {session_n} ({times[session_n]})</div>")
     content += "<div class='abstract'>"
+    abstract = []
     if isinstance(tinfo['abstract'], list):
         for parag in tinfo['abstract']:
-            content += f"<p>{parag}</p>"
+            abstract.append(parag)
     else:
-        content += f"<p>{tinfo['abstract']}</p>"
+        abstract.append(tinfo['abstract'])
+    content += markup("\n\n".join(abstract))
     content += "</div>"
 
     write_page(f"talks/{t_id}.html", content)
@@ -128,7 +125,7 @@ def make_talk_page(t_id, day, session_n):
     short_content += f"<a href='/talks/{t_id}.html'>"
     short_content += f"<div class='talktitle'>{tinfo['title']}</div>"
     short_content += f"</a>"
-    short_content += f"<div class='timetablelistauthor'>{authortxt}.</div>"
+    short_content += f"<div class='timetablelistauthor'>{authortxt}</div>"
 
     return short_content
 
