@@ -33,7 +33,7 @@ a:hover {color:#FF8800}
   .content {width:95%}
 }
 .content {margin:auto;padding:10px}
-.head .content {background-color:rgba(74,152,221,0.9);}
+.head .content {background-color:rgba(74,152,221,0.9);padding-bottom:0}
 
 .title {text-align:center;font-size:35px}
 .tagline {text-align:center;font-size:25px;color:white}
@@ -165,7 +165,7 @@ a.timetabletalk:hover {border:1px solid #FF8800}
 
 .head .links a, .head .links a:link, .head .links a:active, .head .links a:visited
  {color:#4A98DD;background-color:white;padding:10px 20px;font-size:18px;
-  border-radius:10px 10px 0px 0px;margin-right:10px}
+  border-radius:10px 10px 0px 0px;margin-right:10px;display:inline-block}
 .head .links a:hover {background-color:#FF8800;color:black}
 
 .authors {padding-left:40px;text-align:initial}
