@@ -249,8 +249,6 @@ for day in daylist:
     content += f"<div class='timetablelisttalk'>{evenings[day][1]}</div>"
     daytalks[day] = content
 
-
-
 content = "<h1>List of talks</h1>"
 for day in daylist:
     content += f"<h2>{day}</h2>{daytalks[day]}"
