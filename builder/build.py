@@ -132,7 +132,7 @@ def make_talk_page(t_id, day, session_n, prev, next):
     content += f"<div>{authortxt}</div>"
     content += (f"<div style='margin-top:5px'>"
                 f"<a href='/talks/list-{day}.html'>{day}</a>"
-                f" session {session_n} ({times[session_n]})</div>")
+                f" session {session_n} ({times[session_n]} GMT)</div>")
     content += "<div class='abstract'>"
     abstract = []
     if isinstance(tinfo['abstract'], list):
@@ -187,7 +187,7 @@ content += "<div class='timetablegrid'>\n"
 
 for s in [1, 2, 3]:
     content += f"<div class='gridcell timetableheading rotated' style='grid-column: 1 / span 1; "
-    content += f"grid-row: {talk_starts[s]} / span {ntalks[s]};'>Session {s} ({times[s]})</div>"
+    content += f"grid-row: {talk_starts[s]} / span {ntalks[s]};'>Session {s} ({times[s]} GMT)</div>"
 
     content += f"<div class='gridcell timetableheading' style='grid-column: 2 / span 5; "
     content += f"grid-row: {break_positions[s]} / span 1;padding:10px'>"
@@ -196,7 +196,7 @@ for s in [1, 2, 3]:
 
 content += f"<div class='gridcell timetableheading rotated' style='grid-column: 1 / span 1; "
 content += f"grid-row: {talk_starts['evening']} / span 1;'>"
-content += f"Evening session ({times['evening']})</div>"
+content += f"Evening session ({times['evening']} GMT)</div>"
 
 
 content += "<div class='gridcell timetabletalk' "
@@ -280,7 +280,7 @@ daytalks = {}
 for day in daylist:
     content = ""
     for s in [1, 2, 3]:
-        content += f"<h3>Session {s} ({times[s]})</h3>"
+        content += f"<h3>Session {s} ({times[s]} GMT)</h3>"
         if day == "Tuesday" and s == 2:
             content += "<div class='timetablelisttalk'><div class='talktitle'>"
             content += "Q&A with the FEniCS steering council</div></div>"
@@ -292,7 +292,7 @@ for day in daylist:
                 content += "<div class='timetablelisttalk'>"
                 content += make_talk_page(t, day, s, prev_talks[t], next_talks[t])
                 content += "</div>"
-    content += f"<h3>Evening session: {evenings[day][0]} ({times['evening']})</h3>"
+    content += f"<h3>Evening session: {evenings[day][0]} ({times['evening']} GMT)</h3>"
     content += f"<div class='timetablelisttalk'>{evenings[day][1]}</div>"
     daytalks[day] = content
 
