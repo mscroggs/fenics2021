@@ -14,13 +14,12 @@ def markup_authors(a):
 
 def markup_citation(r):
     out = ""
-    if "author" not in r and "url" in r:
-        pass
     if "author" in r:
-        out += markup_authors(r["author"])
+        if r["author"] != "":
+            out += markup_authors(r["author"]) + ". "
     else:
-        out += "<i>(unknown author)</i>"
-    out += f". {r['title']}"
+        out += "<i>(unknown author)</i>. "
+    out += f"{r['title']}"
     if "journal" in r:
         out += f", <em>{r['journal']}</em>"
         if "volume" in r:
@@ -38,6 +37,10 @@ def markup_citation(r):
     if "year" in r:
         out += f", {r['year']}"
     out += "."
+    if "url" in r:
+        out += f" <a href='{r['url']}'>"
+        out += r['url'].split("://")[1]
+        out += "</a>"
     if "doi" in r:
         out += f" [DOI:&nbsp;<a href='https://doi.org/{r['doi']}'>{r['doi']}</a>]"
     else:
