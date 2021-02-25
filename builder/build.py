@@ -34,7 +34,7 @@ with open(os.path.join(talks_path, "_timetable.yml")) as f:
 
 times = {1: "13:00-14:40", 2: "15:00-16:30", 3: "17:00-18:30", "evening": "19:30-21:00"}
 daylist = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
-evenings = {"Monday": ("Drinks reception", "Lorem ipsum"),
+evenings = {"Monday": ("Drinks reception", ""),
             "Tuesday": ("Discussion tables", ""),
             "Wednesday": ("FEniCS quiz night", ""),
             "Thursday": ("Conference dinner", ""),
@@ -162,13 +162,13 @@ content += "Q&A with the FEniCS steering council</div></div>"
 content += "<div class='gridcell timetabletalk' "
 content += f"style='grid-column: 2 / span 1; grid-row: 2 / span 1;'>"
 content += "<div class='timetabletalktitle'>Welcome & Introduction</div>"
-content += "<div class='timetabletalkspeaker'>Put name here</div>"
+content += "<div class='timetabletalkspeaker'>Matthew Scroggs</div>"
 content += "</div>"
 
 content += "<div class='gridcell timetabletalk' "
 content += f"style='grid-column: 6 / span 1; grid-row: 18 / span 2;'>"
 content += "<div class='timetabletalktitle'>Prizes & Conclusion</div>"
-content += "<div class='timetabletalkspeaker'>Put name here</div>"
+content += "<div class='timetabletalkspeaker'>Matthew Scroggs</div>"
 content += "</div>"
 
 for i, day in enumerate(daylist):
