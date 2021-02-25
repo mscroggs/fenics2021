@@ -211,6 +211,10 @@ for day in daylist:
     content = ""
     for s in [1, 2, 3]:
         content += f"<h3>Session {s} ({times[s]})</h3>"
+        if day == "Tuesday" and s == 2:
+            content += "<div class='timetablelisttalk'><div class='talktitle'>"
+            content += "Q&A with the FEniCS steering council</div></div>"
+
         if f"session {s}" in timetable[day]:
             talks = timetable[day][f"session {s}"]
             for t in talks:
@@ -221,6 +225,7 @@ for day in daylist:
     content += f"<h3>Evening session: {evenings[day][0]} ({times['evening']})</h3>"
     content += f"<div class='timetablelisttalk'>{evenings[day][1]}</div>"
     daytalks[day] = content
+
 
 
 content = "<h1>List of talks</h1>"
