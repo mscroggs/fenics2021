@@ -263,6 +263,8 @@ for day in daylist:
                 if prev is not None:
                     next_talks[prev] = (t, next_note)
                 prev = t
+                next_note = None
+                prev_note = None
         next_note = "after a break"
         prev_note = "before a break"
     next_note = "on the following day"

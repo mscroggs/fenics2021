@@ -170,6 +170,9 @@ a.timetabletalk:hover {border:1px solid #FF8800}
 
 .authors {padding-left:40px;text-align:initial}
 
-.prevlink, .nextlink{width:49%;display:inline-block}
+.prevnext {
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
 .prevlink {text-align:left}
 .nextlink {text-align:right}
