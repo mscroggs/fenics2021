@@ -4,7 +4,7 @@ abstract:
 speaker:
   name: Matthias Rambausek
   country: France
-  affilation: LMS, C.N.R.S., École Polytechnique, Institut Polytechnique de Paris
+  affiliation: LMS, C.N.R.S., École Polytechnique, Institut Polytechnique de Paris
 coauthors:
   - name: Dipayan Mukherjee
     country: France
