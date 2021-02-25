@@ -5,10 +5,12 @@ speaker:
   country: United States
   affiliation: University of Illinois at Urbana-Champaign
 coauthor:
-- name: Andreas Klöckner
+- name: Andreas Kloeckner
   country: United States
   affiliation: University of Illinois at Urbana-Champaign
 - name: Robert Kirby
-  country: United States Baylor University
+  country: United States
+  affiliation: Baylor University
 - name: Peter Coogan
-  country: United States Baylor University
+  country: United States
+  affiliation: Baylor University
