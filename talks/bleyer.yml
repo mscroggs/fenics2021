@@ -1,0 +1,7 @@
+title: Automating the formulation and resolution of convex variational problems with the fenics_optim package
+abstract: In this work, we present a Python package called fenics_optim which enables to easily formulate convex variational problems as conic optimization problems within FEniCS. It relies on the conic optimization solver Mosek which uses state-of-the-art interior-point methods for solving large-scale linear, second-order cone and semi-definite programming problems. These are particularly suited for solving non-smooth optimization problems which arise in contact or elasto-plasticity problems for instance but also in the image processing community. In particular, we will present an application to solving limit analysis problems, ie computing directly the limit load of a perfectly plastic structure as a convex optimization problem and without relying on an incremental elasto-plastic procedure until final collapse. I will finish by a recent extension towards limit-analysis based topology optimization.
+speaker:
+  name: Jeremy Bleyer
+  country: France
+  affiliation: Laboratoire Navier, Ecole des Ponts ParisTech, Université Gustave Eiffel
+  website: https://scholar.google.no/citations?user=p9iRhzgAAAAJ&hl=en&oi=ao

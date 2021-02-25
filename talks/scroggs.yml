@@ -1,0 +1,23 @@
+title: Constructing high order DOF maps by permuting reference data
+abstract: When creating higher order finite element spaces, it is vital that neighbouring cells agree on the positioning and orientations of degrees-of-freedom on their shared mesh entities. In this talk, we discuss how reference data can be transformed so that the correct global data is obtained even if the local orientations of two neighbouring cells do not agree. We present examples of how this method is implemented in Basix, FEniCSx's finite element tabulator. <ghostref title="Construction of arbitrary order finite element degree-of-freedom maps on polygonal and polyhedral cell meshes" author="Scroggs, Matthew W. and Dokken, J&oslash;rgen S. and Richardson, Chris N. and Wells, Garth N." year="2021" journal="submitted to ACM Transactions on Mathematical Software" arxiv="2102.11901">
+speaker:
+  name: Matthew Scroggs
+  country: United Kingdom
+  affiliation: University of Cambridge
+  website: https://www.mscroggs.co.uk
+  twitter: mscroggs
+  github: mscroggs
+coauthor: 
+- name: J&oslash;rgen S. Dokken
+  country: United Kingdom
+  affiliation: University of Cambridge
+  website: https://jsdokken.com/
+  github: jorgensd
+- name: Chris Richardson
+  country: United Kingdom
+  affiliation: BP Institute
+  github: chrisrichardson
+- name: Garth N. Wells
+  country: United Kingdom
+  affiliation: University of Cambridge
+  github: garth-wells

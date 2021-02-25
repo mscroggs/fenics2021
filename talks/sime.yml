@@ -1,0 +1,17 @@
+title: A tracer's sojourn in a compressible velocity field
+abstract:
+- Pointwise satisfaction of the continuity equation is key to precise advection of tracer data through incompressible velocity fields.
+- In this presentation we explore tracer advection in the context of weakly compressible flows arising in anelastic fluids.
+- To do this we exploit the hybrid discontinuous Galerkin (HDG) method via the GeoPart and LEoPart libraries in conjunction with the FEniCS project.
+- We present some esoteric findings and aesthetic images.
+speaker:
+  name: Nate Sime
+  country: United States
+  affiliation: Carnegie Institution for Science
+coauthor:
+- name: Cian Wilson
+  country: United States 
+  affiliation: Carnegie Institution for Science
+- name: Peter van Keken
+  country: United States
+  affiliation: Carnegie Institution for Science

@@ -1,0 +1,19 @@
+title: "Finite elements on accelerators: an experience using FEniCSx and SYCL"
+abstract:
+  - In this presentation, we are going to talk about our experience implementing the finite element method on different architectures and accelerators using the FEniCSx libraries and the SYCL programming model. Our main focus is on performance portability, we would like the FEM program to get consistent performance on a wide variety of platforms, instead of being very efficient on a single one.
+  - "SYCL is a modern kernel-based parallel programming model that allows for one code to be written which can run in multiple types of computational devices (eg CPUs and GPUs). A kernel describes a single operation, that can be instantiated many times and applied to different input data (eg cell-wise matrix assembly). This kernel-based model matches nicely with the new FEniCS data-centric design: DOLFINx generates data to operate in parallel (geometry, topology, and dofmaps) and FFCx generates efficient code that can be used as part of the parallel kernels."
+  - We will discuss how different ways of expressing parallelism can affect the performance we ultimately achieve, for instance, we consider different global assembly strategies and data structures. We will also discuss how carefully arranging memory transfer and allocations can reduce latency and increase throughput in different accelerators. Finally, we will show some performance results of simplified finite element simulations on different architectures, ranging from Intel and AMD CPUs to NVIDIA GPUs.
+speaker:
+  name: Igor Baratta
+  country: United Kingdom
+  affiliation: University of Cambridge
+  github: IgorBaratta
+coauthor:
+  - name: Chris Richardson
+    country: United Kingdom
+    affiliation: University of Cambridge
+    github: chrisrichardson
+  - name: Garth Wells
+    country: United Kingdom
+    affiliation: University of Cambridge
+    github: garth-wells

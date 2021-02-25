@@ -1,0 +1,10 @@
+title: Additive Schwarz methods for serendipity elements
+abstract: While solving partial differential equations with finite element method, serendipity elements allow us to obtain the same order of accuracy as rectangular tensor-product elements with many fewer degrees of freedom. To realize these savings in practice, we utilize p-version Additive Schwarz methods that solve local patch problems together with a low-order global system. For symmetric coercive problems, we obtain condition numbers independent of the mesh size and degree of serendipity space. Numerical experiments using Firedrake and PETSc confirm this theory and demonstrate efficiency relative to standard elements for model problems.
+speaker:
+  name: Jorge Marchena Menendez
+  country: United States
+  affiliation: Baylor University
+coauthor:
+  - name: Robert Kirby
+    country: United States
+    affiliation: Baylor University

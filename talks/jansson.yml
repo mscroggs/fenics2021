@@ -1,0 +1,27 @@
+title: "Digital Math: Solving the reproducibility crisis in the digital era"
+abstract:
+  - We present the Digital Math framework as the foundation for modern science-based on constructive digital mathematical computation. The computed result (coefficient vector, FEM function, plot, etc.) is a mathematical theorem, and the mathematical Open Source code, here in the FEniCS framework, and computation is the mathematical proof. Based on the Digital Math framework and the FEniCS realization, we present solutions to some of the grand challenges in science, education and industry.
+  - "In this seminar, we specifically focus on solving the reproducibility crisis in research, recently highlighted in our panel debate with the European Commission, Swedish Parliament, Lorena Barba and top Swedish journalist:"
+  - "http://digimat.tech/paneldebate-kth/"
+  - We see education as reproducing scientific results of key importance for society. As part of the seminar, you are invited to participate in the online DigiMat course on reproducible research, where anyone in an accessible Ubiquitous High-Performance Computing (UHPC) Digital Math environment can create your own reproducible “Digital Math” publication.
+  - Reports from the education system show that almost all students lose motivation for math and programming somewhere along the way. At the same time computational math is the fundament of modern society, creating an enormous societal problem.
+  - We show results that our DigiMat - Digital Math online educationprogram <ref author="" title="Digital Math online educationprogram" url="http://digimat.tech/digimat">, from pre-school through university and professional is asolution to this grand challenge in education. DigiMat createsmotivation and learning of the key abstract concepts by playing with,editing and building your own Digital Math interactive simulations andvirtual worlds. DigiMat Pro has reached 30000+ participants with great feedback, and DigiMat Basic is now reaching schools in Sweden with good results.
+  - "We show reproducible predictive Real Flight Simulation as a solution to the grand challenge of aerodynamics connected to results in the High Lift Prediction Workshop. For general continuum modeling, such as biomechanics, we present our Real Unified Continuum framework <ref author=\"Johan Jansson, Massimiliano Leoni, Måns Andersson, Patricia Lopez Sanchez, Mats Stading, Ridgway Scott, Claes Johnson\" title=\"Predictive Real Unified Continuum modeling of multi-physics in the Digital Math framework\" journal=\"Digital Math: Human workshop\" year=\"2020\" url=\"http://digimat.tech/paper-digital-math-unified-continuum/\"> with results in food tech, heart modeling, etc."
+speaker:
+  name: Johan Jansson
+  country: Sweden
+  affiliation: KTH Royal Institute of Technology
+  website: http://digimat.tech
+coauthor:
+  - name: M&aring;ns Andersson
+    country: Sweden
+    affiliation: KTH Royal Institute of Technology
+  - name: Linde Van Beers
+    country: Sweden
+    affiliation: KTH Royal Institute of Technology
+  - name: Ridgway Scott
+    country: United States
+    affiliation: University of Chicago
+  - name: Claes Johnson
+    country: Sweden
+    affiliation: KTH Royal Institute of Technology

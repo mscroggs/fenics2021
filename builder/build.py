@@ -29,12 +29,12 @@ os.system(f"cp -r {files_path}/* {html_path}")
 with open(os.path.join(html_path, "CNAME"), "w") as f:
     f.write("fenics2021.com")
 
-with open(os.path.join(talks_path, "timetable.yml")) as f:
+with open(os.path.join(talks_path, "_timetable.yml")) as f:
     timetable = yaml.load(f, Loader=yaml.FullLoader)
 
 times = {1: "13:00-14:40", 2: "15:00-16:30", 3: "17:00-18:30", "evening": "19:30-21:00"}
 daylist = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
-evenings = {"Monday": ("Drinks reception", "Lorem ipsum"),
+evenings = {"Monday": ("Drinks reception", ""),
             "Tuesday": ("Discussion tables", ""),
             "Wednesday": ("FEniCS quiz night", ""),
             "Thursday": ("Conference dinner", ""),
@@ -51,7 +51,31 @@ for i in [1, 2, 3]:
     break_positions[i] = talk_starts[i] + ntalks[i]
 talk_starts["evening"] = break_positions[3] + 1
 
-empty_talks = {"Tuesday": {2: list(range(5))}, "Friday": {1: [5], 3: [3, 4]}}
+empty_talks = {"Tuesday": {2: list(range(5))}, "Friday": {3: [3, 4]}}
+
+country_emoji = {
+    "Norway": "&#127475;&#127476;",
+    "United States": "&#127482;&#127480;",
+    "United Kingdom": "&#127468;&#127463;",
+    "Sweden": "&#127480;&#127466;",
+    "Luxembourg": "&#127473;&#127482;",
+    "Canada": "&#127464;&#127462;",
+    "Germany": "&#127465;&#127466;",
+    "France": "&#127467;&#127479;",
+    "Spain": "&#127466;&#127480;",
+    "Brazil": "&#127463;&#127479;",
+    "Poland": "&#127477;&#127473;",
+    "Italy": "&#127470;&#127481;",
+    "Switzerland": "&#127464;&#127469;",
+    "India": "&#127470;&#127475;",
+    "Ireland": "&#127470;&#127466;",
+    "Colombia": "&#127464;&#127476;",
+    "Morocco": "&#127474;&#127462;",
+    "Qatar": "&#127478;&#127462;",
+    "Turkey": "&#127481;&#127479;",
+    "Finland": "&#127467;&#127470;",
+    "French Polynesia": "&#127477;&#127467;",
+}
 
 
 def markup_author(authorinfo, bold=False):
@@ -72,7 +96,10 @@ def markup_author(authorinfo, bold=False):
                  "<i class='fab fa-twitter'></i></a>")
 
     if "affiliation" in authorinfo:
-        info += f" ({authorinfo['affiliation']})"
+        info += f" ({authorinfo['affiliation']}"
+        if "country" in authorinfo:
+            info += f", {country_emoji[authorinfo['country']]}"
+        info += ")"
     return info
 
 
@@ -91,32 +118,50 @@ def get_title_and_speaker(t_id):
     return tinfo["title"], tinfo["speaker"]["name"]
 
 
-def make_talk_page(t_id, day, session_n):
+def make_talk_page(t_id, day, session_n, prev, next):
     with open(os.path.join(talks_path, f"{t_id}.yml")) as f:
         tinfo = yaml.load(f, Loader=yaml.FullLoader)
 
     authors = [markup_author(tinfo["speaker"], True)]
     if "coauthor" in tinfo:
         authors += [markup_author(a) for a in tinfo["coauthor"]]
-    authortxt = ", ".join(authors[:-1])
-    if len(authors) > 1:
-        if len(authors) > 2:
-            authortxt += ","
-        authortxt += " and "
-    authortxt += authors[-1]
+    authortxt = "".join([f"<div class='authors'>{i}</div>" for i in authors])
 
     content = ""
     content += f"<h1>{tinfo['title']}</h1>"
-    content += f"<div>{authortxt}.</div>"
+    content += f"<div>{authortxt}</div>"
     content += (f"<div style='margin-top:5px'>"
                 f"<a href='/talks/list-{day}.html'>{day}</a>"
-                f" session {session_n} ({times[session_n]})</div>")
+                f" session {session_n} ({times[session_n]} GMT)</div>")
     content += "<div class='abstract'>"
+    abstract = []
     if isinstance(tinfo['abstract'], list):
         for parag in tinfo['abstract']:
-            content += f"<p>{parag}</p>"
+            abstract.append(parag)
     else:
-        content += f"<p>{tinfo['abstract']}</p>"
+        abstract.append(tinfo['abstract'])
+    content += markup("\n\n".join(abstract))
+    content += "</div>"
+
+    content += "<div class='prevnext'>"
+    content += "<div class='prevlink'>"
+    if prev[0] is not None:
+        content += f"<a href='/talks/{prev[0]}.html'>previous talk"
+        if prev[1] is not None:
+            content += f" ({prev[1]})"
+        content += "</a>"
+    else:
+        content += "<i>this is the first talk</i>"
+    content += "</div>"
+    content += "<div class='nextlink'>"
+    if next[0] is not None:
+        content += f"<a href='/talks/{next[0]}.html'>next talk"
+        if next[1] is not None:
+            content += f" ({next[1]})"
+        content += "</a>"
+    else:
+        content += "<i>this is the final talk</i>"
+    content += "</div>"
     content += "</div>"
 
     write_page(f"talks/{t_id}.html", content)
@@ -125,7 +170,7 @@ def make_talk_page(t_id, day, session_n):
     short_content += f"<a href='/talks/{t_id}.html'>"
     short_content += f"<div class='talktitle'>{tinfo['title']}</div>"
     short_content += f"</a>"
-    short_content += f"<div class='timetablelistauthor'>{authortxt}.</div>"
+    short_content += f"<div class='timetablelistauthor'>{authortxt}</div>"
 
     return short_content
 
@@ -142,7 +187,7 @@ content += "<div class='timetablegrid'>\n"
 
 for s in [1, 2, 3]:
     content += f"<div class='gridcell timetableheading rotated' style='grid-column: 1 / span 1; "
-    content += f"grid-row: {talk_starts[s]} / span {ntalks[s]};'>Session {s} ({times[s]})</div>"
+    content += f"grid-row: {talk_starts[s]} / span {ntalks[s]};'>Session {s} ({times[s]} GMT)</div>"
 
     content += f"<div class='gridcell timetableheading' style='grid-column: 2 / span 5; "
     content += f"grid-row: {break_positions[s]} / span 1;padding:10px'>"
@@ -151,7 +196,7 @@ for s in [1, 2, 3]:
 
 content += f"<div class='gridcell timetableheading rotated' style='grid-column: 1 / span 1; "
 content += f"grid-row: {talk_starts['evening']} / span 1;'>"
-content += f"Evening session ({times['evening']})</div>"
+content += f"Evening session ({times['evening']} GMT)</div>"
 
 
 content += "<div class='gridcell timetabletalk' "
@@ -162,13 +207,13 @@ content += "Q&A with the FEniCS steering council</div></div>"
 content += "<div class='gridcell timetabletalk' "
 content += f"style='grid-column: 2 / span 1; grid-row: 2 / span 1;'>"
 content += "<div class='timetabletalktitle'>Welcome & Introduction</div>"
-content += "<div class='timetabletalkspeaker'>Put name here</div>"
+content += "<div class='timetabletalkspeaker'>Matthew Scroggs</div>"
 content += "</div>"
 
 content += "<div class='gridcell timetabletalk' "
 content += f"style='grid-column: 6 / span 1; grid-row: 18 / span 2;'>"
 content += "<div class='timetabletalktitle'>Prizes & Conclusion</div>"
-content += "<div class='timetabletalkspeaker'>Put name here</div>"
+content += "<div class='timetabletalkspeaker'>Matthew Scroggs</div>"
 content += "</div>"
 
 for i, day in enumerate(daylist):
@@ -206,21 +251,50 @@ content += "</div>"
 
 write_page("talks/index.html", content)
 
+next_talks = {}
+prev_talks = {}
+prev = None
+prev_note = None
+next_note = None
+for day in daylist:
+    for s in [1, 2, 3]:
+        if f"session {s}" in timetable[day]:
+            talks = timetable[day][f"session {s}"]
+            for t in talks:
+                prev_talks[t] = (prev, prev_note)
+                if prev is not None:
+                    next_talks[prev] = (t, next_note)
+                prev = t
+                next_note = None
+                prev_note = None
+        next_note = "after a break"
+        prev_note = "before a break"
+    next_note = "on the following day"
+    prev_note = "on the previous day"
+next_talks[prev] = (None, None)
+
+print(next_talks)
+
+
 daytalks = {}
 for day in daylist:
     content = ""
     for s in [1, 2, 3]:
-        content += f"<h3>Session {s} ({times[s]})</h3>"
+        content += f"<h3>Session {s} ({times[s]} GMT)</h3>"
+        if day == "Tuesday" and s == 2:
+            content += "<div class='timetablelisttalk'><div class='talktitle'>"
+            content += "Q&A with the FEniCS steering council</div></div>"
+
         if f"session {s}" in timetable[day]:
             talks = timetable[day][f"session {s}"]
             for t in talks:
+                print(t)
                 content += "<div class='timetablelisttalk'>"
-                content += make_talk_page(t, day, s)
+                content += make_talk_page(t, day, s, prev_talks[t], next_talks[t])
                 content += "</div>"
-    content += f"<h3>Evening session: {evenings[day][0]} ({times['evening']})</h3>"
+    content += f"<h3>Evening session: {evenings[day][0]} ({times['evening']} GMT)</h3>"
     content += f"<div class='timetablelisttalk'>{evenings[day][1]}</div>"
     daytalks[day] = content
-
 
 content = "<h1>List of talks</h1>"
 for day in daylist:

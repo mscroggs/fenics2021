@@ -1,0 +1,16 @@
+title: "ATOMiCS: topology optimization using FEniCS and OpenMDAO"
+abstract: We present a toolbox called ATOMiCS, which uses FEniCS as the partial differential equation (PDE) solver for topology optimization and provides partial derivatives for density-based topology optimization in a modular large-scale optimization framework, OpenMDAO. OpenMDAO is a gradient-based multidisciplinary design optimization framework developed by NASA. Many existing models from different disciplines have been implemented in OpenMDAO as modular components by various users. Integrating FEniCS with OpenMDAO brings a practical PDE solution approach and symbolic derivative computation while maintaining interoperability with existing OpenMDAO models. In addition, using FEniCS as the PDE solver for topology optimization inside a modular framework enables a general topology optimization toolbox with user-specified governing PDEs. We have applied ATOMiCS to topology optimization problems such as minimizing compliance in linear and nonlinear elastic structures, minimizing compliance and weight of thermoelastic material in battery packs, and shape-matching with liquid crystal elastomer structures.
+speaker:
+  name: Jiayao Yan
+  country: United States
+  affiliation: University of California San Diego
+coauthor:
+- name: Ru Xiang
+  country: United States
+  affiliation: University of California San Diego
+- name: David Kamensky
+  country: United States
+  affiliation: University of California San Diego
+- name: John Hwang
+  country: United States
+  affiliation: University of California San Diego

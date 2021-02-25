@@ -1,0 +1,28 @@
+title: Local a posteriori error estimates for the spectral fractional Laplacian
+abstract:
+  - The fractional Laplacian has a global character and its solutions have strong boundary layers. Its efficient solution is still an open challenge for the community.
+  - In this talk, we will show a novel a posteriori error estimation method for the spectral fractional Laplacian.
+  - Our method begins with the work of <ref author="A. Bonito and J. E. Pasciak" year="2015" title="Numerical Approximation of Fractional Powers of Elliptic Operators" doi="10.1090/S0025-5718-2015-02937-8"> where a fractional operator is represented by an integral over non-fractional (ie local) parametric operators. The integral and the local operators can then be discretised using a quadrature rule and a standard finite element method, respectively.
+  - We show that the integral representation of <ref author="A. Bonito and J. E. Pasciak" year="2015" title="Numerical Approximation of Fractional Powers of Elliptic Operators" doi="10.1090/S0025-5718-2015-02937-8"> can equally be applied to the construction of an error estimator. A key building block of the method is an efficient hierarchical estimator introduced in   <ref author="R. E. Bank and A. Weiser" year="1985" title="Some a posteriori error estimators for elliptic partial differential equations" doi="10.2307/2007953">.
+  - "The estimator has numerous benefits: it is numerically sharp, it allows the measurement of the error in various norms, and it is defined for one, two and three-dimensional problems. It is also fully local and cheap to compute in parallel."
+  - The estimator leads to optimal convergence rates when used to steer adaptive refinement algorithms.
+  - The implementation is based on FEniCS Error Estimation (FEniCS-EE), a finite element error estimation package for DOLFIN and DOLFINX <ref author="Raphaël Bulle, Jack S. Hale, Alexei Lozinski, Stéphane P. A. Bordas, Franz Chouly" year="2020" title="Hierarchical a posteriori error estimation of Bank&ndash;Weiser type in the FEniCS Project" arxiv="2102.04360" journal="submitted">.
+speaker:
+  name: Rapha&euml;l Bulle
+  country: Luxembourg
+  affiliation: University of Luxembourg
+  website: https://www.researchgate.net/profile/Raphael-Bulle
+coauthor:
+  - name: St&eacute;phane P. A. Bordas
+    country: Luxembourg
+    affiliation: University of Luxembourg
+  - name: Franz Chouly
+    country: France
+    affiliation: Université de Bourgogne-Franche-Comté
+  - name: Jack S. Hale
+    country: Luxembourg
+    affiliation: University of Luxembourg
+  - name: Alexei Lozinski
+    country: France
+    affiliation: Universit&eacute; Bourgogne Franche-Comt&eacute;
+    website: http://lmb.univ-fcomte.fr/Lozinski-Alexei

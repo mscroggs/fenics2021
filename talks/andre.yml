@@ -1,0 +1,11 @@
+title: Bistatic polarimetric through-wall SAR public release data set
+abstract: This talk presents details of a public release measured radar through-wall dataset suitable for validation of electromagnetic propagation and scattering predictions and for research in scene reconstruction and three-dimensional Synthetic Aperture Radar (SAR) image formation. The collection was fully polarimetric, in a frequency range of 1-4 GHz, employing both monostatic and bistatic two-dimensional synthetic aperture scanning geometries. The scene comprised a concrete walled structure approximately 3 m square and 1.3 m high, containing and surrounded by various metal targets. The Dstl funded experiments were performed at Cranfield University's Ground-Based SAR laboratory in the UK and the dataset will be released in November 2021.
+speaker:
+  name: Daniel Andre
+  country: United Kingdom
+  affiliation: Cranfield University
+  website: https://www.cranfield.ac.uk/people/dr-daniel-andre-496015
+coauthor:
+  - name: Richard Sabbiers
+    country: United Kingdom
+    affiliation: Cranfield University

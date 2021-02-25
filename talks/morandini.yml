@@ -1,0 +1,7 @@
+title: A two-level nonlinear beam model using adjoints
+abstract: A two-level nonlinear beam model, with the two levels linked by first- and second-order adjoints, allows to successfully deal with beam problems characterized by complex and multi-material cross-sections. Emphasis is given to the approach used for coupling the two levels within the FEniCS framework, and on how to overcome a few issues encountered during the actual implementation of the coupling procedure.
+speaker:
+  name: Marco Morandini
+  country: Italy
+  affiliation: Politecnico di Milano
+  website: https://home.aero.polimi.it/morandini

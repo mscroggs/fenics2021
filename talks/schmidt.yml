@@ -1,0 +1,16 @@
+title: A second order scheme to compute geometric interfaces with applications in microfluids
+abstract:
+- Second order shape calculus is used to solve the Young-Laplace problem, which determines the shape of energy minimal interfaces such as droplets and capillary bridges. Knowledge of the shape and resulting capillary force of droplets in micro fluids has multiple application in granulate flows and lubrication.
+- To this end, 2nd order shape calculus is combined with a variety of contact and subset constraints to make the problem tractable with FEniCS. In particular, a level-set formulation to described the external geometry is coupled with a curvature-free variational formulation of the shape Hessian on shells, combining the multi and inter mesh capabilities of FEniCS with finite elements on shells.
+- Alternative, non-smooth interface energies and the resulting geometric flows will also be discussed.
+speaker: 
+  name: Stephan Schmidt
+  country: Germany
+  affiliation: Humboldt University Berlin
+coauthor:
+- name: Melanie Gr&auml;&szlig;er
+  country: Germany
+  affiliation: Paderborn University
+- name: Hans-Joachim Schmid
+  country: Germany
+  affiliation: Paderborn University

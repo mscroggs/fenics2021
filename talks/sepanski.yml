@@ -1,0 +1,16 @@
+title: "Nonlocal UFL: Finite elements for Helmholtz equations with a nonlocal boundary condition"
+abstract: Numerical resolution of exterior Helmholtz problems require some approach to domain truncation. As an alternative to approximate nonreflecting boundary conditions and invocation of the Dirichlet-to-Neumann map, we introduce new, nonlocal boundary conditions. These conditions are exact and require the evaluation of layer potentials involving Green's functions. The nonlocal boundary conditions are readily approximated by fast multipole methods, and the resulting linear system can be preconditioned by the purely local operator. Integration of the layer potential evaluation library pytential with the new external operator feature of Firedrake allows us to express these boundary conditions in UFL.
+speaker:
+  name: Benjamin Sepanski
+  country: United States
+  affiliation: University of Texas at Austin, Department of Computer Science
+  website: https://www.cs.utexas.edu/~bmsepan
+coauthor:
+- name: Robert Kirby
+  country: United States
+  affiliation: Department of Mathematics, Baylor University
+  website: https://sites.baylor.edu/robert_kirby
+- name: Andreas Kloeckner
+  country: United States
+  affiliation: Department Computer Science, University of Illinois at Urbana-Champaign, Urbana, IL
+  website: https://mathema.tician.de/aboutme

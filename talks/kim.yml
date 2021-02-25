@@ -1,0 +1,23 @@
+title: "hIPPYlib-MUQ: Scalable Markov chain Monte Carlo sampling methods for large-scale Bayesian inverse problems governed by PDEs"
+abstract:
+  - "With a massive explosion of datasets across all areas of science and engineering, the central questions are: How do we optimally learn from data through the lens of models? And how do we account for uncertainties in both data and models? These questions can be mathematically framed as Bayesian inverse problems. While powerful and sophisticated approaches have been developed to tackle these problems, such methods are often challenging to implement and there is no available software that easily facilitates the analysis of Bayesian inverse problems. In this talk, we present an extensible FEniCS-based software framework hIPPYlib-MUQ that overcomes these challenges by providing access to state-of-the-art algorithms that offer the capability to solve complex large-scale Bayesian inverse problems across a broad spectrum of scientific and engineering areas."
+speaker:
+  name: Ki-Tae Kim
+  country: United States
+  affiliation: University of California, Merced
+coauthor:
+  - name: Umberto Villa
+    country: United States
+    affiliation: Washington University in St. Louis
+  - name: Matthew Parno
+    country: United States
+    affiliation: The United States Army Corps of Engineers
+  - name: Noemi Petra
+    country: United States
+    affiliation: University of California, Merced
+  - name: Youssef Marzouk
+    country: United States
+    affiliation: Massachusetts Institute of Technology
+  - name: Omar Ghattas
+    country: United States
+    affiliation: The University of Texas at Austin

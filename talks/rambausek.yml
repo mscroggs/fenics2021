@@ -1,0 +1,14 @@
+title: Dissipative materials models with Materiaux and FEniCS
+abstract:
+  - In this contribution we introduce the material modeling framework "Materiaux" <ref author="Rambausek, M." year="2021" title="The Materiaux material modeling suite (Version v0.1.post1)" journal="Zenodo" doi="10.5281/zenodo.4479295">, which is partly based on the FEniCS technologies. Materiaux allows for the convenient development of complicated material models (including plasticity and dissipative ferromagnetism) in Python and provides the necessary integration bits to directly use the models in FEniCS/dolfin simulations. While the present implementation of the FEniCS bindings are based on subclassing dolfin::Expression, the structure of the models created is much more general such that they in principle allow for bindings in dolfinx and other FE packages. After outlining the basic structure of Materiaux we demonstrate the capabilities of Materiaux in combination with FEniCS by an application to magnetically hard <ref author="Mukherjee, D., Danas, K." year="2019" title="An evolving switching surface model for ferromagnetic hysteresis" journal="Journal of Applied Physics" volume="125" number="3:033902" doi="10.1063/1.5051483"> <ref author="Mukherjee, D., Rambausek, M., Danas, K." year="2021" title="An explicit dissipative model for isotropic hard magnetorheological elastomers" journal="Journal of the Mechanics and Physics of Solids" doi="10.1016/j.jmps.2021.104361"> and soft viscoelastic magnetorheological elastomers.
+speaker:
+  name: Matthias Rambausek
+  country: France
+  affiliation: LMS, C.N.R.S., École Polytechnique, Institut Polytechnique de Paris
+coauthor:
+  - name: Dipayan Mukherjee
+    country: France
+    affiliation: LMS, C.N.R.S., École Polytechnique, Institut Polytechnique de Paris
+  - name: Konstantinos Danas
+    country: France
+    affiliation: LMS, C.N.R.S., École Polytechnique, Institut Polytechnique de Paris

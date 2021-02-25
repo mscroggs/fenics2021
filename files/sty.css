@@ -58,7 +58,8 @@ td.rotated span {-ms-writing-mode: tb-rl; -webkit-writing-mode: vertical-rl; wri
 td.heading {font-weight:bold;font-size:80%}
 
 .talktitle, .timetabletalktitle {font-family: Lato, sans-serif;font-weight:bold}
-.timetabletalkspeaker {font-size:80%;margin-top:5px}
+.timetabletalktitle {font-size:70%}
+.timetabletalkspeaker {font-size:55%;margin-top:5px}
 
 .timetablegrid {
   display:grid;
@@ -166,3 +167,16 @@ a.timetabletalk:hover {border:1px solid #FF8800}
  {color:#4A98DD;background-color:white;padding:10px 20px;font-size:18px;
   border-radius:10px 10px 0px 0px;margin-right:10px;display:inline-block}
 .head .links a:hover {background-color:#FF8800;color:black}
+
+.authors {padding-left:40px;text-align:initial}
+
+.prevnext {
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.prevlink {text-align:left}
+.nextlink {text-align:right}
+
+a.refid, a.refid:visited, a.refid:link, a.refid:active, a.refid:hover {color:black}
+a.refid:target {font-weight:bold; color:#FF8800}
+

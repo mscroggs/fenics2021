@@ -1,0 +1,17 @@
+title: "Reduced order methods for optimal flow control: FEniCS-based applications"
+abstract: 
+  - "Optimal control is a powerful mathematical tool that can be used to fill the gap between collected data and equations, making the model more reliable and precise in the prediction of physical phenomena. However, optimal control problems are usually costly, most of all in a parametrized setting where many evaluations of the problem must be run to have a more comprehensive knowledge of the whole system. Reduced order methods (ROMs) help us to tackle this issue. Indeed, they aim at describing the parametric nature of the optimality system in a low-dimensional framework, accelerating the system solutions, maintaining the model accuracy. The talk aims at showing an overview of several applications in this topic through FEniCS-based <ref author=\"A. Logg, K. Mardal, and G. Wells\" title=\"Automated Solution of Differential Equations by the Finite Element Method\" publisher=\"Springer-Verlag, Berlin\" year=\"2012\" doi=\"10.1007/978-3-642-23099-8\"> libraries, RBniCS and multiphenics <ref title=\"RBniCS - reduced order modelling in FEniCS\" year=\"2015\" author=\"\" url=\"https://www.rbnicsproject.org\"> <ref title=\"Multiphenics project\" author=\"\" url=\"https://mathlab.sissa.it/multiphenics\">, developed to deal with parametric partial differential equations. After describing the general problem formulation and the basic ideas behind ROMs, we will show many numerical results in the optimal control field highlighting the potential of FEniCS and of the two libraries for these very complex problems, moving from steady linear problems to nonlinear time-dependent ones <ref author=\"F. Pichi, M. Strazzullo, F. Ballarin, and G. Rozza\" title=\"Driving bifurcating parametrized nonlinear PDEs by optimal control strategies: Application to Navier-Stokes equations and model reduction\" journal=\"Submitted\" year=\"2020\" arxiv=\"2010.13506\"> <ref author=\"M. Strazzullo, F. Ballarin, and G. Rozza\" title=\"POD-Galerkin model order reduction for parametrized nonlinear time dependent optimal flow control: an application to Shallow Water Equations\" journal=\"Submitted\"  arxiv=\"2003.09695\" year=\"2020\"> <ref author=\"M. Strazzullo, F. Ballarin, and G. Rozza\" title=\"POD-Galerkin model order reduction for parametrized time dependent linear quadratic optimal control problems in saddle point formulation\" journal=\"Journal of Scientific Computing\" volume=\"83\" number=\"55\" year=\"2020\" doi=\"10.1007/s10915-020-01232-x\">."
+speaker:
+  name: Maria Strazzullo
+  country: Italy
+  affiliation: SISSA (International School for Advanced Studies)
+  website: https://people.sissa.it/~mstrazzu
+coauthor:
+- name: Francesco Ballarin
+  country: Italy
+  affiliation: Catholic University of the Sacred Heart
+  website: https://www.francescoballarin.it
+- name: Gianluigi Rozza
+  country: Italy
+  affiliation: SISSA (International School for Advanced Studies)
+  website: https://people.sissa.it/~grozza

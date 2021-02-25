@@ -1,0 +1,15 @@
+title: FFCx code generation for expressions
+abstract:
+  - The FEniCSx Form Compiler (FFCx) compiles the symbolic weak formulation of PDEs into C code.
+  - Historically, its primary focus was on integral operators originating from weak forms. Using a quadrature rule it generated code to evaluate integrals. However, a number of applications appeared where symbolic UFL expressions not involving integrals needed to be compiled into C code - including interpolation into point-evaluation function spaces.
+  - In this contribution a code generation for UFL symbolic expressions is described. Code generation and optimisation techniques of FFCx are briefly reviewed and improvements needed to compile C code for non-integral, tensor-valued expressions are described.
+  - "New functionality is demonstrated with several examples: efficient interpolation into Lagrange point-evaluation spaces and assembly of interpolation and other non-integral operators (discrete gradient, divergence, curl, etc.). Examples are prepared using the development version of FEniCSx."
+  - It is believed that this extension to FFCx will be used in common practice by FEniCS users, improve their code performance and widen the applicability of the entire FEniCS package environment.
+speaker:
+  name: Michal Habera
+  country: Luxembourg
+  affiliation: University of Luxembourg
+coauthor:
+  - name: Andreas Zilian
+    country: Luxembourg
+    affiliation: University of Luxembourg

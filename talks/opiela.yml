@@ -1,0 +1,11 @@
+title: Predicting sound absorption in additively manufactured porous materials using multiscale simulations in FEniCS
+abstract: "Porous materials are widely used in soundproofing and noise control applications. Their microgeometry, which determines the sound absorption properties, can be developed to fit specific needs and produced employing modern additive manufacturing technologies. However, the design process usually requires running multiscale and multiphysics simulations, which is greatly facilitated by the FEniCS computing platform. The airborne propagation and attenuation of acoustic waves in a 3D printed rigid-frame porous material is considered with the aid of the 2019.1.0 FEniCS release. Two cases are studied: a basic passive configuration, and an adaptable configuration with steel balls introduced to the main pores that effectively modify visco-inertial and thermal dissipation within the system. The stationary Stokes, Laplace, and Poisson analyses are performed on a periodic fluid (air) domain representative for the microgeometry of the medium imposing periodic boundary conditions within a parallelised code. The respective solution fields are averaged over the domain using the built-in DOLFIN algorithms and upscaled to serve as an input to macroscopic calculations. The coupled Helmholtz problem of harmonic linear acoustics is solved to model the distribution of acoustic pressure in both a homogenised fluid equivalent to the porous material, and a layer of air adjacent to it. Suitable continuity boundary condition at the interface is implemented weakly into the finite element formulation of the problem. Finally, the numerical predictions of normal incidence sound absorption coefficient are compared with impedance tube measurements made on a 3D sample. Along with FEniCS, only open-source software is involved to prepare volumetric meshes and visualise the results."
+speaker: 
+  name: Kamil C. Opiela
+  country: Poland
+  affiliation: Institute of Fundamental Technological Research, Polish Academy of Sciences
+coauthor:
+- name: Tomasz G. Zieliński
+  country: Poland
+  affiliation: Institute of Fundamental Technological Research, Polish Academy of Sciences
+  website: http://bluebox.ippt.pan.pl/~tzielins/index.php

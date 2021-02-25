@@ -1,0 +1,10 @@
+title: A generic FEniCS-framework for moment approximations of Boltzmann's equation
+abstract: The moment method is a technique which relates a microscopic description of a kinetic model to a macroscopic continuum model. In the context of nonequilibrium gas flows, the moment method is used to derive fluid dynamics equations from the Boltzmann equation which provides a kinetic description of the nonequilibrium. The resulting moment equations are a set of partial differential equations (PDEs) and inherently form a hierarchy due to the nature of the moment method. Using more moment variables result in a larger system with better physical accuracy. Following a similar procedure, a corresponding set of boundary conditions can be directly derived from the kinetic description. Ultimately the moment equations can be reformulated and rewritten as a hyperbolic system of first order PDEs. Our aim is to develop a generic framework which solves arbitrary moment systems and we hitherto developed a solver called 'FEniCS For Moment Equations' (F2ME). In this talk, we briefly look at a set of moment systems and describe how FEniCS is employed to solve these systems. Furthermore, we discuss the implementation of our approach in detail and demonstrate the validity of the developed solver by comparing it with analytical and experimental solutions.
+speaker:
+  name: Edilbert Christhuraj
+  country: Germany
+  affiliation: RWTH Aachen University
+coauthor:
+  - name: Manuel Torrilhon
+    country: Germany
+    affiliation: RWTH Aachen University

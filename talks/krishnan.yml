@@ -1,0 +1,18 @@
+title: "Working with complex meshes: The mesh processing pipeline"
+abstract:
+- In any finite element analysis, it is very important to have an efficient tool to generate the mesh. In our work, we use Gmsh as a meshing software, and it is observed that the main problem with the current implementation of the mesh processing pipeline is that it is facing difficulties to handle models with complex geometries comprising of many boundaries and loading conditions; this means it has more number of physical groups. We use these physical groups to assign material properties, loads, or boundary conditions to the model.
+- The main objective of this talk is to explain the complete mesh processing pipeline for complex geometry. Starting from modeling of a mesh geometry and marking different boundary conditions in Gmsh, then will discuss about the benefits of using Mesh functions and Mesh Value Collections in FEniCS, and we will also discuss how to use the number tags from the XDMF file for defining various subdomains required for load and boundary conditions applications, and at the end how to visualize the XDMF file for validating if all the boundary conditions and loads are applied appropriately.
+- This talk will help the community to understand the complete mesh processing pipeline for a complex mesh geometry with increased efficiency.
+speaker:
+  name: U Meenu Krishnan
+  country: India
+  affiliation: Indian Institute of Technology, Roorkee
+  website: https://computationalmechanics.in/rajib_teams/u-meenu-krishnan/
+coauthor:
+  - name: Abhinav Gupta
+    country: India
+    affiliation: Indian Institute of Technology, Roorkee
+  - name: Rajib Chowdhury
+    country: India
+    affiliation: Indian Institute of Technology, Roorkee
+

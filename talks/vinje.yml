@@ -1,0 +1,9 @@
+title: Patient specific brain simulations with FEniCS and Freesurfer
+abstract:
+ - Patient-specific simulations of physical processes within the brain requires detailed grid construction from image data, typically MR-images. In this talk I will present the pipeline developed by our group on how to go from MRI images to finite element simulations. In many aspects of neuroscience there is particular focus on distinct regions within the brain. The new pipeline allows for efficient analysis of different brain regions and a more robust comparison with experimental results found in the literature.
+ - Freesurfer is a software developed to identify the brain tissue found in the MR images as well as segmenting it into several different subregions. Each subregion will be assigned a unique number according to a look-up-table with the corresponding name of the region. This information can be translated into FEniCS Meshfunctions with the Python package SVMTK (Figure). With the Meshfunction, we may assign different physical parameters to different regions of the brain. In addition, analysis and visualization of different regions in post-processing may also be performed.
+ - In this talk I show the general usage of this pipeline along with a few examples of relevant simulations for transport phenomena within the brain.
+speaker:
+  name: Vegard Vinje
+  country: Norway
+  affiliation: Simula Research Laboratory
