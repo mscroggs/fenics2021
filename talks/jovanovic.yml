@@ -5,11 +5,11 @@ abstract:
 speaker:
   name: Aleksandar P. Jovanovic
   country: Germany
-  affiliation: Leibniz Institute for Plasma Science and Technology (INP), Felix-Hausdorff-Str. 2, 17489 Greifswald, Germany
+  affiliation: Leibniz Institute for Plasma Science and Technology (INP)
 coauthor:
   - name: Detlef Loffhagen
     country: Germany
-    affiliation: Leibniz Institute for Plasma Science and Technology (INP), Felix-Hausdorff-Str. 2, 17489 Greifswald, Germany
+    affiliation: Leibniz Institute for Plasma Science and Technology (INP)
   - name: Markus M. Becker
     country: Germany
-    affiliation: Leibniz Institute for Plasma Science and Technology (INP), Felix-Hausdorff-Str. 2, 17489 Greifswald, Germany
+    affiliation: Leibniz Institute for Plasma Science and Technology (INP)
