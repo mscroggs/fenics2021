@@ -117,7 +117,7 @@ def get_title_and_speaker(t_id):
     return tinfo["title"], tinfo["speaker"]["name"]
 
 
-def make_talk_page(t_id, day, session_n):
+def make_talk_page(t_id, day, session_n, prev, next):
     with open(os.path.join(talks_path, f"{t_id}.yml")) as f:
         tinfo = yaml.load(f, Loader=yaml.FullLoader)
 
@@ -141,6 +141,26 @@ def make_talk_page(t_id, day, session_n):
         abstract.append(tinfo['abstract'])
     content += markup("\n\n".join(abstract))
     content += "</div>"
+
+    content += "<div class='prevnext'>"
+    content += "<div class='prevlink'>"
+    if prev[0] is not None:
+        content += f"<a href='/talks/{prev[0]}.html'>previous talk"
+        if prev[1] is not None:
+            content += f" ({prev[1]})"
+        content += "</a>"
+    else:
+        content += "<i>this is the first talk</i>"
+    content += "</div>"
+    content += "<div class='nextlink'>"
+    if next[0] is not None:
+        content += f"<a href='/talks/{next[0]}.html'>next talk"
+        if next[1] is not None:
+            content += f" ({next[1]})"
+        content += "</a>"
+    else:
+        content += "<i>this is the final talk</i>"
+    content += "</a>"
 
     write_page(f"talks/{t_id}.html", content)
 
@@ -229,6 +249,29 @@ content += "</div>"
 
 write_page("talks/index.html", content)
 
+next_talks = {}
+prev_talks = {}
+prev = None
+prev_note = None
+next_note = None
+for day in daylist:
+    for s in [1, 2, 3]:
+        if f"session {s}" in timetable[day]:
+            talks = timetable[day][f"session {s}"]
+            for t in talks:
+                prev_talks[t] = (prev, prev_note)
+                if prev is not None:
+                    next_talks[prev] = (t, next_note)
+                prev = t
+        next_note = "after a break"
+        prev_note = "before a break"
+    next_note = "on the following day"
+    prev_note = "on the previous day"
+next_talks[prev] = (None, None)
+
+print(next_talks)
+
+
 daytalks = {}
 for day in daylist:
     content = ""
@@ -243,7 +286,7 @@ for day in daylist:
             for t in talks:
                 print(t)
                 content += "<div class='timetablelisttalk'>"
-                content += make_talk_page(t, day, s)
+                content += make_talk_page(t, day, s, prev_talks[t], next_talks[t])
                 content += "</div>"
     content += f"<h3>Evening session: {evenings[day][0]} ({times['evening']})</h3>"
     content += f"<div class='timetablelisttalk'>{evenings[day][1]}</div>"

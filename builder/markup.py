@@ -4,6 +4,7 @@ from datetime import datetime
 from citations import markup_citation
 
 page_references = []
+ref_map = {}
 
 
 def markup(content):
@@ -100,12 +101,15 @@ def add_ghost_citation(matches):
 
 def add_citation(matches):
     global page_references
-    ref = {}
-    for i in shlex.split(matches[1]):
-        a, b = i.split("=")
-        ref[a] = b
-    page_references.append(markup_citation(ref))
-    return f"<a href='#ref{len(page_references)}'>[{len(page_references)}]</a>"
+    global ref_map
+    if matches[1] not in ref_map:
+        ref = {}
+        for i in shlex.split(matches[1]):
+            a, b = i.split("=")
+            ref[a] = b
+        page_references.append(markup_citation(ref))
+        ref_map[matches[1]] = len(page_references)
+    return f"<a href='#ref{ref_map[matches[1]]}'>[{ref_map[matches[1]]}]</a>"
 
 
 def insert_dates(txt):
