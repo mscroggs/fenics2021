@@ -32,7 +32,8 @@ with open(os.path.join(html_path, "CNAME"), "w") as f:
 with open(os.path.join(talks_path, "_timetable.yml")) as f:
     timetable = yaml.load(f, Loader=yaml.FullLoader)
 
-times = {1: "13:00-14:40", 2: "15:00-16:30", 3: "17:00-18:30", "evening": "19:30-21:00"}
+times = {1: "13:00&ndash;14:40", 2: "15:00&ndash;16:30", 3: "17:00&ndash;18:30",
+         "evening": "19:30&ndash;21:00"}
 daylist = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 evenings = {"Monday": ("Drinks reception", "more details coming shortly..."),
             "Tuesday": ("Discussion tables", "more details coming shortly..."),
