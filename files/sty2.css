@@ -180,3 +180,5 @@ a.timetabletalk:hover {border:1px solid #FF8800}
 a.refid, a.refid:visited, a.refid:link, a.refid:active, a.refid:hover {color:black}
 a.refid:target {font-weight:bold; color:#FF8800}
 
+a.icon img {height:1em;vertical-align:middle}
+a.icon {display:inline-block}
