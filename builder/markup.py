@@ -75,6 +75,7 @@ def markup(content):
     out = re.sub(r"<ref ([^>]+)>", add_citation, out)
     out = re.sub(r"<ghostref ([^>]+)>", add_ghost_citation, out)
     out = insert_links(out)
+    out = insert_icons(out)
 
     out = re.sub(r"`([^`]+)`", r"<span style='font-family:monospace'>\1</span>", out)
 
@@ -85,11 +86,35 @@ def markup(content):
                         for i, j in enumerate(page_references)])
         out += "</ul>"
 
-    return insert_dates(out)
+    out = insert_dates(out)
+    return out
+
+
+def insert_icons(txt):
+    for t, icon, url in [
+        ("FEniCS", "fenics.png", "https://fenicsproject.org"),
+        ("FEniCSx", "fenics.png", "https://fenicsproject.org"),
+        ("FFCx", "fenics.png", "https://github.com/FEniCS/ffcx"),
+        ("UFL", "fenics.png", "https://github.com/FEniCS/ufl"),
+        ("FIAT", "fenics.png", "https://github.com/FEniCS/fiat"),
+        ("Basix", "fenics.png", "https://github.com/FEniCS/basix"),
+        ("DOLFINx", "fenics.png", "https://github.com/FEniCS/dolfinx"),
+        ("DOLFIN", "fenics.png", "https://bitbucket.org/fenics-project/dolfin"),
+        ("FFC", "fenics.png", "https://bitbucket.org/fenics-project/ffc"),
+        ("Firedrake", "firedrake.png", "https://www.firedrakeproject.org"),
+        ("Bempp-cl", "bempp.png", "https://www.bempp.com"),
+        ("Bempp", "bempp.png", "https://www.bempp.com"),
+    ]:
+        txt = re.sub(
+            r"(^|[>\s.!?\(])" + t + r"([\s.!?\)\-,'])",
+            r"\1<a href='" + url + "' class='icon'><img src='/img/" + icon + "'>" + t + r"</a>\2",
+            txt)
+    return txt
 
 
 def insert_links(txt):
-    txt = re.sub(r"\(([^\)]+)\.md\)", r"(/\1.html)", txt)
+    txt = re.sub(r"(https?:\/\/)([^\s]+)", r"<a href='\1\2'>\2</a>", txt)
+    txt = re.sub(r"\[([^\]]+)\]\(([^\)]+)\)", r"<a href='\2'>\1</a>", txt)
     txt = re.sub(r"\[([^\]]+)\]\(([^\)]+)\)", r"<a href='\2'>\1</a>", txt)
     return txt
 
