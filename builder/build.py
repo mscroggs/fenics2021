@@ -42,7 +42,7 @@ evenings = {"Monday": ("Drinks reception", ""),
 extras = {
     "Monday": {"session 1": {"start": ("Welcome & Introduction", "")}},
     "Tuesday": {"session 2": {"start": ("Q&A with the FEniCS steering council", "")}},
-    "Friday": {"session 3": {"end": ("Welcome & Introduction", "")}}
+    "Friday": {"session 3": {"end": ("Prizes & Conclusion", "")}}
 }
 
 ntalks = {1: 6, 2: 5, 3: 5}
