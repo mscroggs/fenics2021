@@ -1,6 +1,6 @@
 title: Semismooth Newton method for Bingham flow
 abstract: We propose a semismooth Newton method for non-Newtonian models of incompressible flow where the constitutive relation between the shear stress and the symmetric velocity gradient is given implicitly; as a motivating example we consider the Bingham model for viscoplastic flow. The proposed method avoids the use of variational inequalities and is based on a particularly simple regularisation for which the (weak) convergence of the approximate stresses is known to hold. The system is analysed at the function space level and results in mesh-independent behaviour of the nonlinear iterations.
 speaker:
-  name: Alexeu Gazca
+  name: Alexei Gazca
   country: Germany
   affiliation: FAU Erlangen-Nürnberg
