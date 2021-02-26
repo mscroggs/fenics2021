@@ -39,6 +39,11 @@ evenings = {"Monday": ("Drinks reception", ""),
             "Wednesday": ("FEniCS quiz night", ""),
             "Thursday": ("Conference dinner", ""),
             "Friday": ("Hang out and goodbyes", "")}
+extras = {
+    "Monday": {"session 1": {"start": ("Welcome & Introduction", "")}},
+    "Tuesday": {"session 2": {"start": ("Q&A with the FEniCS steering council", "")}},
+    "Friday": {"session 3": {"end": ("Welcome & Introduction", "")}}
+}
 
 ntalks = {1: 6, 2: 5, 3: 5}
 talk_starts = {}
@@ -201,19 +206,20 @@ content += f"Evening session ({times['evening']} GMT)</div>"
 
 content += "<div class='gridcell timetabletalk' "
 content += f"style='grid-column: 3 / span 1; grid-row: {talk_starts[2]} / span {ntalks[2]};'>"
-content += "<div class='timetabletalktitle'>"
-content += "Q&A with the FEniCS steering council</div></div>"
+content += f"<div class='timetabletalktitle'>{extras['Tuesday']['session 2']['start'][0]}</div>"
+content += f"<div class='timetabletalkspeaker'>{extras['Tuesday']['session 2']['start'][1]}</div>"
+content += "</div>"
 
 content += "<div class='gridcell timetabletalk' "
 content += f"style='grid-column: 2 / span 1; grid-row: 2 / span 1;'>"
-content += "<div class='timetabletalktitle'>Welcome & Introduction</div>"
-content += "<div class='timetabletalkspeaker'>Matthew Scroggs</div>"
+content += f"<div class='timetabletalktitle'>{extras['Monday']['session 1']['start'][0]}</div>"
+content += f"<div class='timetabletalkspeaker'>{extras['Monday']['session 1']['start'][1]}</div>"
 content += "</div>"
 
 content += "<div class='gridcell timetabletalk' "
 content += f"style='grid-column: 6 / span 1; grid-row: 18 / span 2;'>"
-content += "<div class='timetabletalktitle'>Prizes & Conclusion</div>"
-content += "<div class='timetabletalkspeaker'>Matthew Scroggs</div>"
+content += f"<div class='timetabletalktitle'>{extras['Friday']['session 3']['end'][0]}</div>"
+content += f"<div class='timetabletalkspeaker'>{extras['Friday']['session 3']['end'][1]}</div>"
 content += "</div>"
 
 for i, day in enumerate(daylist):
@@ -281,9 +287,12 @@ for day in daylist:
     content = ""
     for s in [1, 2, 3]:
         content += f"<h3>Session {s} ({times[s]} GMT)</h3>"
-        if day == "Tuesday" and s == 2:
-            content += "<div class='timetablelisttalk'><div class='talktitle'>"
-            content += "Q&A with the FEniCS steering council</div></div>"
+        if day in extras and f"session {s}" in extras[day] and "start" in extras[day][f"session {s}"]:
+            content += "<div class='timetablelisttalk'>"
+            content += "<div class='talktitle'>" + extras[day][f"session {s}"]["start"][0] + "</div>"
+            content += "<div class='timetablelistauthor'>"
+            content += "<div class='authors'>"+ extras[day][f"session {s}"]["start"][1] + "</div>"
+            content += "</div></div>"
 
         if f"session {s}" in timetable[day]:
             talks = timetable[day][f"session {s}"]
@@ -292,6 +301,14 @@ for day in daylist:
                 content += "<div class='timetablelisttalk'>"
                 content += make_talk_page(t, day, s, prev_talks[t], next_talks[t])
                 content += "</div>"
+
+        if day in extras and f"session {s}" in extras[day] and "end" in extras[day][f"session {s}"]:
+            content += "<div class='timetablelisttalk'>"
+            content += "<div class='talktitle'>" + extras[day][f"session {s}"]["end"][0] + "</div>"
+            content += "<div class='timetablelistauthor'>"
+            content += "<div class='authors'>"+ extras[day][f"session {s}"]["end"][1] + "</div>"
+            content += "</div></div>"
+
     content += f"<h3>Evening session: {evenings[day][0]} ({times['evening']} GMT)</h3>"
     content += f"<div class='timetablelisttalk'>{evenings[day][1]}</div>"
     daytalks[day] = content
