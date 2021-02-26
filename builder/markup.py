@@ -94,11 +94,20 @@ def insert_icons(txt):
     for t, icon, url in [
         ("FEniCS", "fenics.png", "https://fenicsproject.org"),
         ("FEniCSx", "fenics.png", "https://fenicsproject.org"),
+        ("FFCx", "fenics.png", "https://github.com/FEniCS/ffcx"),
+        ("UFL", "fenics.png", "https://github.com/FEniCS/ufl"),
+        ("FIAT", "fenics.png", "https://github.com/FEniCS/fiat"),
+        ("Basix", "fenics.png", "https://github.com/FEniCS/basix"),
+        ("DOLFINx", "fenics.png", "https://github.com/FEniCS/dolfinx"),
+        ("DOLFIN", "fenics.png", "https://bitbucket.org/fenics-project/dolfin"),
+        ("FFC", "fenics.png", "https://bitbucket.org/fenics-project/ffc"),
         ("Firedrake", "firedrake.png", "https://www.firedrakeproject.org"),
+        ("Bempp-cl", "bempp.png", "https://www.bempp.com"),
+        ("Bempp", "bempp.png", "https://www.bempp.com"),
     ]:
         txt = re.sub(
-            r"([\s^.!?])" + t + r"([\s.!?])",
-            r"\1<a href='" + url + "' class='icon><img src='/img/" + icon + "'></a>" + t + r"\2",
+            r"(^|[>\s.!?\(])" + t + r"([\s.!?\)\-,'])",
+            r"\1<a href='" + url + "' class='icon'><img src='/img/" + icon + "'>" + t + r"</a>\2",
             txt)
     return txt
 
