@@ -174,7 +174,7 @@ def make_talk_page(t_id, day, session_n, prev, next):
     short_content = ""
     short_content += f"<a href='/talks/{t_id}.html'>"
     short_content += f"<div class='talktitle'>{tinfo['title']}</div>"
-    short_content += f"</a>"
+    short_content += "</a>"
     short_content += f"<div class='timetablelistauthor'>{authortxt}</div>"
 
     return short_content
@@ -191,15 +191,15 @@ content = "<h1>Timetable</h1>"
 content += "<div class='timetablegrid'>\n"
 
 for s in [1, 2, 3]:
-    content += f"<div class='gridcell timetableheading rotated' style='grid-column: 1 / span 1; "
+    content += "<div class='gridcell timetableheading rotated' style='grid-column: 1 / span 1; "
     content += f"grid-row: {talk_starts[s]} / span {ntalks[s]};'>Session {s} ({times[s]} GMT)</div>"
 
-    content += f"<div class='gridcell timetableheading' style='grid-column: 2 / span 5; "
+    content += "<div class='gridcell timetableheading' style='grid-column: 2 / span 5; "
     content += f"grid-row: {break_positions[s]} / span 1;padding:10px'>"
     content += " &nbsp; &nbsp; &nbsp; ".join([i for i in "BREAK"])
     content += "</div>"
 
-content += f"<div class='gridcell timetableheading rotated' style='grid-column: 1 / span 1; "
+content += "<div class='gridcell timetableheading rotated' style='grid-column: 1 / span 1; "
 content += f"grid-row: {talk_starts['evening']} / span 1;'>"
 content += f"Evening session ({times['evening']} GMT)</div>"
 
@@ -211,13 +211,13 @@ content += f"<div class='timetabletalkspeaker'>{extras['Tuesday']['session 2']['
 content += "</div>"
 
 content += "<div class='gridcell timetabletalk' "
-content += f"style='grid-column: 2 / span 1; grid-row: 2 / span 1;'>"
+content += "style='grid-column: 2 / span 1; grid-row: 2 / span 1;'>"
 content += f"<div class='timetabletalktitle'>{extras['Monday']['session 1']['start'][0]}</div>"
 content += f"<div class='timetabletalkspeaker'>{extras['Monday']['session 1']['start'][1]}</div>"
 content += "</div>"
 
 content += "<div class='gridcell timetabletalk' "
-content += f"style='grid-column: 6 / span 1; grid-row: 18 / span 2;'>"
+content += "style='grid-column: 6 / span 1; grid-row: 18 / span 2;'>"
 content += f"<div class='timetabletalktitle'>{extras['Friday']['session 3']['end'][0]}</div>"
 content += f"<div class='timetabletalkspeaker'>{extras['Friday']['session 3']['end'][1]}</div>"
 content += "</div>"
@@ -242,8 +242,9 @@ for i, day in enumerate(daylist):
                 continue
             talkpos = f"grid-column: {i + 2} / span 1; "
             talkpos += f"grid-row: {talk_starts[s] + add + talk_n} / span 1"
-            if f"session {s}" in timetable[day] and len(timetable[day][f"session {s}"]) > talk_n:
-                talk_id = timetable[day][f"session {s}"][talk_n]
+            sess = f"session {s}"
+            if sess in timetable[day] and len(timetable[day][sess]) > talk_n:
+                talk_id = timetable[day][sess][talk_n]
                 content += (f"<a class='gridcell timetabletalk' href='/talks/{talk_id}.html' "
                             f"style='{talkpos}'>")
                 title, speaker = get_title_and_speaker(talk_id)
@@ -287,26 +288,27 @@ for day in daylist:
     content = ""
     for s in [1, 2, 3]:
         content += f"<h3>Session {s} ({times[s]} GMT)</h3>"
-        if day in extras and f"session {s}" in extras[day] and "start" in extras[day][f"session {s}"]:
+        sess = f"session {s}"
+        if day in extras and sess in extras[day] and "start" in extras[day][sess]:
             content += "<div class='timetablelisttalk'>"
-            content += "<div class='talktitle'>" + extras[day][f"session {s}"]["start"][0] + "</div>"
+            content += "<div class='talktitle'>" + extras[day][sess]["start"][0] + "</div>"
             content += "<div class='timetablelistauthor'>"
-            content += "<div class='authors'>"+ extras[day][f"session {s}"]["start"][1] + "</div>"
+            content += "<div class='authors'>" + extras[day][sess]["start"][1] + "</div>"
             content += "</div></div>"
 
-        if f"session {s}" in timetable[day]:
-            talks = timetable[day][f"session {s}"]
+        if sess in timetable[day]:
+            talks = timetable[day][sess]
             for t in talks:
                 print(t)
                 content += "<div class='timetablelisttalk'>"
                 content += make_talk_page(t, day, s, prev_talks[t], next_talks[t])
                 content += "</div>"
 
-        if day in extras and f"session {s}" in extras[day] and "end" in extras[day][f"session {s}"]:
+        if day in extras and sess in extras[day] and "end" in extras[day][sess]:
             content += "<div class='timetablelisttalk'>"
-            content += "<div class='talktitle'>" + extras[day][f"session {s}"]["end"][0] + "</div>"
+            content += "<div class='talktitle'>" + extras[day][sess]["end"][0] + "</div>"
             content += "<div class='timetablelistauthor'>"
-            content += "<div class='authors'>"+ extras[day][f"session {s}"]["end"][1] + "</div>"
+            content += "<div class='authors'>" + extras[day][sess]["end"][1] + "</div>"
             content += "</div></div>"
 
     content += f"<h3>Evening session: {evenings[day][0]} ({times['evening']} GMT)</h3>"
