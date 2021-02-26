@@ -7,7 +7,7 @@ page_references = []
 ref_map = {}
 
 
-def markup(content):
+def markup(content, icons=True):
     global page_references
     while "{{if " in content:
         pre, rest = content.split("{{if ", 1)
@@ -75,7 +75,8 @@ def markup(content):
     out = re.sub(r"<ref ([^>]+)>", add_citation, out)
     out = re.sub(r"<ghostref ([^>]+)>", add_ghost_citation, out)
     out = insert_links(out)
-    out = insert_icons(out)
+    if icons:
+        out = insert_icons(out)
 
     out = re.sub(r"`([^`]+)`", r"<span style='font-family:monospace'>\1</span>", out)
 
@@ -113,7 +114,7 @@ def insert_icons(txt):
 
 
 def insert_links(txt):
-    txt = re.sub(r"(https?:\/\/)([^\s]+)", r"<a href='\1\2'>\2</a>", txt)
+    txt = re.sub(r"([^\(])(https?:\/\/)([^\s]+)", r"\1<a href='\1\2'>\2</a>", txt)
     txt = re.sub(r"\[([^\]]+)\]\(([^\)]+)\)", r"<a href='\2'>\1</a>", txt)
     txt = re.sub(r"\[([^\]]+)\]\(([^\)]+)\)", r"<a href='\2'>\1</a>", txt)
     return txt

@@ -185,7 +185,7 @@ for file in os.listdir(pages_path):
     if file.endswith(".md"):
         fname = file[:-3]
         with open(os.path.join(pages_path, file)) as f:
-            content = markup(f.read())
+            content = markup(f.read(), False)
         write_page(f"{fname}.html", content)
 
 content = "<h1>Timetable</h1>"
