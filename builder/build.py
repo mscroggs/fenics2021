@@ -34,11 +34,11 @@ with open(os.path.join(talks_path, "_timetable.yml")) as f:
 
 times = {1: "13:00-14:40", 2: "15:00-16:30", 3: "17:00-18:30", "evening": "19:30-21:00"}
 daylist = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
-evenings = {"Monday": ("Drinks reception", ""),
-            "Tuesday": ("Discussion tables", ""),
-            "Wednesday": ("FEniCS quiz night", ""),
-            "Thursday": ("Conference dinner", ""),
-            "Friday": ("Hang out and goodbyes", "")}
+evenings = {"Monday": ("Drinks reception", "more details coming shortly..."),
+            "Tuesday": ("Discussion tables", "more details coming shortly..."),
+            "Wednesday": ("FEniCS quiz night", "more details coming shortly..."),
+            "Thursday": ("Conference dinner", "more details coming shortly..."),
+            "Friday": ("Hang out and goodbyes", "more details coming shortly...")}
 extras = {
     "Monday": {"session 1": {"start": ("Welcome & Introduction", "")}},
     "Tuesday": {"session 2": {"start": ("Q&A with the FEniCS steering council", "")}},
