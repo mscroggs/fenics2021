@@ -281,9 +281,6 @@ for day in daylist:
     prev_note = "on the previous day"
 next_talks[prev] = (None, None)
 
-print(next_talks)
-
-
 daytalks = {}
 for day in daylist:
     content = ""

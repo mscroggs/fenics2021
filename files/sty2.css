@@ -182,3 +182,5 @@ a.refid:target {font-weight:bold; color:#FF8800}
 
 a.icon img {height:1em;vertical-align:middle}
 a.icon {display:inline-block}
+
+.innertext p {text-align:left}

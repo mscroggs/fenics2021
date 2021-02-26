@@ -1,6 +1,6 @@
 # FEniCS 2021
 
-The FEniCS 2021 conference is an opportunity for all those interested in the FEniCS Project and related projects to exchange ideas, communicate their results and network with the automated scientific computing community.
+The FEniCS 2021 conference is an opportunity for all those interested in the {{icon:FEniCS}} Project and related projects to exchange ideas, communicate their results and network with the automated scientific computing community.
 
 Unlike previous FEniCS conferences, FEniCS 2021 will be held entirely online.
 

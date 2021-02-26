@@ -78,6 +78,7 @@ def markup(content, icons=True):
     if icons:
         out = insert_icons(out)
 
+    out = re.sub(r"{{icon:([^}]+)}}", enter_icon, out)
     out = re.sub(r"`([^`]+)`", r"<span style='font-family:monospace'>\1</span>", out)
 
     if len(page_references) > 0:
@@ -91,21 +92,31 @@ def markup(content, icons=True):
     return out
 
 
+iconlist = [
+    ("FEniCS", "fenics.png", "https://fenicsproject.org"),
+    ("FEniCSx", "fenics.png", "https://fenicsproject.org"),
+    ("FFCx", "fenics.png", "https://github.com/FEniCS/ffcx"),
+    ("UFL", "fenics.png", "https://github.com/FEniCS/ufl"),
+    ("FIAT", "fenics.png", "https://github.com/FEniCS/fiat"),
+    ("Basix", "fenics.png", "https://github.com/FEniCS/basix"),
+    ("DOLFINx", "fenics.png", "https://github.com/FEniCS/dolfinx"),
+    ("DOLFIN", "fenics.png", "https://bitbucket.org/fenics-project/dolfin"),
+    ("FFC", "fenics.png", "https://bitbucket.org/fenics-project/ffc"),
+    ("Firedrake", "firedrake.png", "https://www.firedrakeproject.org"),
+    ("Bempp-cl", "bempp.png", "https://www.bempp.com"),
+    ("Bempp", "bempp.png", "https://www.bempp.com"),
+]
+
+
+def enter_icon(matches):
+    for t, icon, url in iconlist:
+        if matches[1] == t:
+            return f"<a href='{url}' class='icon'><img src='/img/{icon}'>{t}</a>"
+    raise ValueError(f"Icon not found: {matches[1]}")
+
+
 def insert_icons(txt):
-    for t, icon, url in [
-        ("FEniCS", "fenics.png", "https://fenicsproject.org"),
-        ("FEniCSx", "fenics.png", "https://fenicsproject.org"),
-        ("FFCx", "fenics.png", "https://github.com/FEniCS/ffcx"),
-        ("UFL", "fenics.png", "https://github.com/FEniCS/ufl"),
-        ("FIAT", "fenics.png", "https://github.com/FEniCS/fiat"),
-        ("Basix", "fenics.png", "https://github.com/FEniCS/basix"),
-        ("DOLFINx", "fenics.png", "https://github.com/FEniCS/dolfinx"),
-        ("DOLFIN", "fenics.png", "https://bitbucket.org/fenics-project/dolfin"),
-        ("FFC", "fenics.png", "https://bitbucket.org/fenics-project/ffc"),
-        ("Firedrake", "firedrake.png", "https://www.firedrakeproject.org"),
-        ("Bempp-cl", "bempp.png", "https://www.bempp.com"),
-        ("Bempp", "bempp.png", "https://www.bempp.com"),
-    ]:
+    for t, icon, url in iconlist:
         txt = re.sub(
             r"(^|[>\s.!?\(])" + t + r"([\s.!?\)\-,'])",
             r"\1<a href='" + url + "' class='icon'><img src='/img/" + icon + "'>" + t + r"</a>\2",
