@@ -151,7 +151,7 @@ def make_talk_page(t_id, day, session_n, prev, next):
     content += "<div class='prevnext'>"
     content += "<div class='prevlink'>"
     if prev[0] is not None:
-        content += f"<a href='/talks/{prev[0]}.html'>previous talk"
+        content += f"<a href='/talks/{prev[0]}.html'>&larr; previous talk"
         if prev[1] is not None:
             content += f" ({prev[1]})"
         content += "</a>"
@@ -163,7 +163,7 @@ def make_talk_page(t_id, day, session_n, prev, next):
         content += f"<a href='/talks/{next[0]}.html'>next talk"
         if next[1] is not None:
             content += f" ({next[1]})"
-        content += "</a>"
+        content += " &rarr;</a>"
     else:
         content += "<i>this is the final talk</i>"
     content += "</div>"
