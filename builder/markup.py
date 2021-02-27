@@ -21,6 +21,13 @@ def markup(content, icons=True):
                 content += optional
             if condition == "after" and datetime.now() > datetime(*options):
                 content += optional
+        elif condition == "dateis":
+            y, m, d = [int(i) for i in options.split(",")]
+            y2 = datetime.now().year
+            m2 = datetime.now().month
+            d2 = datetime.now().day
+            if y == y2 and m == m2 and d == d2:
+                content += optional
         else:
             raise ValueError(f"Unknown condition: {condition}")
         content += post

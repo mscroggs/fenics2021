@@ -2,6 +2,8 @@ name: Build website
 
 on:
   push
+  schedule:
+    - cron: "0 1 * * *"
 
 jobs:
   style-checks:

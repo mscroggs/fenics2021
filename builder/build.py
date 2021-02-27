@@ -109,10 +109,14 @@ def markup_author(authorinfo, bold=False):
     return info
 
 
-def write_page(url, content):
+def write_page(url, content, title=None):
+    if title is None:
+        title = "FEniCS 2021"
+    else:
+        title = "FEniCS 2021: " + title
     with open(os.path.join(html_path, url), "w") as f:
         with open(os.path.join(template_path, "intro.html")) as f2:
-            f.write(f2.read())
+            f.write(f2.read().replace("{{pagetitle}}", title))
         f.write(content)
         with open(os.path.join(template_path, "outro.html")) as f2:
             f.write(f2.read())
@@ -170,7 +174,7 @@ def make_talk_page(t_id, day, session_n, prev, next):
     content += "</div>"
     content += "</div>"
 
-    write_page(f"talks/{t_id}.html", content)
+    write_page(f"talks/{t_id}.html", content, tinfo['title'])
 
     short_content = ""
     short_content += f"<a href='/talks/{t_id}.html'>"

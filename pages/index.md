@@ -1,5 +1,21 @@
 # FEniCS 2021
 
+{{if dateis 2021, 3, 22}}
+<a href='/talks/list-Monday.html' style='font-family:Lato, sans-serif;font-size:120%'>Click here to view today's talks</a>
+{{fi}}
+{{if dateis 2021, 3, 23}}
+<a href='/talks/list-Tuesday.html' style='font-family:Lato, sans-serif;font-size:120%'>Click here to view today's talks</a>
+{{fi}}
+{{if dateis 2021, 3, 24}}
+<a href='/talks/list-Wednesday.html' style='font-family:Lato, sans-serif;font-size:120%'>Click here to view today's talks</a>
+{{fi}}
+{{if dateis 2021, 3, 25}}
+<a href='/talks/list-Thursday.html' style='font-family:Lato, sans-serif;font-size:120%'>Click here to view today's talks</a>
+{{fi}}
+{{if dateis 2021, 3, 26}}
+<a href='/talks/list-Friday.html' style='font-family:Lato, sans-serif;font-size:120%'>Click here to view today's talks</a>
+{{fi}}
+
 The FEniCS 2021 conference is an opportunity for all those interested in the {{icon:FEniCS}} Project and related projects to exchange ideas, communicate their results and network with the automated scientific computing community.
 
 Unlike previous FEniCS conferences, FEniCS 2021 will be held entirely online.
