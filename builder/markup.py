@@ -107,6 +107,7 @@ iconlist = [
     ("FIAT", "fenics.png", "https://github.com/FEniCS/fiat"),
     ("Basix", "fenics.png", "https://github.com/FEniCS/basix"),
     ("DOLFINx", "fenics.png", "https://github.com/FEniCS/dolfinx"),
+    ("dolfiny", None, "https://github.com/michalhabera/dolfiny"),
     ("DOLFIN", "fenics.png", "https://bitbucket.org/fenics-project/dolfin"),
     ("FFC", "fenics.png", "https://bitbucket.org/fenics-project/ffc"),
     ("Firedrake", "firedrake.png", "https://www.firedrakeproject.org"),
@@ -118,21 +119,31 @@ iconlist = [
 def enter_icon(matches):
     for t, icon, url in iconlist:
         if matches[1] == t:
-            return f"<a href='{url}' class='icon'><img src='/img/{icon}'>{t}</a>"
+            if icon is None:
+                return f"<a href='{url}' class='icon'>{t}</a>"
+            else:
+                return f"<a href='{url}' class='icon'><img src='/img/{icon}'>{t}</a>"
     raise ValueError(f"Icon not found: {matches[1]}")
 
 
 def insert_icons(txt):
     for t, icon, url in iconlist:
-        txt = re.sub(
-            r"(^|[>\s.!?\(])" + t + r"([\s.!?\)\-,'])",
-            r"\1<a href='" + url + "' class='icon'><img src='/img/" + icon + "'>" + t + r"</a>\2",
-            txt)
+        if icon is None:
+            txt = re.sub(
+                r"(^|[>\s.!?\(])" + t + r"([\s.!?\)\-,'])",
+                r"\1<a href='" + url + "' class='icon'>" + t + r"</a>\2",
+                txt)
+        else:
+            txt = re.sub(
+                r"(^|[>\s.!?\(])" + t + r"([\s.!?\)\-,'])",
+                r"\1<a href='" + url + "' class='icon'><img src='/img/" + icon + "'>"
+                + t + r"</a>\2",
+                txt)
     return txt
 
 
 def insert_links(txt):
-    txt = re.sub(r"([^\('])(https?:\/\/)([^\s]+)", r"\1<a href='\1\2'>\2</a>", txt)
+    txt = re.sub(r"([^\('])(https?:\/\/)([^\s]+)", r"\1<a href='\2\3'>\3</a>", txt)
     txt = re.sub(r"\[([^\]]+)\]\(([^\)]+)\)", r"<a href='\2'>\1</a>", txt)
     txt = re.sub(r"\[([^\]]+)\]\(([^\)]+)\)", r"<a href='\2'>\1</a>", txt)
     return txt
