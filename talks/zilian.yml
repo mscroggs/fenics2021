@@ -1,8 +1,8 @@
-title: "'dolfiny': Convenience wrappers for DOLFINx"
+title: "dolfiny: Convenience wrappers for DOLFINx"
 abstract:
   - With the increased flexibility of DOLFINx and its reduction to core functionality, the responsibility for even some basic components of computational analysis is shifted to the user.
-  - This presentation provides an overview of the open-source package 'dolfiny', which provides end-user API interfaces to mesh/meshtags generation and processing, expression list handling, function interpolation and projection as well as the restriction of function spaces to parts of the computational domain. This functionality is consistently considered in interfaces to PETSc/SNES as nonlinear solver and SLEPc as eigensolver backend, both allowing the operation on block and nested operators. In addition, the package provides a convenient approach to incorporate time integration into the UFL formulation of the problem, which is exemplified for the generalised alpha method.
-  - The capability of 'dolfiny' is demonstrated in a number of examples, ranging between finite strain structural analysis, plasticity and fluid-structure interaction.
+  - This presentation provides an overview of the open-source package dolfiny, which provides end-user API interfaces to mesh/meshtags generation and processing, expression list handling, function interpolation and projection as well as the restriction of function spaces to parts of the computational domain. This functionality is consistently considered in interfaces to PETSc/SNES as nonlinear solver and SLEPc as eigensolver backend, both allowing the operation on block and nested operators. In addition, the package provides a convenient approach to incorporate time integration into the UFL formulation of the problem, which is exemplified for the generalised alpha method.
+  - The capability of dolfiny is demonstrated in a number of examples, ranging between finite strain structural analysis, plasticity and fluid-structure interaction.
 speaker:
   name: Andreas Zilian
   country: Luxembourg
