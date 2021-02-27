@@ -100,6 +100,7 @@ def markup(content, icons=True):
 
 
 iconlist = [
+    # With icons
     ("FEniCS", "fenics.png", "https://fenicsproject.org"),
     ("FEniCSx", "fenics.png", "https://fenicsproject.org"),
     ("FFCx", "fenics.png", "https://github.com/FEniCS/ffcx"),
@@ -107,12 +108,44 @@ iconlist = [
     ("FIAT", "fenics.png", "https://github.com/FEniCS/fiat"),
     ("Basix", "fenics.png", "https://github.com/FEniCS/basix"),
     ("DOLFINx", "fenics.png", "https://github.com/FEniCS/dolfinx"),
-    ("dolfiny", None, "https://github.com/michalhabera/dolfiny"),
     ("DOLFIN", "fenics.png", "https://bitbucket.org/fenics-project/dolfin"),
     ("FFC", "fenics.png", "https://bitbucket.org/fenics-project/ffc"),
     ("Firedrake", "firedrake.png", "https://www.firedrakeproject.org"),
     ("Bempp-cl", "bempp.png", "https://www.bempp.com"),
     ("Bempp", "bempp.png", "https://www.bempp.com"),
+    ("PETSc", "petsc.png", "https://www.mcs.anl.gov/petsc/"),
+    ("Guix", "guix.png", "https://guix.gnu.org/"),
+    ("TFEL/Math", "tfel.png", "https://github.com/TfEL/TfEL-Maths-Pedagogy"),
+    ("Trilinos", "trilinos.png", "https://trilinos.github.io/"),
+    ("SLEPc", "slepc.png", "https://slepc.upv.es/"),
+    ("Multiphenics", "multiphenics.png", "https://github.com/mathLab/multiphenics"),
+    ("OpenMDAO", "openmdao.png", "https://github.com/mathLab/multiphenics"),
+    ("RBniCS", "rbnics.png", "https://www.rbnicsproject.org/"),
+    ("Gmsh", "gmsh.png", "https://gmsh.info/"),
+    ("Elmer", "elmer.png", "http://www.elmerfem.org/blog/"),
+    ("JAX", "jax.png", "https://github.com/google/jax"),
+    ("PyTorch", "pytorch.png", "https://pytorch.org/"),
+    ("ChainRule.jl", "chainrule.png", "https://github.com/JuliaDiff/ChainRules.jl"),
+    ("Scipy", "scipy.png", "https://www.scipy.org/"),
+    ("Numba", "numba.png", "https://numba.pydata.org/"),
+
+    # Without icons
+    ("dolfiny", None, "https://github.com/michalhabera/dolfiny"),
+    ("dolfin-adjoint/pyadjoint", None, "https://www.dolfin-adjoint.org/"),
+    ("FEniCS-EE", None, "https://github.com/rbulle/fenics-error-estimation"),
+    ("hIPPYlib", None, "https://github.com/hippylib/hippylib"),
+    ("hIPPYlib-MUQ", None, "https://hippylib.github.io/muq-hippylib/"),
+    ("tIGAr", None, "https://github.com/david-kamensky/tIGAr"),
+    ("BERNAISE", None, "https://github.com/gautelinga/BERNAISE"),
+    ("FEniCS-preCICE", None, "https://github.com/precice/fenics-adapter"),
+    ("OpenFOAM", None, "https://openfoam.org/"),
+    ("SU2", None, "https://su2code.github.io/"),
+    ("preCICE", None, "https://www.precice.org/"),
+    ("geopart", None, "https://bitbucket.org/nate-sime/geopart/"),
+    ("leopart", None, "https://bitbucket.org/jakob_maljaars/leopart/"),
+    ("PyMC3", None, "https://docs.pymc.io/"),
+    ("Zygote.jl", None, "https://github.com/FluxML/Zygote.jl"),
+    ("cffi", None, "https://foss.heptapod.net/pypy/cffi/"),
 ]
 
 defelementlist = [
@@ -121,6 +154,7 @@ defelementlist = [
     ("seredipity", "serendipity"),
     ("Lagrange", "lagrange")
 ]
+
 
 def enter_icon(matches):
     for t, icon, url in iconlist:
@@ -136,12 +170,12 @@ def insert_icons(txt):
     for t, icon, url in iconlist:
         if icon is None:
             txt = re.sub(
-                r"(^|[>\s.!?\(])" + t + r"([\s.!?\)\-,'])",
+                r"(^|[>\s.!?\(\/])" + t + r"([\s.!?\)\/,']|(?:-based))",
                 r"\1<a href='" + url + "' class='icon'>" + t + r"</a>\2",
                 txt, 1)
         else:
             txt = re.sub(
-                r"(^|[>\s.!?\(])" + t + r"([\s.!?\)\-,'])",
+                r"(^|[>\s.!?\(\/])" + t + r"([\s.!?\)\/,']|(?:-based))",
                 r"\1<a href='" + url + "' class='icon'><img src='/img/" + icon + "'>"
                 + t + r"</a>\2",
                 txt, 1)

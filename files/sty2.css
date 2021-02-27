@@ -168,7 +168,7 @@ a.timetabletalk:hover {border:1px solid #FF8800}
   border-radius:10px 10px 0px 0px;margin-right:10px;display:inline-block}
 .head .links a:hover {background-color:#FF8800;color:black}
 
-.authors {padding-left:40px;text-align:initial}
+.authors {padding-left:40px;text-align:initial;padding-bottom:0.5em}
 
 .prevnext {
   display:grid;
