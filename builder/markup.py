@@ -115,6 +115,12 @@ iconlist = [
     ("Bempp", "bempp.png", "https://www.bempp.com"),
 ]
 
+defelementlist = [
+    ("Mardal&ndash;Tai&ndash;Winther", "mardal-tai-winther"),
+    ("Arnold&ndash;Winther", "arnold-winther"),
+    ("seredipity", "serendipity"),
+    ("Lagrange", "lagrange")
+]
 
 def enter_icon(matches):
     for t, icon, url in iconlist:
@@ -132,13 +138,15 @@ def insert_icons(txt):
             txt = re.sub(
                 r"(^|[>\s.!?\(])" + t + r"([\s.!?\)\-,'])",
                 r"\1<a href='" + url + "' class='icon'>" + t + r"</a>\2",
-                txt)
+                txt, 1)
         else:
             txt = re.sub(
                 r"(^|[>\s.!?\(])" + t + r"([\s.!?\)\-,'])",
                 r"\1<a href='" + url + "' class='icon'><img src='/img/" + icon + "'>"
                 + t + r"</a>\2",
-                txt)
+                txt, 1)
+    for e, url in defelementlist:
+        txt = txt.replace(e, f"<a href='https://defelement.com/elements/{url}.html'>{e}</a>", 1)
     return txt
 
 
