@@ -136,13 +136,14 @@ def insert_icons(txt):
         else:
             txt = re.sub(
                 r"(^|[>\s.!?\(])" + t + r"([\s.!?\)\-,'])",
-                r"\1<a href='" + url + "' class='icon'><img src='/img/" + icon + "'>" + t + r"</a>\2",
+                r"\1<a href='" + url + "' class='icon'><img src='/img/" + icon + "'>"
+                + t + r"</a>\2",
                 txt)
     return txt
 
 
 def insert_links(txt):
-    txt = re.sub(r"([^\('])(https?:\/\/)([^\s]+)", r"\1<a href='\1\2'>\2</a>", txt)
+    txt = re.sub(r"([^\('])(https?:\/\/)([^\s]+)", r"\1<a href='\2\3'>\3</a>", txt)
     txt = re.sub(r"\[([^\]]+)\]\(([^\)]+)\)", r"<a href='\2'>\1</a>", txt)
     txt = re.sub(r"\[([^\]]+)\]\(([^\)]+)\)", r"<a href='\2'>\1</a>", txt)
     return txt
