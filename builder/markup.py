@@ -141,11 +141,12 @@ iconlist = [
     ("OpenFOAM", None, "https://openfoam.org/"),
     ("SU2", None, "https://su2code.github.io/"),
     ("preCICE", None, "https://www.precice.org/"),
-    ("geopart", None, "https://bitbucket.org/nate-sime/geopart/"),
-    ("leopart", None, "https://bitbucket.org/jakob_maljaars/leopart/"),
+    ("GeoPart", None, "https://bitbucket.org/nate-sime/geopart/"),
+    ("LEoPart", None, "https://bitbucket.org/jakob_maljaars/leopart/"),
     ("PyMC3", None, "https://docs.pymc.io/"),
     ("Zygote.jl", None, "https://github.com/FluxML/Zygote.jl"),
     ("cffi", None, "https://foss.heptapod.net/pypy/cffi/"),
+    ("Irksome", None, "https://github.com/firedrakeproject/Irksome"),
 ]
 
 defelementlist = [
