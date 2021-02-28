@@ -153,7 +153,8 @@ defelementlist = [
     ("Mardal&ndash;Tai&ndash;Winther", "mardal-tai-winther"),
     ("Arnold&ndash;Winther", "arnold-winther"),
     ("seredipity", "serendipity"),
-    ("Lagrange", "lagrange")
+    ("Lagrange", "lagrange"),
+    ("Scott&ndash;Vogelius", "scott-vogelius"),
 ]
 
 
