@@ -37,3 +37,7 @@ The deadline for registering for the conference is <strong>20 March 2021</strong
 {{if after 2021, 3, 21, 0, 0}}
 Registration for this conference is now closed.
 {{fi}}
+
+## Code of conduct
+We expect all attendees of FEniCS 2021 to follow the FEniCS Project [code of conduct](https://fenicsproject.org/code-of-conduct/).
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the [conference organisers](/team.md) or the [FEniCS Steering Council](https://bitbucket.org/fenics-project/governance/src/master/people.md).
