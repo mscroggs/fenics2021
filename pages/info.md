@@ -1,29 +1,66 @@
 # Useful information
 
-## The FEniCS project
-The [FEniCS project](https://fenicsproject.org/) consists of a large collection of softwares. The current stable version of FEniCS (often called dolfin) is a C++/Python package for solving finite element problems. The dolfin package uses several other libraries:
-- [FFC](https://bitbucket.org/fenics-project/ffc/)  (FEniCS Form Compiler)
-- [FIAT](https://github.com/FEniCS/fiat/) (FInite element Automatic Tabulator)
-- [UFL](https://github.com/FEniCS/ufl/) (Unified Form Language)
+## Components of FEniCS
+Throughout the conference, you will hear people refer to the different packages that make up FEniCS.
+For useful reference, these components are:
 
-If you are using the python interface, you will not notice any of these packages, as they are automatically called by dolfin when required. A large variety of documente demos can be found [here](https://fenicsproject.org/olddocs/dolfin/latest/python/demos.html).
+### {{icon:DOLFIN}} 
+DOLFIN is a C++/Python finite element library, and is the main component that most users interact with.
 
-However, if you are using the C++ interface of dolfin, you have to use FFC to compile a UFL file containing your variational formulation before calling the main program. See the following page for [documented demos](https://bitbucket.org/fenics-project/dolfin/src/master/demo/).
+### {{icon:FFC}} 
+FFC (the FEniCS Form Compiler) is a library that generates C++ code that can be used in assembly.
+
+### {{icon:FIAT}}
+FIAT (the FInite element Automatic Tabulator) contains the definitions of finite element spaces, and can evaluate basis functions.
+
+### {{icon:UFL}}
+UFL (Unified Form Language) is the language in which forms can be written. These can then be interpreted by FFC and used to
+generate code.
+
+## Components of FEniCSx
+FEniCSx is the new version of FEniCS that is currently actively developed. New features in DOLFINx include:
+
+<ul>
+<li>Variational formulations with complex numbers</li>
+<li>Higher order mesh support</li>
+<li>Support for quadrilateral and hexahedral elements</li>
+</ul>
+
+For useful reference, the components of FEniCSx are:
+
+### {{icon:DOLFINx}} 
+DOLFINx is the new version of DOLFIN.
+
+### {{icon:FFCx}} 
+FFCx (the FEniCSx Form Compiler) is the new version of FFC.
+
+### {{icon:Basix}}
+Basix is FEniCSx's new element tabulator.
+
+### {{icon:UFL}}
+<i>(see above)</i>
 
 ## Communication channels and Q&A
-To communicate with developers of FEniCS, you can use the Slack [channel](https://app.slack.com/client/T1AFBGYP2/C1AFSEWKU). To sign of for the slack channel, register your email [here](https://fenicsproject-slack-invite.herokuapp.com/).
+There are a few ways that developers and users of FEniCS communicate online.
 
-For general questions about usage and problems/error messages, please use our [Discourse forum](fenicsproject.discourse.group/).
+### Slack
+The [FEniCS Slack channel](https://app.slack.com/client/T1AFBGYP2/C1AFSEWKU) is used for chat and discussions between developers and users.
+You might like to use this channel to follow up on discussions started at FEniCS 2021.
+To sign up for the slack channel, register your email [here](https://fenicsproject-slack-invite.herokuapp.com/).
 
-## FEniCSx/DOLFINx
-[FEniCSx/DOLFINx](https://github.com/FEniCS/dolfinx/) is the actively developed version of the FEniCS project. It consists of reimplementations of FFC, namely [FFCx](https://github.com/FEniCS/ffcx/) and FIAT, namely [Basix](https://github.com/FEniCS/basix/).
+### Discourse
+Questions about usage of FEniCS can be posted on the [FEnics Discourse group](http://fenicsproject.discourse.group).
 
-A highlight of new features in DOLFINx include:
-- Variational formulations with complex numbers
-- Higher order mesh support
-- Support for quadrilateral and hexahedral elements
+### GitHub issue tracker
+Bugs and errors in FEniCSx are posted on the [GitHub issue tracker](https://github.com/FEniCS/dolfinx/issues).
 
-## The DOLFINx tutorial
-As the user-api of DOLFINx is quite different from previous releases of dolfin, an interactive tutorial (no installation required) can be found [here](https://github.com/jorgensd/dolfinx-tutorial/).
+### Q&A forum (deprecated)
+Before moving to Discourse, the FEniCS Q&A forum was used for asking questions about usage. New questions cannot be posted, but
+some users may find [the archives](https://fenicsproject.org/qa/) helpful.
 
-The tutorial uses interactive Jupyter notebooks (hosted with Binder) such that any used on any computer can run the tutorial.
+## Useful links
+[The DOLFINx tutorial](https://github.com/jorgensd/dolfinx-tutorial/) is an interactive guide to the features of FEniCSx.
+The tutorial uses Jupyter notebooks (hosted with Binder) that can be run online without any installation required.
+
+[DefElement](https://defelement.com) is an encyclopedia of finite element definitions. It contains information about common (and less common)
+finite element basis functions are defined.
