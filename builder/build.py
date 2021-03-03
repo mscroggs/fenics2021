@@ -42,7 +42,7 @@ evenings = {"Monday": ("Drinks reception", "more details coming shortly..."),
             "Friday": ("Hang out and goodbyes", "more details coming shortly...")}
 extras = {
     "Monday": {"session 1": {"start": ("Welcome & Introduction", "")}},
-    "Tuesday": {"session 2": {"start": ("Q&A with the FEniCS steering council", "")}},
+    "Wednesday": {"session 2": {"start": ("Q&A with the FEniCS steering council", "")}},
     "Friday": {"session 3": {"end": ("Prizes & Conclusion", "")}}
 }
 
@@ -57,7 +57,7 @@ for i in [1, 2, 3]:
     break_positions[i] = talk_starts[i] + ntalks[i]
 talk_starts["evening"] = break_positions[3] + 1
 
-empty_talks = {"Tuesday": {2: list(range(5))}, "Friday": {3: [3, 4]}}
+empty_talks = {"Wednesday": {2: list(range(5))}, "Friday": {3: [3, 4]}}
 
 country_emoji = {
     "Norway": "&#127475;&#127476;",
@@ -210,9 +210,9 @@ content += f"Evening session ({times['evening']} GMT)</div>"
 
 
 content += "<div class='gridcell timetabletalk' "
-content += f"style='grid-column: 3 / span 1; grid-row: {talk_starts[2]} / span {ntalks[2]};'>"
-content += f"<div class='timetabletalktitle'>{extras['Tuesday']['session 2']['start'][0]}</div>"
-content += f"<div class='timetabletalkspeaker'>{extras['Tuesday']['session 2']['start'][1]}</div>"
+content += f"style='grid-column: 4 / span 1; grid-row: {talk_starts[2]} / span {ntalks[2]};'>"
+content += f"<div class='timetabletalktitle'>{extras['Wednesday']['session 2']['start'][0]}</div>"
+content += f"<div class='timetabletalkspeaker'>{extras['Wednesday']['session 2']['start'][1]}</div>"
 content += "</div>"
 
 content += "<div class='gridcell timetabletalk' "
