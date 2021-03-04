@@ -184,7 +184,8 @@ def insert_icons(txt):
                 + t + r"</a>\2",
                 txt, 1)
     for e, url in defelementlist:
-        txt = txt.replace(e, f"<a href='https://defelement.com/elements/{url}.html'>{e}</a>", 1)
+        txt = txt.replace(e, f"<a class='icon' href='https://defelement.com/elements/{url}.html'>"
+                          f"<img src='/img/defelement.png'>{e}</a>", 1)
     return txt
 
 
