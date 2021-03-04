@@ -59,8 +59,8 @@ Before moving to Discourse, the FEniCS Q&A forum was used for asking questions a
 some users may find [the archives](https://fenicsproject.org/qa/) helpful.
 
 ## Useful links
-[The DOLFINx tutorial](https://github.com/jorgensd/dolfinx-tutorial/) is an interactive guide to the features of FEniCSx.
+[The DOLFINx tutorial](https://github.com/jorgensd/dolfinx-tutorial/){fenics.png} is an interactive guide to the features of FEniCSx.
 The tutorial uses Jupyter notebooks (hosted with Binder) that can be run online without any installation required.
 
-[DefElement](https://defelement.com) is an encyclopedia of finite element definitions. It contains information about common (and less common)
+[DefElement](https://defelement.com){defelement.png} is an encyclopedia of finite element definitions. It contains information about common (and less common)
 finite element basis functions are defined.
