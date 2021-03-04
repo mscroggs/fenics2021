@@ -154,6 +154,8 @@ defelementlist = [
     ("Arnold&ndash;Winther", "arnold-winther"),
     ("seredipity", "serendipity"),
     ("Lagrange", "lagrange"),
+    ("N&eacute;d&eacute;lec", "nedelec1"),
+    ("Raviart&ndash;Thomas", "raviart-thomas"),
     ("Scott&ndash;Vogelius", "scott-vogelius"),
 ]
 
