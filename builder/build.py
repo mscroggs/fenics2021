@@ -17,12 +17,14 @@ html_path = args.destination
 files_path = os.path.join(dir_path, "../files")
 talks_path = os.path.join(dir_path, "../talks")
 pages_path = os.path.join(dir_path, "../pages")
+evening_path = os.path.join(dir_path, "../evening")
 template_path = os.path.join(dir_path, "../template")
 
 if os.path.isdir(html_path):
     os.system(f"rm -rf {html_path}")
 os.mkdir(html_path)
 os.mkdir(os.path.join(html_path, "talks"))
+os.mkdir(os.path.join(html_path, "evening"))
 
 os.system(f"cp -r {files_path}/* {html_path}")
 
@@ -35,11 +37,11 @@ with open(os.path.join(talks_path, "_timetable.yml")) as f:
 times = {1: "13:00&ndash;14:40", 2: "15:00&ndash;16:30", 3: "17:00&ndash;18:30",
          "evening": "19:30&ndash;21:00"}
 daylist = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
-evenings = {"Monday": ("Drinks reception", "more details coming shortly..."),
-            "Tuesday": ("Discussion tables", "more details coming shortly..."),
-            "Wednesday": ("FEniCS quiz night", "more details coming shortly..."),
-            "Thursday": ("Conference dinner", "more details coming shortly..."),
-            "Friday": ("Hang out and goodbyes", "more details coming shortly...")}
+evenings = {"Monday": ("Drinks reception", "On Monday evening, we will be congregating in Gather Town for a drinks reception, where you will get a chance to mingle and chat with other conference delegates."),
+            "Tuesday": ("Discussion tables", "On Tuesday evening, we will be congregating in the meeting room of the Gather Town space to have open discussions around a selection of topics."),
+            "Wednesday": ("FEniCS quiz night", "On Wednesday evening, we will be congregating in the Gather Town pub for a quiz."),
+            "Thursday": ("Conference dinner", "On Thursday evening, we would normally meet up in a pub for a drink and chat before heading to the conference dinner. There won't be an actual dinner at this virtual conference, but we will be meeting up in the Gather Town pub for a drink and a chat."),
+            "Friday": ("Hang out and goodbyes", "On Friday evening, we will be congregating in Gather Town for a chat, and to say farewell to the people we have met at the conference.")}
 extras = {
     "Monday": {"session 1": {"start": ("Welcome & Introduction", "")}},
     "Wednesday": {"session 2": {"start": ("Q&A with the FEniCS steering council", "")}},
@@ -192,6 +194,13 @@ for file in os.listdir(pages_path):
             content = markup(f.read(), False)
         write_page(f"{fname}.html", content)
 
+for file in os.listdir(evening_path):
+    if file.endswith(".md"):
+        fname = file[:-3]
+        with open(os.path.join(evening_path, file)) as f:
+            content = markup(f.read())
+        write_page(f"evening/{fname}.html", content)
+
 content = "<h1>Timetable</h1>"
 content += "<div class='timetablegrid'>\n"
 
@@ -231,12 +240,13 @@ for i, day in enumerate(daylist):
     content += f"<div class='gridcell timetableheading' style='grid-column: {i + 2} / span 1; "
     content += f"grid-row: 1 / span 1;'>{day}</div>"
 
-    content += "<div class='gridcell timetabletalk' "
+    content += "<a class='gridcell timetabletalk' "
     content += f"style='grid-column: {i + 2} / span 1; "
-    content += f"grid-row: {talk_starts['evening']} / span 1;'>"
+    content += f"grid-row: {talk_starts['evening']} / span 1;'"
+    content += f"href='/evening/{day.lower()}.html'>"
     content += f"<div class='timetabletalktitle'>{evenings[day][0]}</div>"
     content += f"<div class='timetabletalkspeaker'>{evenings[day][1]}</div>"
-    content += "</div>"
+    content += "</a>"
 
     for s in [1, 2, 3]:
         add = 0
@@ -313,7 +323,8 @@ for day in daylist:
             content += "<div class='authors'>" + extras[day][sess]["end"][1] + "</div>"
             content += "</div></div>"
 
-    content += f"<h3>Evening session: {evenings[day][0]} ({times['evening']} GMT)</h3>"
+    content += f"<h3>Evening session: <a href='/evening/{day.lower()}.html'>{evenings[day][0]}"
+    content += f"</a> ({times['evening']} GMT)</h3>"
     content += f"<div class='timetablelisttalk'>{evenings[day][1]}</div>"
     daytalks[day] = content
 
