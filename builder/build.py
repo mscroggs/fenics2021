@@ -202,7 +202,27 @@ for day in ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]:
     content += "</div>"
     write_page(f"evening/{day.lower()}.html", markup(content))
 
-    evenings[day] = (evening_info['title'], evening_info['desc'][0])
+    evening_short = ""
+    bracket_open = False
+    first = True
+    for i in evening_info['desc']:
+        if "img" in i:
+            continue
+        if first:
+            first = False
+        elif not bracket_open:
+            evening_short += "<br /><br />"
+        if i.startswith("## "):
+            if bracket_open:
+                evening_short += ", "
+            evening_short += i[3:]
+            bracket_open = True
+        elif not bracket_open:
+            evening_short += i
+    if bracket_open:
+        bracket_open = False
+        evening_short += "."
+    evenings[day] = (evening_info['title'], evening_short)
 
 content = "<h1>Timetable</h1>"
 content += "<div class='timetablegrid'>\n"
