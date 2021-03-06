@@ -161,7 +161,7 @@ a.timetabletalk:hover {border:1px solid #FF8800}
 .sociallist a, .sociallist a:link, .sociallist a:active, .sociallist a:visited
  {text-decoration:none}
 
-.head .links {margin-top:20px}
+.head .links {margin-top:20px;text-align:center}
 
 .head .links a, .head .links a:link, .head .links a:active, .head .links a:visited
  {color:#4A98DD;background-color:white;padding:10px 20px;font-size:18px;
