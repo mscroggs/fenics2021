@@ -37,11 +37,6 @@ with open(os.path.join(talks_path, "_timetable.yml")) as f:
 times = {1: "13:00&ndash;14:40", 2: "15:00&ndash;16:30", 3: "17:00&ndash;18:30",
          "evening": "19:30&ndash;21:00"}
 daylist = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
-evenings = {"Monday": ("Drinks reception", "On Monday evening, we will be congregating in Gather Town for a drinks reception, where you will get a chance to mingle and chat with other conference delegates."),
-            "Tuesday": ("Discussion tables", "On Tuesday evening, we will be congregating in the meeting room of the Gather Town space to have open discussions around a selection of topics."),
-            "Wednesday": ("FEniCS quiz night", "On Wednesday evening, we will be congregating in the Gather Town pub for a quiz."),
-            "Thursday": ("Conference dinner", "On Thursday evening, we would normally meet up in a pub for a drink and chat before heading to the conference dinner. There won't be an actual dinner at this virtual conference, but we will be meeting up in the Gather Town pub for a drink and a chat."),
-            "Friday": ("Hang out and goodbyes", "On Friday evening, we will be congregating in Gather Town for a chat, and to say farewell to the people we have met at the conference.")}
 extras = {
     "Monday": {"session 1": {"start": ("Welcome & Introduction", "")}},
     "Wednesday": {"session 2": {"start": ("Q&A with the FEniCS steering council", "")}},
@@ -194,12 +189,20 @@ for file in os.listdir(pages_path):
             content = markup(f.read(), False)
         write_page(f"{fname}.html", content)
 
-for file in os.listdir(evening_path):
-    if file.endswith(".md"):
-        fname = file[:-3]
-        with open(os.path.join(evening_path, file)) as f:
-            content = markup(f.read())
-        write_page(f"evening/{fname}.html", content)
+evenings = {}
+
+for day in ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]:
+    with open(os.path.join(evening_path, f"{day.lower()}.yml")) as f:
+        evening_info = yaml.load(f, Loader=yaml.FullLoader)
+    content = f"# {evening_info['title']}\n"
+    content += f"<div style='margin-top:5px'><a href='/talks/list-{day}.html'>{day}</a>"
+    content += f" evening ({times['evening']} GMT)</div>\n"
+    content += "<div class='abstract'>\n"
+    content += "\n\n".join(evening_info["desc"])
+    content += "</div>"
+    write_page(f"evening/{day.lower()}.html", markup(content))
+
+    evenings[day] = (evening_info['title'], evening_info['desc'][0])
 
 content = "<h1>Timetable</h1>"
 content += "<div class='timetablegrid'>\n"

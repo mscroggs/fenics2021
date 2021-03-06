@@ -19,6 +19,8 @@
 The FEniCS 2021 conference is an opportunity for all those interested in the {{icon:FEniCS}} Project and related projects to exchange ideas, communicate their results and network with the automated scientific computing community.
 
 Unlike previous FEniCS conferences, FEniCS 2021 will be held entirely online.
+The talks will be presented using Zoom Webinar. The evening activities will be held using [Gather Town](/gather-town.md). Link to join both of these will be emailed to you a few days before the
+conference.
 
 We welcome developers, existing and potential users of the FEniCS ecosystem as well as mathematicians, computer scientists and application domain specialists interested in numerical methods, their implementation and applications.
 
