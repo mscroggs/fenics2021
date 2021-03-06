@@ -43,3 +43,11 @@ Registration for this conference is now closed.
 ## Code of conduct
 We expect all attendees of FEniCS 2021 to follow the FEniCS Project [code of conduct](https://fenicsproject.org/code-of-conduct/).
 Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the [conference organisers](/team.md) or the [FEniCS Steering Council](https://bitbucket.org/fenics-project/governance/src/master/people.md).
+
+## Talks
+Over the 3 days of FEniCS 2021, there will be [72 10-minute talks](/talks/list.html) given by presenters from institutions in over 10 countries.
+
+<center><img src='/img/map.png' style='max-width:80%'></center>
+
+Following each talk, there will be time for 1 or 2 questions. Further questions and discussions can be held using Zoom Webinar's Q&A and chat boxes, or by locating the speaker
+in one of the Gather Town evening sessions.
