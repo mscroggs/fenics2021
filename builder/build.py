@@ -261,7 +261,7 @@ content += "</div>"
 
 for i, day in enumerate(daylist):
     content += f"<div class='gridcell timetableheading' style='grid-column: {i + 2} / span 1; "
-    content += f"grid-row: 1 / span 1;'>{day}</div>"
+    content += f"grid-row: 1 / span 1;'><a href='/talks/list-{day}.html'>{day}</a></div>"
 
     content += "<a class='gridcell timetabletalk' "
     content += f"style='grid-column: {i + 2} / span 1; "
