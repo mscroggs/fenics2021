@@ -45,7 +45,7 @@ We expect all attendees of FEniCS 2021 to follow the FEniCS Project [code of con
 Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the [conference organisers](/team.md) or the [FEniCS Steering Council](https://bitbucket.org/fenics-project/governance/src/master/people.md).
 
 ## Talks
-Over the 5 days of FEniCS 2021, there will be [72 10-minute talks](/talks/list.html) given by presenters from institutions in over 10 countries.
+Over the 5 days of FEniCS 2021, there will be [over 70 10-minute talks](/talks/list.html) given by presenters from institutions in over 10 countries.
 
 <center><img src='/img/map.png' style='max-width:80%'></center>
 
