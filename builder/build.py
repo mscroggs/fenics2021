@@ -229,7 +229,8 @@ content += "<div class='timetablegrid'>\n"
 
 for s in [1, 2, 3]:
     content += "<div class='gridcell timetableheading rotated' style='grid-column: 1 / span 1; "
-    content += f"grid-row: {talk_starts[s]} / span {ntalks[s]};'>Session {s} (Zoom) ({times[s]} GMT)</div>"
+    content += f"grid-row: {talk_starts[s]} / span {ntalks[s]};'>Session {s} (Zoom) "
+    content += f"({times[s]} GMT)</div>"
 
     content += "<div class='gridcell timetableheading' style='grid-column: 2 / span 5; "
     content += f"grid-row: {break_positions[s]} / span 1;padding:10px'>"
