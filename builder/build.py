@@ -290,8 +290,6 @@ for i, day in enumerate(daylist):
                 content += f"<div class='timetabletalktitle'>{title}</div>"
                 content += f"<div class='timetabletalkspeaker'>{speaker}</div>"
                 content += "</a>"
-            else:
-                content += f"<div class='gridcell timetabletalk' style='{talkpos}'>?</div>"
 
 content += "</div>"
 
