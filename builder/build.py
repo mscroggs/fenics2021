@@ -347,7 +347,8 @@ for day in daylist:
             content += "<div class='authors'>" + extras[day][sess]["end"][1] + "</div>"
             content += "</div></div>"
 
-    content += f"<h3>Evening session (Gather Town): <a href='/evening/{day.lower()}.html'>{evenings[day][0]}"
+    content += f"<h3>Evening session (Gather Town): "
+    content += f"<a href='/evening/{day.lower()}.html'>{evenings[day][0]}"
     content += f"</a> ({times['evening']} GMT)</h3>"
     content += f"<div class='timetablelisttalk'>{evenings[day][1]}</div>"
     daytalks[day] = content
