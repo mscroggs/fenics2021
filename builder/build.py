@@ -232,13 +232,16 @@ for s in [1, 2, 3]:
     content += f"grid-row: {talk_starts[s]} / span {ntalks[s]};'>Session {s} (Zoom) "
     content += f"({times[s]} GMT)</div>"
 
-    content += "<div class='gridcell timetableheading' style='grid-column: 2 / span 5; "
+    if s == 3:
+        content += "<div class='gridcell timetableheading' style='grid-column: 2 / span 4; "
+    else:
+        content += "<div class='gridcell timetableheading' style='grid-column: 2 / span 5; "
     content += f"grid-row: {break_positions[s]} / span 1;padding:10px'>"
     content += " &nbsp; &nbsp; &nbsp; ".join([i for i in "BREAK"])
     content += "</div>"
 
 content += "<div class='gridcell timetableheading rotated' style='grid-column: 1 / span 1; "
-content += f"grid-row: {talk_starts['evening']} / span 1;'>"
+content += f"grid-row: {talk_starts['evening']} / span 2;'>"
 content += f"Evening session (Gather Town) ({times['evening']} GMT)</div>"
 
 
@@ -266,7 +269,10 @@ for i, day in enumerate(daylist):
 
     content += "<a class='gridcell timetabletalk' "
     content += f"style='grid-column: {i + 2} / span 1; "
-    content += f"grid-row: {talk_starts['evening']} / span 1;'"
+    if day == "Friday":
+        content += f"grid-row: {talk_starts['evening'] - 1} / span 2;'"
+    else:
+        content += f"grid-row: {talk_starts['evening']} / span 2;'"
     content += f"href='/evening/{day.lower()}.html'>"
     content += f"<div class='timetabletalktitle'>{evenings[day][0]}</div>"
     content += f"<div class='timetabletalkspeaker'>{evenings[day][1]}</div>"
