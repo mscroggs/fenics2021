@@ -16,6 +16,7 @@ args = parser.parse_args()
 html_path = args.destination
 files_path = os.path.join(dir_path, "../files")
 talks_path = os.path.join(dir_path, "../talks")
+slides_path = os.path.join(dir_path, "../slides")
 pages_path = os.path.join(dir_path, "../pages")
 evening_path = os.path.join(dir_path, "../evening")
 template_path = os.path.join(dir_path, "../template")
@@ -24,9 +25,11 @@ if os.path.isdir(html_path):
     os.system(f"rm -rf {html_path}")
 os.mkdir(html_path)
 os.mkdir(os.path.join(html_path, "talks"))
+os.mkdir(os.path.join(html_path, "slides"))
 os.mkdir(os.path.join(html_path, "evening"))
 
 os.system(f"cp -r {files_path}/* {html_path}")
+os.system(f"cp -r {slides_path}/* {html_path}/slides")
 
 with open(os.path.join(html_path, "CNAME"), "w") as f:
     f.write("fenics2021.com")
@@ -140,6 +143,9 @@ def make_talk_page(t_id, day, session_n, prev, next):
     content += (f"<div style='margin-top:5px'>"
                 f"<a href='/talks/list-{day}.html'>{day}</a>"
                 f" session {session_n} (Zoom) ({times[session_n]} GMT)</div>")
+    if os.path.isfile(os.path.join(slides_path, f"{t_id}.pdf")):
+        content += (f"<div style='margin-top:10px'><a href='/slides/{t_id}.pdf'>"
+                    "<i class='fas fa-file-powerpoint'></i> View slides (pdf)</a>")
     content += "<div class='abstract'>"
     abstract = []
     if isinstance(tinfo['abstract'], list):
@@ -232,13 +238,16 @@ for s in [1, 2, 3]:
     content += f"grid-row: {talk_starts[s]} / span {ntalks[s]};'>Session {s} (Zoom) "
     content += f"({times[s]} GMT)</div>"
 
-    content += "<div class='gridcell timetableheading' style='grid-column: 2 / span 5; "
+    if s == 3:
+        content += "<div class='gridcell timetableheading' style='grid-column: 2 / span 4; "
+    else:
+        content += "<div class='gridcell timetableheading' style='grid-column: 2 / span 5; "
     content += f"grid-row: {break_positions[s]} / span 1;padding:10px'>"
     content += " &nbsp; &nbsp; &nbsp; ".join([i for i in "BREAK"])
     content += "</div>"
 
 content += "<div class='gridcell timetableheading rotated' style='grid-column: 1 / span 1; "
-content += f"grid-row: {talk_starts['evening']} / span 1;'>"
+content += f"grid-row: {talk_starts['evening']} / span 2;'>"
 content += f"Evening session (Gather Town) ({times['evening']} GMT)</div>"
 
 
@@ -266,7 +275,10 @@ for i, day in enumerate(daylist):
 
     content += "<a class='gridcell timetabletalk' "
     content += f"style='grid-column: {i + 2} / span 1; "
-    content += f"grid-row: {talk_starts['evening']} / span 1;'"
+    if day == "Friday":
+        content += f"grid-row: {talk_starts['evening'] - 1} / span 2;'"
+    else:
+        content += f"grid-row: {talk_starts['evening']} / span 2;'"
     content += f"href='/evening/{day.lower()}.html'>"
     content += f"<div class='timetabletalktitle'>{evenings[day][0]}</div>"
     content += f"<div class='timetabletalkspeaker'>{evenings[day][1]}</div>"
@@ -290,8 +302,6 @@ for i, day in enumerate(daylist):
                 content += f"<div class='timetabletalktitle'>{title}</div>"
                 content += f"<div class='timetabletalkspeaker'>{speaker}</div>"
                 content += "</a>"
-            else:
-                content += f"<div class='gridcell timetabletalk' style='{talkpos}'>?</div>"
 
 content += "</div>"
 
