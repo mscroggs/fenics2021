@@ -16,6 +16,7 @@ args = parser.parse_args()
 html_path = args.destination
 files_path = os.path.join(dir_path, "../files")
 talks_path = os.path.join(dir_path, "../talks")
+slides_path = os.path.join(dir_path, "../slides")
 pages_path = os.path.join(dir_path, "../pages")
 evening_path = os.path.join(dir_path, "../evening")
 template_path = os.path.join(dir_path, "../template")
@@ -24,9 +25,11 @@ if os.path.isdir(html_path):
     os.system(f"rm -rf {html_path}")
 os.mkdir(html_path)
 os.mkdir(os.path.join(html_path, "talks"))
+os.mkdir(os.path.join(html_path, "slides"))
 os.mkdir(os.path.join(html_path, "evening"))
 
 os.system(f"cp -r {files_path}/* {html_path}")
+os.system(f"cp -r {slides_path}/* {html_path}/slides")
 
 with open(os.path.join(html_path, "CNAME"), "w") as f:
     f.write("fenics2021.com")
@@ -140,6 +143,9 @@ def make_talk_page(t_id, day, session_n, prev, next):
     content += (f"<div style='margin-top:5px'>"
                 f"<a href='/talks/list-{day}.html'>{day}</a>"
                 f" session {session_n} (Zoom) ({times[session_n]} GMT)</div>")
+    if os.path.isfile(os.path.join(slides_path, f"{t_id}.pdf")):
+        content += (f"<div style='margin-top:10px'><a href='/slides/{t_id}.pdf'>"
+                    "<i class='fas fa-file-powerpoint'></i> View slides (pdf)</a>")
     content += "<div class='abstract'>"
     abstract = []
     if isinstance(tinfo['abstract'], list):
