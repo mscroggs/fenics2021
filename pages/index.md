@@ -30,6 +30,11 @@ The FEniCS 2021 conference is sponsored by:
 
 <center>[<img src='/img/rafinex.png' style='height:100px'>](https://www.rafinex.com/)</center>
 
+## Conference photo
+This was taken on [Thursday evening](/evening/thursday.html).
+
+<center>[<img src='/img/small-photo.png' style='max-width:700px'>](/img/small-photo.png)</center>
+
 ## Registration
 {{if before 2021, 3, 21, 0, 0}}
 You can register to attend this conference using [this form on the University of Cambridge online store](https://onlinesales.admin.cam.ac.uk/conferences-and-events/earth-sciences/fenics/fenics-2021).
@@ -51,3 +56,4 @@ Over the 5 days of FEniCS 2021, there will be [over 70 10-minute talks](/talks/l
 
 Following each talk, there will be time for 1 or 2 questions. Further questions and discussions can be held using Zoom Webinar's Q&A and chat boxes, or by locating the speaker
 in one of the Gather Town evening sessions.
+
