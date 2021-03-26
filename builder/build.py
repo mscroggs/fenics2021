@@ -253,7 +253,10 @@ for day in ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]:
         evening_info = yaml.load(f, Loader=yaml.FullLoader)
     content = f"# {evening_info['title']}\n"
     content += f"<div style='margin-top:5px'><a href='/talks/list-{day}.html'>{day}</a>"
-    content += f" evening ({times['evening']} GMT)</div>\n"
+    if day == "Friday":
+        content += f" evening (18:30&ndash; GMT)</div>\n"
+    else:
+        content += f" evening ({times['evening']} GMT)</div>\n"
     content += "<div class='abstract'>\n"
     content += "\n\n".join(evening_info["desc"])
     content += "</div>"
@@ -421,7 +424,10 @@ for day in daylist:
 
     content += f"<h3>Evening session (Gather Town): "
     content += f"<a href='/evening/{day.lower()}.html'>{evenings[day][0]}"
-    content += f"</a> ({times['evening']} GMT)</h3>"
+    if day == "Friday":
+        content += f"</a> (18:30&ndash; GMT)</h3>"
+    else:
+        content += f"</a> ({times['evening']} GMT)</h3>"
     content += f"<div class='timetablelisttalk'>{evenings[day][1]}</div>"
     daytalks[day] = content
 
