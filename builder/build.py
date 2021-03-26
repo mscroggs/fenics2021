@@ -226,15 +226,10 @@ def make_talk_page(t_id, day, session_n, prev, next):
     write_page(f"talks/{t_id}.html", content, tinfo['title'])
 
     short_content = ""
-    short_content += f"<a href='/talks/{t_id}.html'>"
-    short_content += f"<div class='talktitle'>{tinfo['title']}"
-
+    short_content += f"<div class='talktitle'>"
     if t_id in list(prizes.values()):
-        short_content += " <i class='fas fa-award'></i>"
-
-    short_content += "</div>"
-
-    short_content += "</a>"
+        short_content += "<i class='fas fa-award'></i> "
+    short_content += f"<a href='/talks/{t_id}.html'>{tinfo['title']}</a></div>"
     short_content += f"<div class='timetablelistauthor'>{authortxt}</div>"
 
     return short_content

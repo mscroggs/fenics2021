@@ -26,7 +26,17 @@ We welcome developers, existing and potential users of the FEniCS ecosystem as w
 
 The FEniCS 2021 conference will emphasise an open and inclusive atmosphere, contributed talks from a diverse range of scientific areas, and dedicated time for discussions and coding.
 
-The FEniCS 2021 conference is sponsored by:
+## Prizes
+
+Three prizes were given at FEniCS 2021:
+
+<ul>
+<li>Best talk by a PhD student or undergraduate: [R&eacute;mi Delaporte-Mathurin](/talks/delaporte-mathurin.html)</li>
+<li>Best talk by a PhD student or undergraduate (runner up): [India Marsden](/talks/marsden.html)</li>
+<li>Best talk by a postdoc: [Marc Hirschvogel](/talks/hirschvogel.html)</li>
+</ul>
+
+The prizes were kindly provided by the conference sponsors:
 
 <center>[<img src='/img/rafinex.png' style='height:100px'>](https://www.rafinex.com/)</center>
 
