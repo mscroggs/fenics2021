@@ -1,17 +1,17 @@
 title: Discussion tables
 desc:
-  - On Tuesday evening, we will be congregating in the Gather Town meeting room to have open discussions around a selection of topics.
+  - On Tuesday evening, we congregated in the Gather Town meeting room to have open discussions around a selection of topics.
   - <center><img src='/img/tables.png' style='max-width:80%'></center>
-  - "Six tables will each have a topic for discussion written on them. You should join whichever table you want to, or you could move between tables to drop into multiple discussions. The topics are:"
+  - "Six tables each had a topic for discussion written on them. Everyone joined whichever table they want to, or moved between tables to drop into multiple discussions. The topics were:"
   - "## Solvers"
-  - People at this table will be discussing linear algebra, solvers, preconditioners and related topics.
+  - People at this table discussed linear algebra, solvers, preconditioners and related topics.
   - "## Time"
-  - People at this table will be discussing time-dependent problems.
+  - People at this table discussed time-dependent problems.
   - "## Meshing + i/o"
-  - People at this table will be discussing meshing, input, output, and related issues.
+  - People at this table discussed meshing, input, output, and related issues.
   - "## DG"
-  - People at this table will be discussing discontinuous Galerkin methods.
+  - People at this table discussed discontinuous Galerkin methods.
   - "## HPC"
-  - People at this table will be discussing issues related to high performance computing, including the use of FEniCS in parallel and with GPUs.
+  - People at this table discussed issues related to high performance computing, including the use of FEniCS in parallel and with GPUs.
   - "## Coupling to other software"
-  - People at this table will be discussing interfacing between FEniCS and other software.
+  - People at this table discussed interfacing between FEniCS and other software.

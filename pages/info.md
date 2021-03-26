@@ -1,7 +1,7 @@
 # Useful information
 
 ## Components of FEniCS
-Throughout the conference, you will hear people refer to the different packages that make up FEniCS.
+Throughout the conference, you heard people refer to the different packages that make up FEniCS.
 For useful reference, these components are:
 
 ### {{icon:DOLFIN}} 
