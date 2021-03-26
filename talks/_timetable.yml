@@ -1,90 +1,176 @@
 Monday:
   session 1:
-    - vinje
-    - baratham
-    - tamosiunas
-    - andersson
-    - hirschvogel
+    chair:
+      name: Chris Richardson
+      country: United Kingdom
+      affiliation: BP Institute
+      github: chrisrichardson
+    talks:
+      - vinje
+      - baratham
+      - tamosiunas
+      - andersson
+      - hirschvogel
   session 2:
-    - bouziani
-    - dokken
-    - brubeck
-    - rehor
-    - marchena-menendez
+    chair:
+      name: Lawrence Mitchell
+      country: United Kingdom
+      affiliation: University of Durham
+      github: wence-
+    talks:
+      - bouziani
+      - dokken
+      - brubeck
+      - rehor
+      - marchena-menendez
   session 3:
-    - sarkar
-    - wei
-    - garlick
-    - helfer
-    - dancheva
+    chair:
+      name: Sarah Roggendorf
+      country: United Kingdom
+      affiliation: University of Cambridge
+    talks:
+      - sarkar
+      - wei
+      - garlick
+      - helfer
+      - dancheva
 Tuesday:
   session 1:
-    - habera
-    - marsden
-    - richardson
-    - nixon-hill
-    - zilian
-    - scroggs
+    chair:
+      name: Susanne Claus
+      country: France
+      affiliation: ONERA
+    talks:
+      - habera
+      - marsden
+      - richardson
+      - nixon-hill
+      - zilian
+      - scroggs
   session 2:
-    - kim
-    - pichi
-    - gupta
-    - aznaran
-    - kulkarni
+    chair:
+      name: J&oslash;rgen S. Dokken
+      country: United Kingdom
+      affiliation: University of Cambridge
+      website: https://jsdokken.com/
+      github: jorgensd
+    talks:
+      - kim
+      - pichi
+      - gupta
+      - aznaran
+      - kulkarni
   session 3:
-    - schmidt
-    - neumann
-    - papadopoulos
-    - ramaswamy
-    - yan
+    chair:
+      name: Nate Sime
+      country: United States
+      affiliation: Carnegie Institution for Science
+      github: nate-sime
+    talks:
+      - schmidt
+      - neumann
+      - papadopoulos
+      - ramaswamy
+      - yan
 Wednesday:
   session 1:
-    - hale
-    - bulle
-    - kaiser
-    - opiela
-    - arbes
-    - jansson
+    chair:
+      name: Marie Rognes
+      affiliation: Simula Research Laboratory
+      country: Norway
+      github: meg-simula
+    talks:
+      - hale
+      - bulle
+      - kaiser
+      - opiela
+      - arbes
+      - jansson
+  session 2:
+    chair:
+      name: Matthew Scroggs
+      country: United Kingdom
+      affiliation: University of Cambridge
+      website: https://www.mscroggs.co.uk
+      twitter: mscroggs
+      github: mscroggs
   session 3:
-    - zhao
-    - hill
-    - johansson
-    - baratta
-    - krishnan
+    chair:
+      name: David Kamensky
+      country: United States
+      affiliation: University of California San Diego
+    talks:
+      - zhao
+      - hill
+      - johansson
+      - baratta
+      - krishnan
 Thursday:
   session 1:
-    - yadav
-    - delaporte-mathurin
-    - lengiewicz
-    - desai
-    - ausas
-    - enders-seidlitz
+    chair:
+      name: Simon Funke
+      affiliation: Simula Research Laboratory
+      country: Norway
+    talks:
+      - yadav
+      - delaporte-mathurin
+      - lengiewicz
+      - desai
+      - ausas
+      - enders-seidlitz
   session 2:
-    - abali
-    - boufala
-    - andre
-    - sepanski
+    chair:
+      name: R&oacute;is&iacute;n Hill
+      country: Ireland
+      affiliation: NUI Galway
+    talks:
+      - abali
+      - boufala
+      - andre
+      - sepanski
   session 3:
-    - jovanovic
-    - teeraratkul
-    - van-beers
-    - sime
+    chair:
+      name: Joseph P. Dean
+      country: United Kingdom
+      affiliation: University of Cambridge
+      github: jpdean    
+    talks:
+      - jovanovic
+      - teeraratkul
+      - van-beers
+      - sime
 Friday:
   session 1:
-    - morandini
-    - yashchuk
-    - shekarchizadeh
-    - baumgartner
-    - gendin
-    - rambausek
+    chair:
+      name: C&eacute;cile Daversin-Catty
+      affiliation: Simula Research Laboratory
+      country: Norway
+    talks:
+      - morandini
+      - yashchuk
+      - shekarchizadeh
+      - baumgartner
+      - gendin
+      - rambausek
   session 2:
-    - strazzullo
-    - christhuraj
-    - dean
-    - gazca
-    - kadeethum
+    chair:
+      name: Igor Baratta
+      country: United Kingdom
+      affiliation: University of Cambridge
+      github: IgorBaratta
+    talks:
+      - strazzullo
+      - christhuraj
+      - dean
+      - gazca
+      - kadeethum
   session 3:
-    - lozenski
-    - bleyer
-    - kirby
-
+    chair:
+      name: Garth Wells
+      country: United Kingdom
+      affiliation: University of Cambridge
+      github: garth-wells
+    talks:
+      - lozenski
+      - bleyer
+      - kirby

@@ -294,8 +294,8 @@ for i, day in enumerate(daylist):
             talkpos = f"grid-column: {i + 2} / span 1; "
             talkpos += f"grid-row: {talk_starts[s] + add + talk_n} / span 1"
             sess = f"session {s}"
-            if sess in timetable[day] and len(timetable[day][sess]) > talk_n:
-                talk_id = timetable[day][sess][talk_n]
+            if sess in timetable[day] and len(timetable[day][sess]["talks"]) > talk_n:
+                talk_id = timetable[day][sess]["talks"][talk_n]
                 content += (f"<a class='gridcell timetabletalk' href='/talks/{talk_id}.html' "
                             f"style='{talkpos}'>")
                 title, speaker = get_title_and_speaker(talk_id)
@@ -314,8 +314,8 @@ prev_note = None
 next_note = None
 for day in daylist:
     for s in [1, 2, 3]:
-        if f"session {s}" in timetable[day]:
-            talks = timetable[day][f"session {s}"]
+        if f"session {s}" in timetable[day] and "talks" in timetable[day][f"session {s}"]:
+            talks = timetable[day][f"session {s}"]["talks"]
             for t in talks:
                 prev_talks[t] = (prev, prev_note)
                 if prev is not None:
@@ -335,6 +335,11 @@ for day in daylist:
     for s in [1, 2, 3]:
         content += f"<h3>Session {s} (Zoom) ({times[s]} GMT)</h3>"
         sess = f"session {s}"
+        if sess in timetable[day] and "chair" in timetable[day][sess]:
+            chair = timetable[day][sess]["chair"]
+            content += "<div class='authors' style='margin-top:-10px;margin-bottom:10px'>"
+            content += f"Chair: {markup_author(chair)}"
+            content += "</div>"
         if day in extras and sess in extras[day] and "start" in extras[day][sess]:
             content += "<div class='timetablelisttalk'>"
             content += "<div class='talktitle'>" + extras[day][sess]["start"][0] + "</div>"
@@ -342,8 +347,8 @@ for day in daylist:
             content += "<div class='authors'>" + extras[day][sess]["start"][1] + "</div>"
             content += "</div></div>"
 
-        if sess in timetable[day]:
-            talks = timetable[day][sess]
+        if sess in timetable[day] and "talks" in timetable[day][sess]:
+            talks = timetable[day][sess]["talks"]
             for t in talks:
                 print(t)
                 content += "<div class='timetablelisttalk'>"
