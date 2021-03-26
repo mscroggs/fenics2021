@@ -45,7 +45,8 @@ extras = {
     "Wednesday": {"session 2": {"start": ("Q&A with the FEniCS steering council", "")}},
     "Friday": {"session 3": {"end": ("Prizes & Conclusion", "")}}
 }
-prizes = {"phd1": None, "phd2": None, "postdoc": None}
+prizes = {"phd1": "delaporte-mathurin", "phd2": "marsden",
+          "postdoc": "hirschvogel"}
 
 ntalks = {1: 6, 2: 5, 3: 5}
 talk_starts = {}
