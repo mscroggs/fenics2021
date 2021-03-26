@@ -58,7 +58,7 @@ for i in [1, 2, 3]:
     break_positions[i] = talk_starts[i] + ntalks[i]
 talk_starts["evening"] = break_positions[3] + 1
 
-empty_talks = {"Wednesday": {2: list(range(5))}, "Friday": {3: [3, 4]}}
+empty_talks = {"Wednesday": {2: list(range(5))}, "Friday": {3: [4]}}
 
 country_emoji = {
     "Norway": "&#127475;&#127476;",
@@ -315,7 +315,7 @@ content += f"<div class='timetabletalkspeaker'>{extras['Monday']['session 1']['s
 content += "</div>"
 
 content += "<div class='gridcell timetabletalk' "
-content += "style='grid-column: 6 / span 1; grid-row: 18 / span 2;'>"
+content += "style='grid-column: 6 / span 1; grid-row: 19 / span 1;'>"
 content += f"<div class='timetabletalktitle'>{extras['Friday']['session 3']['end'][0]}</div>"
 content += f"<div class='timetabletalkspeaker'>{extras['Friday']['session 3']['end'][1]}</div>"
 content += "</div>"
