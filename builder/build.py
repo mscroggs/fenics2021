@@ -133,8 +133,10 @@ def make_talk_page(t_id, day, session_n, prev, next):
         tinfo = yaml.load(f, Loader=yaml.FullLoader)
 
     authors = [markup_author(tinfo["speaker"], True)]
+    authornames = [tinfo["speaker"]["name"]]
     if "coauthor" in tinfo:
         authors += [markup_author(a) for a in tinfo["coauthor"]]
+        authornames += [a["name"] for a in tinfo["coauthor"]]
     authortxt = "".join([f"<div class='authors'>{i}</div>" for i in authors])
 
     content = ""
@@ -145,7 +147,37 @@ def make_talk_page(t_id, day, session_n, prev, next):
                 f" session {session_n} (Zoom) ({times[session_n]} GMT)</div>")
     if os.path.isfile(os.path.join(slides_path, f"{t_id}.pdf")):
         content += (f"<div style='margin-top:10px'><a href='/slides/{t_id}.pdf'>"
-                    "<i class='fas fa-file-powerpoint'></i> View slides (pdf)</a>")
+                    "<i class='fas fa-file-powerpoint'></i> View slides (pdf)</a></div>")
+
+    content += ("<div id='cite1' style='margin-top:10px'>"
+                "<a href='javascript:show_citation()'>"
+                "<i class='fas fa-arrow-down'></i> Cite this talk</a></div>")
+    content += ("<div id='cite2' style='margin-top:10px;display:none'>"
+                "<p>You can cite this talk by using the following BibTe&Chi;:</p>"
+                "<p class='pcode'>"
+                f"@misc{{fenics2021-{t_id},<br />"
+                f"&nbsp;&nbsp;&nbsp;&nbsp;title = {{{tinfo['title']}}},<br />"
+                f"&nbsp;&nbsp;&nbsp;&nbsp;author = {{{' and '.join(authornames)}}},<br />"
+                "&nbsp;&nbsp;&nbsp;&nbsp;year = {2021},<br />"
+                "&nbsp;&nbsp;&nbsp;&nbsp;url = "
+                f"{{http://mscroggs.github.io/fenics2021/talks/{t_id}.html}},<br />"
+                "&nbsp;&nbsp;&nbsp;&nbsp;note = {talk presented at FEniCS 2021 (held online)}<br />"
+                "}"
+                "</p>"
+                "<a href='javascript:hide_citation()'>"
+                "<i class='fas fa-arrow-up'></i> Hide citation info</a>"
+                "</div>")
+    content += ("<script type='text/javascript'>\n"
+                "function show_citation(){\n"
+                "  document.getElementById('cite1').style.display = 'none';"
+                "  document.getElementById('cite2').style.display = 'block';"
+                "}\n"
+                "function hide_citation(){\n"
+                "  document.getElementById('cite2').style.display = 'none';"
+                "  document.getElementById('cite1').style.display = 'block';"
+                "}\n"
+                "</script>")
+
     content += "<div class='abstract'>"
     abstract = []
     if isinstance(tinfo['abstract'], list):
