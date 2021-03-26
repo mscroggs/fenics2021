@@ -45,6 +45,7 @@ extras = {
     "Wednesday": {"session 2": {"start": ("Q&A with the FEniCS steering council", "")}},
     "Friday": {"session 3": {"end": ("Prizes & Conclusion", "")}}
 }
+prizes = {"phd1": None, "phd2": None, "postdoc": None}
 
 ntalks = {1: 6, 2: 5, 3: 5}
 talk_starts = {}
@@ -145,6 +146,18 @@ def make_talk_page(t_id, day, session_n, prev, next):
     content += (f"<div style='margin-top:5px'>"
                 f"<a href='/talks/list-{day}.html'>{day}</a>"
                 f" session {session_n} (Zoom) ({times[session_n]} GMT)</div>")
+    if t_id == prizes["phd1"]:
+        content += (f"<div style='margin-top:10px'>"
+                    "<i class='fas fa-award'></i> This talk won a prize:"
+                    " Best talk by a PhD student or undergraduate</div>")
+    if t_id == prizes["phd2"]:
+        content += (f"<div style='margin-top:10px'>"
+                    "<i class='fas fa-award'></i> This talk won a prize:"
+                    " Best talk by a PhD student or undergraduate (runner up)</div>")
+    if t_id == prizes["postdoc"]:
+        content += (f"<div style='margin-top:10px'>"
+                    "<i class='fas fa-award'></i> This talk won a prize:"
+                    " Best talk by a postdoc</div>")
     if os.path.isfile(os.path.join(slides_path, f"{t_id}.pdf")):
         content += (f"<div style='margin-top:10px'><a href='/slides/{t_id}.pdf'>"
                     "<i class='fas fa-file-powerpoint'></i> View slides (pdf)</a></div>")
@@ -213,7 +226,13 @@ def make_talk_page(t_id, day, session_n, prev, next):
 
     short_content = ""
     short_content += f"<a href='/talks/{t_id}.html'>"
-    short_content += f"<div class='talktitle'>{tinfo['title']}</div>"
+    short_content += f"<div class='talktitle'>{tinfo['title']}"
+
+    if t_id in list(prizes.values()):
+        short_content += " <i class='fas fa-award'></i>"
+
+    short_content += "</div>"
+
     short_content += "</a>"
     short_content += f"<div class='timetablelistauthor'>{authortxt}</div>"
 
@@ -314,6 +333,7 @@ for i, day in enumerate(daylist):
     content += f"href='/evening/{day.lower()}.html'>"
     content += f"<div class='timetabletalktitle'>{evenings[day][0]}</div>"
     content += f"<div class='timetabletalkspeaker'>{evenings[day][1]}</div>"
+
     content += "</a>"
 
     for s in [1, 2, 3]:
@@ -333,6 +353,11 @@ for i, day in enumerate(daylist):
                 title, speaker = get_title_and_speaker(talk_id)
                 content += f"<div class='timetabletalktitle'>{title}</div>"
                 content += f"<div class='timetabletalkspeaker'>{speaker}</div>"
+                icons = []
+                if talk_id in list(prizes.values()):
+                    icons.append("<i class='fas fa-award'></i>")
+
+                content += " ".join(icons)
                 content += "</a>"
 
 content += "</div>"
