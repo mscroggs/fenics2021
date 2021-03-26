@@ -24,3 +24,10 @@ Updating the website
 --------------------
 When changes are pushed to the main branch, the website will automatically
 be built and updated.
+
+License
+-------
+The code to generate the FEniCS 2021 (contained in the folders `builder/`,
+`template/`, and `test/`, as well as the file `files/sty.css`) is released
+under an [MIT license](/LICENSE). Copyright of other files is held by the
+presenters of the talks that the files are relevant to.
