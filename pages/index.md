@@ -42,7 +42,7 @@ The prizes were kindly provided by the conference sponsors:
 ## Conference photo
 This was taken on [Thursday evening](/evening/thursday.html).
 
-<center>[<img src='/img/small-photo.png' style='max-width:700px'>](/img/small-photo.png)</center>
+<center>[<img src='/img/small-photo.png' style='max-width:80%'>](/img/small-photo.png)</center>
 
 ## Code of conduct
 We expected all attendees of FEniCS 2021 to follow the FEniCS Project [code of conduct](https://fenicsproject.org/code-of-conduct/).
