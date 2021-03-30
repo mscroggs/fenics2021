@@ -1,6 +1,5 @@
 import os
 import pytest
-import yaml
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 talks_path = os.path.join(dir_path, "../talks")
@@ -14,4 +13,4 @@ for file in os.listdir(slides_path):
 
 @pytest.mark.parametrize("i", ids)
 def test_all_included(i):
-        assert os.path.isfile(os.path.join(talks_path, f"{i}.yml"))
+    assert os.path.isfile(os.path.join(talks_path, f"{i}.yml"))
