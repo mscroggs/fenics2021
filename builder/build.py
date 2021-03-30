@@ -144,9 +144,10 @@ def make_talk_page(t_id, day, session_n, prev, next):
     content = ""
     content += f"<h1>{tinfo['title']}</h1>"
     content += f"<div>{authortxt}</div>"
-    content += (f"<div style='margin-top:5px'>"
-                f"<a href='/talks/list-{day}.html'>{day}</a>"
-                f" session {session_n} (Zoom) ({times[session_n]} GMT)</div>")
+    if day is not None:
+        content += (f"<div style='margin-top:5px'>"
+                    f"<a href='/talks/list-{day}.html'>{day}</a>"
+                    f" session {session_n} (Zoom) ({times[session_n]} GMT)</div>")
     if t_id == prizes["phd1"]:
         content += (f"<div style='margin-top:10px'>"
                     "<i class='fas fa-award'></i> This talk won a prize:"
@@ -202,26 +203,29 @@ def make_talk_page(t_id, day, session_n, prev, next):
     content += markup("\n\n".join(abstract))
     content += "</div>"
 
-    content += "<div class='prevnext'>"
-    content += "<div class='prevlink'>"
-    if prev[0] is not None:
-        content += f"<a href='/talks/{prev[0]}.html'>&larr; previous talk"
-        if prev[1] is not None:
-            content += f" ({prev[1]})"
-        content += "</a>"
-    else:
-        content += "<i>this is the first talk</i>"
-    content += "</div>"
-    content += "<div class='nextlink'>"
-    if next[0] is not None:
-        content += f"<a href='/talks/{next[0]}.html'>next talk"
-        if next[1] is not None:
-            content += f" ({next[1]})"
-        content += " &rarr;</a>"
-    else:
-        content += "<i>this is the final talk</i>"
-    content += "</div>"
-    content += "</div>"
+    if prev is not None or next is not None:
+        content += "<div class='prevnext'>"
+        if prev is not None:
+            content += "<div class='prevlink'>"
+            if prev[0] is not None:
+                content += f"<a href='/talks/{prev[0]}.html'>&larr; previous talk"
+                if prev[1] is not None:
+                    content += f" ({prev[1]})"
+                content += "</a>"
+            else:
+                content += "<i>this is the first talk</i>"
+            content += "</div>"
+        if next is not None:
+            content += "<div class='nextlink'>"
+            if next[0] is not None:
+                content += f"<a href='/talks/{next[0]}.html'>next talk"
+                if next[1] is not None:
+                    content += f" ({next[1]})"
+                content += " &rarr;</a>"
+            else:
+                content += "<i>this is the final talk</i>"
+            content += "</div>"
+        content += "</div>"
 
     write_page(f"talks/{t_id}.html", content, tinfo['title'])
 
@@ -384,6 +388,9 @@ for day in daylist:
     next_note = "on the following day"
     prev_note = "on the previous day"
 next_talks[prev] = (None, None)
+
+for t in timetable["other"]:
+    content += make_talk_page(t, None, None, None, None)
 
 daytalks = {}
 for day in daylist:

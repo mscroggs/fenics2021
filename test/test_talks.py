@@ -4,7 +4,6 @@ import yaml
 
 
 def test_all_included():
-    pytest.skip()
     dir_path = os.path.dirname(os.path.realpath(__file__))
     talks_path = os.path.join(dir_path, "../talks")
 
@@ -12,10 +11,15 @@ def test_all_included():
         timetable = yaml.load(f, Loader=yaml.FullLoader)
 
     ids1 = set()
-    for i in timetable.values():
-        for j in i.values():
-            for k in j:
+    for day, i in timetable.items():
+        if day == "other":
+            for k in i:
                 ids1.add(k)
+        else:
+            for j in i.values():
+                if "talks" in j:
+                    for k in j["talks"]:
+                        ids1.add(k)
 
     ids2 = set()
     for file in os.listdir(talks_path):
