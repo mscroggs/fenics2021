@@ -163,6 +163,10 @@ def make_talk_page(t_id, day, session_n, prev, next):
     if os.path.isfile(os.path.join(slides_path, f"{t_id}.pdf")):
         content += (f"<div style='margin-top:10px'><a href='/slides/{t_id}.pdf'>"
                     "<i class='fas fa-file-powerpoint'></i> View slides (pdf)</a></div>")
+    if "slides" in tinfo:
+        content += (f"<div style='margin-top:10px'><a href='{tinfo['slides']['url']}'>"
+                    "<i class='fas fa-file-powerpoint'></i> View slides on "
+                    f"{tinfo['slides']['where']}</a></div>")
 
     content += ("<div id='cite1' style='margin-top:10px'>"
                 "<a href='javascript:show_citation()'>"
