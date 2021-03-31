@@ -2,3 +2,5 @@
 _html/*
 *.pyc
 emails/*
+_tex/*
+_pdf/*

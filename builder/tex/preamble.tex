@@ -1,0 +1,24 @@
+\documentclass[a4paper]{article}
+\usepackage{wallpaper}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pdfpages}
+\usepackage[hidelinks]{hyperref}
+\usepackage[left=3cm,right=3cm,top=3cm,bottom=3cm]{geometry}
+\usepackage[sortlocale=auto,style=numeric,maxbibnames=90]{biblatex}
+\addbibresource{references.bib}
+\usepackage{libertinus}
+\usepackage{titlesec}
+
+\titleformat{\chapter}[display]
+  {\centering}{}{}{\huge\setmainfont{Lato Bold}}
+
+\titleformat{\section}[block]
+  {}{}{}{\large\setmainfont{Lato Bold}}
+
+\newcommand{\talktitle}[1]{\begin{center}\LARGE\setmainfont{Lato Bold}#1\end{center}}
+\newcommand{\talkauthor}[1]{\begin{flushleft}{\setmainfont{Lato}#1}\end{flushleft}}
+\newcommand{\talkdate}[1]{\begin{center}\setmainfont{Lato Bold}#1\end{center}}
+
+\newcommand{\twitter}[1]{{\setmainfont[Scale=1.5]{Chalkdust Icon Font}a}\;@#1}
+\newcommand{\github}[1]{{\setmainfont[Scale=1.5]{Chalkdust Icon Font}r}\;#1}
