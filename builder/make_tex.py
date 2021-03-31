@@ -76,12 +76,14 @@ def tex_author(info, speaker=False):
     if "website" in info:
         urls.append(f"\\url{{{info['website']}}}")
     if "github" in info:
-        urls.append(f"\\href{{https://github.com/{info['github']}}}{{\\github{{{info['github']}}}}}")
+        urls.append(f"\\href{{https://github.com/{info['github']}}}"
+                    f"{{\\github{{{info['github']}}}}}")
     if "twitter" in info:
-        urls.append(f"\\href{{https://twitter.com/{info['twitter']}}}{{\\twitter{{{info['twitter']}}}}}")
+        urls.append(f"\\href{{https://twitter.com/{info['twitter']}}}"
+                    f"{{\\twitter{{{info['twitter']}}}}}")
 
     if len(urls) > 0:
-        out += " (" + ", ".join(urls)+ ")"
+        out += " (" + ", ".join(urls) + ")"
     if "affiliation" in info:
         out += ", " + to_tex(info["affiliation"])
         if "country" in info:
@@ -107,8 +109,10 @@ def write_citations():
             item = "@article{"
         else:
             item = "@unpublished{"
-        item += j + ",\n";
-        item += "author = {" + to_tex(" and ".join(ref["author"].replace(", and ", ", ").split(", "))) + "},\n"
+        item += j + ",\n"
+        item += "author = {"
+        item += to_tex(" and ".join(ref["author"].replace(", and ", ", ").split(", ")))
+        item += "},\n"
         item += "title = {" + to_tex(ref["title"]) + "},\n"
         if "year" in ref:
             item += "year = {" + ref["year"] + "},\n"
@@ -134,6 +138,7 @@ def write_citations():
 
     with open(os.path.join(tex_path, "references.bib"), "w") as f:
         f.write("\n\n".join(bib))
+
 
 def add_citation(matches):
     global citations
@@ -176,7 +181,8 @@ def make_tex(tid, day, session):
     authors = "\n\n\\smallskip\n\n".join(["\\hangindent=1cm " + i for i in authors])
 
     tex = f"\\talktitle{{{to_tex(tdata['title'])}}}\n"
-    tex += f"\\addcontentsline{{toc}}{{section}}{{{to_tex(tdata['title'])} ({to_tex(authorlist)})}}\n"
+    tex += f"\\addcontentsline{{toc}}{{section}}{{{to_tex(tdata['title'])} "
+    tex += f"({to_tex(authorlist)})}}\n"
     tex += f"\\talkauthor{{{authors}}}\n"
     tex += f"\\talkdate{{{dates[day]} 2021}}\n"
 
@@ -240,4 +246,3 @@ write_citations()
 
 assert os.system(f"cd {tex_path} && xelatex all.tex && biber all"
                  f" && xelatex all.tex && xelatex all.tex && mv all.pdf {pdf_path}") == 0
-
