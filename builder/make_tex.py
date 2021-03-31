@@ -202,7 +202,7 @@ def make_tex(tid, day, session):
 
     if os.path.isfile(os.path.join(slides_path, f"{tid}.pdf")):
         tex += "\\clearpage\n"
-        tex += f"\\includepdf[pages=-,fitpaper,width=210mm]{{../slides/{tid}.pdf}}\n"
+        tex += f"\\includepdf[pages=-,fitpaper,width=180mm]{{../slides/{tid}.pdf}}\n"
     return tex
 
 
