@@ -119,7 +119,7 @@ iconlist = [
     ("Trilinos", "trilinos.png", "https://trilinos.github.io/"),
     ("SLEPc", "slepc.png", "https://slepc.upv.es/"),
     ("Multiphenics", "multiphenics.png", "https://github.com/mathLab/multiphenics"),
-    ("OpenMDAO", "openmdao.png", "https://github.com/mathLab/multiphenics"),
+    ("OpenMDAO", "openmdao.png", "https://openmdao.org/"),
     ("RBniCS", "rbnics.png", "https://www.rbnicsproject.org/"),
     ("Gmsh", "gmsh.png", "https://gmsh.info/"),
     ("Elmer", "elmer.png", "http://www.elmerfem.org/blog/"),
