@@ -175,13 +175,20 @@ def make_tex(tid, day, session):
     authors = [tex_author(tdata["speaker"], True)]
     authorlist = tdata["speaker"]["name"]
     if "coauthor" in tdata:
-        for i in tdata["coauthor"]:
-            authorlist += ", " + i["name"]
+        for n, i in enumerate(tdata["coauthor"]):
+            if len(tdata["coauthor"]) == 1:
+                authorlist += " and "
+            elif n == len(tdata["coauthor"]) - 1:
+                authorlist += ", and "
+            else:
+                authorlist += ", "
+            authorlist += i["name"]
         authors += [tex_author(i) for i in tdata["coauthor"]]
     authors = "\n\n\\smallskip\n\n".join(["\\hangindent=1cm " + i for i in authors])
 
     tex = f"\\talktitle{{{to_tex(tdata['title'])}}}\n"
-    tex += f"\\addcontentsline{{toc}}{{section}}{{{to_tex(tdata['title'])} "
+    tex += f"\\label{{{tid}:start}}"
+    tex += f"\\phantomsection\\addcontentsline{{toc}}{{section}}{{{to_tex(tdata['title'])} "
     tex += f"({to_tex(authorlist)})}}\n"
     tex += f"\\talkauthor{{{authors}}}\n"
     tex += f"\\talkdate{{{dates[day]} 2021}}\n"
@@ -194,6 +201,32 @@ def make_tex(tid, day, session):
     else:
         tex += tex_abstract("\n\n".join(tdata["abstract"]))
 
+    if tid in ["delaporte-mathurin", "marsden", "hirschvogel"]:
+        tex += "\n\n\\bigskip\n\n\\noindent This talk was awarded a prize: "
+        if tid == "delaporte-mathurin":
+            tex += "Best talk by a PhD student or undergraduate."
+        elif tid == "marsden":
+            tex += "Best talk by a PhD student or undergraduate (runner up)."
+        else:
+            assert tid == "hirschvogel"
+            tex += "Best talk by a postdoc (runner up)."
+
+    tex += "\\ghostfootnote{You can cite this talk as:}\\ghostfootnote{"
+    tex += "\\begin{addmargin}{1cm}"
+    tex += f"{to_tex(authorlist)}. "
+    tex += f"``{to_tex(tdata['title'])}''. "
+    tex += "In: \\emph{Proceedings of FEniCS 2021, online, 22--26 March}"
+    tex += " (eds Igor Baratta, J{\\o}rgen S.\\ Dokken, Chris Richardson, Matthew W.\\ Scroggs) "
+    tex += f"(2021), \\pageref{{{tid}:start}}"
+    tex += f"\\ifthenelse{{\\equal{{\\pageref{{{tid}:start}}}}{{\\pageref{{{tid}:end}}}}}}"
+    tex += f"{{}}{{--\\pageref{{{tid}:end}}}}."
+    if "doi" in tdata:
+        tex += f" \\textsc{{doi}}: \\href{{https://dx.doi.org/{tdata['doi']}}}"
+        tex += f"{{\\texttt{{{tdata['doi']}}}}}."
+    tex += "\\end{addmargin}"
+    tex += "}\\ghostfootnote{BibTeX for this citation can be found at "
+    tex += f"\\url{{https://mscroggs.github.io/fenics2021/talks/{tid}.html}}."
+    tex += "}"
     has_citations_dict[tid] = has_citations
     if has_citations:
         tex += "\n\n\\vfill\n\n\\printbibliography[heading=subbibliography]\n"
@@ -202,7 +235,10 @@ def make_tex(tid, day, session):
 
     if os.path.isfile(os.path.join(slides_path, f"{tid}.pdf")):
         tex += "\\clearpage\n"
-        tex += f"\\includepdf[pages=-,fitpaper,width=180mm]{{../slides/{tid}.pdf}}\n"
+        tex += "\\includepdf[pages=-,fitpaper,width=180mm,pagecommand="
+        tex += f"{{\\label{{{tid}:end}}}}]{{../slides/{tid}.pdf}}\n"
+    else:
+        tex += f"\\label{{{tid}:end}}"
     return tex
 
 
@@ -237,7 +273,7 @@ for day in daylist:
                 tex = make_tex(tid, day, sess)
                 talks.append(tex)
     all_tex += "\n\\clearpage\n"
-    all_tex += f"\\addcontentsline{{toc}}{{chapter}}{{{day} {dates[day]}}}\n"
+    all_tex += f"\\phantomsection\\addcontentsline{{toc}}{{chapter}}{{{day} {dates[day]}}}\n"
     all_tex += "\n\\clearpage\n".join(talks)
 
 write_tex("all", all_tex)

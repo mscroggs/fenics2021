@@ -1,5 +1,6 @@
 \documentclass[a4paper]{article}
 \usepackage{wallpaper}
+\usepackage{scrextend}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{pdfpages}
@@ -22,3 +23,10 @@
 
 \newcommand{\twitter}[1]{{\setmainfont[Scale=1.5]{Chalkdust Icon Font}a}\;@#1}
 \newcommand{\github}[1]{{\setmainfont[Scale=1.5]{Chalkdust Icon Font}r}\;#1}
+
+\newcommand\ghostfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
