@@ -20,6 +20,14 @@ by running:
 python3 builder/build.py /path/to/html/folder
 ```
 
+Building the proceedings pdf
+----------------------------
+The proceedings pdf can be build by running:
+
+```bash
+python3 builder/make_tex.py
+```
+
 Updating the website
 --------------------
 When changes are pushed to the main branch, the website will automatically

@@ -234,9 +234,13 @@ def make_tex(tid, day, session):
     tex += "\\end{refsection}\n"
 
     if os.path.isfile(os.path.join(slides_path, f"{tid}.pdf")):
+        print(f"Compressing {tid}.pdf")
+        assert os.system("gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/printer "
+                         f"-dNOPAUSE -dBATCH  -dQUIET -sOutputFile={slides_path}/{tid}-smaller.pdf "
+                         f"{slides_path}/{tid}.pdf") == 0
         tex += "\\clearpage\n"
         tex += "\\includepdf[pages=-,fitpaper,width=180mm,pagecommand="
-        tex += f"{{\\label{{{tid}:end}}}}]{{../slides/{tid}.pdf}}\n"
+        tex += f"{{\\label{{{tid}:end}}}}]{{../slides/{tid}-smaller.pdf}}\n"
     else:
         tex += f"\\label{{{tid}:end}}"
     return tex
