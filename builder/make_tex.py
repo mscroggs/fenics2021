@@ -19,6 +19,8 @@ if os.path.isdir(pdf_path):
 os.mkdir(tex_path)
 os.mkdir(pdf_path)
 
+pdfs_to_exclude = ["rambausek"]
+
 
 def insert_icons(txt):
     for t, icon, url in iconlist:
@@ -233,7 +235,7 @@ def make_tex(tid, day, session):
 
     tex += "\\end{refsection}\n"
 
-    if os.path.isfile(os.path.join(slides_path, f"{tid}.pdf")):
+    if os.path.isfile(os.path.join(slides_path, f"{tid}.pdf")) and tid not in pdfs_to_exclude:
         print(f"Compressing {tid}.pdf")
         assert os.system("gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/printer "
                          f"-dNOPAUSE -dBATCH  -dQUIET -sOutputFile={slides_path}/{tid}-smaller.pdf "
