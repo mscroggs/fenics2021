@@ -19,7 +19,7 @@ if os.path.isdir(pdf_path):
 os.mkdir(tex_path)
 os.mkdir(pdf_path)
 
-pdfs_to_exclude = ["rambausek"]
+pdfs_to_exclude = ["rambausek", "neumann"]
 
 
 def insert_icons(txt):
