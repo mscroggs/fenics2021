@@ -32,7 +32,7 @@ def insert_icons(txt):
 
 
 def insert_links(txt):
-    txt = re.sub(r"([^\('])(https?:\/\/)([^\s]+)", r"\1\\url{\2}", txt)
+    txt = re.sub(r"([^\('])(https?:\/\/)([^\s]+)", r"\1\\url{\2\3}", txt)
     txt = re.sub(r"\[([^\]]+)\]\(([^\)]+)\)\{([^\}]+)\}", r"\\href{\2}{\1}", txt)
     return txt
 
