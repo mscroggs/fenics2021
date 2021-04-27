@@ -13,13 +13,13 @@ pdf_path = os.path.join(dir_path, "../_pdf")
 
 if os.path.isdir(tex_path):
     os.system(f"rm -rf {tex_path}")
+os.mkdir(tex_path)
+
 if os.path.isdir(pdf_path):
     os.system(f"rm -rf {pdf_path}")
-
-os.mkdir(tex_path)
 os.mkdir(pdf_path)
 
-pdfs_to_exclude = ["rambausek", "neumann"]
+pdfs_to_exclude = ["rambausek", "neumann", "rehor"]
 
 
 def insert_icons(txt):
@@ -213,6 +213,16 @@ def make_tex(tid, day, session):
             assert tid == "hirschvogel"
             tex += "Best talk by a postdoc (runner up)."
 
+    if "slide-license" in tdata and tdata["slide-license"] != "CC BY 4.0":
+        tex += "\n\n\\bigskip\n\nThe slides for this talk are available at "
+        tex += f"\\url{{https://mscroggs.github.io/fenics2021/talks/{tid}.html}}"
+        tex += " under a "
+        if tdata["slide-license"] == "CC BY-NC-ND 4.0":
+            tex += "\\href{https://creativecommons.org/licenses/by-nc-nd/4.0/}{CC BY-NC-ND 4.0}"
+        else:
+            raise ValueError(f"Unknown license: {tdata['slide-license']}")
+        tex += " license."
+
     tex += "\\ghostfootnote{You can cite this talk as:}\\ghostfootnote{"
     tex += "\\begin{addmargin}{1cm}"
     tex += f"{to_tex(authorlist)}. "
@@ -288,3 +298,21 @@ write_citations()
 
 assert os.system(f"cd {tex_path} && xelatex all.tex && biber all"
                  f" && xelatex all.tex && xelatex all.tex && mv all.pdf {pdf_path}") == 0
+
+for day in daylist:
+    talks = []
+    for i in [1, 2, 3]:
+        sess = f"session {i}"
+        if sess in timetable[day] and "talks" in timetable[day][sess]:
+            for tid in timetable[day][sess]["talks"]:
+                with open(os.path.join(talks_path, f"{tid}.yml")) as f:
+                    tdata = yaml.load(f, Loader=yaml.FullLoader)
+                if "pages" in tdata:
+                    if "-" in str(tdata["pages"]):
+                        start, end = [int(i) for i in tdata["pages"].split("-")]
+                    else:
+                        start = tdata["pages"]
+                        end = tdata["pages"]
+                    print(f"Making {tid.pdf}")
+                    assert os.system(f"cd {pdf_path} && pdftk all.pdf "
+                                     f"cat 1 {start + 4}-{end + 4} output {tid}.pdf") == 0

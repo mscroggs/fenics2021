@@ -1,4 +1,4 @@
-title: "Run-time from 300 years to 300 min: Lessons learned in large-scale modeling in FEniCS."
+title: "Run-time from 300 years to 300 min: Lessons learned in large-scale modeling in FEniCS"
 abstract:
   - Topology optimization and phase-field fracture simulations necessitate the use of high mesh density in the model. Thus, practical problems could range from a million to more than a billion degrees of freedom. It is impossible to solve such systems without proper knowledge of good programming practices, efficient memory management, and parallel computation. Fortunately, FEniCS works out of the box for parallel computation. However, a researcher working with FEniCS should also understand the algorithm's computational complexity and optimize it for the best performance.
   - This talk aims to provide beginners with proper guidelines for handling large-scale systems in FEniCS. We investigate the work cost and the storage cost related to different components of the program. We will also comment on good programming practices that allow for a drastic reduction in program run-time. Furthermore, we present our study on a topology optimization problem and discuss our mistakes while working with small mesh that resulted in an estimated run-time of 300 years for a large-scale system. We finally present the redesigned implementation that brought the run-time close to 300 mins.
@@ -17,3 +17,6 @@ coauthor:
   - name: Anupam Chakrabarti
     country: India
     affiliation: Indian Institiute of Technology Roorkee
+slide-license: CC BY 4.0
+pages: 241-257
+doi: 10.6084/m9.figshare.14495289

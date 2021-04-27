@@ -44,6 +44,10 @@ This was taken on [Thursday evening](/evening/thursday.html).
 
 <center>[<img src='/img/small-photo.png' style='max-width:80%'>](/img/small-photo.png)</center>
 
+## Conference proceedings
+The full proceedings of the conference are available on <a href='https://dx.doi.org/10.6084/m9.figshare.14495856'>figshare (DOI: 10.6084/m9.figshare.14495856)</a>.
+Links to the section of the proceedings for each talk can be found by clicking the talks title on the [timetable](/talks) or [list of talks](/talks/list.html).
+
 ## Code of conduct
 We expected all attendees of FEniCS 2021 to follow the FEniCS Project [code of conduct](https://fenicsproject.org/code-of-conduct/).
 Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the [conference organisers](/team.md) or the [FEniCS Steering Council](https://bitbucket.org/fenics-project/governance/src/master/people.md).

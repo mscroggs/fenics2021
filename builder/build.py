@@ -149,20 +149,35 @@ def make_talk_page(t_id, day, session_n, prev, next):
                     f"<a href='/talks/list-{day}.html'>{day}</a>"
                     f" session {session_n} (Zoom) ({times[session_n]} GMT)</div>")
     if t_id == prizes["phd1"]:
-        content += (f"<div style='margin-top:10px'>"
+        content += ("<div style='margin-top:10px'>"
                     "<i class='fas fa-award'></i> This talk won a prize:"
                     " Best talk by a PhD student or undergraduate</div>")
     if t_id == prizes["phd2"]:
-        content += (f"<div style='margin-top:10px'>"
+        content += ("<div style='margin-top:10px'>"
                     "<i class='fas fa-award'></i> This talk won a prize:"
                     " Best talk by a PhD student or undergraduate (runner up)</div>")
     if t_id == prizes["postdoc"]:
-        content += (f"<div style='margin-top:10px'>"
+        content += ("<div style='margin-top:10px'>"
                     "<i class='fas fa-award'></i> This talk won a prize:"
                     " Best talk by a postdoc</div>")
     if os.path.isfile(os.path.join(slides_path, f"{t_id}.pdf")):
         content += (f"<div style='margin-top:10px'><a href='/slides/{t_id}.pdf'>"
-                    "<i class='fas fa-file-powerpoint'></i> View slides (pdf)</a></div>")
+                    "<i class='fas fa-file-powerpoint'></i> View slides (pdf)</a>")
+        if "slide-license" not in tinfo:
+            raise RuntimeError(f"Slide license not found ({t_id})")
+        content += " (available under a "
+        if tinfo["slide-license"] == "CC BY 4.0":
+            content += "<a href='https://creativecommons.org/licenses/by/4.0/'>CC BY 4.0</a>"
+        elif tinfo["slide-license"] == "CC BY-NC-ND 4.0":
+            content += "<a href='https://creativecommons.org/licenses/by-nc-nd/4.0/'>"
+            content += "CC BY-NC-ND 4.0</a>"
+        else:
+            raise ValueError(f"Unknown license for {t_id}: {tinfo['slide-license']}")
+        content += " license)"
+        content += "</div>"
+    if "doi" in tinfo:
+        content += (f"<div style='margin-top:10px'><a href='https://dx.doi.org/{tinfo['doi']}'>"
+                    f"<i class='fas fa-link'></i> {tinfo['doi']}</a></div>")
     if "slides" in tinfo:
         content += (f"<div style='margin-top:10px'><a href='{tinfo['slides']['url']}'>"
                     "<i class='fas fa-file-powerpoint'></i> View slides on "
@@ -174,14 +189,23 @@ def make_talk_page(t_id, day, session_n, prev, next):
     content += ("<div id='cite2' style='margin-top:10px;display:none'>"
                 "<p>You can cite this talk by using the following BibTe&Chi;:</p>"
                 "<p class='pcode'>"
-                f"@misc{{fenics2021-{t_id},<br />"
+                f"@incollection{{fenics2021-{t_id},<br />"
                 f"&nbsp;&nbsp;&nbsp;&nbsp;title = {{{tinfo['title']}}},<br />"
                 f"&nbsp;&nbsp;&nbsp;&nbsp;author = {{{' and '.join(authornames)}}},<br />"
                 "&nbsp;&nbsp;&nbsp;&nbsp;year = {2021},<br />"
                 "&nbsp;&nbsp;&nbsp;&nbsp;url = "
                 f"{{http://mscroggs.github.io/fenics2021/talks/{t_id}.html}},<br />"
-                "&nbsp;&nbsp;&nbsp;&nbsp;note = {talk presented at FEniCS 2021 (held online)}<br />"
-                "}"
+                "&nbsp;&nbsp;&nbsp;&nbsp;booktitle = {Proceedings of FEniCS 2021, online,"
+                " 22--26 March},<br />"
+                "&nbsp;&nbsp;&nbsp;&nbsp;editor = {Igor Baratta and J{\\o}rgen S. Dokken"
+                " and Chris Richarson and Matthew W. Scroggs},<br />")
+    if "doi" in tinfo:
+        content += f"&nbsp;&nbsp;&nbsp;&nbsp;doi = {{{tinfo['doi']}}},<br />"
+    if "pages" in tinfo:
+        content += "&nbsp;&nbsp;&nbsp;&nbsp;pages = {"
+        content += str(tinfo['pages']).replace('-', '--')
+        content += "}<br />"
+    content += ("}"
                 "</p>"
                 "<a href='javascript:hide_citation()'>"
                 "<i class='fas fa-arrow-up'></i> Hide citation info</a>"
@@ -234,7 +258,7 @@ def make_talk_page(t_id, day, session_n, prev, next):
     write_page(f"talks/{t_id}.html", content, tinfo['title'])
 
     short_content = ""
-    short_content += f"<div class='talktitle'>"
+    short_content += "<div class='talktitle'>"
     if t_id in list(prizes.values()):
         short_content += "<i class='fas fa-award'></i> "
     short_content += f"<a href='/talks/{t_id}.html'>{tinfo['title']}</a></div>"
@@ -258,7 +282,7 @@ for day in ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]:
     content = f"# {evening_info['title']}\n"
     content += f"<div style='margin-top:5px'><a href='/talks/list-{day}.html'>{day}</a>"
     if day == "Friday":
-        content += f" evening (18:30&ndash; GMT)</div>\n"
+        content += " evening (18:30&ndash; GMT)</div>\n"
     else:
         content += f" evening ({times['evening']} GMT)</div>\n"
     content += "<div class='abstract'>\n"
@@ -429,10 +453,10 @@ for day in daylist:
             content += "<div class='authors'>" + extras[day][sess]["end"][1] + "</div>"
             content += "</div></div>"
 
-    content += f"<h3>Evening session (Gather Town): "
+    content += "<h3>Evening session (Gather Town): "
     content += f"<a href='/evening/{day.lower()}.html'>{evenings[day][0]}"
     if day == "Friday":
-        content += f"</a> (18:30&ndash; GMT)</h3>"
+        content += "</a> (18:30&ndash; GMT)</h3>"
     else:
         content += f"</a> ({times['evening']} GMT)</h3>"
     content += f"<div class='timetablelisttalk'>{evenings[day][1]}</div>"
