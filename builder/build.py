@@ -86,6 +86,36 @@ country_emoji = {
 }
 
 
+def to_tex(txt):
+    txt = txt.replace("<ul>", "\\begin{itemize}")
+    txt = txt.replace("</ul>", "\\end{itemize}")
+    txt = txt.replace("<ol>", "\\begin{enumerate}")
+    txt = txt.replace("</ol>", "\\end{enumerate}")
+    txt = txt.replace("<li>", "\\item ")
+    txt = txt.replace("</li>", "")
+    txt = txt.replace("<i>", "\\emph{")
+    txt = txt.replace("</i>", "}")
+    txt = txt.replace("<b>", "\\textbf{")
+    txt = txt.replace("</b>", "}")
+
+    txt = re.sub(r"&(.)uml;", r'\\"{\1}', txt)
+    txt = re.sub(r"&(.)tilde;", r"\\~{\1}", txt)
+    txt = re.sub(r"&(.)ring;", r"\\r{\1}", txt)
+    txt = re.sub(r"&(.)acute;", r"\\'{\1}", txt)
+    txt = re.sub(r"&(.)circ;", r"\\^{\1}", txt)
+    txt = txt.replace("&oslash;", "{\\o}")
+    txt = txt.replace("&Oslash;", "{\\O}")
+    txt = txt.replace("&ndash;", "--")
+    txt = txt.replace("&mdash;", "---")
+    txt = txt.replace("&szlig;", "{\\ss}")
+    txt = txt.replace("&", "\\&")
+    txt = re.sub(r"`([^`]+)`", r"\\texttt{\1}", txt)
+    txt = txt.replace("_", "\\_")
+    txt = txt.replace(' "', ' ``')
+    txt = txt.replace(" '", " `")
+    return txt
+
+
 def markup_author(authorinfo, bold=False):
     info = ""
     if bold:
@@ -190,8 +220,10 @@ def make_talk_page(t_id, day, session_n, prev, next):
                 "<p>You can cite this talk by using the following BibTe&Chi;:</p>"
                 "<p class='pcode'>"
                 f"@incollection{{fenics2021-{t_id},<br />"
-                f"&nbsp;&nbsp;&nbsp;&nbsp;title = {{{tinfo['title']}}},<br />"
-                f"&nbsp;&nbsp;&nbsp;&nbsp;author = {{{' and '.join(authornames)}}},<br />"
+                f"&nbsp;&nbsp;&nbsp;&nbsp;title = {{{to_tex(tinfo['title'])}}},<br />"
+                "&nbsp;&nbsp;&nbsp;&nbsp;author = {"
+                f"{' and '.join([to_tex(i) for i in authornames])}"
+                "},<br />"
                 "&nbsp;&nbsp;&nbsp;&nbsp;year = {2021},<br />"
                 "&nbsp;&nbsp;&nbsp;&nbsp;url = "
                 f"{{http://mscroggs.github.io/fenics2021/talks/{t_id}.html}},<br />"
