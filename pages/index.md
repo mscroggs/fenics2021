@@ -50,7 +50,7 @@ Links to the section of the proceedings for each talk can be found by clicking t
 
 ## Code of conduct
 We expected all attendees of FEniCS 2021 to follow the FEniCS Project [code of conduct](https://fenicsproject.org/code-of-conduct/).
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the [conference organisers](/team.md) or the [FEniCS Steering Council](https://bitbucket.org/fenics-project/governance/src/master/people.md).
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the [conference organisers](/team.md) or the [FEniCS Steering Council](https://github.com/fenics/governance/blob/master/people.md).
 
 ## Talks
 Over the 5 days of FEniCS 2021, there were [70 10-minute talks](/talks/list.html) given by presenters from institutions in over 10 countries.
