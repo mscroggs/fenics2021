@@ -1,0 +1,57 @@
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='author' content='Matthew Scroggs'>
+<meta name='description' content='The webpages for the FEniCS 2021 conference'>
+<meta name='keywords' content='finite element methods,FEniCS,FEniCSx,FFC,FFCx,UFL,FIAT,Basix,Firedrake,math,maths,engineering'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FEniCS 2021: Piola-mapped finite elements in Firedrake for linear elasticity and Stokes flow</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<link rel='stylesheet' type='text/css' href='/sty.css'>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+<link rel="manifest" href="/icons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://kit.fontawesome.com/5506de0e1b.js" crossorigin="anonymous"></script>
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<div class='head'>
+<div class='laptop'>
+<div class='content'>
+<div class='title'><a href='/'>FEniCS 2021</a></div>
+<div class='tagline'>22-26 March 2021</div>
+<div class='links'><a href='/'>Home</a><a href='/talks'>Timetable</a><a href='/talks/list.html'>List of talks</a><a href='/team.html'>Organisers</a><a href='/info.html'>Useful info</a></div>
+</div>
+</div>
+</div>
+<div class='body'>
+<div class='content'>
+<h1>Piola-mapped finite elements in Firedrake for linear elasticity and Stokes flow</h1><div><div class='authors'><b>Francis Aznaran</b> <a href='https://www.maths.ox.ac.uk/people/francis.aznaran' class='falink'><i class='fab fa-internet-explorer'></i></a> (University of Oxford, &#127468;&#127463;)</div><div class='authors'>Patrick Farrell <a href='https://www.maths.ox.ac.uk/people/patrick.farrell' class='falink'><i class='fab fa-internet-explorer'></i></a> (University of Oxford, &#127468;&#127463;)</div><div class='authors'>Robert Kirby <a href='https://sites.baylor.edu/robert_kirby/' class='falink'><i class='fab fa-internet-explorer'></i></a> (Baylor University, &#127482;&#127480;)</div></div><div style='margin-top:5px'><a href='/talks/list-Tuesday.html'>Tuesday</a> session 2 (Zoom) (15:00&ndash;16:30 GMT)</div><div style='margin-top:10px'><a href='/slides/aznaran.pdf'><i class='fas fa-file-powerpoint'></i> View slides (pdf)</a> (available under a <a href='https://creativecommons.org/licenses/by/4.0/'>CC BY 4.0</a> license)</div><div style='margin-top:10px'><a href='https://dx.doi.org/10.6084/m9.figshare.14495295'><i class='fas fa-link'></i> 10.6084/m9.figshare.14495295</a></div><div id='cite1' style='margin-top:10px'><a href='javascript:show_citation()'><i class='fas fa-arrow-down'></i> Cite this talk</a></div><div id='cite2' style='margin-top:10px;display:none'><p>You can cite this talk by using the following BibTe&Chi;:</p><p class='pcode'>@incollection{fenics2021-aznaran,<br />&nbsp;&nbsp;&nbsp;&nbsp;title = {Piola-mapped finite elements in Firedrake for linear elasticity and Stokes flow},<br />&nbsp;&nbsp;&nbsp;&nbsp;author = {Francis Aznaran and Patrick Farrell and Robert Kirby},<br />&nbsp;&nbsp;&nbsp;&nbsp;year = {2021},<br />&nbsp;&nbsp;&nbsp;&nbsp;url = {http://mscroggs.github.io/fenics2021/talks/aznaran.html},<br />&nbsp;&nbsp;&nbsp;&nbsp;booktitle = {Proceedings of FEniCS 2021, online, 22--26 March},<br />&nbsp;&nbsp;&nbsp;&nbsp;editor = {Igor Baratta and J{\o}rgen S. Dokken and Chris Richarson and Matthew W. Scroggs},<br />&nbsp;&nbsp;&nbsp;&nbsp;doi = {10.6084/m9.figshare.14495295},<br />&nbsp;&nbsp;&nbsp;&nbsp;pages = {258--301}<br />}</p><a href='javascript:hide_citation()'><i class='fas fa-arrow-up'></i> Hide citation info</a></div><script type='text/javascript'>
+function show_citation(){
+  document.getElementById('cite1').style.display = 'none';  document.getElementById('cite2').style.display = 'block';}
+function hide_citation(){
+  document.getElementById('cite2').style.display = 'none';  document.getElementById('cite1').style.display = 'block';}
+</script><div class='abstract'><p>Many finite element spaces are not preserved by the standard pullback to the reference cell. Robust implementation therefore requires studying the relation between degrees of freedom under pushforward, in order to obtain the correct bases on a generic physical triangle <a href='#ref1'>[1]</a>. In this work, we extend this transformation theory to vector- and tensor-valued elements mapped by the contravariant Piola transform. We apply this theory, and describe its efficient implementation in <a href='https://www.firedrakeproject.org' class='icon'><img src='/img/firedrake.png'>Firedrake</a>, for the the <a class='icon' href='https://defelement.com/elements/mardal-tai-winther.html'><img src='/img/defelement.png'>Mardal&ndash;Tai&ndash;Winther</a> elements discretizing \(H(\mathrm{div})\) for Stokes&ndash;Darcy flow, and the <a class='icon' href='https://defelement.com/elements/arnold-winther.html'><img src='/img/defelement.png'>Arnold&ndash;Winther</a> elements discretizing \(H(\operatorname{div};\mathbb{S})\) for the stress-displacement formulation of linear elasticity. </p>
+<p>In particular, the Arnold&ndash;Winther elements were the first to stably enforce exact symmetry of the Cauchy stress tensor; we demonstrate how they may be efficiently mapped, while the few prior implementations are either custom-made for specific numerical experiments, or require the explicit element-by-element construction of the basis. Our novel implementation of these exotic elements composes inexpensively and automatically with the rest of the Firedrake code stack; numerical results are presented. <h2>References</h2><ul class='citations'><li><a class='refid' id='ref1'>[1]</a> R. C. Kirby. A general approach to transforming finite elements, <em>The SMAI journal of computational mathematics</em> 4, 197&ndash;224, 2018. [DOI:&nbsp;<a href='https://doi.org/10.5802/smai-jcm.33'>10.5802/smai-jcm.33</a>]</li></ul></div><div class='prevnext'><div class='prevlink'><a href='/talks/gupta.html'>&larr; previous talk</a></div><div class='nextlink'><a href='/talks/kulkarni.html'>next talk &rarr;</a></div></div><center><img src="/img/fenics.png" style="margin-top:50px"></center>
+</div>
+</div>
+</div>
+</body>
+</html>

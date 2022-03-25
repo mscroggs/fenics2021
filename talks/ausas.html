@@ -1,0 +1,56 @@
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='author' content='Matthew Scroggs'>
+<meta name='description' content='The webpages for the FEniCS 2021 conference'>
+<meta name='keywords' content='finite element methods,FEniCS,FEniCSx,FFC,FFCx,UFL,FIAT,Basix,Firedrake,math,maths,engineering'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FEniCS 2021: Motion of synthetic microswimmers at low Reynolds numbers with FEniCS</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<link rel='stylesheet' type='text/css' href='/sty.css'>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+<link rel="manifest" href="/icons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://kit.fontawesome.com/5506de0e1b.js" crossorigin="anonymous"></script>
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<div class='head'>
+<div class='laptop'>
+<div class='content'>
+<div class='title'><a href='/'>FEniCS 2021</a></div>
+<div class='tagline'>22-26 March 2021</div>
+<div class='links'><a href='/'>Home</a><a href='/talks'>Timetable</a><a href='/talks/list.html'>List of talks</a><a href='/team.html'>Organisers</a><a href='/info.html'>Useful info</a></div>
+</div>
+</div>
+</div>
+<div class='body'>
+<div class='content'>
+<h1>Motion of synthetic microswimmers at low Reynolds numbers with FEniCS</h1><div><div class='authors'><b>Roberto Ausas</b> <a href='http://www.lmacc.icmc.usp.br/~ausas' class='falink'><i class='fab fa-internet-explorer'></i></a> (Institute of Mathematics and Computer Sciences, University of S&atilde;o Paulo, &#127463;&#127479;)</div><div class='authors'>Stevens Paz (Universidad del Valle, &#127464;&#127476;)</div><div class='authors'>Paula Alvez da Silva (Institute of Mathematics and Computer Sciences, University of S&atilde;o Paulo, &#127463;&#127479;)</div><div class='authors'>Gustavo Buscaglia <a href='http://www.lcad.icmc.usp.br/~buscaglia' class='falink'><i class='fab fa-internet-explorer'></i></a> (Institute of Mathematics and Computer Sciences, University of S&atilde;o Paulo, &#127463;&#127479;)</div></div><div style='margin-top:5px'><a href='/talks/list-Thursday.html'>Thursday</a> session 1 (Zoom) (13:00&ndash;14:40 GMT)</div><div style='margin-top:10px'><a href='https://dx.doi.org/10.6084/m9.figshare.14495475'><i class='fas fa-link'></i> 10.6084/m9.figshare.14495475</a></div><div id='cite1' style='margin-top:10px'><a href='javascript:show_citation()'><i class='fas fa-arrow-down'></i> Cite this talk</a></div><div id='cite2' style='margin-top:10px;display:none'><p>You can cite this talk by using the following BibTe&Chi;:</p><p class='pcode'>@incollection{fenics2021-ausas,<br />&nbsp;&nbsp;&nbsp;&nbsp;title = {Motion of synthetic microswimmers at low Reynolds numbers with FEniCS},<br />&nbsp;&nbsp;&nbsp;&nbsp;author = {Roberto Ausas and Stevens Paz and Paula Alvez da Silva and Gustavo Buscaglia},<br />&nbsp;&nbsp;&nbsp;&nbsp;year = {2021},<br />&nbsp;&nbsp;&nbsp;&nbsp;url = {http://mscroggs.github.io/fenics2021/talks/ausas.html},<br />&nbsp;&nbsp;&nbsp;&nbsp;booktitle = {Proceedings of FEniCS 2021, online, 22--26 March},<br />&nbsp;&nbsp;&nbsp;&nbsp;editor = {Igor Baratta and J{\o}rgen S. Dokken and Chris Richarson and Matthew W. Scroggs},<br />&nbsp;&nbsp;&nbsp;&nbsp;doi = {10.6084/m9.figshare.14495475},<br />&nbsp;&nbsp;&nbsp;&nbsp;pages = {487}<br />}</p><a href='javascript:hide_citation()'><i class='fas fa-arrow-up'></i> Hide citation info</a></div><script type='text/javascript'>
+function show_citation(){
+  document.getElementById('cite1').style.display = 'none';  document.getElementById('cite2').style.display = 'block';}
+function hide_citation(){
+  document.getElementById('cite2').style.display = 'none';  document.getElementById('cite1').style.display = 'block';}
+</script><div class='abstract'><p>Swim propulsion strategies that work well in the macroscopic world turn out to be ineffective at the microscopic scale due to the dominance of viscous forces at very low Reynolds numbers. Understanding the locomotion strategies that can be adopted at the microscopic level by living microorganisms and synthetic microswimmers is of fundamental importance in biology and in biomedical applications. This work deals with the swimming of microscopic bodies in a highly viscous ambient fluid. We solve this fluid-solid interaction problem by means of a fully implicit formulation in which fluid unknowns (velocity and pressure) and positional degrees of freedom of the body are obtained simultaneously. This is accomplished by suitably constructing the space of kinematically admissible fluid-solid motions. A stabilized equal order formulation is adopted for the fluid part and linear triangular elements are used to approximate the swimmer geometry. Lagrangian update of the moving boundaries is performed either by a non-reversible Euler method or by a reversible mid-point scheme. In the latter case, a fixed-point iterative strategy is used to obtain the solution. We present a <a href='https://fenicsproject.org' class='icon'><img src='/img/fenics.png'>FEniCS</a>-based finite element implementation of this fluid-swimmer interaction problem. Convergence of the proposed methodology is numerically assessed. Several numerical and implementation details are provided along challenging 2D- and 3D-axisymmetric examples, considering Newtonian and non-Newtonian rheologies. </div><div class='prevnext'><div class='prevlink'><a href='/talks/desai.html'>&larr; previous talk</a></div><div class='nextlink'><a href='/talks/enders-seidlitz.html'>next talk &rarr;</a></div></div><center><img src="/img/fenics.png" style="margin-top:50px"></center>
+</div>
+</div>
+</div>
+</body>
+</html>

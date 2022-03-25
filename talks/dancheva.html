@@ -1,0 +1,57 @@
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='author' content='Matthew Scroggs'>
+<meta name='description' content='The webpages for the FEniCS 2021 conference'>
+<meta name='keywords' content='finite element methods,FEniCS,FEniCSx,FFC,FFCx,UFL,FIAT,Basix,Firedrake,math,maths,engineering'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FEniCS 2021: mgis.fenics Part II: Cosserat media in small deformation with mgis.fenics</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<link rel='stylesheet' type='text/css' href='/sty.css'>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+<link rel="manifest" href="/icons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://kit.fontawesome.com/5506de0e1b.js" crossorigin="anonymous"></script>
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<div class='head'>
+<div class='laptop'>
+<div class='content'>
+<div class='title'><a href='/'>FEniCS 2021</a></div>
+<div class='tagline'>22-26 March 2021</div>
+<div class='links'><a href='/'>Home</a><a href='/talks'>Timetable</a><a href='/talks/list.html'>List of talks</a><a href='/team.html'>Organisers</a><a href='/info.html'>Useful info</a></div>
+</div>
+</div>
+</div>
+<div class='body'>
+<div class='content'>
+<h1>mgis.fenics Part II: Cosserat media in small deformation with mgis.fenics</h1><div><div class='authors'><b>Tamara Dancheva</b> <a href='http://www.bcamath.org/en/' class='falink'><i class='fab fa-internet-explorer'></i></a> (BCAM - Basque Center for Applied Mathematics, &#127466;&#127480;)</div><div class='authors'>Unai Alonso (University of the Basque Country, &#127466;&#127480;)</div><div class='authors'>Michael Barton (BCAM - Basque Center for Applied Mathematics, &#127466;&#127480;)</div><div class='authors'>J&eacute;r&eacute;my Bleyer (Ecole des Ponts ParisTech, &#127467;&#127479;)</div><div class='authors'>Thomas Hefler (CEA (French Alternative Energies and Atomic Energy Commission), &#127467;&#127479;)</div><div class='authors'>Raffaele Russo (University of the Basque Country, &#127466;&#127480;)</div></div><div style='margin-top:5px'><a href='/talks/list-Monday.html'>Monday</a> session 3 (Zoom) (17:00&ndash;18:30 GMT)</div><div style='margin-top:10px'><a href='/slides/dancheva.pdf'><i class='fas fa-file-powerpoint'></i> View slides (pdf)</a> (available under a <a href='https://creativecommons.org/licenses/by/4.0/'>CC BY 4.0</a> license)</div><div style='margin-top:10px'><a href='https://dx.doi.org/10.6084/m9.figshare.14495241'><i class='fas fa-link'></i> 10.6084/m9.figshare.14495241</a></div><div id='cite1' style='margin-top:10px'><a href='javascript:show_citation()'><i class='fas fa-arrow-down'></i> Cite this talk</a></div><div id='cite2' style='margin-top:10px;display:none'><p>You can cite this talk by using the following BibTe&Chi;:</p><p class='pcode'>@incollection{fenics2021-dancheva,<br />&nbsp;&nbsp;&nbsp;&nbsp;title = {mgis.fenics Part II: Cosserat media in small deformation with mgis.fenics},<br />&nbsp;&nbsp;&nbsp;&nbsp;author = {Tamara Dancheva and Unai Alonso and Michael Barton and J\'{e}r\'{e}my Bleyer and Thomas Hefler and Raffaele Russo},<br />&nbsp;&nbsp;&nbsp;&nbsp;year = {2021},<br />&nbsp;&nbsp;&nbsp;&nbsp;url = {http://mscroggs.github.io/fenics2021/talks/dancheva.html},<br />&nbsp;&nbsp;&nbsp;&nbsp;booktitle = {Proceedings of FEniCS 2021, online, 22--26 March},<br />&nbsp;&nbsp;&nbsp;&nbsp;editor = {Igor Baratta and J{\o}rgen S. Dokken and Chris Richarson and Matthew W. Scroggs},<br />&nbsp;&nbsp;&nbsp;&nbsp;doi = {10.6084/m9.figshare.14495241},<br />&nbsp;&nbsp;&nbsp;&nbsp;pages = {121--136}<br />}</p><a href='javascript:hide_citation()'><i class='fas fa-arrow-up'></i> Hide citation info</a></div><script type='text/javascript'>
+function show_citation(){
+  document.getElementById('cite1').style.display = 'none';  document.getElementById('cite2').style.display = 'block';}
+function hide_citation(){
+  document.getElementById('cite2').style.display = 'none';  document.getElementById('cite1').style.display = 'block';}
+</script><div class='abstract'><p>When exposed to high strain rates of deformation, metal alloys with low thermal conductivity are typically liable to large quantities of plastic strain. This phenomenon of localization of high temperatures in a narrow band, known as an adiabatic shear band, occurs in many manufacturing processes such as machining or metal forming. We aim to simulate it based on the research of Forest <i>et al</i> <a href='#ref1'>[1]</a> and Russo <i>et al</i> <a href='#ref2'>[2]</a> that propose a thermodynamically consistent framework for both elastoplasticity and elastoviscoplasticity. Their approach builds upon a bulk of work stemming from that of the Cosserat brothers in 1909 <a href='#ref3'>[3]</a> on generalized continua by introducing independent translational and rotational degrees of freedom. </p>
+<p>Our contribution is the implementation of the elastoplasticity framework using <a href='https://fenicsproject.org' class='icon'><img src='/img/fenics.png'>FEniCS</a>, the MFront library <a href='#ref4'>[4]</a>, and the corresponding interface between them, the mgis.fenics module. These tools automate the implementation of material behaviours and allow for complex models. We present the results for the glide and bending/torsion test, and their validation against another finite element solver (Zset) and the analytical solution. Moreover, we run the performance analysis on the Atlas-EDR cluster, at the Donostia International Physics Center (DIPC). We break down the execution time, identify the most computationally intensive components, and analyze the results from the point of view of parallel scaling. <h2>References</h2><ul class='citations'><li><a class='refid' id='ref1'>[1]</a> Samuel Forest and Rainer Sievert. Elastoviscoplastic constitutive frameworks for generalized continua, <em>Acta Mechanica</em> 160, 71&ndash;111, 2003. [DOI:&nbsp;<a href='https://doi.org/10.1007/s00707-002-0975-0'>10.1007/s00707-002-0975-0</a>]</li><li><a class='refid' id='ref2'>[2]</a> Raffaele Russo, Samuel Forest, and Franck Andrés Girot Mata. Thermomechanics of cosserat medium: modeling adiabatic shear bands in metals, <em>Continuum Mechanics and Thermodynamics</em>, 1&ndash;20, 2020. [DOI:&nbsp;<a href='https://doi.org/10.1007/s00161-020-00930-z'>10.1007/s00161-020-00930-z</a>]</li><li><a class='refid' id='ref3'>[3]</a> Eugene Cosserat and François Cosserat. Theorie des corps dédormables, 1909. [DOI:&nbsp;<a href='https://doi.org/10.1038/081067a0'>10.1038/081067a0</a>]</li><li><a class='refid' id='ref4'>[4]</a> Thomas Helfer, Bruno Michel, Jean-Michel Proix, Maxime Salvo, Jérôme Sercombe, and Michel Casella. Introducing the open-source mfront code generator: Application to mechanical behaviours and material knowledge management within the pleiades fuel element modelling platform, <em>Computers & Mathematics with Applications</em> 70, 994&ndash;1023, 2015. [DOI:&nbsp;<a href='https://doi.org/10.1016/j.camwa.2015.06.027'>10.1016/j.camwa.2015.06.027</a>]</li></ul></div><div class='prevnext'><div class='prevlink'><a href='/talks/helfer.html'>&larr; previous talk</a></div><div class='nextlink'><a href='/talks/habera.html'>next talk (on the following day) &rarr;</a></div></div><center><img src="/img/fenics.png" style="margin-top:50px"></center>
+</div>
+</div>
+</div>
+</body>
+</html>

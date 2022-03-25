@@ -1,0 +1,56 @@
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='author' content='Matthew Scroggs'>
+<meta name='description' content='The webpages for the FEniCS 2021 conference'>
+<meta name='keywords' content='finite element methods,FEniCS,FEniCSx,FFC,FFCx,UFL,FIAT,Basix,Firedrake,math,maths,engineering'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FEniCS 2021: Artificial neural network for bifurcating phenomena modelled by nonlinear parametrized PDEs</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<link rel='stylesheet' type='text/css' href='/sty.css'>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+<link rel="manifest" href="/icons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://kit.fontawesome.com/5506de0e1b.js" crossorigin="anonymous"></script>
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<div class='head'>
+<div class='laptop'>
+<div class='content'>
+<div class='title'><a href='/'>FEniCS 2021</a></div>
+<div class='tagline'>22-26 March 2021</div>
+<div class='links'><a href='/'>Home</a><a href='/talks'>Timetable</a><a href='/talks/list.html'>List of talks</a><a href='/team.html'>Organisers</a><a href='/info.html'>Useful info</a></div>
+</div>
+</div>
+</div>
+<div class='body'>
+<div class='content'>
+<h1>Artificial neural network for bifurcating phenomena modelled by nonlinear parametrized PDEs</h1><div><div class='authors'><b>Federico Pichi</b> <a href='https://people.sissa.it/~fpichi/' class='falink'><i class='fab fa-internet-explorer'></i></a> (SISSA, International School for Advanced Studies, &#127470;&#127481;)</div><div class='authors'>Francesco Ballarin <a href='https://www.francescoballarin.it' class='falink'><i class='fab fa-internet-explorer'></i></a> (Catholic University of the Sacred Heart, &#127470;&#127481;)</div><div class='authors'>Gianluigi Rozza <a href='https://people.sissa.it/~grozza/' class='falink'><i class='fab fa-internet-explorer'></i></a> (SISSA, International School for Advanced Studies, &#127470;&#127481;)</div><div class='authors'>Jan S. Hesthaven (EPFL, École Polytechnique Fédérale de Lausanne, &#127464;&#127469;)</div></div><div style='margin-top:5px'><a href='/talks/list-Tuesday.html'>Tuesday</a> session 2 (Zoom) (15:00&ndash;16:30 GMT)</div><div style='margin-top:10px'><a href='/slides/pichi.pdf'><i class='fas fa-file-powerpoint'></i> View slides (pdf)</a> (available under a <a href='https://creativecommons.org/licenses/by/4.0/'>CC BY 4.0</a> license)</div><div style='margin-top:10px'><a href='https://dx.doi.org/10.6084/m9.figshare.14495280'><i class='fas fa-link'></i> 10.6084/m9.figshare.14495280</a></div><div id='cite1' style='margin-top:10px'><a href='javascript:show_citation()'><i class='fas fa-arrow-down'></i> Cite this talk</a></div><div id='cite2' style='margin-top:10px;display:none'><p>You can cite this talk by using the following BibTe&Chi;:</p><p class='pcode'>@incollection{fenics2021-pichi,<br />&nbsp;&nbsp;&nbsp;&nbsp;title = {Artificial neural network for bifurcating phenomena modelled by nonlinear parametrized PDEs},<br />&nbsp;&nbsp;&nbsp;&nbsp;author = {Federico Pichi and Francesco Ballarin and Gianluigi Rozza and Jan S. Hesthaven},<br />&nbsp;&nbsp;&nbsp;&nbsp;year = {2021},<br />&nbsp;&nbsp;&nbsp;&nbsp;url = {http://mscroggs.github.io/fenics2021/talks/pichi.html},<br />&nbsp;&nbsp;&nbsp;&nbsp;booktitle = {Proceedings of FEniCS 2021, online, 22--26 March},<br />&nbsp;&nbsp;&nbsp;&nbsp;editor = {Igor Baratta and J{\o}rgen S. Dokken and Chris Richarson and Matthew W. Scroggs},<br />&nbsp;&nbsp;&nbsp;&nbsp;doi = {10.6084/m9.figshare.14495280},<br />&nbsp;&nbsp;&nbsp;&nbsp;pages = {222--240}<br />}</p><a href='javascript:hide_citation()'><i class='fas fa-arrow-up'></i> Hide citation info</a></div><script type='text/javascript'>
+function show_citation(){
+  document.getElementById('cite1').style.display = 'none';  document.getElementById('cite2').style.display = 'block';}
+function hide_citation(){
+  document.getElementById('cite2').style.display = 'none';  document.getElementById('cite1').style.display = 'block';}
+</script><div class='abstract'><p>This work aims to develop and investigate a computational framework to study parametrized partial differential equations (PDEs) which model nonlinear systems undergoing bifurcations. Bifurcation analysis, ie following the coexisting branches due to the non-uniqueness of the solution, as well as determining the bifurcation points themselves, are complex computational tasks <a href='#ref1'>[1]</a> <a href='#ref2'>[2]</a> <a href='#ref3'>[3]</a>. The combination of reduced basis (RB) model reduction and artificial neural network (ANN) can potentially reduce the computational burden by several orders of magnitude and shed light on new strategies. Following the POD-NN approach <a href='#ref4'>[4]</a>, we analyzed two CFD applications where both physical and geometrical parameters were considered. We studied the Navier&ndash;Stokes equations for a viscous, steady, and incompressible flow: (i) in a planar straight channel with a narrow inlet of varying width, and (ii) in a triangular parametrized cavity <a href='#ref5'>[5]</a>. All the simulations were performed within the open source software <a href='https://fenicsproject.org' class='icon'><img src='/img/fenics.png'>FEniCS</a> and <a href='https://www.rbnicsproject.org/' class='icon'><img src='/img/rbnics.png'>RBniCS</a> <a href='#ref6'>[6]</a> for the RB framework, integrated with <a href='https://pytorch.org/' class='icon'><img src='/img/pytorch.png'>PyTorch</a> to construct the neural network. <h2>References</h2><ul class='citations'><li><a class='refid' id='ref1'>[1]</a> F. Pichi, A. Quaini, and G. Rozza. A reduced order modeling technique to study bifurcating phenomena: Application to the Gross–Pitaevskii equation, <em>SIAM Journal on Scientific Computing</em> 42, B1115&ndash;B1135, 2020. [DOI:&nbsp;<a href='https://doi.org/10.1137/20M1313106'>10.1137/20M1313106</a>]</li><li><a class='refid' id='ref2'>[2]</a> F. Pichi and G. Rozza. Reduced basis approaches for parametrized bifurcation problems held by non-linear Von Kármán equations, <em>Journal of Scientific Computing</em> 81, 112&ndash;135, 2019. [DOI:&nbsp;<a href='https://doi.org/10.1007/s10915-019-01003-3'>10.1007/s10915-019-01003-3</a>]</li><li><a class='refid' id='ref3'>[3]</a> F. Pichi, M. Strazzullo, F. Ballarin, and G. Rozza. Driving bifurcating parametrized nonlinear PDEs by optimal control strategies: application to Navier&ndash;Stokes equations with model order reduction, ar&Chi;iv: <a href='https://arxiv.org/abs/2010.13506'>2010.13506</a>, 2020.</li><li><a class='refid' id='ref4'>[4]</a> J. S. Hesthaven and S. Ubbiali. Non-intrusive reduced order modeling of nonlinear problems using neural networks, <em>Journal of Computational Physics</em> 363, 55&ndash;78, 2018. [DOI:&nbsp;<a href='https://doi.org/10.1016/j.jcp.2018.02.037'>10.1016/j.jcp.2018.02.037</a>]</li><li><a class='refid' id='ref5'>[5]</a> F. Pichi, F. Ballarin, G. Rozza, and J. S. Hesthaven. Artificial neural network for bifurcating phenomena modelled by nonlinear parametrized PDEs, <em>in preparation</em>, 2020.</li><li><a class='refid' id='ref6'>[6]</a> RBniCS - reduced order modelling in FEniCS. <a href='https://www.rbnicsproject.org'>www.rbnicsproject.org</a></li></ul></div><div class='prevnext'><div class='prevlink'><a href='/talks/kim.html'>&larr; previous talk</a></div><div class='nextlink'><a href='/talks/gupta.html'>next talk &rarr;</a></div></div><center><img src="/img/fenics.png" style="margin-top:50px"></center>
+</div>
+</div>
+</div>
+</body>
+</html>

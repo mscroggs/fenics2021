@@ -1,0 +1,57 @@
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='author' content='Matthew Scroggs'>
+<meta name='description' content='The webpages for the FEniCS 2021 conference'>
+<meta name='keywords' content='finite element methods,FEniCS,FEniCSx,FFC,FFCx,UFL,FIAT,Basix,Firedrake,math,maths,engineering'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FEniCS 2021: Modelling of solidification problems with FEniCS</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<link rel='stylesheet' type='text/css' href='/sty.css'>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+<link rel="manifest" href="/icons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://kit.fontawesome.com/5506de0e1b.js" crossorigin="anonymous"></script>
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<div class='head'>
+<div class='laptop'>
+<div class='content'>
+<div class='title'><a href='/'>FEniCS 2021</a></div>
+<div class='tagline'>22-26 March 2021</div>
+<div class='links'><a href='/'>Home</a><a href='/talks'>Timetable</a><a href='/talks/list.html'>List of talks</a><a href='/team.html'>Organisers</a><a href='/info.html'>Useful info</a></div>
+</div>
+</div>
+</div>
+<div class='body'>
+<div class='content'>
+<h1>Modelling of solidification problems with FEniCS</h1><div><div class='authors'><b>Florian Arbes</b> (IFE, &#127475;&#127476;)</div><div class='authors'>Kent-Andre Mardal (UiO, &#127475;&#127476;)</div><div class='authors'>&Oslash;yvind Jensen (IFE, &#127475;&#127476;)</div><div class='authors'>J&oslash;rgen S. Dokken <a href='https://jsdokken.com/' class='falink'><i class='fab fa-internet-explorer'></i></a> <a href='https://github.com/jorgensd' class='falink'><i class='fab fa-github'></i></a> (University of Cambridge, &#127468;&#127463;)</div></div><div style='margin-top:5px'><a href='/talks/list-Wednesday.html'>Wednesday</a> session 1 (Zoom) (13:00&ndash;14:40 GMT)</div><div style='margin-top:10px'><a href='https://dx.doi.org/10.6084/m9.figshare.14495358'><i class='fas fa-link'></i> 10.6084/m9.figshare.14495358</a></div><div id='cite1' style='margin-top:10px'><a href='javascript:show_citation()'><i class='fas fa-arrow-down'></i> Cite this talk</a></div><div id='cite2' style='margin-top:10px;display:none'><p>You can cite this talk by using the following BibTe&Chi;:</p><p class='pcode'>@incollection{fenics2021-arbes,<br />&nbsp;&nbsp;&nbsp;&nbsp;title = {Modelling of solidification problems with FEniCS},<br />&nbsp;&nbsp;&nbsp;&nbsp;author = {Florian Arbes and Kent-Andre Mardal and {\O}yvind Jensen and J{\o}rgen S. Dokken},<br />&nbsp;&nbsp;&nbsp;&nbsp;year = {2021},<br />&nbsp;&nbsp;&nbsp;&nbsp;url = {http://mscroggs.github.io/fenics2021/talks/arbes.html},<br />&nbsp;&nbsp;&nbsp;&nbsp;booktitle = {Proceedings of FEniCS 2021, online, 22--26 March},<br />&nbsp;&nbsp;&nbsp;&nbsp;editor = {Igor Baratta and J{\o}rgen S. Dokken and Chris Richarson and Matthew W. Scroggs},<br />&nbsp;&nbsp;&nbsp;&nbsp;doi = {10.6084/m9.figshare.14495358},<br />&nbsp;&nbsp;&nbsp;&nbsp;pages = {371}<br />}</p><a href='javascript:hide_citation()'><i class='fas fa-arrow-up'></i> Hide citation info</a></div><script type='text/javascript'>
+function show_citation(){
+  document.getElementById('cite1').style.display = 'none';  document.getElementById('cite2').style.display = 'block';}
+function hide_citation(){
+  document.getElementById('cite2').style.display = 'none';  document.getElementById('cite1').style.display = 'block';}
+</script><div class='abstract'><p>Modelling the solidification of alloys remains challenging, as there is a multi-physics problem to be solved involving fluid flow, heat transfer as well as phase changes. Shape casting processes are constantly sought to be improved, which can potentially be achieved through accurate and fast modelling of the alloy solidification process. We present in a short overview our approach of an application relying on <a href='https://fenicsproject.org' class='icon'><img src='/img/fenics.png'>FEniCS</a> that will be used to model such solidification problems. The model, which is currently under development, follows a volume-averaged two-phase approach, as proposed by Beckermann <i>et al</i> <a href='#ref1'>[1]</a>. </p>
+<p>Simplified models have been tested and used to generate snapshots for a non-intrusive reduced order model. As this application is being built in Python, we hope its flexible core will open up new opportunities for fast and accurate reduced order models. <h2>References</h2><ul class='citations'><li><a class='refid' id='ref1'>[1]</a> J. Ni and C. Beckermann. A volume-averaged two-phase model for transport phenomena during solidification, <em>Metallurgical Transactions B </em> 22, 1991. [DOI:&nbsp;<a href='https://doi.org/10.1007/BF02651234'>10.1007/BF02651234</a>]</li></ul></div><div class='prevnext'><div class='prevlink'><a href='/talks/opiela.html'>&larr; previous talk</a></div><div class='nextlink'><a href='/talks/jansson.html'>next talk &rarr;</a></div></div><center><img src="/img/fenics.png" style="margin-top:50px"></center>
+</div>
+</div>
+</div>
+</body>
+</html>

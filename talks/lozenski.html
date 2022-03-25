@@ -1,0 +1,56 @@
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='author' content='Matthew Scroggs'>
+<meta name='description' content='The webpages for the FEniCS 2021 conference'>
+<meta name='keywords' content='finite element methods,FEniCS,FEniCSx,FFC,FFCx,UFL,FIAT,Basix,Firedrake,math,maths,engineering'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FEniCS 2021: Consensus ADMM for inverse problems governed by multiple PDE models</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<link rel='stylesheet' type='text/css' href='/sty.css'>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+<link rel="manifest" href="/icons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://kit.fontawesome.com/5506de0e1b.js" crossorigin="anonymous"></script>
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<div class='head'>
+<div class='laptop'>
+<div class='content'>
+<div class='title'><a href='/'>FEniCS 2021</a></div>
+<div class='tagline'>22-26 March 2021</div>
+<div class='links'><a href='/'>Home</a><a href='/talks'>Timetable</a><a href='/talks/list.html'>List of talks</a><a href='/team.html'>Organisers</a><a href='/info.html'>Useful info</a></div>
+</div>
+</div>
+</div>
+<div class='body'>
+<div class='content'>
+<h1>Consensus ADMM for inverse problems governed by multiple PDE models</h1><div><div class='authors'><b>Luke Lozenski</b> (Washington University in St. Louis, &#127482;&#127480;)</div><div class='authors'>Umberto Villa (Washington University in St. Louis, &#127482;&#127480;)</div></div><div style='margin-top:5px'><a href='/talks/list-Friday.html'>Friday</a> session 3 (Zoom) (17:00&ndash;18:30 GMT)</div><div style='margin-top:10px'><a href='/slides/lozenski.pdf'><i class='fas fa-file-powerpoint'></i> View slides (pdf)</a> (available under a <a href='https://creativecommons.org/licenses/by/4.0/'>CC BY 4.0</a> license)</div><div style='margin-top:10px'><a href='https://dx.doi.org/10.6084/m9.figshare.14495652'><i class='fas fa-link'></i> 10.6084/m9.figshare.14495652</a></div><div id='cite1' style='margin-top:10px'><a href='javascript:show_citation()'><i class='fas fa-arrow-down'></i> Cite this talk</a></div><div id='cite2' style='margin-top:10px;display:none'><p>You can cite this talk by using the following BibTe&Chi;:</p><p class='pcode'>@incollection{fenics2021-lozenski,<br />&nbsp;&nbsp;&nbsp;&nbsp;title = {Consensus ADMM for inverse problems governed by multiple PDE models},<br />&nbsp;&nbsp;&nbsp;&nbsp;author = {Luke Lozenski and Umberto Villa},<br />&nbsp;&nbsp;&nbsp;&nbsp;year = {2021},<br />&nbsp;&nbsp;&nbsp;&nbsp;url = {http://mscroggs.github.io/fenics2021/talks/lozenski.html},<br />&nbsp;&nbsp;&nbsp;&nbsp;booktitle = {Proceedings of FEniCS 2021, online, 22--26 March},<br />&nbsp;&nbsp;&nbsp;&nbsp;editor = {Igor Baratta and J{\o}rgen S. Dokken and Chris Richarson and Matthew W. Scroggs},<br />&nbsp;&nbsp;&nbsp;&nbsp;doi = {10.6084/m9.figshare.14495652},<br />&nbsp;&nbsp;&nbsp;&nbsp;pages = {783--805}<br />}</p><a href='javascript:hide_citation()'><i class='fas fa-arrow-up'></i> Hide citation info</a></div><script type='text/javascript'>
+function show_citation(){
+  document.getElementById('cite1').style.display = 'none';  document.getElementById('cite2').style.display = 'block';}
+function hide_citation(){
+  document.getElementById('cite2').style.display = 'none';  document.getElementById('cite1').style.display = 'block';}
+</script><div class='abstract'><p>The alternating direction method of multipliers (ADMM) provides a natural way of solving inverse problems with multiple forward models and nonsmooth regularization. ADMM allows splitting these large-scale inverse problems into smaller, simpler sub-problems, for which computationally efficient solvers are available. In this work, we are interested in the case in which the forward models stem from partial differential equations and the inversion parameter is a scalar or vector field belonging to an infinite-dimensional Hilbert space. Then, the ADMM methods allow us to split the original inverse problems into several (one for each forward model) single-PDE inverse problems with a smooth Tikhonov-like regularization and, an unconstrained denoising-like problem with non-smooth regularization to update the consensus variable. We discuss several adaptations of the ADMM needed to maintain consistency with the underlining infinite-dimensional problem and ensure scalability. Specifically, we show how using the correct norm in the consensus equations (ie, the one of the underlining Hilbert space) improves both the accuracy and computational efficiency of ADMM. Moreover, we use the Lagrangian formalism to derive expressions of first and second-order optimality conditions for the continuous form of each subproblem, which are then discretized with the finite element method using <a href='https://fenicsproject.org' class='icon'><img src='/img/fenics.png'>FEniCS</a>. In particular, for solving the decoupled Tikhonov regularized inverse problems we utilized an inexact Newton conjugate gradient solver in <a href='https://github.com/hippylib/hippylib' class='icon'>hIPPYlib</a>, an extensible software framework for large-scale inverse problems governed by PDEs. To handle the denoising problem stemming from the consensus variable update we apply the PETScTAOSolver built into FEniCS. We present two imaging applications inspired by electrical impedance tomography and quantitative photoacoustic tomography to demonstrate the proposed method's effectiveness. </div><div class='prevnext'><div class='prevlink'><a href='/talks/kadeethum.html'>&larr; previous talk (before a break)</a></div><div class='nextlink'><a href='/talks/bleyer.html'>next talk &rarr;</a></div></div><center><img src="/img/fenics.png" style="margin-top:50px"></center>
+</div>
+</div>
+</div>
+</body>
+</html>

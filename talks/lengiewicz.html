@@ -1,0 +1,57 @@
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='author' content='Matthew Scroggs'>
+<meta name='description' content='The webpages for the FEniCS 2021 conference'>
+<meta name='keywords' content='finite element methods,FEniCS,FEniCSx,FFC,FFCx,UFL,FIAT,Basix,Firedrake,math,maths,engineering'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FEniCS 2021: Interfacing AceGEN and FEniCS for advanced constitutive models</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<link rel='stylesheet' type='text/css' href='/sty.css'>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+<link rel="manifest" href="/icons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://kit.fontawesome.com/5506de0e1b.js" crossorigin="anonymous"></script>
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<div class='head'>
+<div class='laptop'>
+<div class='content'>
+<div class='title'><a href='/'>FEniCS 2021</a></div>
+<div class='tagline'>22-26 March 2021</div>
+<div class='links'><a href='/'>Home</a><a href='/talks'>Timetable</a><a href='/talks/list.html'>List of talks</a><a href='/team.html'>Organisers</a><a href='/info.html'>Useful info</a></div>
+</div>
+</div>
+</div>
+<div class='body'>
+<div class='content'>
+<h1>Interfacing AceGEN and FEniCS for advanced constitutive models</h1><div><div class='authors'><b>Jakub Lengiewicz</b> (University of Luxembourg, &#127473;&#127482;)</div><div class='authors'>Michal Habera (University of Luxembourg, &#127473;&#127482;)</div><div class='authors'>Andreas Zilian (University of Luxembourg, &#127473;&#127482;)</div><div class='authors'>Stephane Bordas (University of Luxembourg, &#127473;&#127482;)</div></div><div style='margin-top:5px'><a href='/talks/list-Thursday.html'>Thursday</a> session 1 (Zoom) (13:00&ndash;14:40 GMT)</div><div style='margin-top:10px'><a href='https://dx.doi.org/10.6084/m9.figshare.14495463'><i class='fas fa-link'></i> 10.6084/m9.figshare.14495463</a></div><div id='cite1' style='margin-top:10px'><a href='javascript:show_citation()'><i class='fas fa-arrow-down'></i> Cite this talk</a></div><div id='cite2' style='margin-top:10px;display:none'><p>You can cite this talk by using the following BibTe&Chi;:</p><p class='pcode'>@incollection{fenics2021-lengiewicz,<br />&nbsp;&nbsp;&nbsp;&nbsp;title = {Interfacing AceGEN and FEniCS for advanced constitutive models},<br />&nbsp;&nbsp;&nbsp;&nbsp;author = {Jakub Lengiewicz and Michal Habera and Andreas Zilian and Stephane Bordas},<br />&nbsp;&nbsp;&nbsp;&nbsp;year = {2021},<br />&nbsp;&nbsp;&nbsp;&nbsp;url = {http://mscroggs.github.io/fenics2021/talks/lengiewicz.html},<br />&nbsp;&nbsp;&nbsp;&nbsp;booktitle = {Proceedings of FEniCS 2021, online, 22--26 March},<br />&nbsp;&nbsp;&nbsp;&nbsp;editor = {Igor Baratta and J{\o}rgen S. Dokken and Chris Richarson and Matthew W. Scroggs},<br />&nbsp;&nbsp;&nbsp;&nbsp;doi = {10.6084/m9.figshare.14495463},<br />&nbsp;&nbsp;&nbsp;&nbsp;pages = {474}<br />}</p><a href='javascript:hide_citation()'><i class='fas fa-arrow-up'></i> Hide citation info</a></div><script type='text/javascript'>
+function show_citation(){
+  document.getElementById('cite1').style.display = 'none';  document.getElementById('cite2').style.display = 'block';}
+function hide_citation(){
+  document.getElementById('cite2').style.display = 'none';  document.getElementById('cite1').style.display = 'block';}
+</script><div class='abstract'><p>There are two main difficulties related to FE analysis: (i) the necessity to provide effective FE procedures for complex constitutive models or advanced FE formulations, and (ii) the need to solve big problems. Up to date, no single environment exists to fully tackle both. In the present contribution we combine two existing systems: AceGen and <a href='https://fenicsproject.org' class='icon'><img src='/img/fenics.png'>FEniCS</a>. AceGen is an advanced automatic differentiation (AD) system, capable to derive highly efficient low-level computer code for characteristic FE quantities (gradients, tangent operators, sensitivity vectors, etc) for complex FE formulations. FEniCS is a flexible open-source FE framework, designed to perform large-scale analyses on high-performance computer architectures. </p>
+<p>The proposed hybrid approach relies on new developments of <a href='https://fenicsproject.org' class='icon'><img src='/img/fenics.png'>FEniCSx</a> project, which allows to incorporate external FE code to the environment. As examples, we have generated FE routines for two representative FE formulations: hyperelesticity and non-linear elasto-plasticity with hardening. The former formulation can be also generated by the FEniCS Form Compiler (<a href='https://bitbucket.org/fenics-project/ffc' class='icon'><img src='/img/fenics.png'>FFC</a>), thus allows to quantitively show the runtime speedup of the FE procedures generated by AceGEN w.r.t. FEniCS/FFC. The latter formulation shows the dominance of the hybrid approach over AceGen/AceFem or FEniCS alone, which is the ability to solve complex FE formulations within the HPC-ready framework. </div><div class='prevnext'><div class='prevlink'><a href='/talks/delaporte-mathurin.html'>&larr; previous talk</a></div><div class='nextlink'><a href='/talks/desai.html'>next talk &rarr;</a></div></div><center><img src="/img/fenics.png" style="margin-top:50px"></center>
+</div>
+</div>
+</div>
+</body>
+</html>

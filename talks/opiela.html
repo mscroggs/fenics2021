@@ -1,0 +1,56 @@
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='author' content='Matthew Scroggs'>
+<meta name='description' content='The webpages for the FEniCS 2021 conference'>
+<meta name='keywords' content='finite element methods,FEniCS,FEniCSx,FFC,FFCx,UFL,FIAT,Basix,Firedrake,math,maths,engineering'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FEniCS 2021: Predicting sound absorption in additively manufactured porous materials using multiscale simulations in FEniCS</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<link rel='stylesheet' type='text/css' href='/sty.css'>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+<link rel="manifest" href="/icons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://kit.fontawesome.com/5506de0e1b.js" crossorigin="anonymous"></script>
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<div class='head'>
+<div class='laptop'>
+<div class='content'>
+<div class='title'><a href='/'>FEniCS 2021</a></div>
+<div class='tagline'>22-26 March 2021</div>
+<div class='links'><a href='/'>Home</a><a href='/talks'>Timetable</a><a href='/talks/list.html'>List of talks</a><a href='/team.html'>Organisers</a><a href='/info.html'>Useful info</a></div>
+</div>
+</div>
+</div>
+<div class='body'>
+<div class='content'>
+<h1>Predicting sound absorption in additively manufactured porous materials using multiscale simulations in FEniCS</h1><div><div class='authors'><b>Kamil C. Opiela</b> (Institute of Fundamental Technological Research, Polish Academy of Sciences, &#127477;&#127473;)</div><div class='authors'>Tomasz G. Zieliński <a href='http://bluebox.ippt.pan.pl/~tzielins/index.php' class='falink'><i class='fab fa-internet-explorer'></i></a> (Institute of Fundamental Technological Research, Polish Academy of Sciences, &#127477;&#127473;)</div></div><div style='margin-top:5px'><a href='/talks/list-Wednesday.html'>Wednesday</a> session 1 (Zoom) (13:00&ndash;14:40 GMT)</div><div style='margin-top:10px'><a href='https://dx.doi.org/10.6084/m9.figshare.14495349'><i class='fas fa-link'></i> 10.6084/m9.figshare.14495349</a></div><div id='cite1' style='margin-top:10px'><a href='javascript:show_citation()'><i class='fas fa-arrow-down'></i> Cite this talk</a></div><div id='cite2' style='margin-top:10px;display:none'><p>You can cite this talk by using the following BibTe&Chi;:</p><p class='pcode'>@incollection{fenics2021-opiela,<br />&nbsp;&nbsp;&nbsp;&nbsp;title = {Predicting sound absorption in additively manufactured porous materials using multiscale simulations in FEniCS},<br />&nbsp;&nbsp;&nbsp;&nbsp;author = {Kamil C. Opiela and Tomasz G. Zieliński},<br />&nbsp;&nbsp;&nbsp;&nbsp;year = {2021},<br />&nbsp;&nbsp;&nbsp;&nbsp;url = {http://mscroggs.github.io/fenics2021/talks/opiela.html},<br />&nbsp;&nbsp;&nbsp;&nbsp;booktitle = {Proceedings of FEniCS 2021, online, 22--26 March},<br />&nbsp;&nbsp;&nbsp;&nbsp;editor = {Igor Baratta and J{\o}rgen S. Dokken and Chris Richarson and Matthew W. Scroggs},<br />&nbsp;&nbsp;&nbsp;&nbsp;doi = {10.6084/m9.figshare.14495349},<br />&nbsp;&nbsp;&nbsp;&nbsp;pages = {370}<br />}</p><a href='javascript:hide_citation()'><i class='fas fa-arrow-up'></i> Hide citation info</a></div><script type='text/javascript'>
+function show_citation(){
+  document.getElementById('cite1').style.display = 'none';  document.getElementById('cite2').style.display = 'block';}
+function hide_citation(){
+  document.getElementById('cite2').style.display = 'none';  document.getElementById('cite1').style.display = 'block';}
+</script><div class='abstract'><p>Porous materials are widely used in soundproofing and noise control applications. Their microgeometry, which determines the sound absorption properties, can be developed to fit specific needs and produced employing modern additive manufacturing technologies. However, the design process usually requires running multiscale and multiphysics simulations, which is greatly facilitated by the <a href='https://fenicsproject.org' class='icon'><img src='/img/fenics.png'>FEniCS</a> computing platform. The airborne propagation and attenuation of acoustic waves in a 3D printed rigid-frame porous material is considered with the aid of the 2019.1.0 FEniCS release. Two cases are studied: a basic passive configuration, and an adaptable configuration with steel balls introduced to the main pores that effectively modify visco-inertial and thermal dissipation within the system. The stationary Stokes, Laplace, and Poisson analyses are performed on a periodic fluid (air) domain representative for the microgeometry of the medium imposing periodic boundary conditions within a parallelised code. The respective solution fields are averaged over the domain using the built-in <a href='https://bitbucket.org/fenics-project/dolfin' class='icon'><img src='/img/fenics.png'>DOLFIN</a> algorithms and upscaled to serve as an input to macroscopic calculations. The coupled Helmholtz problem of harmonic linear acoustics is solved to model the distribution of acoustic pressure in both a homogenised fluid equivalent to the porous material, and a layer of air adjacent to it. Suitable continuity boundary condition at the interface is implemented weakly into the finite element formulation of the problem. Finally, the numerical predictions of normal incidence sound absorption coefficient are compared with impedance tube measurements made on a 3D sample. Along with FEniCS, only open-source software is involved to prepare volumetric meshes and visualise the results. </div><div class='prevnext'><div class='prevlink'><a href='/talks/kaiser.html'>&larr; previous talk</a></div><div class='nextlink'><a href='/talks/arbes.html'>next talk &rarr;</a></div></div><center><img src="/img/fenics.png" style="margin-top:50px"></center>
+</div>
+</div>
+</div>
+</body>
+</html>

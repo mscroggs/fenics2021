@@ -1,0 +1,59 @@
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='author' content='Matthew Scroggs'>
+<meta name='description' content='The webpages for the FEniCS 2021 conference'>
+<meta name='keywords' content='finite element methods,FEniCS,FEniCSx,FFC,FFCx,UFL,FIAT,Basix,Firedrake,math,maths,engineering'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FEniCS 2021: Dynamic composition of solvers for coupled problems in DOLFINx</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<link rel='stylesheet' type='text/css' href='/sty.css'>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+<link rel="manifest" href="/icons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://kit.fontawesome.com/5506de0e1b.js" crossorigin="anonymous"></script>
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<div class='head'>
+<div class='laptop'>
+<div class='content'>
+<div class='title'><a href='/'>FEniCS 2021</a></div>
+<div class='tagline'>22-26 March 2021</div>
+<div class='links'><a href='/'>Home</a><a href='/talks'>Timetable</a><a href='/talks/list.html'>List of talks</a><a href='/team.html'>Organisers</a><a href='/info.html'>Useful info</a></div>
+</div>
+</div>
+</div>
+<div class='body'>
+<div class='content'>
+<h1>Dynamic composition of solvers for coupled problems in DOLFINx</h1><div><div class='authors'><b>Martin Řehoř</b> (Rafinex S.à r.l., &#127473;&#127482;)</div><div class='authors'>Jack S. Hale (University of Luxembourg, &#127473;&#127482;)</div></div><div style='margin-top:5px'><a href='/talks/list-Monday.html'>Monday</a> session 2 (Zoom) (15:00&ndash;16:30 GMT)</div><div style='margin-top:10px'><a href='/slides/rehor.pdf'><i class='fas fa-file-powerpoint'></i> View slides (pdf)</a> (available under a <a href='https://creativecommons.org/licenses/by-nc-nd/4.0/'>CC BY-NC-ND 4.0</a> license)</div><div style='margin-top:10px'><a href='https://dx.doi.org/10.6084/m9.figshare.14495211'><i class='fas fa-link'></i> 10.6084/m9.figshare.14495211</a></div><div id='cite1' style='margin-top:10px'><a href='javascript:show_citation()'><i class='fas fa-arrow-down'></i> Cite this talk</a></div><div id='cite2' style='margin-top:10px;display:none'><p>You can cite this talk by using the following BibTe&Chi;:</p><p class='pcode'>@incollection{fenics2021-rehor,<br />&nbsp;&nbsp;&nbsp;&nbsp;title = {Dynamic composition of solvers for coupled problems in DOLFINx},<br />&nbsp;&nbsp;&nbsp;&nbsp;author = {Martin Řehoř and Jack S. Hale},<br />&nbsp;&nbsp;&nbsp;&nbsp;year = {2021},<br />&nbsp;&nbsp;&nbsp;&nbsp;url = {http://mscroggs.github.io/fenics2021/talks/rehor.html},<br />&nbsp;&nbsp;&nbsp;&nbsp;booktitle = {Proceedings of FEniCS 2021, online, 22--26 March},<br />&nbsp;&nbsp;&nbsp;&nbsp;editor = {Igor Baratta and J{\o}rgen S. Dokken and Chris Richarson and Matthew W. Scroggs},<br />&nbsp;&nbsp;&nbsp;&nbsp;doi = {10.6084/m9.figshare.14495211},<br />&nbsp;&nbsp;&nbsp;&nbsp;pages = {87}<br />}</p><a href='javascript:hide_citation()'><i class='fas fa-arrow-up'></i> Hide citation info</a></div><script type='text/javascript'>
+function show_citation(){
+  document.getElementById('cite1').style.display = 'none';  document.getElementById('cite2').style.display = 'block';}
+function hide_citation(){
+  document.getElementById('cite2').style.display = 'none';  document.getElementById('cite1').style.display = 'block';}
+</script><div class='abstract'><p>Recent developments in <a href='https://github.com/FEniCS/dolfinx' class='icon'><img src='/img/fenics.png'>DOLFINx</a> allow for the block assembly of linear algebraic systems arising from discretisations of coupled partial differential equations. Each algebraic block represents a subproblem associated with a coupling of the unknown fields. Designing and implementing robust and scalable solution and preconditioning strategies for block-structured linear systems is an active area of research. </p>
+<p>In this contribution we show how DOLFINx can now exploit one of the most significant features of PETSc; the dynamic composition of the hierarchical solver and preconditioner options at runtime, see Brown <i>et al</i> <a href='#ref1'>[1]</a>. The idea is inspired by the work of Kirby and Mitchell <a href='#ref2'>[2]</a> that was originally implemented in the <a href='https://www.firedrakeproject.org' class='icon'><img src='/img/firedrake.png'>Firedrake</a> Project. </p>
+<p>One of the most significant benefits of the approach is the possibility to construct advanced preconditioners that require structure beyond a purely algebraic problem description, eg the pressure-convection-diffusion (PCD) approximation of the Schur complement for the Navier&ndash;Stokes equations, see Silvester <i>et al</i> <a href='#ref3'>[3]</a>. </p>
+<p>We illustrate the capabilities of our implementation on examples ranging from incompressible flow of a viscous fluid, through temperature-driven convection, to flows described by rate-type viscoelastic fluid models. <h2>References</h2><ul class='citations'><li><a class='refid' id='ref1'>[1]</a> J. Brown, M. G. Knepley, D. A. May, L. C. McInnes, and B. Smith. Composable Linear Solvers for Multiphysics, <em>Proceedings of the 2012 11th International Symposium on Parallel and Distributed Computing (ISPDC '12), IEEE Computer Society, USA</em>, 55&ndash;62, 2012. [DOI:&nbsp;<a href='https://doi.org/10.1109/ISPDC.2012.16'>10.1109/ISPDC.2012.16</a>]</li><li><a class='refid' id='ref2'>[2]</a> R. Kirby, and L. Mitchell. Solver Composition Across the PDE/Linear Algebra Barrier, <em>SIAM Journal on Scientific Computing</em> 40, 2017. [DOI:&nbsp;<a href='https://doi.org/10.1137/17M1133208'>10.1137/17M1133208</a>]</li><li><a class='refid' id='ref3'>[3]</a> D. Silvester, H. Elman, and A. Wathen. Finite Elements and Fast Iterative Solvers: with applications in incompressible fluid dynamics, 2014. [DOI:&nbsp;<a href='https://doi.org/10.1093/acprof:oso/9780199678792.001.0001'>10.1093/acprof:oso/9780199678792.001.0001</a>]</li></ul></div><div class='prevnext'><div class='prevlink'><a href='/talks/brubeck.html'>&larr; previous talk</a></div><div class='nextlink'><a href='/talks/marchena-menendez.html'>next talk &rarr;</a></div></div><center><img src="/img/fenics.png" style="margin-top:50px"></center>
+</div>
+</div>
+</div>
+</body>
+</html>

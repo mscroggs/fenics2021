@@ -1,0 +1,59 @@
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='author' content='Matthew Scroggs'>
+<meta name='description' content='The webpages for the FEniCS 2021 conference'>
+<meta name='keywords' content='finite element methods,FEniCS,FEniCSx,FFC,FFCx,UFL,FIAT,Basix,Firedrake,math,maths,engineering'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FEniCS 2021: mgis.fenics Part I: Coupling MFront and FEniCS for complex solid mechanics simulations</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<link rel='stylesheet' type='text/css' href='/sty.css'>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+<link rel="manifest" href="/icons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://kit.fontawesome.com/5506de0e1b.js" crossorigin="anonymous"></script>
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<div class='head'>
+<div class='laptop'>
+<div class='content'>
+<div class='title'><a href='/'>FEniCS 2021</a></div>
+<div class='tagline'>22-26 March 2021</div>
+<div class='links'><a href='/'>Home</a><a href='/talks'>Timetable</a><a href='/talks/list.html'>List of talks</a><a href='/team.html'>Organisers</a><a href='/info.html'>Useful info</a></div>
+</div>
+</div>
+</div>
+<div class='body'>
+<div class='content'>
+<h1>mgis.fenics Part I: Coupling MFront and FEniCS for complex solid mechanics simulations</h1><div><div class='authors'><b>Thomas Helfer</b> <a href='http://tfel.sourceforge.net' class='falink'><i class='fab fa-internet-explorer'></i></a> (CEA, DEN/DEC/SESC, Département d'&Eacute;tudes des Combustibles, &#127467;&#127479;)</div><div class='authors'>J&eacute;r&eacute;my Bleyer <a href='https://comet-fenics.readthedocs.io/en/latest/index.html' class='falink'><i class='fab fa-internet-explorer'></i></a> (Laboratoire Navier UMR 8205 (École des Ponts ParisTech-IFSTTAR-CNRS), &#127467;&#127479;)</div><div class='authors'>Raffaele Russo (University of the Basque Country, &#127466;&#127480;)</div><div class='authors'>Tamara Dancheva (BCAM - Basque Center for Applied Mathematics, &#127466;&#127480;)</div></div><div style='margin-top:5px'><a href='/talks/list-Monday.html'>Monday</a> session 3 (Zoom) (17:00&ndash;18:30 GMT)</div><div style='margin-top:10px'><a href='/slides/helfer.pdf'><i class='fas fa-file-powerpoint'></i> View slides (pdf)</a> (available under a <a href='https://creativecommons.org/licenses/by/4.0/'>CC BY 4.0</a> license)</div><div style='margin-top:10px'><a href='https://dx.doi.org/10.6084/m9.figshare.14495232'><i class='fas fa-link'></i> 10.6084/m9.figshare.14495232</a></div><div id='cite1' style='margin-top:10px'><a href='javascript:show_citation()'><i class='fas fa-arrow-down'></i> Cite this talk</a></div><div id='cite2' style='margin-top:10px;display:none'><p>You can cite this talk by using the following BibTe&Chi;:</p><p class='pcode'>@incollection{fenics2021-helfer,<br />&nbsp;&nbsp;&nbsp;&nbsp;title = {mgis.fenics Part I: Coupling MFront and FEniCS for complex solid mechanics simulations},<br />&nbsp;&nbsp;&nbsp;&nbsp;author = {Thomas Helfer and J\'{e}r\'{e}my Bleyer and Raffaele Russo and Tamara Dancheva},<br />&nbsp;&nbsp;&nbsp;&nbsp;year = {2021},<br />&nbsp;&nbsp;&nbsp;&nbsp;url = {http://mscroggs.github.io/fenics2021/talks/helfer.html},<br />&nbsp;&nbsp;&nbsp;&nbsp;booktitle = {Proceedings of FEniCS 2021, online, 22--26 March},<br />&nbsp;&nbsp;&nbsp;&nbsp;editor = {Igor Baratta and J{\o}rgen S. Dokken and Chris Richarson and Matthew W. Scroggs},<br />&nbsp;&nbsp;&nbsp;&nbsp;doi = {10.6084/m9.figshare.14495232},<br />&nbsp;&nbsp;&nbsp;&nbsp;pages = {100--120}<br />}</p><a href='javascript:hide_citation()'><i class='fas fa-arrow-up'></i> Hide citation info</a></div><script type='text/javascript'>
+function show_citation(){
+  document.getElementById('cite1').style.display = 'none';  document.getElementById('cite2').style.display = 'block';}
+function hide_citation(){
+  document.getElementById('cite2').style.display = 'none';  document.getElementById('cite1').style.display = 'block';}
+</script><div class='abstract'><p>Constitutive equations describe how the internal state variables of a material evolve with changing external conditions or due to gradients of thermodynamic variables. Those state variables can describe many microstructural aspects of the material (grain size, dislocation density, hardening state, etc) or be phenomenological in nature (equivalent plastic strain). The knowledge of those internal state variables allows the computation of local thermodynamic forces which affect the material equilibrium at the structural scale. </p>
+<p>MFront is an open-source code generator for complex constitutive laws which aims at ease of use, numerical efficiency and portability (see <a href='#ref1'>[1]</a><a href='#ref2'>[2]</a>). MFront has been developed under very stringent quality requirements in the context of nuclear fuel element simulation under the PLEIADES platform (see <a href='#ref3'>[3]</a>), which is co-developed by CEA, EDF and Framatome. MFront provides several domain specific languages (DSL) built on top of the C++ language and associated with specific integration schemes that allows to readily implement the constitutive equations in source code close to their mathematical expressions. Numerical details are hidden by default allowing the user to focus on the physics. The underlying mathematical library, called <a href='https://github.com/TfEL/TfEL-Maths-Pedagogy' class='icon'><img src='/img/tfel.png'>TFEL/Math</a>, provides optimised tensor objects and makes heavily use of template metaprogramming to generate optimised code. </p>
+<p>Those DSLs are translated into C++ sources adapted to the targeted solver. Interfaces are provided for Cast3M, Code Aster, Europlexus, Cyrano, Abaqus/Implicit, Abaqus/Explicit, Ansys, CalculiX, AMITEX FFTP, etc. A so-called generic interface has recently been introduced and is meant to be used through the MFrontGenericInterfaceSupport project (MGIS) (See <a href='#ref4'>[4]</a><a href='#ref5'>[5]</a>). </p>
+<p>The mgis.fenics python module aims at leveraging the power of the <a href='https://fenicsproject.org' class='icon'><img src='/img/fenics.png'>FEniCS</a> platform, used for the discretization of the balance equations, the assembly of residuals and stiffness matrices and the parallel distribution of the resolution, combined with MFront, used for the local integration of the constitutive equations, to build complex mechanical simulations. Several examples, illustrating the use of the new module, will be presented (see <a href='#ref6'>[6]</a><a href='#ref7'>[7]</a>), including:<ul><li>Finite strain plasticity in the logarithmic space.</li><li>Phase-field approach to britlle fracture.</li><li>Finite strain polycrystal computations based on the Méric-Cailletaud behaviour.</li></ul> <h2>References</h2><ul class='citations'><li><a class='refid' id='ref1'>[1]</a> Thomas Helfer, Bruno Michel, Jean-Michel Proix, Maxime Salvo, J&eacute;r&ocirc;me Sercombe, Michel Casella. Introducing the open-source mfront code generator: Application to mechanical behaviours and material knowledge management within the PLEIADES fuel element modelling platform, <em>Computers & Mathematics with Applications</em> 70, 994&ndash;1023, 2015. [DOI:&nbsp;<a href='https://doi.org/10.1016/j.camwa.2015.06.027'>10.1016/j.camwa.2015.06.027</a>]</li><li><a class='refid' id='ref2'>[2]</a> MFront website. <a href='http://www.tfel.sourceforge.net'>www.tfel.sourceforge.net</a></li><li><a class='refid' id='ref3'>[3]</a> V. Marelle, P. Goldbronn, S. Bernaud, E. Castelier, J. Julien, K. Nkonga, L.Noirot, I. Ramiere. New developments in ALCYONE 2.0 fuel performance code, <em>Top Fuel</em>, 2016. <a href='https://www.osti.gov/biblio/22764059'>www.osti.gov/biblio/22764059</a></li><li><a class='refid' id='ref4'>[4]</a> Thomas Helfer. The MFrontGenericInterfaceSupport project. <a href='https://thelfer.github.io/mgis/web/index.html'>thelfer.github.io/mgis/web/index.html</a></li><li><a class='refid' id='ref5'>[5]</a> Thomas Helfer, Jeremy Bleyer, Tero Frondelius, Ivan Yashchuk, Thomas Nagel, Dmitri Naumov. The `MFrontGenericInterfaceSupport` project, <em>Journal of Open Source Software</em> 5:2003. [DOI:&nbsp;<a href='https://doi.org/10.21105/joss.02003'>10.21105/joss.02003</a>]</li><li><a class='refid' id='ref6'>[6]</a> Jérémy Bleyer and Thomas Helfer. Elasto-plastic analysis implemented using the MFront code generator, <em>Numerical tours of continuum mechanics using FEniCS</em>, 2019. <a href='https://comet-fenics.readthedocs.io/en/latest/demo/plasticity_mfront/plasticity_mfront.py.html'>comet-fenics.readthedocs.io/en/latest/demo/plasticity_mfront/plasticity_mfront.py.html</a></li><li><a class='refid' id='ref7'>[7]</a> Jérémy Bleyer and Thomas Helfer. FEniCS and MFront for complex non linear solid mechanics simulation, 2019. [DOI:&nbsp;<a href='https://doi.org/10.13140/RG.2.2.35501.54247'>10.13140/RG.2.2.35501.54247</a>]</li></ul></div><div class='prevnext'><div class='prevlink'><a href='/talks/garlick.html'>&larr; previous talk</a></div><div class='nextlink'><a href='/talks/dancheva.html'>next talk &rarr;</a></div></div><center><img src="/img/fenics.png" style="margin-top:50px"></center>
+</div>
+</div>
+</div>
+</body>
+</html>

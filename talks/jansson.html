@@ -1,0 +1,62 @@
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='author' content='Matthew Scroggs'>
+<meta name='description' content='The webpages for the FEniCS 2021 conference'>
+<meta name='keywords' content='finite element methods,FEniCS,FEniCSx,FFC,FFCx,UFL,FIAT,Basix,Firedrake,math,maths,engineering'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FEniCS 2021: Digital Math: Solving the reproducibility crisis in the digital era</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<link rel='stylesheet' type='text/css' href='/sty.css'>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+<link rel="manifest" href="/icons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://kit.fontawesome.com/5506de0e1b.js" crossorigin="anonymous"></script>
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<div class='head'>
+<div class='laptop'>
+<div class='content'>
+<div class='title'><a href='/'>FEniCS 2021</a></div>
+<div class='tagline'>22-26 March 2021</div>
+<div class='links'><a href='/'>Home</a><a href='/talks'>Timetable</a><a href='/talks/list.html'>List of talks</a><a href='/team.html'>Organisers</a><a href='/info.html'>Useful info</a></div>
+</div>
+</div>
+</div>
+<div class='body'>
+<div class='content'>
+<h1>Digital Math: Solving the reproducibility crisis in the digital era</h1><div><div class='authors'><b>Johan Jansson</b> <a href='http://digimat.tech' class='falink'><i class='fab fa-internet-explorer'></i></a> (KTH Royal Institute of Technology, &#127480;&#127466;)</div><div class='authors'>M&aring;ns Andersson (KTH Royal Institute of Technology, &#127480;&#127466;)</div><div class='authors'>Linde Van Beers (KTH Royal Institute of Technology, &#127480;&#127466;)</div><div class='authors'>Ridgway Scott (University of Chicago, &#127482;&#127480;)</div><div class='authors'>Claes Johnson (KTH Royal Institute of Technology, &#127480;&#127466;)</div></div><div style='margin-top:5px'><a href='/talks/list-Wednesday.html'>Wednesday</a> session 1 (Zoom) (13:00&ndash;14:40 GMT)</div><div style='margin-top:10px'><a href='https://dx.doi.org/10.6084/m9.figshare.14495364'><i class='fas fa-link'></i> 10.6084/m9.figshare.14495364</a></div><div id='cite1' style='margin-top:10px'><a href='javascript:show_citation()'><i class='fas fa-arrow-down'></i> Cite this talk</a></div><div id='cite2' style='margin-top:10px;display:none'><p>You can cite this talk by using the following BibTe&Chi;:</p><p class='pcode'>@incollection{fenics2021-jansson,<br />&nbsp;&nbsp;&nbsp;&nbsp;title = {Digital Math: Solving the reproducibility crisis in the digital era},<br />&nbsp;&nbsp;&nbsp;&nbsp;author = {Johan Jansson and M\r{a}ns Andersson and Linde Van Beers and Ridgway Scott and Claes Johnson},<br />&nbsp;&nbsp;&nbsp;&nbsp;year = {2021},<br />&nbsp;&nbsp;&nbsp;&nbsp;url = {http://mscroggs.github.io/fenics2021/talks/jansson.html},<br />&nbsp;&nbsp;&nbsp;&nbsp;booktitle = {Proceedings of FEniCS 2021, online, 22--26 March},<br />&nbsp;&nbsp;&nbsp;&nbsp;editor = {Igor Baratta and J{\o}rgen S. Dokken and Chris Richarson and Matthew W. Scroggs},<br />&nbsp;&nbsp;&nbsp;&nbsp;doi = {10.6084/m9.figshare.14495364},<br />&nbsp;&nbsp;&nbsp;&nbsp;pages = {372}<br />}</p><a href='javascript:hide_citation()'><i class='fas fa-arrow-up'></i> Hide citation info</a></div><script type='text/javascript'>
+function show_citation(){
+  document.getElementById('cite1').style.display = 'none';  document.getElementById('cite2').style.display = 'block';}
+function hide_citation(){
+  document.getElementById('cite2').style.display = 'none';  document.getElementById('cite1').style.display = 'block';}
+</script><div class='abstract'><p>We present the Digital Math framework as the foundation for modern science-based on constructive digital mathematical computation. The computed result (coefficient vector, FEM function, plot, etc) is a mathematical theorem, and the mathematical Open Source code, here in the <a href='https://fenicsproject.org' class='icon'><img src='/img/fenics.png'>FEniCS</a> framework, and computation is the mathematical proof. Based on the Digital Math framework and the FEniCS realization, we present solutions to some of the grand challenges in science, education and industry. </p>
+<p>In this seminar, we specifically focus on solving the reproducibility crisis in research, recently highlighted in our panel debate with the European Commission, Swedish Parliament, Lorena Barba and top Swedish journalist: </p>
+<p><a href='http://digimat.tech/paneldebate-kth/'>digimat.tech/paneldebate-kth/</a> </p>
+<p>We see education as reproducing scientific results of key importance for society. As part of the seminar, you are invited to participate in the online DigiMat course on reproducible research, where anyone in an accessible Ubiquitous High-Performance Computing (UHPC) Digital Math environment can create your own reproducible "Digital Math" publication. </p>
+<p>Reports from the education system show that almost all students lose motivation for math and programming somewhere along the way. At the same time computational math is the fundament of modern society, creating an enormous societal problem. </p>
+<p>We show results that our DigiMat&mdash;Digital Math online educationprogram <a href='#ref1'>[1]</a>&mdash;from pre-school through university and professional is a solution to this grand challenge in education. DigiMat creates motivation and learning of the key abstract concepts by playing with, editing and building your own Digital Math interactive simulations and virtual worlds. DigiMat Pro has reached 30000+ participants with great feedback, and DigiMat Basic is now reaching schools in Sweden with good results. </p>
+<p>We show reproducible predictive Real Flight Simulation as a solution to the grand challenge of aerodynamics connected to results in the High Lift Prediction Workshop. For general continuum modeling, such as biomechanics, we present our Real Unified Continuum framework <a href='#ref2'>[2]</a> with results in food tech, heart modeling, etc. <h2>References</h2><ul class='citations'><li><a class='refid' id='ref1'>[1]</a> Digital Math online educationprogram. <a href='http://digimat.tech/digimat'>digimat.tech/digimat</a></li><li><a class='refid' id='ref2'>[2]</a> Johan Jansson, Massimiliano Leoni, Måns Andersson, Patricia Lopez Sanchez, Mats Stading, Ridgway Scott, Claes Johnson. Predictive Real Unified Continuum modeling of multi-physics in the Digital Math framework, <em>Digital Math: Human workshop</em>, 2020. <a href='http://digimat.tech/paper-digital-math-unified-continuum/'>digimat.tech/paper-digital-math-unified-continuum/</a></li></ul></div><div class='prevnext'><div class='prevlink'><a href='/talks/arbes.html'>&larr; previous talk</a></div><div class='nextlink'><a href='/talks/zhao.html'>next talk (after a break) &rarr;</a></div></div><center><img src="/img/fenics.png" style="margin-top:50px"></center>
+</div>
+</div>
+</div>
+</body>
+</html>

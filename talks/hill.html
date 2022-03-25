@@ -1,0 +1,61 @@
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='author' content='Matthew Scroggs'>
+<meta name='description' content='The webpages for the FEniCS 2021 conference'>
+<meta name='keywords' content='finite element methods,FEniCS,FEniCSx,FFC,FFCx,UFL,FIAT,Basix,Firedrake,math,maths,engineering'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FEniCS 2021: Generating layer-adapted meshes using mesh PDEs</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<link rel='stylesheet' type='text/css' href='/sty.css'>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+<link rel="manifest" href="/icons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://kit.fontawesome.com/5506de0e1b.js" crossorigin="anonymous"></script>
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<div class='head'>
+<div class='laptop'>
+<div class='content'>
+<div class='title'><a href='/'>FEniCS 2021</a></div>
+<div class='tagline'>22-26 March 2021</div>
+<div class='links'><a href='/'>Home</a><a href='/talks'>Timetable</a><a href='/talks/list.html'>List of talks</a><a href='/team.html'>Organisers</a><a href='/info.html'>Useful info</a></div>
+</div>
+</div>
+</div>
+<div class='body'>
+<div class='content'>
+<h1>Generating layer-adapted meshes using mesh PDEs</h1><div><div class='authors'><b>R&oacute;is&iacute;n Hill</b> (NUI Galway, &#127470;&#127466;)</div><div class='authors'>Niall Madden <a href='http://www.maths.nuigalway.ie/~niall' class='falink'><i class='fab fa-internet-explorer'></i></a> (NUI Galway, &#127470;&#127466;)</div></div><div style='margin-top:5px'><a href='/talks/list-Wednesday.html'>Wednesday</a> session 3 (Zoom) (17:00&ndash;18:30 GMT)</div><div style='margin-top:10px'><a href='/slides/hill.pdf'><i class='fas fa-file-powerpoint'></i> View slides (pdf)</a> (available under a <a href='https://creativecommons.org/licenses/by/4.0/'>CC BY 4.0</a> license)</div><div style='margin-top:10px'><a href='https://dx.doi.org/10.6084/m9.figshare.14495376'><i class='fas fa-link'></i> 10.6084/m9.figshare.14495376</a></div><div id='cite1' style='margin-top:10px'><a href='javascript:show_citation()'><i class='fas fa-arrow-down'></i> Cite this talk</a></div><div id='cite2' style='margin-top:10px;display:none'><p>You can cite this talk by using the following BibTe&Chi;:</p><p class='pcode'>@incollection{fenics2021-hill,<br />&nbsp;&nbsp;&nbsp;&nbsp;title = {Generating layer-adapted meshes using mesh PDEs},<br />&nbsp;&nbsp;&nbsp;&nbsp;author = {R\'{o}is\'{i}n Hill and Niall Madden},<br />&nbsp;&nbsp;&nbsp;&nbsp;year = {2021},<br />&nbsp;&nbsp;&nbsp;&nbsp;url = {http://mscroggs.github.io/fenics2021/talks/hill.html},<br />&nbsp;&nbsp;&nbsp;&nbsp;booktitle = {Proceedings of FEniCS 2021, online, 22--26 March},<br />&nbsp;&nbsp;&nbsp;&nbsp;editor = {Igor Baratta and J{\o}rgen S. Dokken and Chris Richarson and Matthew W. Scroggs},<br />&nbsp;&nbsp;&nbsp;&nbsp;doi = {10.6084/m9.figshare.14495376},<br />&nbsp;&nbsp;&nbsp;&nbsp;pages = {374--400}<br />}</p><a href='javascript:hide_citation()'><i class='fas fa-arrow-up'></i> Hide citation info</a></div><script type='text/javascript'>
+function show_citation(){
+  document.getElementById('cite1').style.display = 'none';  document.getElementById('cite2').style.display = 'block';}
+function hide_citation(){
+  document.getElementById('cite2').style.display = 'none';  document.getElementById('cite1').style.display = 'block';}
+</script><div class='abstract'><p>We consider the numerical solution, by finite element methods, of singularly-perturbed differential equations (SPDEs) whose solutions exhibit boundary layers. We will discuss our numerical method and the implementation in <a href='https://fenicsproject.org' class='icon'><img src='/img/fenics.png'>FEniCS</a> <a href='#ref1'>[1]</a>, including some technical problems we overcame. </p>
+<p>Our interest lies in developing parameter-robust methods, where the quality of the solution is independent of the value of the perturbation parameter. One way of achieving this is to use layer resolving methods based on meshes that concentrate their mesh points in regions of large variations in the solution. </p>
+<p>We investigate the use of Mesh PDEs (MPDEs), as first presented in <a href='#ref2'>[2]</a>, to generate layer resolving meshes that yield parameter robust solutions to SPDEs. Specifically, we present MPDEs whose solutions, in the 1D case, yield the celebrated graded "Bakhvalov" meshes <a href='#ref3'>[3]</a>. </p>
+<p>The true value of the proposed approach comes to the fore when we investigate 2D problems. Whereas the classical Bakhvalov mesh is restricted to generating tensor product grids, the use of MPDEs allows us to generate non-tensor product grids that are still highly anisotropic and layer-adapted grids, and yield robust solutions. We demonstrate this by solving problems on irregular domains, and with space-varying diffusion. </p>
+<p>As the MPDEs are non-linear problems, we use a fixed-point iterative method to solve them numerically. We present an approach involving alternating between \(h\)- and \(r\)-refinement which is highly efficient, especially for larger meshes and small values of the perturbation parameter. </p>
+<p>The manuscript on which this talk is based, and the code that generated the results, are available at <a href='https://osf.io/dpexh/'>osf.io/dpexh/</a> <h2>References</h2><ul class='citations'><li><a class='refid' id='ref1'>[1]</a> M. S. Alnæs, J. Blechta, J. Hake, A. Johansson, B. Kehlet, A. Logg, C. Richardson, J Ring, M. E. Rognes, and G. N. Wells. The FEniCS project version 1.5, <em>Archive of Numerical Software</em> 3, 2015. [DOI:&nbsp;<a href='https://doi.org/10.11588/ans.2015.100.20553'>10.11588/ans.2015.100.20553</a>]</li><li><a class='refid' id='ref2'>[2]</a> Weizhang Huang, Yuhe Ren, and Robert D. Russell. Moving mesh partial differential equations (MMPDES) based on the equidistribution principle, <em>SIAM Journal on Numerical Analysis</em> 31, 709&ndash;730, 1994. [DOI:&nbsp;<a href='https://doi.org/10.1137/0731038'>10.1137/0731038</a>]</li><li><a class='refid' id='ref3'>[3]</a> N. S. Bakhvalov. The optimization of methods of solving boundary value problems with a boundary layer, <em>USSR Computational Mathematics and Mathematical Physics</em> 9, 139&ndash;166, 1969. [DOI:&nbsp;<a href='https://doi.org/10.1016/0041-5553(69)90038-X'>10.1016/0041-5553(69)90038-X</a>]</li></ul></div><div class='prevnext'><div class='prevlink'><a href='/talks/zhao.html'>&larr; previous talk</a></div><div class='nextlink'><a href='/talks/johansson.html'>next talk &rarr;</a></div></div><center><img src="/img/fenics.png" style="margin-top:50px"></center>
+</div>
+</div>
+</div>
+</body>
+</html>

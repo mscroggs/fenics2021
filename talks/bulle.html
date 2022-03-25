@@ -1,0 +1,62 @@
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='author' content='Matthew Scroggs'>
+<meta name='description' content='The webpages for the FEniCS 2021 conference'>
+<meta name='keywords' content='finite element methods,FEniCS,FEniCSx,FFC,FFCx,UFL,FIAT,Basix,Firedrake,math,maths,engineering'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FEniCS 2021: Local <i>a posteriori</i> error estimates for the spectral fractional Laplacian</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<link rel='stylesheet' type='text/css' href='/sty.css'>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+<link rel="manifest" href="/icons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://kit.fontawesome.com/5506de0e1b.js" crossorigin="anonymous"></script>
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<div class='head'>
+<div class='laptop'>
+<div class='content'>
+<div class='title'><a href='/'>FEniCS 2021</a></div>
+<div class='tagline'>22-26 March 2021</div>
+<div class='links'><a href='/'>Home</a><a href='/talks'>Timetable</a><a href='/talks/list.html'>List of talks</a><a href='/team.html'>Organisers</a><a href='/info.html'>Useful info</a></div>
+</div>
+</div>
+</div>
+<div class='body'>
+<div class='content'>
+<h1>Local <i>a posteriori</i> error estimates for the spectral fractional Laplacian</h1><div><div class='authors'><b>Rapha&euml;l Bulle</b> <a href='https://www.researchgate.net/profile/Raphael-Bulle' class='falink'><i class='fab fa-internet-explorer'></i></a> (University of Luxembourg, &#127473;&#127482;)</div><div class='authors'>St&eacute;phane P. A. Bordas (University of Luxembourg, &#127473;&#127482;)</div><div class='authors'>Franz Chouly (Université de Bourgogne-Franche-Comté, &#127467;&#127479;)</div><div class='authors'>Jack S. Hale (University of Luxembourg, &#127473;&#127482;)</div><div class='authors'>Alexei Lozinski <a href='http://lmb.univ-fcomte.fr/Lozinski-Alexei' class='falink'><i class='fab fa-internet-explorer'></i></a> (Universit&eacute; Bourgogne Franche-Comt&eacute;, &#127467;&#127479;)</div></div><div style='margin-top:5px'><a href='/talks/list-Wednesday.html'>Wednesday</a> session 1 (Zoom) (13:00&ndash;14:40 GMT)</div><div style='margin-top:10px'><a href='/slides/bulle.pdf'><i class='fas fa-file-powerpoint'></i> View slides (pdf)</a> (available under a <a href='https://creativecommons.org/licenses/by/4.0/'>CC BY 4.0</a> license)</div><div style='margin-top:10px'><a href='https://dx.doi.org/10.6084/m9.figshare.14495334'><i class='fas fa-link'></i> 10.6084/m9.figshare.14495334</a></div><div id='cite1' style='margin-top:10px'><a href='javascript:show_citation()'><i class='fas fa-arrow-down'></i> Cite this talk</a></div><div id='cite2' style='margin-top:10px;display:none'><p>You can cite this talk by using the following BibTe&Chi;:</p><p class='pcode'>@incollection{fenics2021-bulle,<br />&nbsp;&nbsp;&nbsp;&nbsp;title = {Local \emph{a posteriori} error estimates for the spectral fractional Laplacian},<br />&nbsp;&nbsp;&nbsp;&nbsp;author = {Rapha\"{e}l Bulle and St\'{e}phane P. A. Bordas and Franz Chouly and Jack S. Hale and Alexei Lozinski},<br />&nbsp;&nbsp;&nbsp;&nbsp;year = {2021},<br />&nbsp;&nbsp;&nbsp;&nbsp;url = {http://mscroggs.github.io/fenics2021/talks/bulle.html},<br />&nbsp;&nbsp;&nbsp;&nbsp;booktitle = {Proceedings of FEniCS 2021, online, 22--26 March},<br />&nbsp;&nbsp;&nbsp;&nbsp;editor = {Igor Baratta and J{\o}rgen S. Dokken and Chris Richarson and Matthew W. Scroggs},<br />&nbsp;&nbsp;&nbsp;&nbsp;doi = {10.6084/m9.figshare.14495334},<br />&nbsp;&nbsp;&nbsp;&nbsp;pages = {336--368}<br />}</p><a href='javascript:hide_citation()'><i class='fas fa-arrow-up'></i> Hide citation info</a></div><script type='text/javascript'>
+function show_citation(){
+  document.getElementById('cite1').style.display = 'none';  document.getElementById('cite2').style.display = 'block';}
+function hide_citation(){
+  document.getElementById('cite2').style.display = 'none';  document.getElementById('cite1').style.display = 'block';}
+</script><div class='abstract'><p>The fractional Laplacian has a global character and its solutions have strong boundary layers. Its efficient solution is still an open challenge for the community. </p>
+<p>In this talk, we will show a novel <i>a posteriori</i> error estimation method for the spectral fractional Laplacian. </p>
+<p>Our method begins with the work of <a href='#ref1'>[1]</a> where a fractional operator is represented by an integral over non-fractional (ie local) parametric operators. The integral and the local operators can then be discretised using a quadrature rule and a standard finite element method, respectively. </p>
+<p>We show that the integral representation of <a href='#ref1'>[1]</a> can equally be applied to the construction of an error estimator. A key building block of the method is an efficient hierarchical estimator introduced in   <a href='#ref2'>[2]</a>. </p>
+<p>The estimator has numerous benefits: it is numerically sharp, it allows the measurement of the error in various norms, and it is defined for one, two and three-dimensional problems. It is also fully local and cheap to compute in parallel. </p>
+<p>The estimator leads to optimal convergence rates when used to steer adaptive refinement algorithms. </p>
+<p>The implementation is based on <a href='https://fenicsproject.org' class='icon'><img src='/img/fenics.png'>FEniCS</a> Error Estimation (<a href='https://github.com/rbulle/fenics-error-estimation' class='icon'>FEniCS-EE</a>), a finite element error estimation package for <a href='https://bitbucket.org/fenics-project/dolfin' class='icon'><img src='/img/fenics.png'>DOLFIN</a> and <a href='https://github.com/FEniCS/dolfinx' class='icon'><img src='/img/fenics.png'>DOLFINx</a> <a href='#ref1'>[1]</a>. <h2>References</h2><ul class='citations'><li><a class='refid' id='ref1'>[1]</a> A. Bonito and J. E. Pasciak. Numerical Approximation of Fractional Powers of Elliptic Operators, 2015. [DOI:&nbsp;<a href='https://doi.org/10.1090/S0025-5718-2015-02937-8'>10.1090/S0025-5718-2015-02937-8</a>]</li></ul></div><div class='prevnext'><div class='prevlink'><a href='/talks/hale.html'>&larr; previous talk</a></div><div class='nextlink'><a href='/talks/kaiser.html'>next talk &rarr;</a></div></div><center><img src="/img/fenics.png" style="margin-top:50px"></center>
+</div>
+</div>
+</div>
+</body>
+</html>

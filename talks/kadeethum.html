@@ -1,0 +1,57 @@
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='author' content='Matthew Scroggs'>
+<meta name='description' content='The webpages for the FEniCS 2021 conference'>
+<meta name='keywords' content='finite element methods,FEniCS,FEniCSx,FFC,FFCx,UFL,FIAT,Basix,Firedrake,math,maths,engineering'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FEniCS 2021: Non-intrusive reduced order modeling of linear poroelasticity in heterogeneous porous media</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<link rel='stylesheet' type='text/css' href='/sty.css'>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+<link rel="manifest" href="/icons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://kit.fontawesome.com/5506de0e1b.js" crossorigin="anonymous"></script>
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<div class='head'>
+<div class='laptop'>
+<div class='content'>
+<div class='title'><a href='/'>FEniCS 2021</a></div>
+<div class='tagline'>22-26 March 2021</div>
+<div class='links'><a href='/'>Home</a><a href='/talks'>Timetable</a><a href='/talks/list.html'>List of talks</a><a href='/team.html'>Organisers</a><a href='/info.html'>Useful info</a></div>
+</div>
+</div>
+</div>
+<div class='body'>
+<div class='content'>
+<h1>Non-intrusive reduced order modeling of linear poroelasticity in heterogeneous porous media</h1><div><div class='authors'><b>Teeratorn Kadeethum</b> (Cornell University, &#127482;&#127480;)</div><div class='authors'>Francesco Ballarin (SISSA, &#127470;&#127481;)</div><div class='authors'>Nikolaos Bouklas (Cornell University, &#127482;&#127480;)</div></div><div style='margin-top:5px'><a href='/talks/list-Friday.html'>Friday</a> session 2 (Zoom) (15:00&ndash;16:30 GMT)</div><div style='margin-top:10px'><a href='/slides/kadeethum.pdf'><i class='fas fa-file-powerpoint'></i> View slides (pdf)</a> (available under a <a href='https://creativecommons.org/licenses/by/4.0/'>CC BY 4.0</a> license)</div><div style='margin-top:10px'><a href='https://dx.doi.org/10.6084/m9.figshare.14495643'><i class='fas fa-link'></i> 10.6084/m9.figshare.14495643</a></div><div id='cite1' style='margin-top:10px'><a href='javascript:show_citation()'><i class='fas fa-arrow-down'></i> Cite this talk</a></div><div id='cite2' style='margin-top:10px;display:none'><p>You can cite this talk by using the following BibTe&Chi;:</p><p class='pcode'>@incollection{fenics2021-kadeethum,<br />&nbsp;&nbsp;&nbsp;&nbsp;title = {Non-intrusive reduced order modeling of linear poroelasticity in heterogeneous porous media},<br />&nbsp;&nbsp;&nbsp;&nbsp;author = {Teeratorn Kadeethum and Francesco Ballarin and Nikolaos Bouklas},<br />&nbsp;&nbsp;&nbsp;&nbsp;year = {2021},<br />&nbsp;&nbsp;&nbsp;&nbsp;url = {http://mscroggs.github.io/fenics2021/talks/kadeethum.html},<br />&nbsp;&nbsp;&nbsp;&nbsp;booktitle = {Proceedings of FEniCS 2021, online, 22--26 March},<br />&nbsp;&nbsp;&nbsp;&nbsp;editor = {Igor Baratta and J{\o}rgen S. Dokken and Chris Richarson and Matthew W. Scroggs},<br />&nbsp;&nbsp;&nbsp;&nbsp;doi = {10.6084/m9.figshare.14495643},<br />&nbsp;&nbsp;&nbsp;&nbsp;pages = {765--782}<br />}</p><a href='javascript:hide_citation()'><i class='fas fa-arrow-up'></i> Hide citation info</a></div><script type='text/javascript'>
+function show_citation(){
+  document.getElementById('cite1').style.display = 'none';  document.getElementById('cite2').style.display = 'block';}
+function hide_citation(){
+  document.getElementById('cite2').style.display = 'none';  document.getElementById('cite1').style.display = 'block';}
+</script><div class='abstract'><p>A simulation tool capable of speeding up the calculation for linear poroelasticity problems in heterogeneous porous media is of large practical interest for engineers, in particular, to effectively perform sensitivity analyses, uncertainty quantification, optimization, or control operations on the fluid pressure and bulk deformation fields. Towards this goal, we present here a non-intrusive model reduction framework built on <a href='https://fenicsproject.org' class='icon'><img src='/img/fenics.png'>FEniCS</a>, <a href='https://www.rbnicsproject.org/' class='icon'><img src='/img/rbnics.png'>RBniCS</a>, and <a href='https://github.com/mathLab/multiphenics' class='icon'><img src='/img/multiphenics.png'>Multiphenics</a> using proper orthogonal decomposition (POD) and neural networks, based on the usual offline-online paradigm. As the conductivity of porous media can be highly heterogeneous and span several orders of magnitude, we utilize the interior penalty discontinuous Galerkin (DG) method as a full order solver to handle discontinuity and ensure local mass conservation during the offline stage. </p>
+<p>We then use POD as a data compression tool and compare the nested POD technique, in which time and uncertain parameter domains are compressed consecutively, to the classical POD method in which all domains are compressed simultaneously. The neural networks are finally trained to map the set of uncertain parameters, which could correspond to material properties, boundary conditions, or geometric characteristics, to the collection of coefficients calculated from an \(L^2\) projection over the reduced basis. We then perform a non-intrusive evaluation of the neural networks to obtain coefficients corresponding to new values of the uncertain parameters during the online stage. We show that our framework provides reasonable approximations of the DG solution, but it is significantly faster. Moreover, the reduced order framework can capture sharp discontinuities of both displacement and pressure fields resulting from the heterogeneity in the media conductivity, which is generally challenging for intrusive reduced order methods. The sources of error are presented, showing that the nested POD technique is computationally advantageous and still provides comparable accuracy to the classical POD method. We also explore the effect of different choices of the hyperparameters of the neural network on the framework performance. </div><div class='prevnext'><div class='prevlink'><a href='/talks/gazca.html'>&larr; previous talk</a></div><div class='nextlink'><a href='/talks/lozenski.html'>next talk (after a break) &rarr;</a></div></div><center><img src="/img/fenics.png" style="margin-top:50px"></center>
+</div>
+</div>
+</div>
+</body>
+</html>
