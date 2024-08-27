@@ -34,17 +34,33 @@ jobs:
       - uses: actions/checkout@v2
       - run: sudo pip3 install -r requirements.txt
         name: Install requirements
-      - run: python3 builder/build.py ../_html
+      - run: python3 builder/build.py _html
         name: Build website HTML
-      - run: |
-          cd ../_html
-          git config --global user.email "symfem@mscroggs.co.uk"
-          git config --global user.name "Finite Element Bot"
-          git init
-          git checkout -b gh-pages
-          git add .
-          git commit -m "Build HTML website"
-          git remote add origin https://symfembot:${{ secrets.bot_github_token }}@github.com/mscroggs/fenics2021.git
-          git push -u origin gh-pages --force
-        name: Push website to gh-pages branch
-        if: github.ref == 'refs/heads/main'
+
+  build-and-deploy-website:
+    name: Build fenics2021.com
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    steps:
+      - run: sudo apt-get install -y python3-setuptools python3-pip
+        name: Install pip
+      - uses: actions/checkout@v2
+      - run: sudo pip3 install -r requirements.txt
+        name: Install requirements
+      - run: python3 builder/build.py _html
+        name: Build website HTML
+
+      # Push to GitHub Pages
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: '_html'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
